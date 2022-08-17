@@ -6,16 +6,16 @@ Welcome to the Mixed Reality workshop. In this workshop, you will learn all abou
 
 ### **00 - Introduction to the Power Platform**
 
-During this section, an introduction to the Power Platform will be given. You get answers to questions like: 
+During this section, an introduction to the Power Platform will be given. You get answers to questions like:
 
-- What is the Power Platform? 
+- What is the Power Platform?
 - What does it consist of?
 - What's in it for me?
 - How do I learn more about it?
 
 ### **01 - Introduction to Custom Connectors**
 
-In the first lab, you will experience how to build your first Custom Connector. Before that, it's good to learn more about the Custom Connectors. 
+In the first lab, you will experience how to build your first Custom Connector. Before that, it's good to learn more about the Custom Connectors.
 
 - What is a Custom Connector?
 - Where can I use it for?
@@ -23,7 +23,7 @@ In the first lab, you will experience how to build your first Custom Connector. 
 
 ### **02 - LAB 1 - Create your first Custom Connector**
 
-It's time to get to work! Go build your first Custom Connector. In this lab, you will build a Custom Connector for the [Smithsonian Institution Open Access API](https://edan.si.edu/openaccess/apidocs/). This free API gives you the possibility to search for content from the Smithsonian Institution. This can be various types of media, like for instance 3D Images. 
+It's time to get to work! Go build your first Custom Connector. In this lab, you will build a Custom Connector for the [Smithsonian Institution Open Access API](https://edan.si.edu/openaccess/apidocs/). This free API gives you the possibility to search for content from the Smithsonian Institution. This can be various types of media, like for instance 3D Images.
 
 ### **03 - Introduction to Power Apps & Canvas Apps**
 
