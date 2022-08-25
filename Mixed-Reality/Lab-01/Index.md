@@ -45,6 +45,12 @@ Back in the Power Automate custom connector wizard, let's name the connector `Sm
 
 In this screen, we can also add a connector icon, color, and a description. We will skip that for now, but we do fill in the host field. As you can see, the file search action in the API is a GET request to `https://3d-api.si.edu/api/v1.0/content/file/search`. This means that we can add **3d-api.si.edu** in the host field.
 
-Navigate to the security part of the wizard by clicking on the tab `2 - Security` or by clicking on the **Security →** button on the bottom right.
+Navigate to the security part of the wizard by clicking on the tab `2. Security` or by clicking on the **Security →** button on the bottom right.
 
 ### Security
+
+In our case, the security tab is not that interesting, but in various other cases, this will be the place where you define your authentication. For instance, when connecting to the Microsoft Graph API, you will have to use the `OAuth2.0` authentication type.
+
+For now, we will leave this on the `No authentication` authentication type. Let's move on to the `3. Definition` tab.
+
+### Definition
