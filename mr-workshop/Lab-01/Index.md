@@ -220,3 +220,211 @@ Fill in the following fields for the 'rows' parameter:
 - **Visibility**: `advanced`
 
 The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+#### Responses
+
+Responses are very important in the context of the Power Platform. Without responses, you will not be able to do anything with the data you are getting from the APIs you are sending requests to. The users of your connectors will be very thankful when you define all the responses, because that will make the connector easier to use.
+
+If you look at the [API docs](https://3d-api.si.edu/api-docs/), you will see that the API creators added sample responses for both success and error responses. With this information, we can create our responses.
+
+![A view of the success and error responses of the Smithsonian 3D API](assets/custom-connector-responses.png)
+
+Take a look at the 'Response' section. You will see one response available there by default. It's called 'default'. Click on the 'default' button with the grey background.
+
+This will open the 'Response' overview, which will give you the possibility to name your response and import a sample response, just like we did with the query parameters.
+
+##### 200
+
+The first step we need to do in the 'Response' overview is change the name from `default` to `200`. Next, we need to import the successful response sample. Select the **+ Import from sample** button and paste the following JSON in the body field.
+
+```json
+{
+  "rows": [
+    {
+      "title": "Page induction coil from US Patent #76,654",
+      "content": {
+        "usage": "Web3D",
+        "quality": "Medium",
+        "uri": "https://3d-api.si.edu/content/document/3d_package:40cf5b52-0b21-4063-95fc-aa07998eb4dd/page-induction-coil-20k-512-medium.glb",
+        "file_type": "glb",
+        "draco_compressed": "true"
+      }
+    }
+  ],
+  "rowCount": 1,
+  "message": "content found"
+}
+```
+
+Select the **Import** button when you have done that. Just like with the request sample, the properties will be visible.
+
+![View of the imported sample as a response.](assets/custom-connector-response-view.png)
+
+In the screenshot above, you can see all the properties that are available in the body payload. These properties are available because they were in our sample JSON which we used to generate the response.
+
+###### Message
+
+Select the **˅** next to the 'message' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+In this screen, you will be able to change the properties of the 'message' schema property:
+
+![An example of the property 'message' with all the different input fields, like: title, description, Visibility and more.](assets/custom-connector-property-edit.png)
+
+Fill in the following fields for the 'message' schema property:
+
+- **Title**: `Message`
+- **Description**: `The message that describes the response, for instance: content found.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Row Count
+
+Select the **˅** next to the 'rowCount' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'rowCount' schema property:
+
+- **Title**: `Row Count`
+- **Description**: `The row count of the items that get returned.`
+- **Visibility**: `internal`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Draco Compressed
+
+Select the **˅** next to the 'draco_compressed' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'draco_compressed' schema property:
+
+- **Title**: `Draco Compressed`
+- **Description**: `This property shows if the returned item is Draco compressed or not.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### File Type
+
+Select the **˅** next to the 'file_type' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'file_type' schema property:
+
+- **Title**: `File Type`
+- **Description**: `This property shows what the file type of the returned item is.`
+- **Visibility**: `important`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Quality
+
+Select the **˅** next to the 'quality' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'quality' schema property:
+
+- **Title**: `Quality`
+- **Description**: `This property shows what the quality of the returned item is.`
+- **Visibility**: `important`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### URI
+
+Select the **˅** next to the 'uri' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'uri' schema property:
+
+- **Title**: `URI`
+- **Description**: `This property shows what the URI of the returned item is.`
+- **Visibility**: `important`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Usage
+
+Select the **˅** next to the 'usage' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'usage' schema property:
+
+- **Title**: `Usage`
+- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Title
+
+Select the **˅** next to the 'title' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'title' schema property:
+
+- **Title**: `Title`
+- **Description**: `The title of the returned item.`
+- **Visibility**: `important`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button. In the response overview screen, select the **← Back** button again. That will lead you back to the main screen with the definition. Now we have done a bunch of work, let's create the connector. Select the **✓ Create connector** button at the top right side of the screen. This will take a couple of seconds and it should give you a message at the top that Power Automate is saving your connector, and when it's done, it will show a message that it succeeded.
+
+##### 400
+
+Now we have defined our 'happy path', we also need to define responses for the error paths. Let's select the **+ Add default response** button in the 'Response' section to create a new response. Enter the following JSON sample into the 'Body' field and select the **Import** button.
+
+```json
+{
+  "status": 400,
+  "responseCode": 0,
+  "response": {
+    "error": "bad request: one of your params did not pass validation"
+  },
+  "timestamp": "Fri Jun 07 09:23:09 EDT 2019"
+}
+```
+
+This will add a new default response, so now we have to configure the right properties for our 400 response. Click on the 'default' button with the grey background. Change the name from `default` to `400`.
+
+###### {{TODO: replace the right content below.}}
+
+###### Error
+
+Select the **˅** next to the 'error' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'error' schema property:
+
+- **Title**: `Error`
+- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Response Code
+
+Select the **˅** next to the 'usage' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'usage' schema property:
+
+- **Title**: `Usage`
+- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Status
+
+Select the **˅** next to the 'usage' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'usage' schema property:
+
+- **Title**: `Status`
+- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+###### Timestamp
+
+Select the **˅** next to the 'timestamp' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+
+Fill in the following fields for the 'timestamp' schema property:
+
+- **Title**: `Timestamp`
+- **Description**: `This property shows the timestamp of the error.`
+- **Visibility**: `advanced`
+
+The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
