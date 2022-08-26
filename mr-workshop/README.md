@@ -23,7 +23,9 @@ In the first lab, you will experience how to build your first Custom Connector. 
 
 ### **02 - LAB 1 - Create your first Custom Connector**
 
-It's time to get to work! Go build your first Custom Connector. In this lab, you will build a Custom Connector for the [Smithsonian Institution Open Access API](https://edan.si.edu/openaccess/apidocs/). This free API gives you the possibility to search for content from the Smithsonian Institution. This can be various types of media, like for instance 3D Images.
+It's time to get to work! Go build your first Custom Connector. In this lab, you will build a Custom Connector for the [Smithsonian 3D API](https://3d.si.edu/). This free API gives you the possibility to search for content from the Smithsonian Institution. This can be various types of media, like for instance 3D Images.
+
+🚀 [Lab 01 - Create your first custom connector](Lab-01/Index.md)
 
 ### **03 - Introduction to Power Apps & Canvas Apps**
 
