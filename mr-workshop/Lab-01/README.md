@@ -41,19 +41,21 @@ This will open the custom connector creation wizard. In this wizard, we will cre
 
 ![Screenshot of the Smithsonian 3D API Documentation.](assets/smithsonian-3d-api-docs.png)
 
+### 1. General
+
 Back in the Power Automate custom connector wizard, let's name the connector `Smithsonian 3D`.
 
 In this screen, we can also add a connector icon, color, and a description. We will skip that for now, but we do fill in the host field. As you can see, the file search action in the API is a GET request to `https://3d-api.si.edu/api/v1.0/content/file/search`. This means that we can add **3d-api.si.edu** in the host field.
 
 Navigate to the security part of the wizard by clicking on the tab `2. Security` or by clicking on the **Security →** button on the bottom right.
 
-### Security
+### 2. Security
 
 In our case, the security tab is not that interesting, but in various other cases, this will be the place where you define your authentication. For instance, when connecting to the Microsoft Graph API, you will have to use the `OAuth2.0` authentication type.
 
 For now, we will leave this on the `No authentication` authentication type. Let's move on to the `3. Definition` tab.
 
-### Definition
+### 3. Definition
 
 The definition tab is where you can add:
 
@@ -379,8 +381,6 @@ Now we have defined our 'happy path', we also need to define responses for the e
 
 This will add a new default response, so now we have to configure the right properties for our 400 response. Click on the 'default' button with the grey background. Change the name from `default` to `400`.
 
-###### {{TODO: replace the right content below.}}
-
 ###### Error
 
 Select the **˅** next to the 'error' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
@@ -388,31 +388,31 @@ Select the **˅** next to the 'error' in the body section which is visible in th
 Fill in the following fields for the 'error' schema property:
 
 - **Title**: `Error`
-- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
-- **Visibility**: `advanced`
+- **Description**: `This property shows the description of the error: for instance: 'not found: the resource you were acting on could not be found'.`
+- **Visibility**: `important`
 
 The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
 
 ###### Response Code
 
-Select the **˅** next to the 'usage' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+Select the **˅** next to the 'responseCode' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
 
-Fill in the following fields for the 'usage' schema property:
+Fill in the following fields for the 'responseCode' schema property:
 
-- **Title**: `Usage`
-- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Title**: `Response Code`
+- **Description**: `This property shows the response code of the error, for instance: '0'.`
 - **Visibility**: `advanced`
 
 The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
 
 ###### Status
 
-Select the **˅** next to the 'usage' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
+Select the **˅** next to the 'status' in the body section which is visible in the screenshot above and select the **✏️ Edit** button.
 
-Fill in the following fields for the 'usage' schema property:
+Fill in the following fields for the 'status' schema property:
 
 - **Title**: `Status`
-- **Description**: `This property shows where you can use the returned item for, for instance: Web3D.`
+- **Description**: `This property shows the status code of the error, for instance: '400' or '404'.`
 - **Visibility**: `advanced`
 
 The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
@@ -424,7 +424,31 @@ Select the **˅** next to the 'timestamp' in the body section which is visible i
 Fill in the following fields for the 'timestamp' schema property:
 
 - **Title**: `Timestamp`
-- **Description**: `This property shows the timestamp of the error.`
+- **Description**: `This property shows the timestamp of the error, for instance: 'Fri Jun 07 09:23:09 EDT 2019'.`
 - **Visibility**: `advanced`
 
 The other fields can be left on the default value. When done, scroll up and select the **← Back** button.
+
+Timestamp was the latest property we had to modify. In the response overview screen, select the **← Back** button again and select the **✓ Update connector** button to update the connector with the latest changes. When the updating is done, select the tab `4. Code (Preview)`.
+
+### 4. Code (Preview)
+
+In this lab, we will not use this feature, but if you want to know more about the code feature: check out the [docs page](https://docs.microsoft.com/en-us/connectors/custom-connectors/write-code). Select the tab `5. Test`.
+
+### 5. Test
+
+Testing a connector is very important. In this view you are able to perform technical tests. Every connector needs a connection, so that's what we will create first. Select the **+ New Connection** button in the Connections section. This will create a connection for you.
+
+After creating the connection, you can try out the action you just created.
+
+#### Example
+
+In the below example we will use 'Mammuthus' as our query.
+
+##### Request
+
+![Example of the file search test, with 'Mammuthus' at the top as a query and a blue 'Test operation' button at the bottom](assets/custom-connector-test-file-search-request.png)
+
+##### Response
+
+![Response of the file search test, with a status, headers and body fields in the response. In the body, it contains a rows object with an array of items with the first item having the title 'Mammuthus primigenius (Blumbach)'](assets/custom-connector-test-file-search-response.png)
