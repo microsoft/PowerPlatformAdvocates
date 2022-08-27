@@ -1,0 +1,9 @@
+{
+  "connectorId": "shared_lask-5fsmithsonian-203d-5f7c7852b32ab09aa2",
+  "environment": "c27879ed-5420-4091-9499-1ac9fefc355e",
+  "apiProperties": "apiProperties.json",
+  "apiDefinition": "apiDefinition.swagger.json",
+  "icon": "icon.png",
+  "powerAppsUrl": "https://api.powerapps.com",
+  "powerAppsApiVersion": "2016-11-01"
+}
