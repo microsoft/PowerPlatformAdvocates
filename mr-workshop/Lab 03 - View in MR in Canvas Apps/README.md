@@ -22,11 +22,11 @@ Let's create a new **Coral Collection** folder in OneDrive and upload these asse
 1. Sign-in using your **administrator credentials** for the M365 Developer Program.
 1. In OneDrive, click **+New** to create a new folder. Name the folder **Coral Collection**.
 
-    :::image type="content" source="assets/coral-collection-folder.jpg" alt-text="A screenshot of the OneDrive explorer. Listed under My Files is a Coral Collection folder.":::
+    ![A screenshot of the OneDrive explorer. Listed under My Files is a Coral Collection folder.](assets/coral-collection-folder.jpg)
 
 1. Inside the **Coral** folder, drag or upload the **Models**, **Photos**, and **CoralCollection.xlsx** assets .
 
-    :::image type="content" source="assets/coral-collection-contents.jpg" alt-text="The contents of the Coral Collection folder includes a Models and Photos folder. There is also a Coral Collection spreadsheet.":::
+    ![The contents of the Coral Collection folder includes a Models and Photos folder. There is also a Coral Collection spreadsheet.](assets/coral-collection-contents.jpg)
 
 ## Connect Data
 
@@ -35,15 +35,15 @@ Now that we have our Coral Collection objects stored in OneDrive, we can use **O
 1. In Power Apps, in the left panel, click the **Data** icon and click **Add Data**.
 1. In the **Select a data source** window, search for **OneDrive for Business** and select the result.
 
-    :::image type="content" source="assets/onedrive-for-business.jpg" alt-text="A screenshot of the search results for a data source. The one drive for business result is highlighted in red.":::
+    ![A screenshot of the search results for a data source. The one drive for business result is highlighted in red.](assets/onedrive-for-business.jpg)
 
 1. After you select **OneDrive for Business**, the result will display your email address. Select **OneDrive for Business** once more.
 1. In the **Choose an Excel file** tab that appears, select the **Coral Collection** folder.
-    :::image type="content" source="assets/choose-excel-coral-collection.jpg" alt-text="A screenshot of the choose an excel file screen. The coral collection option is highlighted in red.":::
+    ![A screenshot of the choose an excel file screen. The coral collection option is highlighted in red.](assets/choose-excel-coral-collection.jpg)
 1. Inside the **Coral Collection** folder, select the **CoralCollection.xlsx** file.
-    :::image type="content" source="assets/choose-excel-coral-collection-spreadsheet.jpg" alt-text="A screenshot of the choose an excel file screen. The coral collection spreadsheet is highlighted in red.":::
+    ![A screenshot of the choose an excel file screen. The coral collection spreadsheet is highlighted in red.](assets/choose-excel-coral-collection-spreadsheet.jpg)
 1. Select both the **Coral** and **Occupants** table.
-    :::image type="content" source="assets/choose-a-table.jpg" alt-text="A screenshot of the choose a table screen. The coral and occupants tables are highlighted in red.":::
+    ![A screenshot of the choose a table screen. The coral and occupants tables are highlighted in red.](assets/choose-a-table.jpg)
 1. At the bottom of the panel, click **Connect**.
 
 After the data is connected, Power Apps will add a new **PowerAppsID** column to the spreadsheet. This column contains the Power Apps generated unique ID for the object.
@@ -56,7 +56,7 @@ With a connection made to the Coral Collection objects, we're now ready to creat
 
 Let's first start with designing some of the basic UI for the Galleries Screen.
 
-:::image type="content" source="assets/galleries-basic-ui.jpg" alt-text="A screenshot of the top of the galleries screen. The screen consists of a heading that says Corals and Coral Reefs. In addition, there is a subheading that says discover the collection.":::
+![A screenshot of the top of the galleries screen. The screen consists of a heading that says Corals and Coral Reefs. In addition, there is a subheading that says discover the collection.](assets/galleries-basic-ui.jpg)
 
 1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **CollectionTitle**. In the right panel, change the following properties:
     - **Text**: Corals and Coral Reefs
@@ -77,7 +77,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
 
 We'll now create the section for the **Coral** gallery. Once you've created the **Coral** section, you can duplicate the components to create the **Reef Occupants** section.
 
-:::image type="content" source="assets/coral-section.jpg" alt-text="A screenshot of the coral section which consists of a heading, description, and a horizontal gallery.":::
+![A screenshot of the coral section which consists of a heading, description, and a horizontal gallery.](assets/coral-section.jpg)
 
 1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **Div1**. In the right panel, change the following properties:
     - **Position**: 18 x 190
@@ -146,7 +146,7 @@ Once an object is selected from the Gallery screen, the app should navigate to *
 
 We'll setup the screen for the **Coral** objects and later duplicate and reconfigure for the **Reef Occupants**. Let's first create the basic UI for the screen.
 
-:::image type="content" source="assets/coral-information.jpg" alt-text="A screenshot of the coral information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom.":::
+ ![A screenshot of the coral information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom](assets/coral-information.jpg)
 
 1. In the top navigation menu, click **New Screen > Blank**.
 1. In the left panel, rename the new screen **Coral Information**.
@@ -184,7 +184,7 @@ Test the app to confirm that when an object is selected from the **Galleries** s
 
 ## Add the View in 3DControl
 
-:::image type="content" source="assets/view-in-3d.gif" alt-text="A gif of the 3d coral model being moved around on the screen.":::
+![A gif of the 3d coral model being moved around on the screen.](assets/view-in-3d.gif)
 
 We'll now add the **View in 3D** control which will enable you to view 3D content in the app. You can rotate and zoom into the model with simple gestures.
 
@@ -202,7 +202,7 @@ Test the app to view the 3D model of the object.
 
 ## Add the View in MR Control
 
-:::image type="content" source="assets/view-in-mr.jpg" alt-text="A gif of the view in M R control being used. When the view in M R button is pressed, a coral model is overlaid on top of the camera and is visible in the physical environment.":::
+![A gif of the view in M R control being used. When the view in M R button is pressed, a coral model is overlaid on top of the camera and is visible in the physical environment.](assets/view-in-mr.jpg)
 
 We'll now add the **View in MR** control which will enable you to view the object in your physical environment. The View in MR control creates a button in your app which overlays the respective 3D model onto the live camera feed of your device.
 
@@ -219,7 +219,7 @@ Let's add the control and configure for viewing the object in MR.
 
 Test the app to view the 3D model in Mixed Reality.
 
-:::image type="content" source="assets/view-in-mr-example.jpg" alt-text="A screenshot of the view in M R control used to display a coral in a physical environment.":::
+![A screenshot of the view in M R control used to display a coral in a physical environment.](assets/view-in-mr-example.jpg)
 
 ## Apply What You've Learned
 
@@ -227,7 +227,7 @@ Congratulations - you've setup the configurations for the **Coral** gallery and 
 
 ### Galleries Screen
 
-:::image type="content" source="assets/reef-occupants.jpg" alt-text="A screenshot of the reef occupants section. This section display the models of the objects within the occupants table.":::
+![A screenshot of the reef occupants section. This section display the models of the objects within the occupants table.](assets/reef-occupants.jpg )
 
 You can duplicate the existing components created for the **Coral** gallery. Be sure to change the **Text** properties where appropriate. For example, the **description** for the **Reef Occupants** section should read: *Learn more about the animals who inhabit coral and coral reefs.*
 
@@ -237,7 +237,7 @@ Since the gallery is currently using the **Coral** data source, you'll need to s
 
 ### Reef Occupant Information Screen
 
-:::image type="content" source="assets/reef-occupants-information.jpg" alt-text="A screenshot of the reef occupants information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom.":::
+![A screenshot of the reef occupants information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom.](assets/reef-occupants-information.jpg)
 
 Likewise, you can duplicate the **Coral Information** screen to create the **Reef Occupant Information** screen. We recommend modifying the component names to reflect the **Reef Occupant** to help keep things organized.
 
