@@ -1,3 +1,3 @@
-# Completed Solution - Lab 01 - Custom Connector
+# Completed Solution - Lab 03 - Custom Connector
 
 [Download the solution here](./assets)
