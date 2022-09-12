@@ -31,7 +31,7 @@ It's time to get to work! In this lab, you will learn about components. The Crea
 
 ### 👩🏾‍💻 Lab 2 - View in MR in Canvas Apps
 
-This is lab 2.
+In this lab, you'll create two galleries that'll provide a list of all objects available for view in mixed reality. Once the galleries are configured, you'll create a information screen that'll provide details about the object in addition to functionality to view the model in your physical environment.
 
 🚀 [Lab 2 - View in MR in Canvas Apps](Lab%2002%20-%20View%20in%20MR%20in%20Canvas%20Apps/README.md)
 
