@@ -47,7 +47,7 @@ The Power Apps Studio will open up. When you're here for the first time, a welco
 
 ### Import the Creator Kit components
 
-On the left you will see the left navigation. The first thing we want to do is add the components from the Creator Kit. Select the **+** in the left navigation. This will open the `Insert` menu. The insert menu will contain all the components you can add to your app. We have imported the Creator Kit in our environment, so those components will need to be added to the app. At the bottom of the insert menu will see the `Get more components` button. Make sure to select that. This will open a sidebar on the right to import components.
+On the left you will see the left navigation. The first thing we want to do is add the components from the Creator Kit. Select the **+** in the left navigation. This will open the `Insert` menu. The insert menu will contain all the components you can add to your app. We have imported the Creator Kit in our environment, so those components will need to be added to the app. At the bottom of the insert menu will see the `Get more components` button. Make sure to select the **Get more components** button. This will open a sidebar on the right to import components.
 
 ![Power Apps Studio with the 'Import components' sidebar open on the right.](./assets/Canvas-App-Import-Components.png)
 
@@ -57,32 +57,12 @@ The import components sidebar has two tabs at the top: `Canvas` and `Code`. The 
 >
 > Remember, you can take a look at which components are part of the Creator Kit via the [Overview of the Creator Kit components page](https://docs.microsoft.com/en-us/power-platform/guidance/creator-kit/components).
 
-Select the `Select all` button and select the `Import` button. This will add all the canvas components to your insert menu. You can find them in the `Library components` group.
+Select the `Select all` button and select the `Import` button. This will add all the `canvas components` to your **insert** menu. When imported, you can find them in the `Library components` group.
 
-### Build the app
+If all components are imported correctly, you will see the following message at the the top of your screen.
 
-Expand the `Library components` group and click on the `Header` component. This will add the `Header` component to your screen.
+![Successful message: Selected components were successfully imported.](assets/Canvas-App-Import-Components-Succesfully.png)
 
-![Power Apps Studio with the header component selected and the properties pane open.](assets/Canvas-App-Property-Menu.png)
+Now select the **Get more components** button again, and select the `Code` tab to add the components one by one to the app. This will add the `code components` to your **insert** menu. When imported, you can find them in the `Code components` group.
 
-Change the following properties in the `Properties` pane on the right.
-
-- **Text**: `Mixed Reality`
-- **Left button visible**: `Off`
-- **Right button visible**: `Off`
-
-Click on the `SearchBox` component in the `Library components` group in the insert menu to add the search box to the screen. Select the `Advanced` tab in the pane on the right. In the `Advanced` part of the property pane, you can find more properties. At the top of that pane, you can search for a property, which saves you a lot of time.
-
-Search for `Y` and change that property from `0` to `Header_1.Height`. Next, search for `Width` and change it from `300` to `App.Width`.
-
-#### Connect to the custom connector
-
-To add the custom connector to the app, you have to select the database icon below the insert icon in the left navigation. This will open the `Data` menu.
-
-In the data menu, click on the `Add data` button. This will open the `Select a data source` popup, where you will be able to search for a connector. Enter `Smithsonian` in the search box and click on the `Smithsonian 3D` connector.
-
-![](./assets/Canvas-App-Add-Custom-Connector.png)
-
-You will see a panel open on the right side of the screen where you have to select the `Connect` button. There will be a warning because you are adding a premium connector, but in this case, you can click the `Got it` button.
-
-If all went well, the Smithsonian 3D connector should be visible in the data menu.
+After finishing importing all the components, make sure to select **File** and the **Save** button on the bottom right to **save** your app.

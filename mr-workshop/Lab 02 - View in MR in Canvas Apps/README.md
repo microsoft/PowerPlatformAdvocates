@@ -32,25 +32,28 @@ Let's create a new **Coral Collection** folder in OneDrive and upload these asse
 
 Now that we have our Coral Collection objects stored in OneDrive, we can use **OneDrive for Business** as a data connector to access the collection's assets within the **Coral Collection** folder. Let's connect to **OneDrive for Business** and select the the **Coral** and **Occupants** tables within the **CoralCollection.xlsx** spreadsheet. This connection will enable us to seamlessly reference the object images, photos, and information within the spreadsheet.
 
-1. In Power Apps, in the left panel, click the **Data** icon and click **Add Data**.
-1. In the **Select a data source** window, search for **OneDrive for Business** and select the result.
+1. Go to [make.powerapps.com](https://make.powerapps.com) and select **Solutions** in the left navigation.
+2. Select our **Mixed Reality Workshop** solution.
+3. Click on the display name of the `Mixed Reality App` to open up the Power App in edit mode.
+4. In Power Apps, in the left panel, click the **Data** icon and click **Add Data**.
+5. In the **Select a data source** window, search for **OneDrive for Business** and select the result.
 
    ![A screenshot of the search results for a data source. The one drive for business result is highlighted in red.](assets/onedrive-for-business.jpg)
 
-1. After you select **OneDrive for Business**, the result will display your email address. Select **OneDrive for Business** once more.
-1. In the **Choose an Excel file** tab that appears, select the **Coral Collection** folder.
+6. After you select **OneDrive for Business**, the result will display your email address. Select **OneDrive for Business** once more.
+7. In the **Choose an Excel file** tab that appears, select the **Coral Collection** folder.
 
    ![A screenshot of the choose an excel file screen. The coral collection option is highlighted in red.](assets/choose-excel-coral-collection.jpg)
 
-1. Inside the **Coral Collection** folder, select the **CoralCollection.xlsx** file.
+8. Inside the **Coral Collection** folder, select the **CoralCollection.xlsx** file.
 
    ![A screenshot of the choose an excel file screen. The coral collection spreadsheet is highlighted in red.](assets/choose-excel-coral-collection-spreadsheet.jpg)
 
-1. Select both the **Coral** and **Occupants** table.
+9. Select both the **Coral** and **Occupants** table.
 
    ![A screenshot of the choose a table screen. The coral and occupants tables are highlighted in red.](assets/choose-a-table.jpg)
 
-1. At the bottom of the panel, click **Connect**.
+10. At the bottom of the panel, click **Connect**.
 
 After the data is connected, Power Apps will add a new **PowerAppsID** column to the spreadsheet. This column contains the Power Apps generated unique ID for the object.
 
@@ -72,7 +75,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
    - **Font Weight**: Bold
    - **Position**: 21 x 18
    - **Size**: 600 x 123
-   - **Color**: Black (or #000000)
+   - **Color**: Black or ColorValue("#000000")
 
 1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **Subheading**. In the right panel, change the following properties:
    - **Text**: Discover the collection
@@ -81,7 +84,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
    - **Font Weight**: Semibold
    - **Position**: 21 x 141
    - **Size**: 560 x 41
-   - **Color**: Black (or #000000)
+   - **Color**: Black or ColorValue("#000000")
 
 We'll now create the section for the **Coral** gallery. Once you've created the **Coral** section, you can duplicate the components to create the **Reef Occupants** section.
 
@@ -91,19 +94,19 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
 
    - **Position**: 18 x 190
    - **Size**: 601 x 4
-   - **Color**: #FA7E01
+   - **Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
 1. To add a bit of style to the section headings, we'll leverage the **Button** component which enables us to modify the **Border radius**. However, we'll leave the button inactive so that the component cannot be pressed. In the **Insert** tab, **Input > Button**. Rename the component **CoralHeading**. In the right panel, change the following properties:
 
    - **Text**: Coral
-   - **Position** 20 x 200
+   - **Position**: 20 x 200
    - **Size**: 601 x 70
    - **Padding Left**: 10
-   - **Color-Fill**: #066563
+   - **Color-Fill**: ColorValue("#066563")
    - **Border Thickness**: 0
    - **Border Radius**: 20
-   - **Font** Lato
+   - **Font**: Lato
    - **Font Size**: 24
    - **Font Weight**: Semibold
 
@@ -173,7 +176,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 
    - **Position**: 20 x 36
    - **Size**: 47 x 47
-   - **Font Color**: #FA7E01
+   - **Font Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
 1. In the formula bar, for the **BackArrow**, change the **OnSelect** to `Navigate(Galleries,Fade)`.
@@ -187,7 +190,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Text Alignment**: Align Center
    - **Position**: 105 x 24
    - **Size**: 443 x 70
-   - **Font Color**: #066563
+   - **Font Color**: ColorValue("#066563")
 
 1. In the **Insert** tab, click **Text label** to add a label for the species. Rename the component **CoralSpecies**. In the right panel, change the following properties:
 
@@ -201,7 +204,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 1. In the **Insert** tab, click **Text label** to add a label for the description. Rename the **Text label** component **CoralDesc**. In the right panel, change the following properties:
    - **Text**: `CoralGallery.Selected.Description`
    - **Font**: Lato
-   - **Font Size** 21
+   - **Font Size**: 21
    - **Font Weight**: Normal
    - **Position**: 25 x 732
    - **Size**: 604 x 294
@@ -241,11 +244,13 @@ Let's add the control and configure for viewing the object in MR.
 
 1. In the formula bar, for **Source** enter `CoralGallery.Selected.'3DModel'`.
 
+1. In the left panel, rename the **View in MR** component **CoralMR**.
+
 1. In the right panel, change the following properties:
    - **Position**: 179 x 1037
    - **Size**: 280 x 70
    - **Border radius**: 50
-   - **Color-Fill**: #FA7E01
+   - **Color-Fill**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
 Test the app to view the 3D model in Mixed Reality.
@@ -275,3 +280,61 @@ Likewise, you can duplicate the **Coral Information** screen to create the **Ree
 Be sure to change the **Text** properties where appropriate. For example, the **title** for the screen should display: _Reef Occupants_.
 
 The remaining components in the screen are all currently pulling data from the **CoralGallery**. Therefore, be sure to modify the formulas where appropriate so that the data is populated from the **ReefOccupantsGallery**.
+
+### Create the home screen
+
+In the next labs, you will create another experience in this app, so it makes sense to have a new home screen.
+
+1. In the top navigation menu, click **New Screen > Blank**.
+1. In the left panel, rename the new screen **Overview Screen**.
+1. Scroll up and select **App** in the tree view.
+1. Enter **'Overview Screen'** as the value for **StartScreen**. This will make sure your app opens the **Overview Screen** when you open the app.
+1. If you want, you can select the **...** next to the **Overview Screen** and move the screen to the top of the list.
+
+Save the app, to make sure you won't lose any work.
+
+1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **OverviewTitle**. In the right panel, change the following properties:
+
+   - **Text**: Mixed Reality Workshop
+   - **Font**: Lato Black
+   - **Font Size**: 44
+   - **Font Weight**: Bold
+   - **Position**: 21 x 18
+   - **Size**: 600 x 160
+   - **Color**: Black or ColorValue("#000000")
+
+1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **DivOverview**. In the right panel, change the following properties:
+
+   - **Position**: 18 x 190
+   - **Size**: 601 x 4
+   - **Color**: ColorValue("#FA7E01")
+   - **Border Thickness**: 0
+
+1. In the **Insert** tab, **Input > Button**. Rename the component **btnOverviewCoral**. In the right panel, change the following properties:
+
+   - **Text**: Corals and Coral Reefs
+   - **Position**: 20 x 200
+   - **Size**: 601 x 70
+   - **Padding Left**: 10
+   - **Color-Fill**: ColorValue("#066563")
+   - **Border Thickness**: 0
+   - **Border Radius**: 20
+   - **Font**: Lato
+   - **Font Size**: 24
+   - **Font Weight**: Semibold
+   - **OnSelect** (under the Advanced tab): Navigate('Galleries Screen', Fade)
+   - **HoverFill**: ColorValue("#FA7E01")
+
+### Modify the Galleries Screen
+
+Select the **Galleries Screen** in the tree view. To make the **Overview Screen** accessible from the **Galleries Screen**, let's add a home icon.
+
+Select the **Insert** icon in the left navigation and search for **'home'**. This will show you the home icon. Click on home icon and it will get added to your screen. Rename the icon to **icoGalleriesHome**.
+
+In the right panel, change the following properties:
+
+- **Position**: 555 x 47
+- **Color**: Black or ColorValue("#000000")
+- **OnSelect** (under the Advanced tab): Navigate('Overview Screen', Fade)
+
+This concludes lab 03.
