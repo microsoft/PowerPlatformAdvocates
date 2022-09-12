@@ -1,4 +1,7 @@
-# Lab 01 - Create your first Custom Connector
+# Lab 03 - Create your first Custom Connector
+
+1. Go to [make.powerapps.com](https://make.powerapps.com) and select **Solutions** in the left navigation.
+2. Select our **Mixed Reality Workshop** solution.
 
 ## Create the custom connector
 
