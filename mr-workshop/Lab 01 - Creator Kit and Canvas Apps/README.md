@@ -1,4 +1,4 @@
-# Lab 02 - Use the Creator Kit for Canvas Apps development
+# Lab 01 - Use the Creator Kit for Canvas Apps development
 
 In this lab, we are going to use the Creator Kit to speed up the development of Canvas Apps. The Creator Kit is a set of components based on Fluent UI which you can use in Canvas Apps. Check out the links in the following note to learn more about the Creator Kit.
 
@@ -35,7 +35,38 @@ At the top of the solution screen, select the **← Import Solution** button, cl
 
 ## Creating the Canvas App
 
-We are going back to the `Mixed Reality Workshop` solution which we used for Lab 01, so select **Solutions** and select the display name `Mixed Reality Workshop` to open the solution.
+When you're ready to create a Power Apps Canvas App, like you're going to do today, you always want to start by going to the maker portal. In this case, we're going to the Power Apps maker portal.
+
+👩🏾‍💻 [Power Apps Maker Portal](https://make.powerapps.com)
+
+> **Note:**
+>
+> It's very important to create a solution and not start from Create or Apps. Solutions give you a lot more possibilities. For instance, you can more easily perform application lifecycle management (ALM) on it.
+
+![View of the left hand navigation of the Power Apps Maker Portal with an arrow pointed at the Solutions menu item.](assets/solution-left-hand-menu.png)
+
+## Create a solution
+
+Navigate to solutions in the left hand menu. In the solution view, click the '**+ New Solution**' button at the top. A side bar will open where you can add your solutions' display name, name (internal name), a publisher and a version. When creating a new publisher, only fill in the required fields.
+
+> **Note:**
+>
+> Be aware that the new publisher will have a prefix value. That prefix value will be added to the internal name of every component you create in this solution. When you use 'msft' as a prefix, you will get 'msft\_' as a prefix before every component that gets created in the solution.
+
+For this solution, we will use the following values:
+
+- **Display Name**: `Mixed Reality Workshop`
+- **Name**: `MixedRealityWorkshop`
+- **Publisher**: `create a new one to your own liking and select that one when you are done creating it`
+- **Version**: `1.0.0.0`
+
+There is also a 'more options' option available, but we will not use that in this workshop.
+
+When you have filled in all the values above, click on the **Create** button and your solution will be created. The solution you have created should appear in the solution list after you clicked on the create button.
+
+Click on the display name of your solution to open the solution. This should lead you to the following screen:
+
+![View of the empty Mixed Reality Workshop solution](assets/solution-empty.png)
 
 Select **+ New** > **App** > **Canvas App**. The 'Canvas App from blank' dialog will show up. Use `Mixed Reality App` as the app name, change the format to `Phone`, and click on the `Create` button.
 
