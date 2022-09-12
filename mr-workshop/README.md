@@ -54,3 +54,7 @@ It's time to get to work! Go build your first Custom Connector. In this lab, you
 In this lab, we will use the Custom Connector from Lab 1, and use that in our very own Canvas App. We will use the Mixed Reality (MR) controls to show the content from the [Smithsonian Institution Open Access API](https://edan.si.edu/openaccess/apidocs/) in a nice way. At the end of this lab, you will have created a Canvas App that uses a Custom Connector and 3D Images.
 
 🚀 [Lab 4 - View in 3D in Canvas Apps](Lab%2004%20-%20View%20in%203D%20in%20Canvas%20Apps/README.md)
+
+### Credit
+
+We'd like to extend a generous thanks to [Smithsonian 3D Digitization](https://3d.si.edu/) for providing the models and species descriptions used for this workshop. In addition, some species descriptions were made possible by [Corals of the World](http://www.coralsoftheworld.org).
