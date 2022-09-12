@@ -8,6 +8,8 @@ Welcome to the Mixed Reality workshop. In this workshop, you will learn all abou
 
 This lab is all about setting up your environment. This is what you need to get started. Make sure to do this before starting the workshop.
 
+🚀 [Lab 0 - Setup your environment](Lab%2000%20-%20Setup%20your%20environment/README.md)
+
 ### 📺 Introduction to the Power Platform
 
 During this section, an introduction to the Power Platform will be given. You get answers to questions like:
