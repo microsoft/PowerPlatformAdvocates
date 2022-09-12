@@ -39,11 +39,17 @@ Now that we have our Coral Collection objects stored in OneDrive, we can use **O
 
 1. After you select **OneDrive for Business**, the result will display your email address. Select **OneDrive for Business** once more.
 1. In the **Choose an Excel file** tab that appears, select the **Coral Collection** folder.
+
     ![A screenshot of the choose an excel file screen. The coral collection option is highlighted in red.](assets/choose-excel-coral-collection.jpg)
+
 1. Inside the **Coral Collection** folder, select the **CoralCollection.xlsx** file.
+
     ![A screenshot of the choose an excel file screen. The coral collection spreadsheet is highlighted in red.](assets/choose-excel-coral-collection-spreadsheet.jpg)
+
 1. Select both the **Coral** and **Occupants** table.
+
     ![A screenshot of the choose a table screen. The coral and occupants tables are highlighted in red.](assets/choose-a-table.jpg)
+
 1. At the bottom of the panel, click **Connect**.
 
 After the data is connected, Power Apps will add a new **PowerAppsID** column to the spreadsheet. This column contains the Power Apps generated unique ID for the object.
@@ -66,6 +72,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
     - **Position**: 21 x 18
     - **Size**: 600 x 123
     - **Color**: Black (or #000000)
+
 1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **Subheading**. In the right panel, change the following properties:
     - **Text**: Discover the collection
     - **Font**: Open Sans
@@ -84,6 +91,7 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
     - **Size**: 601 x 4
     - **Color**: #FA7E01
     - **Border Thickness**: 0
+
 1. To add a bit of style to the section headings, we'll leverage the **Button** component which enables us to modify the **Border radius**. However, we'll leave the button inactive so that the component cannot be pressed. In the **Insert** tab, **Input > Button**. Rename the component **CoralHeading**. In the right panel, change the following properties:
     - **Text**: Coral
     - **Position** 20 x 200
@@ -95,6 +103,7 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
     - **Font** Lato
     - **Font Size**: 24
     - **Font Weight**: Semibold
+
 1. In the **Insert** tab, click **Text label** to add a description for the section. Rename the component **SubCoral**. In the right panel, change the following properties:
     - **Text**: Explore a variety of coral species collected from around the world.
     - **Font**: Open Sans
@@ -120,8 +129,11 @@ We'll now add in the gallery for the **Coral** section. Once complete, we'll hav
 1. Select the **CoralGallery**. In the right panel, change the following properties:
     - **Position**: 19 x 295
     - **Size**: 601 x 357
+
 1. On the **CoralGallery** component, click **Add an item from the Insert pane**.
+
 1. In the **Insert** pane, select **Media > Image**** to add an **Image** component to the gallery.
+
 1. We'll now modify the properties for the image component. Select the **Image** component and in the right panel change the following properties:
     - **Image**: `ThisItem.Picture`
     - **Position**: 0 x 48
@@ -131,6 +143,7 @@ We'll now add in the gallery for the **Coral** section. Once complete, we'll hav
 Let's now add navigation to the **Coral Information** screen. Essentially, when you select one of the images, the app will navigate to the **Coral Information** screen.
 
 1. In the first column of the **CoralGallery**, select the **Image** component.
+
 1. In the formula bar, for **OnSelect** enter `Navigate('Coral Information',ScreenTransition.Fade)`.
 
 Since we haven't created the **Coral Information** screen, you'll be given an error - we'll fix that in the next step!
@@ -149,13 +162,17 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
  ![A screenshot of the coral information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom](assets/coral-information.jpg)
 
 1. In the top navigation menu, click **New Screen > Blank**.
+
 1. In the left panel, rename the new screen **Coral Information**.
+
 1. In the left panel, search for the **Back arrow** icon. Rename the component **BackArrow**. In the right panel, change the following properties:
     - **Position**: 20 x 36
     - **Size**: 47 x 47
     - **Font Color**: #FA7E01
     - **Border Thickness**: 0
+
 1. In the formula bar, for the **BackArrow**, change the **OnSelect** to `Navigate(Galleries,Fade)`.
+
 1. In the **Insert** tab, click **Text label** to add a label that'll display the title. Rename the component **CoralTitle**. In the right panel, change the following properties:
     - **Text**: Coral
     - **Font**: Lato Black
@@ -165,6 +182,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
     - **Position**: 105 x 24
     - **Size**: 443 x 70
     - **Font Color**: #066563
+
 1. In the **Insert** tab, click **Text label** to add a label for the species. Rename the component **CoralSpecies**. In the right panel, change the following properties:
     - **Text**: `CoralGallery.Selected.Species`
     - **Font**: Lato
@@ -172,6 +190,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
     - **Font Weight**: Semibold
     - **Position**: 25 x 694
     - **Size**: 588 x 51
+
 1. In the **Insert** tab, click **Text label** to add a label for the description. Rename the **Text label** component **CoralDesc**. In the right panel, change the following properties:
     - **Text**: `CoralGallery.Selected.Description`
     - **Font**: Lato
@@ -191,8 +210,11 @@ We'll now add the **View in 3D** control which will enable you to view 3D conten
 Let's add the control and configure for viewing the object in 3D.
 
 1. In the left panel, click the **Insert** icon and select **Media** > **3D Object**.
+
 1. In the formula bar, for **Source** enter `CoralGallery.Selected.'3DModel'`.
+
 1. In the left panel, rename the **View in 3D** component **Coral3D**.
+
 1. In the right panel, change the following properties:
     - **Background fill**: Transparent
     - **Position**: 40 x 95
@@ -209,7 +231,9 @@ We'll now add the **View in MR** control which will enable you to view the objec
 Let's add the control and configure for viewing the object in MR.
 
 1. In the left panel, click the **Insert** icon and select **Mixed Reality** > **View in MR**.
+
 1. In the formula bar, for **Source** enter `CoralGallery.Selected.'3DModel'`.
+
 1. In the right panel, change the following properties:
     - **Position**: 179 x 1037
     - **Size**: 280 x 70
