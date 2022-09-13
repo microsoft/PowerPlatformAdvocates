@@ -1,4 +1,4 @@
-# Lab 03 - Use View in MR in Canvas Apps
+# Lab 02 - Use View in MR in Canvas Apps
 
 ## Upload Assets to OneDrive
 
