@@ -1,0 +1,265 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Smithsonian 3D API",
+    "version": "v1.0"
+  },
+  "host": "3d-api.si.edu",
+  "basePath": "/api/v1.0/content",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/file/search": {
+      "get": {
+        "tags": [
+          "search"
+        ],
+        "summary": "File search",
+        "description": "This action searches the Smithsonian 3D API and fetches content based on a query/filter.",
+        "operationId": "FileSearch",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "type": "string",
+            "required": false,
+            "x-ms-summary": "Query",
+            "description": "The query term you would like to issue. examples `[q=Mandible,q=Space Shuttle,q=Crab]`",
+            "x-ms-visibility": "important"
+          },
+          {
+            "in": "query",
+            "name": "file_type",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "jpg",
+              "glb",
+              "ply",
+              "zip"
+            ],
+            "x-ms-summary": "File Type",
+            "description": "The file type to filter results against.\r\n\r\nAllowed values: `jpg`, `glb`, `ply`, `zip`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "quality",
+            "type": "string",
+            "required": false,
+            "x-ms-summary": "Quality",
+            "enum": [
+              "Low",
+              "Medium",
+              "High",
+              "Thumb",
+              "Low_resolution",
+              "Medium_resolution",
+              "Full_resolution",
+              "Water_tight"
+            ],
+            "description": "The quality type to filter results against.\r\n\r\nAllowed values: `Low`, `Medium`, `High`, `Thumb`, `Low_resolution`, `Medium_resolution`, `Full_resolution`, `Water_tight`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "model_type",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "glb",
+              "ply",
+              "obj",
+              "gltf",
+              "f3z",
+              "blend",
+              "stl"
+            ],
+            "x-ms-summary": "Model Type",
+            "description": "The model type to filter results against.\r\n\r\nAllowed values: `glb`, `ply`, `obj`, `gltf`, `f3z`, `blend`, `stl`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "gltf_orientation_compliant",
+            "type": "boolean",
+            "required": false,
+            "x-ms-summary": "glTF Orientation Compliant",
+            "description": "Restrict results to gltf_orientation_compliant files.\r\n\r\nAllowed values: `true`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "draco_compressed",
+            "type": "boolean",
+            "required": false,
+            "x-ms-summary": "Draco Compressed",
+            "description": "Restrict results to draco_compressed files.\r\n\r\nAllowed values: `true`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "start",
+            "type": "integer",
+            "format": "int32",
+            "required": false,
+            "default": 0,
+            "x-ms-summary": "Start",
+            "description": "The start of the result set.\r\n\r\nDefault value: `0`",
+            "x-ms-visibility": "advanced"
+          },
+          {
+            "in": "query",
+            "name": "rows",
+            "type": "integer",
+            "format": "int32",
+            "required": false,
+            "default": 10,
+            "x-ms-summary": "Rows",
+            "description": "The number of rows in a result set.\r\n\r\nDefault value: `10`\r\n\r\nAllowed values: `0..100`",
+            "x-ms-visibility": "advanced"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The `OK` response",
+            "schema": {
+              "$ref": "#/definitions/okResponse"
+            }
+          },
+          "400": {
+            "description": "The `Bad Request` response",
+            "schema": {
+              "$ref": "#/definitions/errorResponse"
+            }
+          },
+          "404": {
+            "description": "The `Not Found` response",
+            "schema": {
+              "$ref": "#/definitions/errorResponse"
+            }
+          }
+        },
+        "x-ms-visibility": "important"
+      }
+    }
+  },
+  "definitions": {
+    "content": {
+      "type": "object",
+      "properties": {
+        "usage": {
+          "type": "string",
+          "title": "Usage",
+          "description": "This property shows where you can use the returned item for, for instance: Web3D.",
+          "x-ms-visibility": "advanced"
+        },
+        "quality": {
+          "type": "string",
+          "title": "Quality",
+          "description": "This property shows what the file type of the returned item is.",
+          "x-ms-visibility": "important"
+        },
+        "uri": {
+          "type": "string",
+          "title": "URI",
+          "description": "This property shows what the URI of the returned item is.",
+          "x-ms-visibility": "important"
+        },
+        "file_type": {
+          "type": "string",
+          "title": "File Type",
+          "description": "This property shows what the quality of the returned item is.",
+          "x-ms-visibility": "important"
+        },
+        "draco_compressed": {
+          "type": "string",
+          "title": "Draco Compressed",
+          "description": "This property shows if the returned item is Draco compressed or not.",
+          "x-ms-visibility": "advanced"
+        }
+      }
+    },
+    "errorResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Status",
+          "description": "This property shows the status code of the error, for instance: '400' or '404'.",
+          "x-ms-visibility": "advanced"
+        },
+        "responseCode": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Response Code",
+          "description": "This property shows the response code of the error, for instance: '0'.",
+          "x-ms-visibility": "advanced"
+        },
+        "response": {
+          "$ref": "#/definitions/response"
+        },
+        "timestamp": {
+          "type": "string",
+          "title": "Timestamp",
+          "description": "This property shows the timestamp of the error, for instance: 'Fri Jun 07 09:23:09 EDT 2019'.",
+          "x-ms-visibility": "advanced"
+        }
+      }
+    },
+    "okResponse": {
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/row"
+          }
+        },
+        "rowCount": {
+          "type": "integer",
+          "format": "int32",
+          "title": "Row Count",
+          "description": "The row count of the items that get returned.",
+          "x-ms-visibility": "internal"
+        },
+        "message": {
+          "type": "string",
+          "title": "Message",
+          "description": "The message that describes the response, for instance: content found.",
+          "x-ms-visibility": "advanced"
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "error": {
+          "type": "string",
+          "title": "Error",
+          "description": "This property shows the description of the error: for instance: 'not found: the resource you were acting on could not be found'.",
+          "x-ms-visibility": "important"
+        }
+      }
+    },
+    "row": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title",
+          "description": "The title of the returned item.",
+          "x-ms-visibility": "important"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        }
+      }
+    }
+  }
+}
