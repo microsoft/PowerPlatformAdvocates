@@ -94,6 +94,4 @@ If all components are imported correctly, you will see the following message at 
 
 ![Successful message: Selected components were successfully imported.](assets/Canvas-App-Import-Components-Succesfully.png)
 
-Now select the **Get more components** button again, and select the `Code` tab to add the components one by one to the app. This will add the `code components` to your **insert** menu. When imported, you can find them in the `Code components` group.
-
 After finishing importing all the components, make sure to select **File** and the **Save** button on the bottom right to **save** your app.
