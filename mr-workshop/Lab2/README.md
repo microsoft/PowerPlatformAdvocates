@@ -57,9 +57,11 @@ Now that we have our Coral Collection objects stored in OneDrive, we can use **O
 
 After the data is connected, Power Apps will add a new **PowerAppsID** column to the spreadsheet. This column contains the Power Apps generated unique ID for the object.
 
-## Create Galleries Screen
+## Rename Galleries Screen
 
 With a connection made to the Coral Collection objects, we're now ready to create the galleries! For the app, we'll have a gallery for **Coral** and another for **Reef Occupants**. Each gallery will provide a list of all objects available for view. You'll be able to select an object to learn more and also view the object in both 3D and Mixed Reality.
+
+Rename the **Screen1** screen to **Galleries Screen** by clicking on the **...** next to **Screen1** and then select **Rename**.
 
 ### Add the Galleries Screen UI
 
@@ -67,7 +69,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
 
 ![A screenshot of the top of the galleries screen. The screen consists of a heading that says Corals and Coral Reefs. In addition, there is a subheading that says discover the collection.](assets/galleries-basic-ui.jpg)
 
-1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **CollectionTitle**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **lblCollectionTitle**. In the right panel, change the following properties:
 
    - **Text**: Corals and Coral Reefs
    - **Font**: Lato Black
@@ -77,7 +79,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
    - **Size**: 600 x 123
    - **Color**: Black or ColorValue("#000000")
 
-1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **Subheading**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **lblSubheading**. In the right panel, change the following properties:
    - **Text**: Discover the collection
    - **Font**: Open Sans
    - **Font Size**: 16
@@ -90,14 +92,14 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
 
 ![A screenshot of the coral section which consists of a heading, description, and a horizontal gallery.](assets/coral-section.jpg)
 
-1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **Div1**. In the right panel, change the following properties:
+1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **divSection1**. In the right panel, change the following properties:
 
    - **Position**: 18 x 190
    - **Size**: 601 x 4
    - **Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
-1. To add a bit of style to the section headings, we'll leverage the **Button** component which enables us to modify the **Border radius**. However, we'll leave the button inactive so that the component cannot be pressed. In the **Insert** tab, **Input > Button**. Rename the component **CoralHeading**. In the right panel, change the following properties:
+1. To add a bit of style to the section headings, we'll leverage the **Button** component which enables us to modify the **Border radius**. However, we'll leave the button inactive so that the component cannot be pressed. In the **Insert** tab, **Input > Button**. Rename the component **btnCoralHeading**. In the right panel, change the following properties:
 
    - **Text**: Coral
    - **Position**: 20 x 200
@@ -110,7 +112,7 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
    - **Font Size**: 24
    - **Font Weight**: Semibold
 
-1. In the **Insert** tab, click **Text label** to add a description for the section. Rename the component **SubCoral**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a description for the section. Rename the component **lblSubCoral**. In the right panel, change the following properties:
    - **Text**: Explore a variety of coral species collected from around the world.
    - **Font**: Open Sans
    - **Font Size**: 18
@@ -124,7 +126,7 @@ We'll now add in the gallery for the **Coral** section. Once complete, we'll hav
 
 1. In the left panel, click the **Insert** icon and search for **Blank horizontal gallery**.
 1. On the **Select a data source** window that appears, select the **Coral** data source.
-1. Rename the **Gallery** component **CoralGallery**.
+1. Rename the **Gallery** component **galCoralGallery**.
 
 > **Note:**
 >
@@ -132,12 +134,12 @@ We'll now add in the gallery for the **Coral** section. Once complete, we'll hav
 
 What's great about the gallery component is that the configurations set for one column applies to all columns! We'll configure the first column so that all columns are properly set for each object in the gallery.
 
-1. Select the **CoralGallery**. In the right panel, change the following properties:
+1. Select the **galCoralGallery** component. In the right panel, change the following properties:
 
    - **Position**: 19 x 295
    - **Size**: 601 x 357
 
-1. On the **CoralGallery** component, click **Add an item from the Insert pane**.
+1. On the **galCoralGallery** component, click **Add an item from the Insert pane**.
 
 1. In the **Insert** pane, select **Media > Image\*\*** to add an **Image** component to the gallery.
 
@@ -149,7 +151,7 @@ What's great about the gallery component is that the configurations set for one 
 
 Let's now add navigation to the **Coral Information** screen. Essentially, when you select one of the images, the app will navigate to the **Coral Information** screen.
 
-1. In the first column of the **CoralGallery**, select the **Image** component.
+1. In the first column of the **galCoralGallery**, select the **Image** component.
 
 1. In the formula bar, for **OnSelect** enter `Navigate('Coral Information',ScreenTransition.Fade)`.
 
@@ -172,16 +174,16 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 
 1. In the left panel, rename the new screen **Coral Information**.
 
-1. In the left panel, search for the **Back arrow** icon. Rename the component **BackArrow**. In the right panel, change the following properties:
+1. In the left panel, search for the **Back arrow** icon. Rename the component **icoBackArrow**. In the right panel, change the following properties:
 
    - **Position**: 20 x 36
    - **Size**: 47 x 47
    - **Font Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
-1. In the formula bar, for the **BackArrow**, change the **OnSelect** to `Navigate(Galleries,Fade)`.
+1. In the formula bar, for the **icoBackArrow**, change the **OnSelect** to `Navigate(Galleries,Fade)`.
 
-1. In the **Insert** tab, click **Text label** to add a label that'll display the title. Rename the component **CoralTitle**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a label that'll display the title. Rename the component **lblCoralTitle**. In the right panel, change the following properties:
 
    - **Text**: Coral
    - **Font**: Lato Black
@@ -194,7 +196,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 
 1. In the **Insert** tab, click **Text label** to add a label for the species. Rename the component **CoralSpecies**. In the right panel, change the following properties:
 
-   - **Text**: `CoralGallery.Selected.Species`
+   - **Text**: `galCoralGallery.Selected.Species`
    - **Font**: Lato
    - **Font Size**: 25
    - **Font Weight**: Semibold
@@ -202,7 +204,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Size**: 588 x 51
 
 1. In the **Insert** tab, click **Text label** to add a label for the description. Rename the **Text label** component **CoralDesc**. In the right panel, change the following properties:
-   - **Text**: `CoralGallery.Selected.Description`
+   - **Text**: `galCoralGallery.Selected.Description`
    - **Font**: Lato
    - **Font Size**: 21
    - **Font Weight**: Normal
@@ -221,7 +223,7 @@ Let's add the control and configure for viewing the object in 3D.
 
 1. In the left panel, click the **Insert** icon and select **Media** > **3D Object**.
 
-1. In the formula bar, for **Source** enter `CoralGallery.Selected.'3DModel'`.
+1. In the formula bar, for **Source** enter `galCoralGallery.Selected.'3DModel'`.
 
 1. In the left panel, rename the **View in 3D** component **Coral3D**.
 
@@ -242,7 +244,7 @@ Let's add the control and configure for viewing the object in MR.
 
 1. In the left panel, click the **Insert** icon and select **Mixed Reality** > **View in MR**.
 
-1. In the formula bar, for **Source** enter `CoralGallery.Selected.'3DModel'`.
+1. In the formula bar, for **Source** enter `galCoral.Selected.'3DModel'`.
 
 1. In the left panel, rename the **View in MR** component **CoralMR**.
 
@@ -267,7 +269,7 @@ Congratulations - you've setup the configurations for the **Coral** gallery and 
 
 You can duplicate the existing components created for the **Coral** gallery. Be sure to change the **Text** properties where appropriate. For example, the **description** for the **Reef Occupants** section should read: _Learn more about the animals who inhabit coral and coral reefs._
 
-To help keep things organize, change the component names where appropriate. For example, consider renaming the gallery **ReefOccupantsGallery**.
+To help keep things organize, change the component names where appropriate. For example, consider renaming the gallery **galReefOccupants**.
 
 Since the gallery is currently using the **Coral** data source, you'll need to switch to the **Occupants** data source instead to view the models within the **Occupants** table. Also, be sure to change the **OnSelect** property so that selecting an image navigates to the **Reef Occupant Information** screen.
 
@@ -279,7 +281,7 @@ Likewise, you can duplicate the **Coral Information** screen to create the **Ree
 
 Be sure to change the **Text** properties where appropriate. For example, the **title** for the screen should display: _Reef Occupants_.
 
-The remaining components in the screen are all currently pulling data from the **CoralGallery**. Therefore, be sure to modify the formulas where appropriate so that the data is populated from the **ReefOccupantsGallery**.
+The remaining components in the screen are all currently pulling data from the **galCoral**. Therefore, be sure to modify the formulas where appropriate so that the data is populated from the **galReefOccupants**.
 
 ### Create the home screen
 
@@ -293,7 +295,7 @@ In the next labs, you will create another experience in this app, so it makes se
 
 Save the app, to make sure you won't lose any work.
 
-1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **OverviewTitle**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **lblOverviewTitle**. In the right panel, change the following properties:
 
    - **Text**: Mixed Reality Workshop
    - **Font**: Lato Black
@@ -303,7 +305,7 @@ Save the app, to make sure you won't lose any work.
    - **Size**: 600 x 160
    - **Color**: Black or ColorValue("#000000")
 
-1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **DivOverview**. In the right panel, change the following properties:
+1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **divOverview**. In the right panel, change the following properties:
 
    - **Position**: 18 x 190
    - **Size**: 601 x 4

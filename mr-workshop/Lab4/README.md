@@ -35,7 +35,7 @@ Leave the screen empty, and go back to the **Overview Screen**. Change the follo
 
 Go back to the screen you just created. Here, you will start by adding a couple of components:
 
-1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **SearchTitle**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a heading for the screen. Rename the component **lblSearchTitle**. In the right panel, change the following properties:
 
    - **Text**: Smithsonian 3D Search
    - **Font**: Lato Black
@@ -45,20 +45,20 @@ Go back to the screen you just created. Here, you will start by adding a couple 
    - **Size**: 600 x 160
    - **Color**: Black or ColorValue("#000000")
 
-2. Select the **Insert** icon in the left navigation and search for **'home'**. This will show you the home icon. Click on home icon and it will get added to your screen. Rename the icon to **SearchHome**. In the right panel, change the following properties:
+2. Select the **Insert** icon in the left navigation and search for **'home'**. This will show you the home icon. Click on home icon and it will get added to your screen. Rename the icon to **icoSearchHome**. In the right panel, change the following properties:
 
    - **Position**: 555 x 47
    - **Color**: Black or ColorValue("#000000")
    - **OnSelect** (under the Advanced tab): Navigate('Overview Screen', Fade)
 
-3. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **SearchDiv**. In the right panel, change the following properties:
+3. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **divSearch**. In the right panel, change the following properties:
 
    - **Position**: 18 x 190
    - **Size**: 601 x 4
    - **Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
-4. In the **Insert** menu on the left, search for **Search** and you will be able to select the **SearchBox** component from the Creator Kit we imported before. Click on **SearchBox** to add in to your screen. Rename the component to **SearchBoxSmithsonian**. In the right panel, change the following properties:
+4. In the **Insert** menu on the left, search for **Search** and you will be able to select the **SearchBox** component from the Creator Kit we imported before. Click on **SearchBox** to add in to your screen. Rename the component to **sbSmithsonian**. In the right panel, change the following properties:
 
    - **Position**: 19 x 220
    - **Size**: 601 x 40
@@ -81,14 +81,14 @@ If all went well, the Smithsonian 3D connector should be visible in the data men
 
    - In the left panel, click the **Insert** icon and search for **Blank vertical gallery**.
    - On the **Select a data source** window that appears, hit the escape key on your keyboard, since we will change that later on.
-   - Rename the **Gallery** component **SearchGallery**.
+   - Rename the **Gallery** component **galSearch**.
 
 In the right panel, change the following properties:
 
 - **Position**: 0 x 270
 - **Size**: 640 x 866
 - **TemplateSize**: 60
-- **Items**: Filter(Smithsonian3D.FileSearch({q: SearchBoxSmithsonian.SearchText, start: 0, rows: 100, quality: "High", file_type: "glb"}).rows, ThisRecord.content.quality = "High", ThisRecord.content.file_type = "glb", !IsBlank(ThisRecord.title))
+- **Items**: Filter(Smithsonian3D.FileSearch({q: sbSmithsonian.SearchText, start: 0, rows: 100, quality: "High", file_type: "glb"}).rows, ThisRecord.content.quality = "High", ThisRecord.content.file_type = "glb", !IsBlank(ThisRecord.title))
 
 Click on the **Add an item from the Insert pane** text inside the gallery and select **Label** in the **Insert** tab at the top of your screen. In the right panel, change the following properties:
 
@@ -115,16 +115,16 @@ Now, we are going to add a 3D viewer screen.
 3. Remove **CoralDesc_1** from the screen.
 4. Remove **CoralMR_1** from the screen.
 5. Rename **Coral3D_1** to **3DViewer3D**.
-6. Change the **Source** property of **3DViewer3D** to **SearchGallery.Selected.content.uri**.
+6. Change the **Source** property of **3DViewer3D** to **galSearch.Selected.content.uri**.
 7. Rename **CoralBackArrow_1** to **3DViewerBackArrow**.
 8. Change the **OnSelect** property of **3DViewerBackArrow** to **Navigate('Smithsonian 3D Search Screen', Fade)**.
 9. Rename **CoralSpecies_1** to **3DViewerObjectTitle**.
-10. Change the **Text** property of **3DViewerObjectTitle** to **SearchGallery.Selected.title**.
+10. Change the **Text** property of **3DViewerObjectTitle** to **galSearch.Selected.title**.
 11. Change the **Size height** property of **3DViewerObjectTitle** to **80**.
 12. Rename **CoralTitle_1** to **3DViewerTitle**.
 13. Change the **Text** property of **3DViewerTitle** to **"Smithsonian 3D"**.
 
-Last but not least, go back to the **Smithsonian 3D Search Screen** and select the **View** icon in the first item of the **SearchGallery**. In the right panel, change the following property:
+Last but not least, go back to the **Smithsonian 3D Search Screen** and select the **View** icon in the first item of the **galSearch** component. In the right panel, change the following property:
 
 - **OnSelect** (under the Advanced tab): Select(Parent) && Navigate('Smithsonian 3D Viewer', Fade)
 
