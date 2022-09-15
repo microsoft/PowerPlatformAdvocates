@@ -79,7 +79,7 @@ Let's first start with designing some of the basic UI for the Galleries Screen.
    - **Size**: 600 x 123
    - **Color**: Black or ColorValue("#000000")
 
-1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **lblSubheading**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a subheading for the screen. Rename the component **lblCollectionSub**. In the right panel, change the following properties:
    - **Text**: Discover the collection
    - **Font**: Open Sans
    - **Font Size**: 16
@@ -92,7 +92,7 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
 
 ![A screenshot of the coral section which consists of a heading, description, and a horizontal gallery.](assets/coral-section.jpg)
 
-1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **divSection1**. In the right panel, change the following properties:
+1. We'll create a divider to separate the sections. In the **Insert** tab, search for **Rectangle**. Rename the component **divCoral**. In the right panel, change the following properties:
 
    - **Position**: 18 x 190
    - **Size**: 601 x 4
@@ -111,8 +111,9 @@ We'll now create the section for the **Coral** gallery. Once you've created the 
    - **Font**: Lato
    - **Font Size**: 24
    - **Font Weight**: Semibold
+   - **Display Mode**: DisplayMode.View
 
-1. In the **Insert** tab, click **Text label** to add a description for the section. Rename the component **lblSubCoral**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a description for the section. Rename the component **lblCoralSub**. In the right panel, change the following properties:
    - **Text**: Explore a variety of coral species collected from around the world.
    - **Font**: Open Sans
    - **Font Size**: 18
@@ -176,14 +177,14 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 
 1. In the left panel, rename the new screen **Coral Information Screen**.
 
-1. In the left panel, search for the **Back arrow** icon. Rename the component **icoBackArrow**. In the right panel, change the following properties:
+1. In the left panel, search for the **Back arrow** icon. Rename the component **icoCoralBackArrow**. In the right panel, change the following properties:
 
    - **Position**: 20 x 36
    - **Size**: 47 x 47
    - **Font Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
-1. In the formula bar, for the **icoBackArrow**, change the **OnSelect** to `Navigate('Galleries Screen',Fade)`.
+1. In the formula bar, for the **icoCoralBackArrow**, change the **OnSelect** to `Navigate('Galleries Screen',Fade)`.
 
 1. In the **Insert** tab, click **Text label** to add a label that'll display the title. Rename the component **lblCoralTitle**. In the right panel, change the following properties:
 
