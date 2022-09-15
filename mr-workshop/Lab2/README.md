@@ -151,17 +151,17 @@ What's great about the gallery component is that the configurations set for one 
    - **Size**: 290 x 288
    - **Border radius**: 50
 
-Let's now add navigation to the **Coral Information** screen. Essentially, when you select one of the images, the app will navigate to the **Coral Information** screen.
+Let's now add navigation to the **Coral Information Screen** screen. Essentially, when you select one of the images, the app will navigate to the **Coral Information Screen** screen.
 
 1. In the first column of the **galCoralGallery**, select the **imgCoral** component.
 
-1. In the formula bar, for **OnSelect** enter `Navigate('Coral Information',ScreenTransition.Fade)`.
+1. In the formula bar, for **OnSelect** enter `Navigate('Coral Information Screen',ScreenTransition.Fade)`.
 
 Since we haven't created the **Coral Information** screen, you'll be given an error - we'll fix that in the next step!
 
 ## Create Coral Information Screen
 
-Once an object is selected from the Gallery screen, the app should navigate to **Coral Information** screen which displays the following information about the coral:
+Once an object is selected from the Gallery screen, the app should navigate to **Coral Information Screen** screen which displays the following information about the coral:
 
 - Species
 - Description
@@ -174,7 +174,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
 
 1. In the top navigation menu, click **New Screen > Blank**.
 
-1. In the left panel, rename the new screen **Coral Information**.
+1. In the left panel, rename the new screen **Coral Information Screen**.
 
 1. In the left panel, search for the **Back arrow** icon. Rename the component **icoBackArrow**. In the right panel, change the following properties:
 
@@ -183,7 +183,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Font Color**: ColorValue("#FA7E01")
    - **Border Thickness**: 0
 
-1. In the formula bar, for the **icoBackArrow**, change the **OnSelect** to `Navigate(Galleries,Fade)`.
+1. In the formula bar, for the **icoBackArrow**, change the **OnSelect** to `Navigate('Galleries Screen',Fade)`.
 
 1. In the **Insert** tab, click **Text label** to add a label that'll display the title. Rename the component **lblCoralTitle**. In the right panel, change the following properties:
 
@@ -213,7 +213,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Position**: 25 x 732
    - **Size**: 604 x 294
 
-Test the app to confirm that when an object is selected from the **Galleries Screen** screen, the **Coral Information** screen displays it's respective information.
+Test the app to confirm that when an object is selected from the **Galleries Screen** screen, the **Coral Information Screen** screen displays it's respective information.
 
 ## Add the View in 3DControl
 
@@ -279,7 +279,7 @@ Since the gallery is currently using the **Coral** data source, you'll need to s
 
 ![A screenshot of the reef occupants information screen. A 3D image takes up the top half of the screen. Below the 3D image is the species and description. A view in M R button displays at the bottom.](assets/reef-occupants-information.jpg)
 
-Likewise, you can duplicate the **Coral Information** screen to create the **Reef Occupant Information** screen. We recommend modifying the component names to reflect the **Reef Occupant** to help keep things organized.
+Likewise, you can duplicate the **Coral Information Screen** screen to create the **Reef Occupant Information Screen** screen. We recommend modifying the component names to reflect the **Reef Occupant** to help keep things organized.
 
 Be sure to change the **Text** properties where appropriate. For example, the **title** for the screen should display: _Reef Occupants_.
 
