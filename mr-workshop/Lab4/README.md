@@ -99,6 +99,8 @@ Click on the **Add an item from the Insert pane** text inside the gallery and se
 - **Position**: 15 x 0
 - **Size**: 540 x 60
 
+Rename the label to **lblSearchObjectTitle**.
+
 After that, add another item to the gallery by using the left **Insert** panel and search for **View**. Before you select the icon **View** from the list to add it to the gallery, make sure to select the first label in the gallery, so that it will drop the component inside of the gallery. In the right panel, change the following properties:
 
 - **Position**: 550 x 0
@@ -106,26 +108,28 @@ After that, add another item to the gallery by using the left **Insert** panel a
 - **Padding**: 10, 10, 10, 10
 - **Focused border**: 0
 
+Rename the icon to **icoSearchView**.
+
 ## Create the 3D Viewer Screen
 
 Now, we are going to add a 3D viewer screen.
 
 1. In the left navigation menu, click on the **...** next to the **Coral Information Screen** and select **duplicate screen**.
-2. Rename the duplicated screen to **Smithsonian 3D Viewer**.
+2. Rename the duplicated screen to **Smithsonian 3D Viewer Screen**.
 3. Remove **CoralDesc_1** from the screen.
 4. Remove **CoralMR_1** from the screen.
-5. Rename **Coral3D_1** to **3DViewer3D**.
-6. Change the **Source** property of **3DViewer3D** to **galSearch.Selected.content.uri**.
-7. Rename **CoralBackArrow_1** to **3DViewerBackArrow**.
-8. Change the **OnSelect** property of **3DViewerBackArrow** to **Navigate('Smithsonian 3D Search Screen', Fade)**.
-9. Rename **CoralSpecies_1** to **3DViewerObjectTitle**.
-10. Change the **Text** property of **3DViewerObjectTitle** to **galSearch.Selected.title**.
-11. Change the **Size height** property of **3DViewerObjectTitle** to **80**.
-12. Rename **CoralTitle_1** to **3DViewerTitle**.
-13. Change the **Text** property of **3DViewerTitle** to **"Smithsonian 3D"**.
+5. Rename **Coral3D_1** to **3dSmithsonianViewer**.
+6. Change the **Source** property of **3dSmithsonianViewer** to **galSearch.Selected.content.uri**.
+7. Rename **CoralBackArrow_1** to **ico3DViewerBackArrow**.
+8. Change the **OnSelect** property of **ico3DViewerBackArrow** to **Navigate('Smithsonian 3D Search Screen', Fade)**.
+9. Rename **CoralSpecies_1** to **lbl3DViewerObjectTitle**.
+10. Change the **Text** property of **lbl3DViewerObjectTitle** to **galSearch.Selected.title**.
+11. Change the **Size height** property of **lbl3DViewerObjectTitle** to **80**.
+12. Rename **CoralTitle_1** to **lbl3DViewerTitle**.
+13. Change the **Text** property of **lbl3DViewerTitle** to **"Smithsonian 3D"**.
 
 Last but not least, go back to the **Smithsonian 3D Search Screen** and select the **View** icon in the first item of the **galSearch** component. In the right panel, change the following property:
 
-- **OnSelect** (under the Advanced tab): Select(Parent) && Navigate('Smithsonian 3D Viewer', Fade)
+- **OnSelect** (under the Advanced tab): Select(Parent) && Navigate('Smithsonian 3D Viewer Screen', Fade)
 
 Make sure to save your app after this change. Publish it and check it out on your mobile phone! With this, we are at the end of the lab.
