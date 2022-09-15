@@ -57,7 +57,7 @@ Now that we have our Coral Collection objects stored in OneDrive, we can use **O
 
 After the data is connected, Power Apps will add a new **PowerAppsID** column to the spreadsheet. This column contains the Power Apps generated unique ID for the object.
 
-## Rename Galleries Screen
+## Rename 'Screen1' Screen
 
 With a connection made to the Coral Collection objects, we're now ready to create the galleries! For the app, we'll have a gallery for **Coral** and another for **Reef Occupants**. Each gallery will provide a list of all objects available for view. You'll be able to select an object to learn more and also view the object in both 3D and Mixed Reality.
 
@@ -143,6 +143,8 @@ What's great about the gallery component is that the configurations set for one 
 
 1. In the **Insert** pane, select **Media > Image\*\*** to add an **Image** component to the gallery.
 
+1. Rename the **Image** component to **imgCoral**.
+
 1. We'll now modify the properties for the image component. Select the **Image** component and in the right panel change the following properties:
    - **Image**: `ThisItem.Picture`
    - **Position**: 0 x 48
@@ -151,7 +153,7 @@ What's great about the gallery component is that the configurations set for one 
 
 Let's now add navigation to the **Coral Information** screen. Essentially, when you select one of the images, the app will navigate to the **Coral Information** screen.
 
-1. In the first column of the **galCoralGallery**, select the **Image** component.
+1. In the first column of the **galCoralGallery**, select the **imgCoral** component.
 
 1. In the formula bar, for **OnSelect** enter `Navigate('Coral Information',ScreenTransition.Fade)`.
 
@@ -194,7 +196,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Size**: 443 x 70
    - **Font Color**: ColorValue("#066563")
 
-1. In the **Insert** tab, click **Text label** to add a label for the species. Rename the component **CoralSpecies**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a label for the species. Rename the component **lblCoralSpecies**. In the right panel, change the following properties:
 
    - **Text**: `galCoralGallery.Selected.Species`
    - **Font**: Lato
@@ -203,7 +205,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Position**: 25 x 694
    - **Size**: 588 x 51
 
-1. In the **Insert** tab, click **Text label** to add a label for the description. Rename the **Text label** component **CoralDesc**. In the right panel, change the following properties:
+1. In the **Insert** tab, click **Text label** to add a label for the description. Rename the **Text label** component **lblCoralDesc**. In the right panel, change the following properties:
    - **Text**: `galCoralGallery.Selected.Description`
    - **Font**: Lato
    - **Font Size**: 21
@@ -211,7 +213,7 @@ We'll setup the screen for the **Coral** objects and later duplicate and reconfi
    - **Position**: 25 x 732
    - **Size**: 604 x 294
 
-Test the app to confirm that when an object is selected from the **Galleries** screen, the **Coral Information** screen displays it's respective information.
+Test the app to confirm that when an object is selected from the **Galleries Screen** screen, the **Coral Information** screen displays it's respective information.
 
 ## Add the View in 3DControl
 
@@ -225,7 +227,7 @@ Let's add the control and configure for viewing the object in 3D.
 
 1. In the formula bar, for **Source** enter `galCoralGallery.Selected.'3DModel'`.
 
-1. In the left panel, rename the **View in 3D** component **Coral3D**.
+1. In the left panel, rename the **View in 3D** component **3dCoral**.
 
 1. In the right panel, change the following properties:
    - **Background fill**: Transparent
@@ -246,7 +248,7 @@ Let's add the control and configure for viewing the object in MR.
 
 1. In the formula bar, for **Source** enter `galCoral.Selected.'3DModel'`.
 
-1. In the left panel, rename the **View in MR** component **CoralMR**.
+1. In the left panel, rename the **View in MR** component **mrCoral**.
 
 1. In the right panel, change the following properties:
    - **Position**: 179 x 1037
@@ -269,7 +271,7 @@ Congratulations - you've setup the configurations for the **Coral** gallery and 
 
 You can duplicate the existing components created for the **Coral** gallery. Be sure to change the **Text** properties where appropriate. For example, the **description** for the **Reef Occupants** section should read: _Learn more about the animals who inhabit coral and coral reefs._
 
-To help keep things organize, change the component names where appropriate. For example, consider renaming the gallery **galReefOccupants**.
+To help keep things organize, change the component names where appropriate. For example, consider renaming the gallery to **galReefOccupants**.
 
 Since the gallery is currently using the **Coral** data source, you'll need to switch to the **Occupants** data source instead to view the models within the **Occupants** table. Also, be sure to change the **OnSelect** property so that selecting an image navigates to the **Reef Occupant Information** screen.
 
