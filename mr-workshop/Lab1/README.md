@@ -25,7 +25,7 @@ Select the **˅** next to ⚙ Product and select **Features**. Turn on the setti
 
 ![Code Components setting for Canvas Apps.](assets/Environment-Setting-Code-Components.png)
 
-### Import the solution
+### Import the Creator Kit solution
 
 With this setting enabled, we can now import the Creator Kit solution. Download the solution via [this link](https://aka.ms/creatorkitdownload) and go to [make.powerapps.com](https://make.powerapps.com). Make sure you are in the correct environment (the one where we just enabled the code components feature) and select **Solutions** in the left navigation.
 
