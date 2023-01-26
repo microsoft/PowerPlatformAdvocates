@@ -142,7 +142,7 @@ What's great about the gallery component is that the configurations set for one 
 
 1. On the **galCoralGallery** component, click **Add an item from the Insert pane**.
 
-1. In the **Insert** pane, select **Media > Image\*\*** to add an **Image** component to the gallery.
+1. In the **Insert** pane, select **Media > Image** to add an **Image** component to the gallery.
 
 1. Rename the **Image** component to **imgCoral**.
 
