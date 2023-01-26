@@ -13,7 +13,7 @@ In this lab, we are going to use the Creator Kit to speed up the development of 
 
 ## Installing the Creator Kit
 
-The Creator Kit is not available out of the box, so we need to install the Creator Kit first. Installing the Creator Kit is possible via App Source. Follow the instructions on [this page](https://aka.ms/creatorkit/setup#option-2-install-from-appsource) to install the Creator Kit.
+The Creator Kit is not available out of the box, so we need to install the Creator Kit first. There are multiple ways to install the Creator Kit. Follow the instructions on [this page](https://aka.ms/creatorkit/setup) to install the Creator Kit.
 
 ## Creating the Canvas App
 
