@@ -70,10 +70,8 @@ The import components sidebar has two tabs at the top: `Canvas` and `Code`. The 
 >
 > Remember, you can take a look at which components are part of the Creator Kit via the [Overview of the Creator Kit components page](https://docs.microsoft.com/en-us/power-platform/guidance/creator-kit/components).
 
-Select the `Select all` button and select the `Import` button. This will add all the `canvas components` to your **insert** menu. When imported, you can find them in the `Library components` group.
+Make sure to select the `Code` tab and look for the `Fluent SearchBox` component. Select the `Fluent SearchBox` component and select the `Import` button. This will add the `Fluent SearchBox` to your **insert** menu.
 
-If all components are imported correctly, you will see the following message at the the top of your screen.
+If the component is imported correctly, you can find it in the `Code components` group in the insert menu.
 
-![Successful message: Selected components were successfully imported.](assets/Canvas-App-Import-Components-Succesfully.png)
-
-After finishing importing all the components, make sure to select the **Save** button on the top right to **save** your app.
+After finishing importing the component, make sure to select the **Save** button on the top right to **save** your app.
