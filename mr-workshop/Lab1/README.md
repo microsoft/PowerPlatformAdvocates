@@ -76,4 +76,4 @@ If all components are imported correctly, you will see the following message at 
 
 ![Successful message: Selected components were successfully imported.](assets/Canvas-App-Import-Components-Succesfully.png)
 
-After finishing importing all the components, make sure to select **File** and the **Save** button on the bottom right to **save** your app.
+After finishing importing all the components, make sure to select the **Save** button on the top right to **save** your app.
