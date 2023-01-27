@@ -1,14 +1,14 @@
-# Power Platform Workshops
+# Power Platform Advocates
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Welcome to Power Platform Advocates GitHub repository. In this repo, the Power Platform Advocates team will add presentations and workshops.
 
-As the maintainer of this project, please make a few updates:
+## Presentations
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+- [Exam Readiness Live (PL-100)](/Presentations/ExamReadinessLivePL100.pdf)
+
+## Workshops
+
+- [Power Platform & Mixed Reality](/Workshops/MR/README.md)
 
 ## Contributing
 
