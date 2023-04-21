@@ -121,4 +121,4 @@ Click the ```✓ Update connector``` button and once the custom connector has be
 
 Now that you know that your custom connector is complete, we can go ahead and use it in a Power App - which you will be building next.
 
-### Next: [Lab 4 - Creating a Power Apps Canvas App](/Workshops/JavaAndPowerApps/Lab5/)
+### Next: [Lab 5 - Creating a Power Apps Canvas App](/Workshops/JavaAndPowerApps/Lab5/)
