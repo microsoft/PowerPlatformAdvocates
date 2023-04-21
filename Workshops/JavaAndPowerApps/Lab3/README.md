@@ -398,15 +398,17 @@ The other fields can be left on the default value. When done, scroll up and sele
 11. Select the ```+ Import from sample``` button and paste the following JSON in the *body* field:
 
 ```json
-{
-  "id": "string",
-  "listId": "string",
-  "name": "string",
-  "description": "string",
-  "state": "todo",
-  "dueDate": "2023-04-18T22:21:48.191Z",
-  "completedDate": "2023-04-18T22:21:48.191Z"
-}
+[
+    {
+        "id": "string",
+        "listId": "string",
+        "name": "string",
+        "description": "string",
+        "state": "todo",
+        "dueDate": "2023-04-18T22:21:48.191Z",
+        "completedDate": "2023-04-18T22:21:48.191Z"
+    }
+]    
 ```
 12. Click **Import**.
 
