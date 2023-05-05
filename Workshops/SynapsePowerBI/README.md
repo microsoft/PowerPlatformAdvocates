@@ -1,4 +1,4 @@
-# SerengetiDataLab
+# End to End Data Solution with Power BI and Synpase Workshop using SerengetiDataLab
 
 An E2E solution of the Data Resources on Azure using the Snapshot Serengeti dataset. This E2E solution focuses Azure Synapse Analytics and Power BI
 
@@ -76,8 +76,11 @@ This Lab describes a solution that combines a range of Azure services to ingest,
 Semi-structured data - these are Json files that contain the split of the dataset into train, test, and validation sets.
 Unstructured data - these are the images in the dataset and the zipped files that contain the metadata of the images.
 
+🚀 [Lab 1 -  Create a Data Solution on Azure Synapse Analytics with Snapshot Serengeti](Lab1)
 
 
 ### 👩🏾‍💻 Lab 2 - Building End to End with Power BI
 
 In this lab, you will have your data in synapse and you will need to connect to the data source, model your data and buils a report in Power BI.
+
+🚀 [Lab 2 -  Building End to End with Power BI](Lab2)
