@@ -1,0 +1,17 @@
+{
+	"name": "drop_tables",
+	"properties": {
+		"content": {
+			"query": "DROP TABLE val\nDROP TABLE train\nDROP TABLE images\nDROP TABLE categories\nDROP TABLE annotations\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "defdedicated",
+				"poolName": "defdedicated"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
