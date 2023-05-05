@@ -1,0 +1,55 @@
+{
+	"name": "MainPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy_zipped_metadata_files",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": "copy_zipped_metadata_files",
+						"type": "NotebookReference"
+					},
+					"snapshot": true
+				}
+			},
+			{
+				"name": "save_json_data_to_sql",
+				"type": "SynapseNotebook",
+				"dependsOn": [
+					{
+						"activity": "copy_zipped_metadata_files",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": "save_json_data_to_sql",
+						"type": "NotebookReference"
+					},
+					"snapshot": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
