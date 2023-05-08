@@ -175,9 +175,9 @@ In the screenshot above, you can see all the properties that are available in th
 
 16. Fill in following fields:
     
-    * Name: ```Description```
+    * Title: ```Description```
     * Description: ```Description of the ToDo list```
-    * Visibility: ```advanced```
+    * Visibility: ```none```
   
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
@@ -185,9 +185,9 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 18. Fill in following fields:
 
-    * Name: ```Id```
-    * Description: ```Id of the ToDo list```
-    * Visibility: ```advanced```
+    * Title: ```ID```
+    * Description: ```ID of the ToDo list```
+    * Visibility: ```none```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
@@ -195,9 +195,9 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 20. Fill in following fields:
 
-    * Name: ```Name```
+    * Title: ```Name```
     * Description: ```Name of the ToDo list```
-    * Visibility: ```advanced```
+    * Visibility: ```none```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button. In the response overview screen, select the ```← Back``` button again. That will lead you back to the main screen with the definition. 
 
@@ -236,22 +236,22 @@ Now that you've gone through the process of creating a single action - we need t
 
 6. Then select the ˅ next to ```description``` in the body section and select the ```Edit``` button and fill in the following fields:
 
-    * Title: ```description```
-    * Description: ```description of new list```
+    * Title: ```Description```
+    * Description: ```Description of new list```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
 7. Then select the ˅ next to ```id``` in the body section and select the ```Edit``` button and fill in the following fields:
 
-    * Title: ```id```
-    * Description: ```id of new list```
+    * Title: ```ID```
+    * Description: ```ID of new list```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
 8. Then select the ˅ next to ```name``` in the body section and select the ```Edit``` button and fill in the following fields:
 
-    * Title: ```name```
-    * Description: ```name of new list```
+    * Title: ```Name```
+    * Description: ```Name of new list```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
@@ -277,7 +277,7 @@ Select the ```← Back``` button again to lead you back to the main screen with 
 
 14. Fill in following fields:
     
-    * Name: ```description```
+    * Title: ```Description```
     * Description: ```Description of the ToDo list```
     * Visibility: ```none```
   
@@ -287,8 +287,8 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 16. Fill in following fields:
 
-    * Name: ```id```
-    * Description: ```Id of the ToDo list```
+    * Title: ```ID```
+    * Description: ```ID of the ToDo list```
     * Visibility: ```none```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
@@ -297,7 +297,7 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 18. Fill in following fields:
 
-    * Name: ```name```
+    * Title: ```Name```
     * Description: ```Name of the ToDo list```
     * Visibility: ```none```
 
@@ -366,14 +366,14 @@ Let's go ahead and define the ListItem actions.
 
 5. In the generated *Request* section, select the ˅ next to ```listId``` in the path section and select the ```Edit``` button.
 
-    * Name: ```listId```
+    * Title: ```List ID```
     * Description: ```The Todo list unique identifier```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
 6. Then select the ˅ next to ```top``` in the query section and select the ```Edit``` button and fill in the following fields:
 
-    * Name: ```top```
+    * Name: ```Top```
     * Description: ```The max number of items to return in a result```
     * Summary: ```Max number of items```
     * Default value: ```20```
@@ -384,7 +384,7 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 8. Fill in following fields:
     
-    * Name: ```skip```
+    * Name: ```Skip```
     * Description: ```The number of items to skip within the results```
     * Summary: ```Number of items to skip```
     * Default value: ```0```
