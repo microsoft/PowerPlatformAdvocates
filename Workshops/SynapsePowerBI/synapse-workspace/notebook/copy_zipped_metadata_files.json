@@ -1,0 +1,320 @@
+{
+	"name": "copy_zipped_metadata_files",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "defsparkpool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "224g",
+			"driverCores": 32,
+			"executorMemory": "224g",
+			"executorCores": 32,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "851a3783-c59b-4a39-8a35-7d51b0add688"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_sparkdotnet",
+				"display_name": "csharp"
+			},
+			"language_info": {
+				"name": "csharp"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/a1a27566-3e3c-42d7-a372-692095cd8521/resourceGroups/SerengetiDataLab/providers/Microsoft.Synapse/workspaces/serengetidatalabqezfaqkj/bigDataPools/defsparkpool",
+				"name": "defsparkpool",
+				"type": "Spark",
+				"endpoint": "https://serengetidatalabqezfaqkj.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/defsparkpool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 3,
+				"cores": 32,
+				"memory": 224,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"#r \"nuget: Microsoft.Azure.Storage.Common\"\n",
+					"#r \"nuget: Microsoft.Azure.Storage.Blob\"\n",
+					"#r \"nuget: Microsoft.Azure.Storage.File\""
+				],
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"using Microsoft.Azure.Storage;\n",
+					"using Microsoft.Azure.Storage.Blob;\n",
+					"using Microsoft.Azure.Storage.File;\n",
+					"using System.IO;\n",
+					"using System.IO.Compression;\n",
+					"\n",
+					"using CopyStatus = Microsoft.Azure.Storage.Blob.CopyStatus;\n",
+					"using Microsoft.Spark.Extensions.Azure.Synapse.Analytics.Utils;\n",
+					"using Microsoft.Azure.Storage.Auth;\n",
+					"using Microsoft.Spark.Extensions.Azure.Synapse.Analytics.Notebook.MSSparkUtils;"
+				],
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"CloudBlobContainer destContainer, sourceContainer;\n",
+					"CloudBlobDirectory destDirectory;\n",
+					"\n",
+					"var vaultName = \"serengetikeyvaultqezfaqk\";\n",
+					"var linkConnectionName = \"\";\n",
+					"\n",
+					"string destConnectionString = Credentials.GetSecret(vaultName,\"ADLS-ConnectionString\", linkConnectionName);"
+				],
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"private async Task InitSourceAndDest ()\n",
+					"{\n",
+					"    // Create a BlobEndpoint for the source container\n",
+					"    string sourceConnectionString = \"BlobEndpoint=https://lilablobssc.blob.core.windows.net;\";\n",
+					"    CloudStorageAccount sourceStorageAccount = CloudStorageAccount.Parse(sourceConnectionString);\n",
+					"    CloudBlobClient sourceBlobClient = sourceStorageAccount.CreateCloudBlobClient();\n",
+					"    sourceContainer = sourceBlobClient.GetContainerReference(\"snapshotserengeti-v-2-0\");\n",
+					"\n",
+					"    // Create a FileEndpoint for the destination ADLS\n",
+					"    CloudStorageAccount destStorageAccount = CloudStorageAccount.Parse(destConnectionString);\n",
+					"\n",
+					"    var destBlobClient= destStorageAccount.CreateCloudBlobClient();\n",
+					"    destContainer =  destBlobClient.GetContainerReference(\"snapshot-serengeti\");\n",
+					"\n",
+					"    if(! await destContainer.ExistsAsync())\n",
+					"    {\n",
+					"        await destContainer.CreateIfNotExistsAsync();\n",
+					"    }\n",
+					"\n",
+					"    destDirectory = destContainer.GetDirectoryReference(\"metadata\");\n",
+					"}"
+				],
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"private async Task ExtractAndSaveZippedBlob(CloudBlockBlob sourceBlob,   CloudBlobDirectory destDirectory)\n",
+					"{\n",
+					"    using (var sourceStream = sourceBlob.OpenRead())\n",
+					"    using (var archive = new ZipArchive(sourceStream))\n",
+					"    {\n",
+					"        foreach (var entry in archive.Entries)\n",
+					"        {\n",
+					"            var destBlob = destDirectory.GetBlockBlobReference(entry.FullName);\n",
+					"\n",
+					"            if (await destBlob.ExistsAsync())\n",
+					"            {\n",
+					"                Console.WriteLine($\"{destBlob.Name} exists\");\n",
+					"                continue;\n",
+					"            }\n",
+					"\n",
+					"\n",
+					"            using (var entryStream = entry.Open())\n",
+					"            {\n",
+					"                Console.WriteLine($\"Uploading {destBlob.Name}\");\n",
+					"                await destBlob.UploadFromStreamAsync(entryStream);\n",
+					"            }\n",
+					"        }\n",
+					"    }\n",
+					"}"
+				],
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"private async Task CopyBlob(CloudBlockBlob sourceBlob, CloudBlockBlob destBlob)\n",
+					"{\n",
+					"    if (await destBlob.ExistsAsync())\n",
+					"    {\n",
+					"        Console.WriteLine($\"{destBlob.Name} exists\");\n",
+					"        return;\n",
+					"    }\n",
+					"\n",
+					"    await destBlob.StartCopyAsync(sourceBlob.Uri);\n",
+					"\n",
+					"    while (destBlob.CopyState.Status == CopyStatus.Pending)\n",
+					"    {\n",
+					"        await Task.Delay(1000); //wait for 1 second before checking again\n",
+					"        await destBlob.FetchAttributesAsync();\n",
+					"    }\n",
+					"\n",
+					"    if (destBlob.CopyState.Status == CopyStatus.Success)\n",
+					"    {\n",
+					"        Console.WriteLine(\"Copy operation succeeded\");\n",
+					"    }\n",
+					"    else\n",
+					"    {\n",
+					"        Console.WriteLine(\"Copy operation failed\");\n",
+					"    }\n",
+					"}\n",
+					""
+				],
+				"execution_count": 9
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"// s01 to s011\n",
+					"var metadataZippedFiles=new string[]\n",
+					"{\n",
+					"    \"SnapshotSerengetiS01.json.zip\",\n",
+					"    \"SnapshotSerengetiS02.json.zip\",\n",
+					"    \"SnapshotSerengetiS03.json.zip\",\n",
+					"    \"SnapshotSerengetiS04.json.zip\",\n",
+					"    \"SnapshotSerengetiS05.json.zip\",\n",
+					"    \"SnapshotSerengetiS06.json.zip\",\n",
+					"    \"SnapshotSerengetiS07.json.zip\",\n",
+					"    \"SnapshotSerengetiS08.json.zip\",\n",
+					"    \"SnapshotSerengetiS09.json.zip\",\n",
+					"    \"SnapshotSerengetiS10.json.zip\",\n",
+					"    \"SnapshotSerengetiS11.json.zip\",\n",
+					"    \"SnapshotSerengetiBboxes_20190903.json.zip\",\n",
+					"\n",
+					"};\n",
+					"\n",
+					"await InitSourceAndDest();\n",
+					"\n",
+					"foreach (var zippedFile in metadataZippedFiles)\n",
+					"{\n",
+					"    var sourceBlob = sourceContainer.GetBlockBlobReference(zippedFile);\n",
+					"    await ExtractAndSaveZippedBlob(sourceBlob, destDirectory);\n",
+					"}\n",
+					"\n",
+					"var jsonFiles = new string[]\n",
+					"{\n",
+					"        \"SnapshotSerengetiSplits_v0.json\"\n",
+					"};\n",
+					"\n",
+					"foreach (var file in jsonFiles)\n",
+					"{\n",
+					"    var sourceBlob = sourceContainer.GetBlockBlobReference(file);\n",
+					"    var destBlob = destDirectory.GetBlockBlobReference(file);\n",
+					"    await CopyBlob(sourceBlob, destBlob);\n",
+					"}\n",
+					""
+				],
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				],
+				"execution_count": null
+			}
+		]
+	}
+}
