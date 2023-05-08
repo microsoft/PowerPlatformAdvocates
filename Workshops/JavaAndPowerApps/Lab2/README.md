@@ -16,10 +16,11 @@ Now that we've got our API up and running in Azure, let's add some data so it's 
 
 Scroll down to where you see the Server Response. You should see the 200 response code which means the execution was a success. You should also see the response body - which is the data that is returned to us after the action was executed. 
 
-You should be seeing a list called ```My List``` which is the default list that is set if no other lists exist. 
+Since this is your first time running the API, your response body will empty:
 
 ![Screenshot of the response code and the response body](/Workshops/JavaAndPowerApps/Lab2/assets/response-code-and-body.png)
 
+No worries - you'll be adding data in the next step.
 ## Step 2 - Add your own list data
 
 Now you're going to be adding your own list.
@@ -44,9 +45,9 @@ Scroll down to where you see the Server Response. You should see the 201 respons
 
 5. Go back to the ```GET /lists``` action and execute that one more time.
 
-In the server response, you'll now see that in addition to the original *My List* ToDo list - the *Shopping* ToDo list is returned.
+In the server response, you'll now see that the *Shopping* ToDo list is returned.
 
-![Screenshot of the response code and the response body now showing 2 ToDo lists](/Workshops/JavaAndPowerApps/Lab2/assets/response-with-both-lists.png)
+![Screenshot of the response code and the response body now showing 2 ToDo lists](/Workshops/JavaAndPowerApps/Lab2/assets/response-with-new-list.png)
 
 ## Step 3 - Add your own list item data
 
