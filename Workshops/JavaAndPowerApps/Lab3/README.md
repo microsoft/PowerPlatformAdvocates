@@ -1,6 +1,6 @@
 # Lab 3 - Creating a Custom Connector
 
-In order for your Power App to interact with the API in the previous lab, we need to create a Custom Connector. To create one, you you must describe the API that you want to connect to so that the connector understands the API's operations and data structures. 
+In order for your Power App to interact with the API in the previous lab, we need to create a Custom Connector. To create one, you you must describe the API that you want to connect to so that the connector understands the API's operations and data structures.
 
 You'll be creating the custom connector from scratch by describing the connector completely in the custom connector wizard.
 
@@ -201,7 +201,7 @@ The other fields can be left on the default value. When done, scroll up and sele
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button. In the response overview screen, select the ```← Back``` button again. That will lead you back to the main screen with the definition. 
 
-Now we have done a bunch of work, let's create the connector. Select the **✓ Create connector** button at the top right side of the screen. This will take a couple of seconds and it should give you a message at the top that Power Automate is saving your connector, and when it's done, it will show a message that it succeeded.
+Now that we have done a bunch of work, let's create the connector. Select the **✓ Create connector** button at the top right side of the screen. This will take a couple of seconds and it should give you a message at the top that Power Automate is saving your connector, and when it's done, it will show a message that it succeeded.
 
 ## Step 5 - Adding additional Actions
 
@@ -366,7 +366,7 @@ Let's go ahead and define the ListItem actions.
 
 5. In the generated *Request* section, select the ˅ next to ```listId``` in the path section and select the ```Edit``` button.
 
-    * Title: ```List ID```
+    * Name: ```listId```
     * Description: ```The Todo list unique identifier```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
@@ -700,7 +700,7 @@ The other fields can be left on the default value. When done, scroll up and sele
 8. Fill in the following fields:
 
     * Name: ```itemId```
-    * Description: ```The Todo list item  unique identifier```
+    * Description: ```The Todo list item unique identifier```
 
 The other fields can be left on the default value. When done, scroll up and select the ```← Back``` button.
 
