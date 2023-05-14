@@ -40,7 +40,7 @@ Let's skip the *DeleteList* action for now and ensure that the **GetListItems** 
 
 Fill in the following details:
 
-* id: ```c9c74ec076c245b195447f19cb3d6bbe```
+* listId: ```c9c74ec076c245b195447f19cb3d6bbe```
 
 > **Note**: This is the *id* of the *Shopping* list that you created in [Lab 2](https://github.com/gomomohapi/JavaWorkshop/tree/main/Lab2#step-2---add-your-own-list-data).
 
