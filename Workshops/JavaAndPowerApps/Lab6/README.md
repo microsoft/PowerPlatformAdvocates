@@ -16,7 +16,7 @@ Make sure that you're in the correct environment at the top right-hand side of t
 
 ## Configure OnStart
 
-1. In the *Tree View*, click on **App**. Then using the *Properties list* drop down, select **OnStart**
+1. In the *Tree View*, click on **App**. Then using the *Properties list* drop down, select **OnStart**.
 
 ![Screenshot showing the App.OnStart property](/Workshops/JavaAndPowerApps/Lab6/assets/app-onstart.png)
 
@@ -27,7 +27,7 @@ The **OnStart** property runs when the user starts the app. This property is oft
 ```
 ClearCollect(
     Lists,
-    JavaToDoAPI.GetLists()
+    JavaToDo.GetLists()
 );
 Set(
     newListDefault,
@@ -40,7 +40,7 @@ Set(
 );
 ClearCollect(
     currentListItems,
-    JavaToDoAPI.GetListItems(currentList.id)
+    JavaToDo.GetListItems(currentList.id)
 );
 Set(
     listItemFormVisibility,
@@ -48,7 +48,7 @@ Set(
 );
 ```
 
-3. Once you've added the above formula, let's initialise the process by hovering over the **App** object in the **Tree view** pane, selecting ellipsis (...), and then selecting **Run OnStart**. 
+3. Once you've added the above formula, let's initialise the OnStart process by hovering over the **App** object in the **Tree view** pane, selecting ellipsis (...), and then selecting **Run OnStart**. 
 
 4. **Save** your work.
 
@@ -78,7 +78,7 @@ Set(
     )
     ```
 
-The *galLists* control should now be displaying the two lists you've seen from earlier labs. 
+The *galLists* control should now be displaying the *Shopping* list that you created in an earlier lab.
 
 ![Two lists on gallery in Power App](/Workshops/JavaAndPowerApps/Lab6/assets/list-data-on-gallery.png)
 
@@ -89,6 +89,8 @@ The *galLists* control should now be displaying the two lists you've seen from e
 1. Select the *txtAddList* control and set the following properties:
     * Default: ```newListDefault```
     * Reset: ```resetTxtAddList```
+
+There will be an error after you've set the *Reset* property. No worries - it will be rectified in the next step.
 
 2. Select the *icoAddList* control and set the *OnSelect* property to:
 
@@ -239,8 +241,10 @@ The idea here is that when you select a list item: this form should appear where
 
 ## Configure the the *UpdateListItemGroup* controls.
 
-1. Select the **lblCurrentItem** control and set the following properties:
+1. Expand the *UpdateListItemGroup* and select the **lblCurrentItem** control and set the following properties:
     * Text: ```txtItemName.Text```
+
+This will make the **lblCurrentItem** control empty at the moment because the **txtItemName** control is also empty. This will be fixed in the following steps.
 
 2. Select the **icoDeleteItem** control and set the following properties:
     * OnSelect: 
@@ -323,7 +327,9 @@ The idea here is that when you select a list item: this form should appear where
     );
     ```
 
-And now you're DONE! You've now build the full solution. Go ahead and test your app! Add lists, list items, delete them, edit them, and have fun with your Power App. 
+9. **Save** your work.
+
+And now you're DONE! You've now built the full solution. Go ahead and test your app! Add lists, list items, delete them, edit them, and have fun with your Power App. 
 
 ![Completed Power App](/Workshops/JavaAndPowerApps/Lab6/assets/complete-power-app.png)
 

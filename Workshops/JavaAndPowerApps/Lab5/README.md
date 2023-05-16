@@ -102,6 +102,7 @@ With a connection to the Java ToDo Custom Connector made, you're now ready to co
     * Size: ```1066 x 70```
     * Padding: ```5 (Top) x 5 (Bottom) x 5 (Left) x 15 (Right)```
     * Color: ```RGBA(227, 227, 227, 1)```
+    * Fill: ```RGBA(2, 69, 120, 1)```
 
 Your header should now look like this: 
 
@@ -136,7 +137,7 @@ Your header should now look like this:
 
 7. Then search for "Vertical Line" and select it when it pops up.
 
-8. Go back to the **Tree View** and rename ```Icon1``` to ```icoSelector```. Also rename ```Label1``` to ```lblListName```.
+8. Go back to the **Tree View** and rename ```Icon2``` to ```icoSelector```. Also rename ```Label3``` to ```lblListName```.
 
 ![List gallery components](/Workshops/JavaAndPowerApps/Lab5/assets/list-gallery.png)
 
@@ -212,8 +213,8 @@ Your app should look like this now. You're making good progress:
 
 7. Go back to the **Tree View** and rename:
     * ```Circle1``` to ```cirCheckMark```
-    * ```Icon1``` to ```icoCheckMark```
-    * ```Label1``` to ```lblListItemName```.
+    * ```Icon4``` to ```icoCheckMark```
+    * ```Label4``` to ```lblListItemName```.
 
 ![List Items Gallery components](/Workshops/JavaAndPowerApps/Lab5/assets/list-items-gallery.png)
 
