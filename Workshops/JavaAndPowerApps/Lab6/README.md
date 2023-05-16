@@ -327,6 +327,8 @@ This will make the **lblCurrentItem** control empty at the moment because the **
     );
     ```
 
+9. **Save** your work.
+
 And now you're DONE! You've now built the full solution. Go ahead and test your app! Add lists, list items, delete them, edit them, and have fun with your Power App. 
 
 ![Completed Power App](/Workshops/JavaAndPowerApps/Lab6/assets/complete-power-app.png)
