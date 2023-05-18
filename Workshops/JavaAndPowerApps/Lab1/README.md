@@ -84,7 +84,7 @@ Click the deployed service API URL to launch the ToDo OpenAPI definition.
 
 > **Note**: Bookmark this API URL or keep it somewhere safe for later reference in Lab 3.
 
-![Screenshot  of the ToDo OpenAPI definition](/Workshops/JavaAndPowerApps/Lab1/assets/openai-definition.png)
+![Screenshot  of the ToDo OpenAPI definition](/Workshops/JavaAndPowerApps/Lab1/assets/openapi-definition.png)
 
 We will be adding some data in the next lab.
 
