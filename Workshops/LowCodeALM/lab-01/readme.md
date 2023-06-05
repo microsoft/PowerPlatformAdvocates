@@ -4,9 +4,6 @@ In this lab, you will learn the following things:
 
 * Log into the account you are going to use during the workshop
 * How to create developer environments
-* How to import a solution
-* How to clone a solution
-* Inspect the solution folders
 
 ## Log on to your account
 
