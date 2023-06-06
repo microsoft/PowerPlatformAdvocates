@@ -4,7 +4,7 @@ In this workshop, you will learn how to apply Application Lifecycle Management i
 
 ## Lab 01 - Tenant setup
 
-In this lab, you will login to the account you are going to use during the workshop and you will create developer environments.
+In this lab, you will login to the account you are going to use during the workshop and you will create developer environments. You will also setup a GitHub account and a codespace.
 
 [Lab 01 - Tenant Setup](./lab-01/readme.md)
 

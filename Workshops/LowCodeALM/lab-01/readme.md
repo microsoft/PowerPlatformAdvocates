@@ -1,9 +1,13 @@
 # Lab 01 - Tenant setup
 
-In this lab, you will learn the following things:
+In this lab, you will go through the following tasks:
 
 * Log into the account you are going to use during the workshop
-* How to create developer environments
+* Create developer environments
+* Create a GitHub account
+* Create a codespace
+* Install the Power Platform Tools extension
+* Connect to the Power Platform environment
 
 ## Log on to your account
 
@@ -23,3 +27,17 @@ To create developer environments, you can create them in two ways:
 
 1. Via the Power Platform Admin Center
 1. Via the Power Platform CLI
+
+In this workshop, we will create the environments through the Power Platform Admin Center.
+
+## Create a GitHub account
+
+## Clone the repo of the workshop
+
+## Create a codespace
+
+## Install the Power Platform Tools extension
+
+## Connect to the Power Platform environment
+
+[⏭️ Move to lab 02](../lab-02/readme.md)
