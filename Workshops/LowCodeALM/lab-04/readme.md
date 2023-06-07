@@ -23,3 +23,7 @@ In this task, you will learn how to install the pipelines for Power Platform sol
 ![](./assets/dev-env-agree-terms.png)
 
 This process will take a couple of minutes, you can refresh the page by selecting the `Refresh` button in the command bar at the top.
+
+When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`Dev`). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
+
+![](./assets/dev-env-pipelines-installed.png)
