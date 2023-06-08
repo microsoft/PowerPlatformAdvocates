@@ -26,4 +26,47 @@ This process will take a couple of minutes, you can refresh the page by selectin
 
 When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`Dev`). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
 
+## Task 02: Setup your first pipeline
+
+In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app will be used for that. 
+
 ![](./assets/dev-env-pipelines-installed.png)
+
+Make sure to select that app in the [maker portal](https://make.powerapps.com) and make sure to play the app.
+
+This will open the app in a new tab:
+
+![](./assets/create-pipeline-app.png)
+
+Make yourself familiar with the app, by looking around which menu items there are: 
+
+First, there is an `Overview` section, where you land when you open the app. This is the `Pipelines Dashboard`, which will show you the latest info about runs and pipelines that are active. When you open this for the first time, it's supposed to be empty, so don't worry! 
+
+There is also a `Pipeline Setup` section where you can view your environments and pipelines. 
+
+Last but not least, there is a `Deployments` section which enables you to view the run history and find solution artifacts.
+
+### Create a new pipeline
+
+Let's create a new pipeline, by selecting the new button on the `Pipelines Dashboard`.
+
+![](./assets/create-pipeline-new-pipeline.png)
+
+This will lead you to a form where you can enter details about your pipeline:
+
+![](./assets/create-pipeline-new-pipeline-details.png)
+
+1. Use `My first pipeline` as the name
+1. In the owner field, make sure to look for the email address of your account and select your user
+1. Save the pipeline
+
+Some components of the form only appear after the first save, so that's why we save the pipeline. After saving, scroll down and you will see the following screen: 
+
+![](./assets/create-pipeline-new-pipeline-saved.png)
+
+As you can see there are two sections:
+
+* **Linked Development Environments**
+* **Deployment Stages (Deployment Pipeline)**
+
+A pipeline can be available for multiple development environments. This is very convenient when you want to use multiple development environments and use shared test and shared production environments.
