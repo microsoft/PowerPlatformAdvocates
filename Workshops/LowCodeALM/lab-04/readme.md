@@ -92,6 +92,9 @@ A sidebar will be opened, where you can enter the details of the `Dev` environme
     * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
     * Select Environments in the menu on the left
     * Select the environment named `Dev`
+
+    ![](./assets/create-pipeline-new-development-env-ppac.png)
+    
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
 1. Select yourself as the owner by focusing on the owner field and adding the email address of your account.
 1. Select the `Save and Close` button on the bottom of your sidebar
@@ -102,7 +105,7 @@ If all went well, you'll see the following screen:
 
 Make sure to select the `New Deployment Stage` button now to add the first deployment stage.
 
-![](./assets/create-pipeline-new-deployment-stage-details.png)
+![](./assets/create-pipeline-new-deployment-stage.png)
 
 ### Add the first deployment stage
 
@@ -116,5 +119,3 @@ This will open a new sidebar, where you can enter details about your first deplo
 1. Select `New Development Environment`
 
 This will open another sidebar where you can add details about your test environment.
-
-
