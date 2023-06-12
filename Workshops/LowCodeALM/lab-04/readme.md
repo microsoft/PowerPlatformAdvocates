@@ -60,13 +60,61 @@ This will lead you to a form where you can enter details about your pipeline:
 1. In the owner field, make sure to look for the email address of your account and select your user
 1. Save the pipeline
 
-Some components of the form only appear after the first save, so that's why we save the pipeline. After saving, scroll down and you will see the following screen: 
+Some components of the form only appear after the first save, so that's why we save the pipeline. After saving, scroll down and you will see the following content below the owner field: 
 
 ![](./assets/create-pipeline-new-pipeline-saved.png)
 
-As you can see there are two sections:
+As you can see there are two sections: **Linked Development Environments** & **Deployment Stages**.
 
-* **Linked Development Environments**
-* **Deployment Stages (Deployment Pipeline)**
+**Linked Development Environments**
 
 A pipeline can be available for multiple development environments. This is very convenient when you want to use multiple development environments and use shared test and shared production environments.
+
+In this lab, we will only add one development environment to the Linked Development Environments, but when you use this at your company later on, remember that it can be more than one environment here.
+
+**Deployment Stages**
+
+The Deployment Stages section will give you the option to add stages after your development environment. So for instance, in our lab today, we are going to add a stage called `Deploy to Test` and another stage called `Deploy to Prod`. The cool thing is that we can set previous stages for these stages. This gives us the ability to make sure `Deploy to Test` goes first, and `Deploy to Prod` comes second.
+
+### Create a development environment
+
+Let's continue our lab and start by adding a new development environment by selecting the New Development Environment button in the Linked Development Environments section.
+
+![](./assets/create-pipeline-new-development-env-create.png)
+
+A sidebar will be opened, where you can enter the details of the `Dev` environment you created in lab 01. 
+
+![](./assets/create-pipeline-new-development-env-details.png)
+
+1. Add `Dev` as the Name
+1. Set the Environment Type to `Development Environment`
+1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center. 
+    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Select Environments in the menu on the left
+    * Select the environment named `Dev`
+    * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
+1. Select yourself as the owner by focusing on the owner field and adding the email address of your account.
+1. Select the `Save and Close` button on the bottom of your sidebar
+
+If all went well, you'll see the following screen:
+
+![](./assets/create-pipeline-new-development-env-saved.png)
+
+Make sure to select the `New Deployment Stage` button now to add the first deployment stage.
+
+![](./assets/create-pipeline-new-deployment-stage-details.png)
+
+### Add the first deployment stage
+
+This will open a new sidebar, where you can enter details about your first deployment stage.
+
+![](./assets/create-pipeline-new-deployment-stage-details.png)
+
+1. Add `Deploy to test` as the Name
+1. We're leaving the Description and Previous Deployment stage empty, because we don't have a previous deployment stage, since this is our first stage
+1. Set focus to the input box next to targer deployment environment. This will open up a small popup which enables you to add a new development environment
+1. Select `New Development Environment`
+
+This will open another sidebar where you can add details about your test environment.
+
+
