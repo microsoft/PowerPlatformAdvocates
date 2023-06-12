@@ -4,7 +4,11 @@ In this lab, you will work on the outer loop. You will perform the following tas
 
 * Deploy the pipelines solution to your dev environment
 * Setup your first pipeline
-* Create a first deployment of the imported solution from lab 02
+* Run the first deployment to the Test environment
+* Install the Creator Kit solution in Test environment
+* Install the Creator Kit solution in Prod environment
+* Retry the deployment to the Test environment
+* Deploy to the Prod environment
 
 ## Task 1: Deploy the pipelines solution to your dev environment
 
@@ -178,7 +182,7 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
 
 1. Select `Save` again to save the deployment stage as well
 
-## Task 03: Create a first deployment of the imported solution from lab 02
+## Task 03: Run the first deployment to the Test environment
 
 In this task, you will deploy the solution we imported in lab 02 to the test and production environments. Let's start by our first deployment to test:
 
@@ -216,6 +220,12 @@ In this lab, you have installed the pipelines for Power Platform solution and yo
     ![](./assets/run-first-pipeline-validation-failed-07.png)
 1. The `Creator Kit` solution is not part of the list of solutions, so we need to install the `Creator Kit` solution
     ![](./assets/run-first-pipeline-validation-failed-08.png)
+
+You will have to install the Creator Kit in both the test and prod environments.
+
+## Task 04: Install the Creator Kit solution in Test environment
+
+
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Test` environment by selecting the environment display name
     ![](./assets/run-first-pipeline-validation-failed-09.png)
 1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Test` environment. There might be some updates available, but you can ignore that for now
@@ -225,10 +235,21 @@ In this lab, you have installed the pipelines for Power Platform solution and yo
 1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
     ![](./assets/run-first-pipeline-validation-failed-12.png)
 
-#### Install missing dependency in test
+## Task 05: Install the Creator Kit solution in Prod environment
+
+1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Prod` environment by selecting the environment display name
+    ![](./assets/run-first-pipeline-validation-failed-13.png)
+1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Prod` environment. There might be some updates available, but you can ignore that for now
+    ![](./assets/run-first-pipeline-validation-failed-14.png)
+1. Select the `Install app` button in the command bar at the top
+    ![](./assets/run-first-pipeline-validation-failed-15.png)
+1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-16.png)
+
+## Task 06: Retry the deployment to the Test environment
 
 TODO
 
-#### Install missing dependency in prod
+## Task 07: Deploy to the Prod environment
 
 TODO
