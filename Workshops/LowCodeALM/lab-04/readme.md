@@ -179,3 +179,5 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
 1. Select `Save` again to save the deployment stage as well
 
 
+
+## Task 03: Create a first deployment of the imported solution from lab 02
