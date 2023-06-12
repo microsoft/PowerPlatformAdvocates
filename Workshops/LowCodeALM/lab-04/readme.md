@@ -88,14 +88,16 @@ A sidebar will be opened, where you can enter the details of the `Dev` environme
 
 1. Add `Dev` as the Name
 1. Set the Environment Type to `Development Environment`
-1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center. 
+1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
+
     * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
     * Select Environments in the menu on the left
     * Select the environment named `Dev`
 
-    ![](./assets/create-pipeline-new-development-env-ppac.png)
+      ![](./assets/create-pipeline-new-development-env-ppac.png)
     
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
+
 1. Select yourself as the owner by focusing on the owner field and adding the email address of your account.
 1. Select the `Save and Close` button on the bottom of your sidebar
 
@@ -115,7 +117,65 @@ This will open a new sidebar, where you can enter details about your first deplo
 
 1. Add `Deploy to test` as the Name
 1. We're leaving the Description and Previous Deployment stage empty, because we don't have a previous deployment stage, since this is our first stage
-1. Set focus to the input box next to targer deployment environment. This will open up a small popup which enables you to add a new development environment
+1. Set focus to the input box next to target deployment environment. This will open up a small popup which enables you to add a new development environment
 1. Select `New Development Environment`
 
 This will open another sidebar where you can add details about your test environment.
+
+#### Add the test environment
+
+In the sidebar, make sure to add the following details:
+
+1. Add `Test` as the `Name`
+1. Add `Target Environment` as the `Environment Type`
+1. Add the environment ID of the test environment
+
+    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Select Environments in the menu on the left
+    * Select the environment named `Test`
+
+      ![](./assets/create-pipeline-new-development-env-ppac.png)
+    
+    * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
+
+1. Select yourself as the owner by focusing on the owner field and adding the email address of your account.
+1. Select the `Save and Close` button on the bottom of your sidebar
+1. Select `Save` again to save the deployment stage as well
+
+Make sure to select the `New Deployment Stage` button again to add a second deployment stage: `Deploy to prod`.
+
+### Add the `Deploy to prod` deployment stage
+
+1. Add `Deploy to prod` as the `Name`
+1. Leave the `Description` empty
+1. Focus on the `Previous Deployment Stage` and search for the `Deploy to test` stage. After you have found that stage, select it
+1. Set focus to the input box next to target deployment environment. This will open up a small popup which enables you to add a new development environment
+1. Select `New Development Environment`
+
+> **Note:**  
+> There is a setting field called `Pre Deployment Step Required`. We're not using that in this case, but think about what could that be used for. During the workshop, the trainers will show an example of it.
+
+![](./assets/create-pipeline-deploy-to-prod.png)
+
+#### Add the Prod environment
+
+1. Add `Prod` as the Name
+1. Set the Environment Type to `Target Environment`
+1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
+
+    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Select Environments in the menu on the left
+    * Select the environment named `Prod`
+
+      ![](./assets/create-pipeline-new-development-env-ppac.png)
+    
+    * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
+
+1. Select yourself as the owner by focusing on the owner field and adding the email address of your account.
+1. Select the `Save and Close` button on the bottom of your sidebar
+
+    ![](./assets/create-pipeline-deploy-to-prod-env.png)
+
+1. Select `Save` again to save the deployment stage as well
+
+
