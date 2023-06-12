@@ -167,7 +167,7 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
     * Select Environments in the menu on the left
     * Select the environment named `Prod`
 
-      ![](./assets/create-pipeline-new-development-env-ppac-dev.png)
+      ![](./assets/create-pipeline-new-development-env-ppac-prod.png)
     
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
 
