@@ -90,7 +90,7 @@ A sidebar will be opened, where you can enter the details of the `Dev` environme
 1. Set the Environment Type to `Development Environment`
 1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
 
-    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
     * Select Environments in the menu on the left
     * Select the environment named `Dev`
 
@@ -130,7 +130,7 @@ In the sidebar, make sure to add the following details:
 1. Add `Target Environment` as the `Environment Type`
 1. Add the environment ID of the test environment
 
-    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
     * Select Environments in the menu on the left
     * Select the environment named `Test`
 
@@ -163,7 +163,7 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
 1. Set the Environment Type to `Target Environment`
 1. For the next step, make sure to grab the `Environment Id` from the Power Platform Admin Center
 
-    * Go to the [Power Platform Admin Center](https://aka.ms/ppac)
+    * Open a new tab and go to the [Power Platform Admin Center](https://aka.ms/ppac)
     * Select Environments in the menu on the left
     * Select the environment named `Prod`
 
@@ -188,3 +188,47 @@ In this lab, you have installed the pipelines for Power Platform solution and yo
 
 1. Go to the [maker portal](https://make.powerapps.com)
 1. Make sure to select the `Dev` environment
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+    ![](./assets/run-first-pipeline-dev.png)
+1. Select the rocket icon on the left
+    ![](./assets/run-first-pipeline-solution.png)
+    This will show you a new screen where you can see an overview of all stages you just configured in the last task
+    ![](./assets/run-first-pipeline-overview.png)
+1. Select the purple `Deploy here` button. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later
+    ![](./assets/run-first-pipeline-select-target.png)
+1. Leave it on the default (Now) and select the purple `Next` button on the bottom of the sidebar
+1. This will lead you to the next screen where pipelines for Power Platform will validate if the solution needs some configuration steps and/or there are dependencies that are missing. Wait for the validation to finish
+    ![](./assets/run-first-pipeline-validation-failed-01.png)
+1. As you can see in the screenshot above, the validation failed due to missing dependencies. Select the `Show missing dependencies` button at the top-right corner
+1. In the next sidebar that will show up, you will see which dependencies are missing. In this case, it's the `CreatorKitCore` solution:
+    ![](./assets/run-first-pipeline-validation-failed-02.png)
+    You might remember installing the Creator Kit in lab 01. This is what we need to in the test and prod environments as well.
+1. Select the purple `Close` button at the bottom of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-03.png)
+1. Select the `Close` button on the bottom-right side of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-04.png)
+1. In the following dialog, select the purple `Discard` button to discard changes
+    ![](./assets/run-first-pipeline-validation-failed-05.png)
+1. This will lead us back to the pipeline overview, where we can start our deployment. Now, lets go to the environment by selecting the `Go to the environment` button in the `Deploy to test` stage
+    ![](./assets/run-first-pipeline-validation-failed-06.png)
+1. It will open a new tab which will open the environment homepage where you can go to the `Solutions` menu item to see which solutions are installed in that environment
+    ![](./assets/run-first-pipeline-validation-failed-07.png)
+1. The `Creator Kit` solution is not part of the list of solutions, so we need to install the `Creator Kit` solution
+    ![](./assets/run-first-pipeline-validation-failed-08.png)
+1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Test` environment by selecting the environment display name
+    ![](./assets/run-first-pipeline-validation-failed-09.png)
+1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Test` environment. There might be some updates available, but you can ignore that for now
+    ![](./assets/run-first-pipeline-validation-failed-10.png)
+1. Select the `Install app` button in the command bar at the top
+    ![](./assets/run-first-pipeline-validation-failed-11.png)
+1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-12.png)
+
+#### Install missing dependency in test
+
+TODO
+
+#### Install missing dependency in prod
+
+TODO
