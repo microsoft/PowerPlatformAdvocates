@@ -94,7 +94,7 @@ A sidebar will be opened, where you can enter the details of the `Dev` environme
     * Select Environments in the menu on the left
     * Select the environment named `Dev`
 
-      ![](./assets/create-pipeline-new-development-env-ppac.png)
+      ![](./assets/create-pipeline-new-development-env-ppac-dev.png)
     
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
 
@@ -134,7 +134,7 @@ In the sidebar, make sure to add the following details:
     * Select Environments in the menu on the left
     * Select the environment named `Test`
 
-      ![](./assets/create-pipeline-new-development-env-ppac.png)
+      ![](./assets/create-pipeline-new-development-env-ppac-test.png)
     
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
 
@@ -167,7 +167,7 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
     * Select Environments in the menu on the left
     * Select the environment named `Prod`
 
-      ![](./assets/create-pipeline-new-development-env-ppac.png)
+      ![](./assets/create-pipeline-new-development-env-ppac-dev.png)
     
     * Copy the environment ID from there and paste it in the `Deployment Pipeline Configuration` app.
 
@@ -178,6 +178,13 @@ Make sure to select the `New Deployment Stage` button again to add a second depl
 
 1. Select `Save` again to save the deployment stage as well
 
-
-
 ## Task 03: Create a first deployment of the imported solution from lab 02
+
+In this task, you will deploy the solution we imported in lab 02 to the test and production environments. Let's start by our first deployment to test:
+
+### First deployment to test
+
+In this lab, you have installed the pipelines for Power Platform solution and you have configured a pipeline and the stages that belong to it. But how does a maker deploy a solution from the `Dev` environment to the `Test` and `Prod` environments?
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. Make sure to select the `Dev` environment
