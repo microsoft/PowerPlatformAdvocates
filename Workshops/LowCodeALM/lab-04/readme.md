@@ -234,17 +234,21 @@ You will have to install the Creator Kit in both the test and prod environments.
     ![](./assets/run-first-pipeline-validation-failed-11.png)
 1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
     ![](./assets/run-first-pipeline-validation-failed-12.png)
+1. Select the `I agree to the terms of service` checkbox and select the purple `Install` button
+    ![](./assets/run-first-pipeline-validation-failed-13.png)
+1. In the next screen, you will see a message at the top that the installation of the `Creator Kit` has been started. Select `Environments` in the breadcrumb at the top
+    ![](./assets/run-first-pipeline-validation-failed-14.png)
+
+Next, you have to install the `Creator Kit` app in the `Prod` environment.
 
 ## Task 05: Install the Creator Kit solution in Prod environment
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Prod` environment by selecting the environment display name
-    ![](./assets/run-first-pipeline-validation-failed-13.png)
-1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Prod` environment. There might be some updates available, but you can ignore that for now
-    ![](./assets/run-first-pipeline-validation-failed-14.png)
-1. Select the `Install app` button in the command bar at the top
     ![](./assets/run-first-pipeline-validation-failed-15.png)
-1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
+1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Test` environment. There might be some updates available, but you can ignore that for now
     ![](./assets/run-first-pipeline-validation-failed-16.png)
+
+TODO
 
 ## Task 06: Retry the deployment to the Test environment
 
