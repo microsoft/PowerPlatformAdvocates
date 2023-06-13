@@ -225,6 +225,7 @@ You will have to install the Creator Kit in both the test and prod environments.
 
 ## Task 04: Install the Creator Kit solution in Test environment
 
+The `Creator Kit` app is now only available in the `Dev` environment, so let's add the app also to the `Test` environment.
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Test` environment by selecting the environment display name
     ![](./assets/run-first-pipeline-validation-failed-09.png)
@@ -243,17 +244,143 @@ Next, you have to install the `Creator Kit` app in the `Prod` environment.
 
 ## Task 05: Install the Creator Kit solution in Prod environment
 
+The `Creator Kit` app is now only available in the `Dev` and `Test` environments, so let's add the app also to the `Prod` environment to avoid missing dependencies there.
+
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac), select `Environments` in the left menu, and select the `Prod` environment by selecting the environment display name
     ![](./assets/run-first-pipeline-validation-failed-15.png)
 1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Test` environment. There might be some updates available, but you can ignore that for now
     ![](./assets/run-first-pipeline-validation-failed-16.png)
+1. Select the `Install app` button in the command bar at the top
+    ![](./assets/run-first-pipeline-validation-failed-17.png)
+1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-18.png)
+1. Select the `I agree to the terms of service` checkbox and select the purple `Install` button
+    ![](./assets/run-first-pipeline-validation-failed-19.png)
+1. In the next screen, you will see a message at the top that the installation of the `Creator Kit` has been started. Select `Environments` in the breadcrumb at the top
+    ![](./assets/run-first-pipeline-validation-failed-20.png)
 
-TODO
+Now that you have triggered the install of the `Creator Kit` in both the `Test` and `Prod` environments, you can move on to task 06, retrying the deployment to the `Test` environment.
 
 ## Task 06: Retry the deployment to the Test environment
 
-TODO
+To make sure your deployment goes well, lets check if the Creator Kit solution has been properly installed in the `Test` environment.
+
+### Check if the Creator Kit app is correctly installed
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. Check if you are in the `Test` environment and if not, switch to that environment
+        ![](./assets/check-environment-test.png)
+1. Select `Solutions` in the left navigation and check if the `Creator Kit (Name: CreatorKitCore)` solution is installed
+        ![](./assets/check-install-creator-kit-test.png)
+1. If that's the case, you are ready for deployment. If not, you probably have to wait a little bit until the Creator Kit is installed
+
+### Deploy the solution to the Test environment
+
+For the deployment to test, you have to switch to your `Dev` environment. Make sure to do that and verify that you are in the right environment:
+
+![](./assets/check-environment-dev.png)
+
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+        ![](./assets/run-first-pipeline-dev.png)
+1. Select the rocket icon on the left
+        ![](./assets/run-first-pipeline-solution.png)
+1. Select the purple `Deploy here` button.
+        ![](./assets/run-deploy-to-test-deploy-here.png)
+1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple `Next` button to go to the next screen
+    ![](./assets/run-first-pipeline-select-target.png)
+1. The next screen will be a bit different from our last try, it will now show a summary of the deployment. Fill in some deployment notes, like for instance: `First deployment of the Mixed Reality solution` and select the purple `Deploy` button
+    ![](./assets/run-deploy-to-test-deployment-notes.png)
+1. This will trigger the `Deploy to test` stage
+        ![](./assets/run-deploy-to-test-in-progress.png)
+1. When it's done, you will see that the deployment has been finished
+        ![](./assets/run-deploy-to-test-finished.png)
+
+### Test if the solution was correctly deployed
+
+1. Of course, you want to see for yourself if the deployment was successful, so select the `Go to this environment` button in the `Deploy to test` stage
+        ![](./assets/run-deploy-to-test-check-test.png)
+1. Select `Solutions` in the left navigation
+1. Check if the `Mixed Reality Workshop` solution with version 1.0.0.1 is installed in the `Test` environment
+        ![](./assets/run-deploy-to-test-check-test-solution.png)
+1. Open the `Mixed Reality Workshop` by selecting the display name
+        ![](./assets/run-deploy-to-test-open-solution.png)
+1. Select the `Mixed Reality App` canvas app and select the `Play` button in the command bar at the top
+        ![](./assets/run-deploy-to-test-open-app.png)
+1. When the app is opened, you will have to allow the connections to connect to both OneDrive for Business as well as the Smithsonian 3D connector. Make sure to select the purple `Allow` button
+        ![](./assets/run-deploy-to-test-allow-connections.png)
+1. In the app, you will find two buttons:
+        `Corals and Coral Reefs` and `Smithsonian 3D Search`
+        Select the `Corals and Coral Reefs` button
+        ![](./assets/run-deploy-to-test-select-corals.png)
+1. Next, select the first coral to check if the coral 3D object works
+        ![](./assets/run-deploy-to-test-select-coral.png)
+1. The next screen should show a 3D object of the coral you just selected
+        ![](./assets/run-deploy-to-test-coral-detail.png)
+
+Now you know the app works in test, let's deploy it to production.
 
 ## Task 07: Deploy to the Prod environment
 
-TODO
+To make sure your deployment goes well, lets check if the Creator Kit solution has been properly installed in the `Prod` environment.
+
+### Check if the Creator Kit app is correctly installed
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. Check if you are in the `Prod` environment and if not, switch to that environment
+        ![](./assets/check-environment-prod.png)
+1. Select `Solutions` in the left navigation and check if the `Creator Kit (Name: CreatorKitCore)` solution is installed
+        ![](./assets/check-install-creator-kit-prod.png)
+1. If that's the case, you are ready for deployment. If not, you probably have to wait a little bit until the Creator Kit is installed
+
+### Deploy the solution to the Prod environment
+
+For the deployment to prod, you have to switch to your `Dev` environment. Make sure to do that and verify that you are in the right environment:
+
+![](./assets/check-environment-dev.png)
+
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+        ![](./assets/run-first-pipeline-dev.png)
+1. Select the rocket icon on the left
+        ![](./assets/run-first-pipeline-solution.png)
+1. Select the purple `Deploy here` button. 
+        ![](./assets/run-deploy-to-prod-deploy-here.png)
+1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple `Next` button to go to the next screen
+        ![](./assets/run-deploy-to-prod-select-target.png)
+1. Fill in some deployment notes, like for instance: `First deployment of the Mixed Reality solution` and select the purple `Deploy` button
+        ![](./assets/run-deploy-to-prod-deployment-notes.png)
+1. This will trigger the `Deploy to prod` stage
+        ![](./assets/run-deploy-to-prod-in-progress.png)
+1. When it's done, you will see that the deployment has been finished
+        ![](./assets/run-deploy-to-prod-finished.png)
+
+### Test if the solution was correctly deployed
+
+1. Of course, you want to see for yourself if the deployment was successful, so select the `Go to this environment` button in the `Deploy to prod` stage
+        ![](./assets/run-deploy-to-prod-check-prod.png)
+1. Select `Solutions` in the left navigation
+1. Check if the `Mixed Reality Workshop` solution with version 1.0.0.1 is installed in the `Prod` environment
+        ![](./assets/run-deploy-to-prod-check-prod-solution.png)
+1. Open the `Mixed Reality Workshop` by selecting the display name
+        ![](./assets/run-deploy-to-prod-open-solution.png)
+1. Select the `Mixed Reality App` canvas app and select the `Play` button in the command bar at the top
+        ![](./assets/run-deploy-to-prod-open-app.png)
+1. When the app is opened, you will have to allow the connections to connect to both OneDrive for Business as well as the Smithsonian 3D connector. Make sure to select the purple `Allow` button
+        ![](./assets/run-deploy-to-test-allow-connections.png)
+1. In the app, you will find two buttons:
+        `Corals and Coral Reefs` and `Smithsonian 3D Search`
+        Select the `Corals and Coral Reefs` button
+        ![](./assets/run-deploy-to-test-select-corals.png)
+1. Next, select the first coral to check if the coral 3D object works
+        ![](./assets/run-deploy-to-test-select-coral.png)
+1. The next screen should show a 3D object of the coral you just selected
+        ![](./assets/run-deploy-to-test-coral-detail.png)
+
+Now you know the app works in prod as well and you have successfully deployed the solution to the `Test` and `Prod` environments.
+
+## Next lab
+
+This is the end of lab 04, select the link below to move to the next lab.
+
+[⏭️ Move to lab 05](../lab-05/README.md)
