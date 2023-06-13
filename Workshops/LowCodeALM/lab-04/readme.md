@@ -295,3 +295,7 @@ For the deployment to test, you have to switch to your `Dev` environment. Make s
 ## Task 07: Deploy to the Prod environment
 
 TODO
+
+## Next lab
+
+[⏭️ Move to lab 05](../lab-05/readme.md)
