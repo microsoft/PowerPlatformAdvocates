@@ -247,12 +247,50 @@ Next, you have to install the `Creator Kit` app in the `Prod` environment.
     ![](./assets/run-first-pipeline-validation-failed-15.png)
 1. Next, select `Resources` in the command bar at the top and select `Dynamics 365 Apps`. This will lead you to the installed apps in the `Test` environment. There might be some updates available, but you can ignore that for now
     ![](./assets/run-first-pipeline-validation-failed-16.png)
+1. Select the `Install app` button in the command bar at the top
+    ![](./assets/run-first-pipeline-validation-failed-17.png)
+1. Select the `Creator Kit` app and select the purple `Next` button at the bottom of the sidebar
+    ![](./assets/run-first-pipeline-validation-failed-18.png)
+1. Select the `I agree to the terms of service` checkbox and select the purple `Install` button
+    ![](./assets/run-first-pipeline-validation-failed-19.png)
+1. In the next screen, you will see a message at the top that the installation of the `Creator Kit` has been started. Select `Environments` in the breadcrumb at the top
+    ![](./assets/run-first-pipeline-validation-failed-20.png)
 
-TODO
+Now that you have triggered the install of the `Creator Kit` in both the `Test` and `Prod` environments, you can move on to task 06, retrying the deployment to the `Test` environment.
 
 ## Task 06: Retry the deployment to the Test environment
 
-TODO
+To make sure your deployment goes well, lets check if the Creator Kit solution has been installed.
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. Check if you are in the `Test` environment and if not, switch to that environment
+        ![](./assets/check-environment-test.png)
+1. Select `Solutions` in the left navigation and check if the `Creator Kit (Name: CreatorKitCore)` solution is installed
+        ![](./assets/check-install-creator-kit-test.png)
+1. If that's the case, you are ready for deployment. If not, you probably have to wait a little bit until the Creator Kit is installed
+
+For the deployment to test, you have to switch to your `Dev` environment. Make sure to do that and verify that you are in the right environment:
+
+![](./assets/check-environment-dev.png)
+
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+        ![](./assets/run-first-pipeline-dev.png)
+1. Select the rocket icon on the left
+        ![](./assets/run-first-pipeline-solution.png)
+1. Select the purple `Deploy here` button. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later
+    ![](./assets/run-first-pipeline-select-target.png)
+1. The next screen will be a bit different from our last try, it will now show a summary of the deployment. Fill in some deployment notes, like for instance: First deployment of the Mixed Reality solution and select the purple `Deploy` button
+    ![](./assets/run-deploy-to-test-deployment-notes.png)
+1. This will trigger the `Deploy to test` stage
+        ![](./assets/run-deploy-to-test-in-progress.png)
+1. When it's done, you will see that the deployment has been finished
+        ![](./assets/run-deploy-to-test-finished.png)
+1. Of course, you want to see for yourself if the deployment was successful, so select the `Go to this environment` button in the `Deploy to test` stage
+        ![](./assets/run-deploy-to-test-check-test.png)
+1. Select `Solutions` in the left navigation
+1. Check if the `Mixed Reality Workshop` solution with version 1.0.0.1 is installed in the `Test` environment
+        ![](./assets/run-deploy-to-test-check-test-solution.png)
 
 ## Task 07: Deploy to the Prod environment
 
