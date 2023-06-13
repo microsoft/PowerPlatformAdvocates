@@ -383,4 +383,4 @@ Now you know the app works in prod as well and you have successfully deployed th
 
 This is the end of lab 04, select the link below to move to the next lab.
 
-[⏭️ Move to lab 05](../lab-05/readme.md)
+[⏭️ Move to lab 05](../lab-05/README.md)
