@@ -208,7 +208,7 @@ You will then see a page asking if you're trying to sign in to Power Platform CL
 
 ![Screenshot of the Are you trying to sign in to Power Platform CLI - pac? page](assets/sign-into-pac-cli.png)
 
-6. CLick **Continue**
+6. Click **Continue**
 
 You'll then see a prompt confirming that you have successfully signed in to Power Platform CLI - pac. Close the browser tab and return to your codespace.
 
