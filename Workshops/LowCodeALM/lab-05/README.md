@@ -3,8 +3,7 @@
 This lab will consist of the following tasks:
 
 * Add a new screen to the app
-* Update the solution version (pac solution online-version)
+* Run pac solution sync to get the latest version
 * Run the solution checker (pac solution check)
-* Optional: setup managed environments + solution checker errors
 * Publish the solution
 * Start a new deployment
