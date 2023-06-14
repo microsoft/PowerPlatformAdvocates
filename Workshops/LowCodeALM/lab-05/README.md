@@ -72,11 +72,15 @@ In this task, you will learn how to create an approval flow that will handle the
     Select `UpdatePreDeploymentStepStatus` as Action Name.  
     Add `20` as the PreDeploymentStepStatus (20 is the status ID for approved).  
     Add the `Response summary` dynamic content field from the `Start and wait for an approval` action as Comments.  
+    Add the following expression via the expression panel to the Comments field: `first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']`  
+    ![](./assets/extend-pipeline-cloud-flow-unbound-action1-expression.png)      
     Add the `ActionInputs StageRunId` dynamic content field from the `When an action is performed` trigger as StageRunId.  
 1. Select the `New step` button in the `If no` part of the condition and add the `Perform an unbound action` action from the Microsoft Dataverse connector
     Select `UpdatePreDeploymentStepStatus` as Action Name.  
     Add `30` as the PreDeploymentStepStatus (30 is the status ID for rejected).  
     Add the `Response summary` dynamic content field from the `Start and wait for an approval` action as Comments.  
+    Add the following expression via the expression panel to the Comments field: `first(outputs('Start_and_wait_for_an_approval')?['body/responses'])?['comments']`  
+    ![](./assets/extend-pipeline-cloud-flow-unbound-action2-expression.png)  
     Add the `ActionInputs StageRunId` dynamic content field from the `When an action is performed` trigger as StageRunId.  
       
     ![](./assets/extend-pipeline-cloud-flow-unbound-actions.png)
