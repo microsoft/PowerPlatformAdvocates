@@ -90,6 +90,8 @@ In this task, you will learn how to create an approval flow that will handle the
 
 In this task, you are going to find out if the approval you configured in the last task actually works!
 
+### Deploy to test (without approval)
+
 1. Go to the [maker portal](https://make.powerapps.com)
 1. Check if you are in the `Dev` environment and if not, switch to that environment
     ![](./assets/check-environment-dev.png)
@@ -99,5 +101,41 @@ In this task, you are going to find out if the approval you configured in the la
 1. Select the rocket icon on the left
         ![](./assets/run-first-pipeline-solution.png)
 1. Select the purple `Deploy here` button.
-        ![](./assets/run-deploy-to-test-deploy-here-approval.png)  
-1. This will open up a 
+        ![](./assets/run-deploy-to-test-approval.png)  
+1. This will open a new sidebar which will give you the option to start your deployment now or plan your deployment for later. Select the purple `Next` button to go to the next screen
+        ![](./assets/run-deploy-to-test-approval-select-target.png)  
+1. The next screen will be a bit different from our last try, it will now show a summary of the deployment. Fill in some deployment notes, like for instance: `First deployment of the Mixed Reality solution` and select the purple `Deploy` button
+    ![](./assets/run-deploy-to-test-approval-deployment-notes.png)
+1. This will trigger the `Deploy to test` stage
+        ![](./assets/run-deploy-to-test-approval-in-progress.png)
+1. When it's done, you will see that the deployment has been finished
+        ![](./assets/run-deploy-to-test-approval-finished.png)
+
+### Deploy to prod (with approval)
+
+1. Earlier in this lab, you have made a Pre-Deployment Step required. That means that now, there is an info box on the deploy to prod stage
+    ![](./assets/run-deploy-to-prod-approval-info.png)
+1. Select the purple `Deploy here` button.
+    ![](./assets/run-deploy-to-prod-approval.png)  
+1. This will trigger the Power Automate cloud flow, and because we are working on a fresh environment, it can take a while before the approval solution is deployed. Best is to take a biological break now, since it can take 5-10 minutes before your next step
+1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After 5-10 minutes (only the first time!) it should arrive
+1. In the approval mail you will see a couple of familiar parts:
+    You will see the title of the approval (1)
+    You will see the deployment notes (2)
+    You will see approve / reject buttons (3)
+    You will be able to add comments (4)
+    You will be able to submit the approval / rejection (5)
+1. Make sure to approve the approval, add `Approved!` as comments and select the `Submit` button
+    ![](./assets/run-deploy-to-prod-approval-outlook.png)  
+1. Close the Outlook browser tab, and you will see (sometimes you have to refresh) that the deployment to production is in progress
+    ![](./assets/run-deploy-to-prod-approval-in-progress.png)
+1. After the deployment is finished, you will see that the deployment is finished
+    ![](./assets/run-deploy-to-prod-approval-finished.png)
+
+And that's how the deployment with approvals works!
+
+## Next lab
+
+This is the end of lab 05, select the link below to move back to the lab overview.
+
+[⏭️ Move back to the lab overview](../README.md)
