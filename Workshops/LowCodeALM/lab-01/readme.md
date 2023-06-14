@@ -20,7 +20,7 @@ It's always good to have a separate browser profile for your work and for worksh
 2. Click on the profile icon on the top left corner
 3. Hover over "Other Microsoft Edge Browsers" and then select **Add Browser**
 
-![Add new browser profile](assets/add-new-browser-profile.png)
+    ![Add new browser profile](assets/add-new-browser-profile.png)
 
 4. Click **Add**
 
@@ -186,7 +186,7 @@ With the Power Platform Tools extension installed, you can now interact with the
     
 1. In your codespace, click on the **Power Platform** icon in the left navigation
 
-![Power Platform icon in the left navigation](assets/power-platform-icon.png)
+    ![Power Platform icon in the left navigation](assets/power-platform-icon.png)
 
 You'll more than likely see that there is "No auth profiles found on this computer". Let's create one.
 
@@ -216,7 +216,37 @@ You should now see at least one auth profile. If you have more than one, you can
 
 ![Select Auth Profile](assets/select-auth-profile.png)
 
-TODO: Connect to dev env???
+7. With the correct Auth Profile, in the terminal type the following command and then press **Enter**:
 
-[⏭️ Move to lab 02](../lab-02/readme.md)
-                    
+    ```bash
+    pac org list
+    ```
+
+This gets a list of all the environments that you have access to. You should see the **Dev** environment listed as one of them. This is the one we want to eventually connect to. 
+
+TODO: Screenshot of pac org list
+
+8. Then in the terminal, type the following command and then press **Enter**:
+
+    ```bash
+    pac org select --environment Dev
+    ```
+
+You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
+
+TODO: Screenshot of pac org select confirmation
+
+9. To have further confirmation that you have successfully connected to the **Dev** environment, in the terminal type the following command and then press **Enter**:
+
+    ```bash
+    pac org who
+    ```
+This command will return information about the environment that you are connected to. You should see the **Dev** environment listed as well as other unique information about the environment including the User email you're connected as. 
+
+TODO: Screenshot of pac org who confirmation information
+
+## Next lab
+
+This is the end of lab 01, select the link below to move to the next lab.
+
+[⏭️ Move to lab 02](../lab-02/README.md)               
