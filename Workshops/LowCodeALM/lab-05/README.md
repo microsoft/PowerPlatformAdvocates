@@ -88,4 +88,16 @@ In this task, you will learn how to create an approval flow that will handle the
 
 ## Task 3: Test out the approval
 
-TODO test out the approval
+In this task, you are going to find out if the approval you configured in the last task actually works!
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. Check if you are in the `Dev` environment and if not, switch to that environment
+    ![](./assets/check-environment-dev.png)
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+        ![](./assets/run-first-pipeline-dev.png)
+1. Select the rocket icon on the left
+        ![](./assets/run-first-pipeline-solution.png)
+1. Select the purple `Deploy here` button.
+        ![](./assets/run-deploy-to-test-deploy-here-approval.png)  
+1. This will open up a 
