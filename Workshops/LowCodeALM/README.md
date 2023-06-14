@@ -18,16 +18,16 @@ In lab 02, you will learn about how to work with solutions. You will learn how t
 
 Now that you experienced how to work with solutions by yourself, let's also look at how to work together on solutions. How do you co-author a solution together with other developers? How does this work with developer environments?
 
-[Lab 03 - Work with solutions with a team](./lab-03/readme.md)
+[Lab 03 - Work with solutions with a team](./lab-03/README.md)
 
 ## Lab 04 - Deploy the solution to test and production
 
 You will learn how to deploy the solution that we created to a different environment using pipelines for Power Platform in lab 04. This will include the setup of pipelines for Power Platform, how to create a pipeline & how to deploy a pipeline using it.
 
-[Lab 04 - Deploy the solution to test and production](./lab-04/readme.md)
+[Lab 04 - Deploy the solution to test and production](./lab-04/README.md)
 
-## Lab 05 - Update the solution with a new version
+## Lab 05 - Add an approval before deploying to production
 
-After the deployment to the test and production environments we're done! No - of course not! A solution is never finished, so in this lab, we will update the solution to a new version check if the solution has any errors, and deploy the new solution version to the test and the production environments.
+You will learn how to setup an approval so that you can ask someone to approve a deployment to production.
 
-[Lab 05 - Update the solution with a new version](./lab-05/readme.md)
+[Lab 05 - Add an approval before deploying to production](./lab-05/README.md)
