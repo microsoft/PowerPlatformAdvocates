@@ -9,7 +9,9 @@ Welcome to Power Platform Advocates GitHub repository. In this repo, the Power P
 ## Workshops
 
 - [Power Platform & Mixed Reality](/Workshops/MR/README.md)
+- [Power Apps & DotNet](/Workshops/DotNetAndPowerApps/README.md)
 - [Power Apps & Java](/Workshops/JavaAndPowerApps/README.md)
+- [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
 
 ## Contributing
