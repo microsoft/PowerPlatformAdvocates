@@ -9,4 +9,4 @@ In Lab 02 you learned how to work with solutions. Now we are going to focus on b
 
 ## Next lab
 
-[⏭️ Move to lab 04](../lab-04/readme.md)
+[⏭️ Move to lab 04](../lab-04/README.md)
