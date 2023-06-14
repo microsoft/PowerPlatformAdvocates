@@ -3,7 +3,7 @@
 This lab will consist of the following tasks:
 
 * Extending the pipeline in the Deployment Pipeline Configuration App
-* 
+* Create a cloud flow that handles the approval
 
 ## Task 1: Extending the pipeline in the Deployment Pipeline Configuration App
 
