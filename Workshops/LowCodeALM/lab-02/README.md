@@ -50,7 +50,7 @@ In this task you will import a solution zip file into your Developer Environment
 In your codespace terminal, type the following command to import the solution zip file into your **Dev** environment. 
 
 ```bash
-pac solution import --path Resources/solution/MR_Solution.zip
+pac solution import --path assets/solution/MR_Solution.zip
 ```
 
 Once the import is complete, you will see a message in the terminal saying ```Solution Imported successfully.```
