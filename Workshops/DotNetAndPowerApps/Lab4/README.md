@@ -6,7 +6,7 @@ Now that you've created a Custom Connector and added all the necessary actions, 
 
 2. Every connector needs a connection for it to work so under the *Connections* section, click ```+ New Connection```.
 
-![Screenshot of the Connections section under the Test Tab in the custom connector wizard](/Workshops/JavaAndPowerApps/Lab4/assets/new-custom-connector-connection.png)
+![Screenshot of the Connections section under the Test Tab in the custom connector wizard](/Workshops/DotNetAndPowerApps/Lab4/assets/new-custom-connector-connection.png)
 
 3. After creating the connection, you can proceed to test out the actions you have just created.
 
@@ -18,7 +18,7 @@ Then click ```Test operation```.
 
 This should be the response. A 200 response code along with the body containing all ToDo lists:
 
-![GetLists action Test response](/Workshops/JavaAndPowerApps/Lab4/assets/get-lists-response.png)
+![GetLists action Test response](/Workshops/DotNetAndPowerApps/Lab4/assets/get-lists-response.png)
 
 **CreateList**
 
@@ -42,7 +42,7 @@ Fill in the following details:
 
 * listId: ```c9c74ec076c245b195447f19cb3d6bbe```
 
-> **Note**: This is the *id* of the *Shopping* list that you created in [Lab 2](https://github.com/microsoft/PowerPlatformAdvocates/tree/main/Workshops/JavaAndPowerApps/Lab2#step-2---add-your-own-list-data).
+> **Note**: This is the *id* of the *Shopping* list that you created in [Lab 2](https://github.com/microsoft/PowerPlatformAdvocates/tree/main/Workshops/DotNetAndPowerApps/Lab2#step-2---add-your-own-list-data).
 
 Click ```Test operation```.
 
@@ -84,7 +84,7 @@ Click ```Test operation```.
 
 You should have a 200 response code along with the body containing the updated *Work* ToDo list item: "Send email to manager and colleague". It was previously: "Send email to manager".
 
-![Body response of updated ToDo list item](/Workshops/JavaAndPowerApps/Lab4/assets/updated-list-item-response.png)
+![Body response of updated ToDo list item](/Workshops/DotNetAndPowerApps/Lab4/assets/updated-list-item-response.png)
 
 Now let's work with the Delete actions.
 
@@ -115,10 +115,10 @@ You should have a 204 response code confirming that something has been deleted. 
 
 And there you have it! All actions have been tested and passed.
 
-![All actions with passed test](/Workshops/JavaAndPowerApps/Lab4/assets/passed-action-tests.png)
+![All actions with passed test](/Workshops/DotNetAndPowerApps/Lab4/assets/passed-action-tests.png)
 
 Click the ```✓ Update connector``` button and once the custom connector has been saved, click the ```X Close ``` button.
 
 Now that you know that your custom connector is complete, we can go ahead and use it in a Power App - which you will be building next.
 
-### Next: [Lab 5 - Creating a Power Apps Canvas App](/Workshops/JavaAndPowerApps/Lab5/)
+### Next: [Lab 5 - Creating a Power Apps Canvas App](/Workshops/DotNetAndPowerApps/Lab5/)
