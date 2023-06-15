@@ -71,7 +71,7 @@ Once the export is complete, you will see a message in the terminal saying ```So
 
 ![Solution export succeeded](assets/solution-export-success.png)
 
-## Task 4: Unpack a solution
+## Task 4: Unpack the exported solution
 
 Now, we will be unpacking the solution zip file that we just exported from our **Dev** environment.
 
@@ -85,7 +85,11 @@ Once the unpack is complete, you will see a message in the terminal saying ```Un
 
 ![Unpacked Solution](assets/unpacked-solution.png)
 
-## Task 5: Clone a solution
+## Task 5: Commit changes
+
+TODO
+
+## Task 6: Clone a solution from an environment
 
 For this task, we will be using the ```pac solution clone``` command to clone the solution inside of the **Dev** environment. This command will do exactly what we did in the Task 3 and 4 so we need to delete the export folder that we have created.
 
@@ -114,11 +118,15 @@ Once the clone is complete, you will see a message in the terminal saying:
 
 ![Solution clone extract succeeded](assets/solution-clone-extract-success.png)
 
-## Task 5: Commit Changes
+## Task 7: Commit Changes
 
 TODO
 
-## Task 6: Review solution on the Maker Portal
+## Task 8: Review export/unpack folder vs clone folder
+
+TODO
+
+## Task 9: Review solution on the Maker Portal
 
 TODO
 
