@@ -47,10 +47,12 @@ In this task, you will be uploading a couple of assets to your OneDrive. The sol
 
 In this task you will import a solution zip file into your Developer Environment. The solution that you will be working with throughout this workshop is from our [Mixed Reality Workshop](https://github.com/microsoft/PowerPlatformAdvocates/blob/main/Workshops/MR/README.md). 
 
+Let's open up a new Terminal window. Click on the Burger menu icon in the top left corner and then hover over **Terminal** and then click **New Terminal**
+
 In your codespace terminal, type the following command to import the solution zip file into your **Dev** environment. 
 
 ```bash
-pac solution import --path Resources/solution/MR_Solution.zip
+pac solution import --path assets/solution/MR_Solution.zip
 ```
 
 Once the import is complete, you will see a message in the terminal saying ```Solution Imported successfully.```
@@ -64,7 +66,7 @@ For this task, we will be exporting the solution that we just imported into our 
 In your codespace terminal, type the following command to export the solution zip file from your **Dev** environment. 
 
 ```bash
-pac solution export --path Resources/export/Exported_MR_solution.zip --name MixedRealityWorkshop
+pac solution export --path assets/export/Exported_MR_solution.zip --name MixedRealityWorkshop
 ```
 
 Once the export is complete, you will see a message in the terminal saying ```Solution export succeeded.```
@@ -78,7 +80,7 @@ Now, we will be unpacking the solution zip file that we just exported from our *
 In your codespace terminal, type the following command to unpack the solution zip file from your **Dev** environment. 
 
 ```bash
-pac solution unpack --zipfile Resources/export/Exported_MR_solution.zip --folder Resources/export/Unpacked_MR_solution --processCanvasApps
+pac solution unpack --zipfile assets/export/Exported_MR_solution.zip --folder assets/export/Unpacked_MR_solution
 ```
 
 Once the unpack is complete, you will see a message in the terminal saying ```Unpacked Solution```
@@ -87,40 +89,65 @@ Once the unpack is complete, you will see a message in the terminal saying ```Un
 
 ## Task 5: Commit changes
 
-TODO
+We have made quite a number of changes. Let's commit those changes to our forked repository. To commit is to save the changes that you have made to your repository.
+
+1. In the left navigation bar, click on the **Source Control** icon.
+
+    ![Source Control icon](assets/source-control-icon.png)
+
+2. In the **Source Control** panel, you will see a list of files that have been changed or have been added. 
+3. Type in a commit message in the **Message** box. For example, ```Added unpacked MR solution```. A commit message is a short description of the changes that you have made.
+4. Click the **✓ Commit** button to commit the changes.
+
+    ![Commit changes](assets/commit-changes.png)
+
+5. A popup dialog may appear alerting you of the fact that there are no staged changes. It may also ask you to stage all changes and commit them directly. Select **Yes**
+
+    ![Stage all changes](assets/stage-all-changes.png)
+
+Now because we're using a codespace, the commit will save the changes inside of this codespace. Let's sync changes to our forked repository.
+
+6. Click **Sync Changes** in the Source Control panel.
+7. And then on the popup dialog, click **Ok** to confirm that this action will pull and push commits from and to "origin/main"
+
+Now our codespace is synced with our forked repository.
 
 ## Task 6: Clone a solution from an environment
 
-For this task, we will be using the ```pac solution clone``` command to clone the solution inside of the **Dev** environment. This command will do exactly what we did in the Task 3 and 4 so we need to delete the export folder that we have created.
-
-1. In your codespace Explorer, locate the ```Resources/export``` folder and delete it by right clicking on the folder and selecting **Delete Permanently**.
-
-    ![Delete export folder](assets/delete-export-folder.png)
-
-2. When the confirmation dialog appears, click **Delete**.
-
-    ![Delete export folder confirmation](assets/delete-export-folder-confirmation.png)
-
-Now that we have deleted the export folder, we can clone the solution from the **Dev** environment.
+For this task, we will be using the ```pac solution clone``` command to clone the solution inside of the **Dev** environment. This command will do exactly what we did in Task 4 and 5 but in one command instead of two.
 
 In your codespace terminal, type the following command to clone the solution from your **Dev** environment.
 
 ```bash
-pac solution clone --name MixedRealityWorkshop --processCanvasApps
+pac solution clone --name MixedRealityWorkshop --outputDirectory assets/export --processCanvasApps
 ```
 
 Once the clone is complete, you will see a message in the terminal saying:
 
  ```
  Solution clone extract succeeded.
- Dataverse solution project with name 'MixedRealityWorkshop' created successfully in: '/workspaces/EPPC23-alm'
+ Dataverse solution project with name 'MixedRealityWorkshop' created successfully in: '/workspaces/EPPC23-ALM/assets/export'
  ```
 
 ![Solution clone extract succeeded](assets/solution-clone-extract-success.png)
 
 ## Task 7: Commit Changes
 
-TODO
+Now that we've added a new folder, let's go ahead and commit these changes as well.
+
+1. In the left navigation bar, click on the **Source Control** icon
+
+2. In the **Source Control** panel, you will see a list of files that have been changed or have been added. Note that this list is MUCH longer than the previous commit. This will be explained shortly
+
+3. Type in a commit message in the **Message** box. For example, ```Added cloned MR solution```
+
+4. Click the **✓ Commit** button to commit the changes
+
+5. A popup dialog may appear alerting you of the fact that there are no staged changes. It may also ask you to stage all changes and commit them directly. Select **Yes**
+
+6. Click **Sync Changes** in the Source Control panel
+
+7. And then on the popup dialog, click **Ok** to confirm that this action will pull and push commits from and to "origin/main"
 
 ## Task 8: Review export/unpack folder vs clone folder
 
