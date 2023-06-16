@@ -81,14 +81,22 @@ These were all the changes you had to do for the MR app. Let's move onto the nex
 In this task, you will learn how to create a new branch in GitHub. 
 
 1. Go back to your forked environment
+  
 1. Open up your Codespace by selecting **Code** and selecting your Codespace
-        ![](./assets/new-branch-open-codespace.png)
+  
+    ![](./assets/new-branch-open-codespace.png)
+  
 1. Select the name of the branch (**main**) and select **Create new branch...** at the top
-        ![](./assets/new-branch-create-new-branch.png)
+  
+    ![](./assets/new-branch-create-new-branch.png)
+  
 1. Enter a name for the branch (`add tutorial screen`), see how it will convert a space to a dash and hit enter to create it
-        ![](./assets/new-branch-name-new-branch.png)
+  
+    ![](./assets/new-branch-name-new-branch.png)
+  
 1. Select the button next to the name of your branch to publish your branch to GitHub. This will make it available for others that have access to the GitHub repo
-        ![](./assets/new-branch-publish-branch.png)
+
+    ![](./assets/new-branch-publish-branch.png)
 
 Now that the branch is available to everyone who has access to the GitHub repo, you can also view it in the browser by going to your fork, and then selecting **main**. This will show a list of branches, and your branch that just got published should be there too.
 
@@ -99,6 +107,7 @@ Now that the branch is available to everyone who has access to the GitHub repo, 
 In task 03, you will learn how to sync the latest changes back to your Codespace. 
 
 1. Go back to your Codespace
+  
 1. Change your directory to the directory where you cloned the solution to by running the following command in your terminal:  
   
     `cd assets/export/MixedRealityWorkshop/`  
@@ -163,7 +172,7 @@ Before you commit the changes, you of course want to make sure there are no crit
   
     ![](./assets/checker-sarif-error.png)
 
-
+This task ends here, you won't have to fix all the errors. You know how this can be done and how you can read the SARIF-file.
 
 ## Task 05: Commit the changes to the new branch
 
@@ -190,14 +199,37 @@ In this lab, you will commit the changes that were done to the new branch, so th
 7. And then on the popup dialog, click **Ok** to confirm that this action will pull and push commits from and to "origin/main"
 
     Now our codespace is synced with our forked repository.
-
-
+  
 That is correct, because the formula that was used for navigation didn't work correctly. This is a good example of how you can catch errors before you deploy a solution to others.
 
 ## Task 06: Create a pull request (PR)
 
-TODO
+In this lab, you will learn how you can create a pull request, which is basically a way to propose changes to a GitHub repo.
 
+1. Go back to your forked environment on GitHub
+
+1. Select the **Compare & pull request** button 
+  
+    ![](./assets/create-pr-compare.png)
+  
+1. Select the **base repository** dropdown and select your own fork from the list
+  
+    ![](./assets/create-pr-select-base.png)
+  
+1. Review the **title** and the **description** of your pull request and select the green **Create pull request** button
+  
+    ![](./assets/create-pr.png)
+
+You have now created a pull request. Now the reviewer of the pull request can for instance look at the proposed changes by selecting the files changed tab in the pull request.
+
+![](./assets/create-pr-files-changed.png)
+
+Here it's possible for the reviewer to for instance see all the changes you saw in Codespaces before you committed the changes.
+
+![](./assets/create-pr-overview-screen-changes.png)
+
+This is the end of this lab, in the next lab you will learn how to deploy this solution, using pipelines for Power Platform.
+  
 ## Next lab
 
 [⏭️ Move to lab 04](../lab-04/README.md)
