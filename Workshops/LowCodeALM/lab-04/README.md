@@ -14,7 +14,10 @@ In this lab, you will work on the outer loop. You will perform the following tas
 
 In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment. This solution is needed to configure pipelines. 
 
-> **NOTE:** Normally, it's a best practice to install the pipelines solution on a separate "Pipelines Host" environment. This is a best practice because you will avoid people accidentally using dependencies on the pipelines tables, or having issues with sharing pipelines and giving people the right security roles. Take a look at the [FAQ on Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/alm/pipelines#frequently-asked-questions) to learn more best practices.
+> **NOTE:**  
+> Normally, it's a best practice to install the pipelines solution on a separate "Pipelines Host" environment. In this lab, you will install it in the `Prod` environment because a you can have three **free** developer environments, so you don't have space for another `Pipelines Host` environment next to `Dev`, `Test`, and `Prod` environments. 
+>
+> This is a best practice because you will avoid people accidentally using dependencies on the pipelines tables, or having issues with sharing pipelines and giving people the right security roles. Take a look at the [FAQ on Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/alm/pipelines#frequently-asked-questions) to learn more best practices.
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
 ![](./assets/admin-center.png)
@@ -36,7 +39,7 @@ When finished, you can go to the [maker portal](https://make.powerapps.com) and 
 
 In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app will be used for that. 
 
-![](./assets/dev-env-pipelines-installed.png)
+![](./assets/prod-env-pipelines-installed.png)
 
 Make sure to select that app in the [maker portal](https://make.powerapps.com) and make sure to play the app.
 
