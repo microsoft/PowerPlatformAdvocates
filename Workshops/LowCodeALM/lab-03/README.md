@@ -16,7 +16,29 @@ In this lab, you will have to imagine you're someone else. You will pretend you 
 In this task, you will act like you're a colleague who wants to change the Mixed Reality solution you imported in lab 02. 
 
 1. Go to the [maker portal](https://make.powerapps.com)
-1. 
+1. Check if you are in the `Dev` environment and if not, switch to that environment
+        ![](./assets/check-environment-dev.png)
+1. Go to Solutions via the left menu
+1. Select the `Mixed Reality Workshop` solution by selecting the display name
+        ![](./assets/add-screen-solution-open.png)
+1. Select the `elipsis` and select `Edit`
+        ![](./assets/add-screen-edit-app.png)
+1. Select `New screen`, select `Templates`, and select the `Tutorial` screen
+        ![](./assets/add-screen-add-new-screen.png)
+1. In the tree view on the left scroll down until you see `Screen2`, select the `elipsis` next to it, and select `Rename`
+        ![](./assets/add-screen-rename-new-screen.png)
+1. Select the `Overview Screen`, right-click on the `Smithsonian 3D Search` button and select `Copy`
+        ![](./assets/add-screen-rightclick-smiths3d-button.png)
+1. Right-click on the screen and select `Paste` to paste a copy of the button
+        ![](./assets/add-screen-rightclick-paste.png)
+1. Position the button below the others, add the following formula for the `OnSelect` property in the formula bar:  
+    `Navigate('Tutorial Screen', Fade`  
+    Change the `text` property on the right to:  
+    `Tutorial Screen`
+        ![](./assets/add-screen-change-button-props.png)
+
+![](./assets/add-screen-rename-button.png)
+![](./assets/add-screen-rightclick-paste.png)
 
 ## Task 02: Create a new branch
 
