@@ -11,27 +11,30 @@ In this lab, you will have to imagine you're someone else. You will pretend you 
 * Commit the changes to the new branch
 * Create a pull request (PR)
 
-## Add a screen to the MR app
+## Task 01: Add a screen to the MR app
+
+In this task, you will act like you're a colleague who wants to change the Mixed Reality solution you imported in lab 02. 
+
+1. Go to the [maker portal](https://make.powerapps.com)
+1. 
+
+## Task 02: Create a new branch
 
 TODO
 
-## Create a new branch
+## Task 03: Sync the updated solution to the new branch
 
 TODO
 
-## Sync the updated solution to the new branch
+## Task 04: Run the solution checker
 
 TODO
 
-## Run the solution checker
+## Task 05: Commit the changes to the new branch
 
 TODO
 
-## Commit the changes to the new branch
-
-TODO
-
-## Create a pull request (PR)
+## Task 06: Create a pull request (PR)
 
 TODO
 
