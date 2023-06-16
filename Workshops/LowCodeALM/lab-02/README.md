@@ -195,12 +195,12 @@ There are two main folders here. The **Unpacked_MR_solution** folder which was c
 
 | **MixedRealityWorkshop** | **Unpacked_MR_solution** | Explanation |
 |--------------|-----------|------------|
-| ![Clone](assets/cloned-difference-1.png) | ![Unpack](assets/unpack-difference-1.png) | explain |
-| ![Clone](assets/clone-canvas.png) | ![Unpack](assets/unpack-canvas.png)  | explain |
-| ![Clone](assets/connectors-folder.png) | ![Unpack](assets/connectors-folder.png)  | explain |
-| ![Clone](assets/other-folder.png) | ![Unpack](assets/other-folder.png)  | explain |
+| ![Clone](assets/cloned-difference-1.png) | ![Unpack](assets/unpack-difference-1.png) | TODO Daniel  |
+| ![Clone](assets/clone-canvas.png) | ![Unpack](assets/unpack-canvas.png)  | TODO Daniel |
+| ![Clone](assets/connectors-folder.png) | ![Unpack](assets/connectors-folder.png)  | TODO Daniel |
+| ![Clone](assets/other-folder.png) | ![Unpack](assets/other-folder.png)  | TODO Daniel |
 
-TODO: Closing statement
+TODO Daniel: Closing statement
 
 ## Task 8: Review solution on the Maker Portal
 
