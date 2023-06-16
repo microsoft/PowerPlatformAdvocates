@@ -31,18 +31,33 @@ In this task, you will act like you're a colleague who wants to change the Mixed
         ![](./assets/add-screen-rightclick-smiths3d-button.png)
 1. Right-click on the screen and select `Paste` to paste a copy of the button
         ![](./assets/add-screen-rightclick-paste.png)
-1. Position the button below the others, add the following formula for the `OnSelect` property in the formula bar:  
+1. Position the button below the others, add the following formula (yes, this is an incorrect formula, but you will learn why later in this lab) for the `OnSelect` property in the formula bar:  
     `Navigate('Tutorial Screen', Fade`  
     Change the `text` property on the right to:  
     `Tutorial Screen`
         ![](./assets/add-screen-change-button-props.png)
+1. Select the `elipsis` next to `btn3DSearch_1`, select `Rename`, and rename the button to `btnTutorial`
+        ![](./assets/add-screen-rename-button.png)
+1. Save the app and publish it
+        ![](./assets/add-screen-save-publish.png)
+1. Select the purple `Publish this version` button
+        ![](./assets/add-screen-publish.png)
+1. Select back to go back to the solution
+        ![](./assets/add-screen-back.png)
+1. Confirm that you want to leave the app
+        ![](./assets/add-screen-leave-app.png)
+1. In the solution explorer, select the `Publish all customizations` button in the command bar at the top
+        ![](./assets/add-screen-publish-all.png)
 
-![](./assets/add-screen-rename-button.png)
-![](./assets/add-screen-rightclick-paste.png)
+These were all the changes you had to do for the MR app. Let's move onto the next task.
 
 ## Task 02: Create a new branch
 
-TODO
+In this task, you will learn how to create a new branch in GitHub. 
+
+1. Go back to your forked environment
+1. Open up your Codespace by selecting `Code` and selecting your Codespace
+        ![](./assets/new-branch-open-codespace.png)
 
 ## Task 03: Sync the updated solution to the new branch
 
