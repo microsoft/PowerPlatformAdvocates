@@ -58,6 +58,16 @@ In this task, you will learn how to create a new branch in GitHub.
 1. Go back to your forked environment
 1. Open up your Codespace by selecting `Code` and selecting your Codespace
         ![](./assets/new-branch-open-codespace.png)
+1. Select the name of the branch (`main`) and select `Create new branch...` at the top
+        ![](./assets/new-branch-create-new-branch.png)
+1. Enter a name for the branch (`add tutorial screen`), see how it will convert a space to a dash and hit enter to create it
+        ![](./assets/new-branch-name-new-branch.png)
+1. Select the button next to the name of your branch to publish your branch to GitHub. This will make it available for others that have access to the GitHub repo
+        ![](./assets/new-branch-publish-branch.png)
+
+Now that the branch is available to everyone who has access to the GitHub repo, you can also view it in the browser by going to your fork, and then selecting `main`. This will show a list of branches, and your branch that just got published should be there too.
+
+![](./assets/new-branch-view-branch.png)
 
 ## Task 03: Sync the updated solution to the new branch
 
