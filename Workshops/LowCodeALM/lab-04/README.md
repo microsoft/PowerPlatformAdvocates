@@ -2,7 +2,7 @@
 
 In this lab, you will work on the outer loop. You will perform the following tasks:
 
-* Deploy the pipelines solution to your dev environment
+* Deploy the pipelines solution to your Prod environment
 * Setup your first pipeline
 * Run the first deployment to the Test environment
 * Install the Creator Kit solution in Test environment
@@ -10,31 +10,36 @@ In this lab, you will work on the outer loop. You will perform the following tas
 * Retry the deployment to the Test environment
 * Deploy to the Prod environment
 
-## Task 1: Deploy the pipelines solution to your dev environment
+## Task 1: Deploy the pipelines solution to your Prod environment
 
-In this task, you will learn how to install the pipelines for Power Platform solution in your dev environment. This solution is needed to configure pipelines. Normally you would install this on a seperate environment, but in this case, you will install it on the dev environment.
+In this task, you will learn how to install the pipelines for Power Platform solution in your `Prod` environment. This solution is needed to configure pipelines. 
+
+> **NOTE:**  
+> Normally, it's a best practice to install the pipelines solution on a separate "Pipelines Host" environment. In this lab, you will install it in the `Prod` environment because a you can have three **free** developer environments, so you don't have space for another `Pipelines Host` environment next to `Dev`, `Test`, and `Prod` environments. 
+>
+> This is a best practice because you will avoid people accidentally using dependencies on the pipelines tables, or having issues with sharing pipelines and giving people the right security roles. Take a look at the [FAQ on Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/alm/pipelines#frequently-asked-questions) to learn more best practices.
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
 ![](./assets/admin-center.png)
-1. Select the `Dev` environment you created before
+1. Select the `Prod` environment you created before
 1. In the command bar at the top, select `Resources` and `Dynamics 365 apps` 
-![](./assets/dev-env-dynamics-365-apps.png)
-1. Here you can find the apps that are installed on your `Dev` environment by default. Select the `Install App` button in the command bar at the top
-![](./assets/dev-env-install-app.png)
+![](./assets/prod-env-dynamics-365-apps.png)
+1. Here you can find the apps that are installed on your `Prod` environment by default. Select the `Install App` button in the command bar at the top
+![](./assets/prod-env-install-app.png)
 1. In the sidebar that opens, scroll all the way down select the `Power Platform Pipelines` app and select the `Next` button at the bottom of the sidebar
-![](./assets/dev-env-select-app.png)
+![](./assets/prod-env-select-app.png)
 1. Next, make sure to agree to the terms and select the `Install` button at the bottom of the sidebar
-![](./assets/dev-env-agree-terms.png)
+![](./assets/prod-env-agree-terms.png)
 
 This process will take a couple of minutes, you can refresh the page by selecting the `Refresh` button in the command bar at the top.
 
-When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`Dev`). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
+When finished, you can go to the [maker portal](https://make.powerapps.com) and select the right environment (`Prod`). If all went well, you should be able to see the `Deployment Pipeline Configuration` app in the Apps section in the maker portal.
 
 ## Task 02: Setup your first pipeline
 
 In this task, you will create your first pipeline. The `Deployment Pipeline Configuration` app will be used for that. 
 
-![](./assets/dev-env-pipelines-installed.png)
+![](./assets/prod-env-pipelines-installed.png)
 
 Make sure to select that app in the [maker portal](https://make.powerapps.com) and make sure to play the app.
 
@@ -117,12 +122,12 @@ Make sure to select the `New Deployment Stage` button now to add the first deplo
 
 This will open a new sidebar, where you can enter details about your first deployment stage.
 
-![](./assets/create-pipeline-new-deployment-stage-details.png)
-
 1. Add `Deploy to test` as the Name
 1. We're leaving the Description and Previous Deployment stage empty, because we don't have a previous deployment stage, since this is our first stage
 1. Set focus to the input box next to target deployment environment. This will open up a small popup which enables you to add a new development environment
 1. Select `New Development Environment`
+
+![](./assets/create-pipeline-new-deployment-stage-details.png)
 
 This will open another sidebar where you can add details about your test environment.
 
