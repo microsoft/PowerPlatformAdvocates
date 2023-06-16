@@ -3,14 +3,14 @@
 In this lab, you will go through the following tasks:
 
 * Creating a new browser profile
-* Log into the account you are going to use during the workshop
-* Create developer environments
-* Install the Creator Kit
-* Create a GitHub account
-* Create a fork of the [EPPC23-ALM](https://aka.ms/EPPC23-ALM) repository
-* Create a codespace
-* Install the Power Platform Tools extension
-* Connect to the Power Platform environment
+* Logging into the account you are going to use during the workshop
+* Creating developer environments
+* Installing the Creator Kit
+* Creating a GitHub account
+* Creating a fork of the [EPPC23-ALM](https://aka.ms/EPPC23-ALM) repository
+* Creating a codespace
+* Installing the Power Platform Tools extension
+* Connecting to the Power Platform environment
 
 ## Task 1: Create a new browser profile (Microsoft Edge)
 
@@ -18,19 +18,27 @@ It's always good to have a separate browser profile for your work and for worksh
 
 1. Open Microsoft Edge
 2. Click on the profile icon on the top left corner
-3. Hover over "Other Microsoft Edge Browsers" and then select **Add Browser**
+3. Hover over "Other Microsoft Edge Browsers" / "Other profiles" and then select **Add Browser** / **Add profile**
 
     ![Add new browser profile](assets/add-new-browser-profile.png)
 
 4. Click **Add**
 
+    ![Add a profile dialog](assets/add-profile.png)
+
     This will then open up a new browser window on your taskbar.
 
 5. Pin that browser window to your taskbar
 6. In the new browser window, select **Start without your data**
+
+    ![Start without your data](assets/start-without-your-data.png)
+
 7. Then select **Confirm and start browsing**.
 
+    ![Confirm and start browsing](assets/confirm-and-start-browsing.png)
+
     It may prompt you to configure your new browser theme. If this happens, just select **Next** and then **Finish**.
+
 ## Task 2: Log on to your account
 
 With the credentials that were provided to you, let's log into the account you are going to use during the workshop.
@@ -39,7 +47,9 @@ With the credentials that were provided to you, let's log into the account you a
 2. On the sign-in screen, enter the email address that was provided to you and then click **Next**
 3. Then enter the password and click **Sign in**
 
-    You should now be on the Power Apps Home Page.
+4. If you're prompted to stay signed in, click **Yes**
+
+    You should now be logged in and on the Power Apps Home Page.
 
     ![Power apps home page](assets/power-apps-home-page.png)
 
@@ -62,9 +72,15 @@ In this workshop, we will create the environments through the Power Platform Adm
 
 1. Go to the [Power Platform Admin Center](https://aka.ms/ppac)
 2. Exit the Welcome / Tour pop up. You can do this by clicking on the **X** in the top right corner of the pop up screen
+
+    ![Exit the Welcome / Tour pop up](assets/exit-welcome-tour.png)
+
 3. Click on **Environments** in the left navigation
 4. Click on **New** in the top navigation
-5. Enter the following information:
+
+    ![Environment + New for adding environments](assets/new-environment-button.png)
+
+5. When the right-hand side dialog pops up - enter the following information:
 
     | Field | Value |
     | --- | --- |
@@ -76,7 +92,7 @@ In this workshop, we will create the environments through the Power Platform Adm
     ![Create new Developer Environment](assets/create-dev-env.png)
 
 6. Click **Next**
-7. Then finally click **Save**
+7. The next section is asking you to add Dataverse. Finally Click on **Save**
 8. Now do the same for the Test and Prod environments with the following information:
 
    ```Test Environment:```
@@ -105,7 +121,7 @@ In this workshop, we will create the environments through the Power Platform Adm
 
 The solution that we will be working with in this workshop relies on the Creator Kit as a dependency. The Creator Kit is a set of components based on Fluent UI which you can use in Canvas Apps.
 
-The Creator Kit is not available out of the box, so we will need to install it in the Dev environment.
+The Creator Kit is not available out of the box, so we will need to install it in the ```Dev``` environment.
 
 1. With the Power Platform Admin Center still open, click on the **Dev** environment to open it
 
@@ -149,11 +165,13 @@ Now that you have a GitHub account, we are going to create a fork of the reposit
 1. Go to the [EPPC23-ALM](https://aka.ms/EPPC23-ALM) GitHub repository
 2. Click on the **Fork** button on the top right corner
 
-    ![TODO: Add image of fork button + Create new fork page]()
+    ![Screenshot of fork button in GitHub Repository](assets/fork-button.png)
 
 3. Once the "Create a new fork" page opens, review the information and then click **Create Fork**
 
-    Once your have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **your-username/EPPC23-ALM**.
+    ![Screenshot of "Create fork" button in GitHub](assets/create-fork-button.png)
+
+    Once your have created the fork, you will be redirected to your forked repository. You can see that you are in your forked repository by looking at the top left corner of the page. It should say **your-username/EPPC23-ALM forked from microsoft/EPPC23-ALM**.
 
 ## Task 7: Create a codespace
 
@@ -161,7 +179,7 @@ A codespace is a cloud-hosted development environment you can access from anywhe
 
 1. Make sure that you are in your forked repository (_your-username/EPPC23-ALM_) and then find and click on the **<> Code** button
 
-    ![TODO: Add image of code button]()
+    ![TODO: Add image of code button](assets/repo-code-button.png)
 
 
 2. On the **Code** pop up, select the **Codespaces** tab
@@ -175,11 +193,13 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
 1. In your codespace, click on the **Extensions** icon in the left navigation
 
-    ![TODO: Screenshot of extensions icon with correct repository folders next to it]()
+    ![Screenshot showing where teh Extensions above](assets/extensions-icon-on-navigation-bar.png)
 
 2. Search for **Power Platform Tools** and then click **Install** on the **Power Platform Tools** extension
 
-    ![TODO: Screenshot of search for Power Platform Tools]()
+    ![TODO: Screenshot of search for Power Platform Tools](assets/power-platform-tools-search-and-religion.png)
+
+    After installing the **Power Platform Tools** extension, you will be prompted to "Select File Icon Theme". Do whatever you want.
 
     With the Power Platform Tools extension installed, you can now interact with the Power Platform from within Visual Studio Code. But before we can do that, we need to connect to a Power Platform environment.
 
@@ -195,6 +215,8 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
 2. If you don't see it open already, let's open the Terminal. Click on the Burger menu icon in the top left corner and then hover over **Terminal** and then click **New Terminal**
 
+    A terminal window has now been opened for you. This is where you will write all of the following commands in this lab and in the upcoming labs as well.
+
 3. Type the following command in the terminal and then press **Enter**:
 
     ```bash
@@ -205,9 +227,15 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
     ![Screenshot of the terminal with the code and link](assets/terminal-with-code-and-link.png)
 
+    Once you click on that link, it will open a new browser tab where you will have to paste that code into the browser and then click **Next**    
+
     > **Note:** If you are using a Mac, you can **Ctrl + click** on the ```link``` that is provided in the terminal and then enter the ``code`` provided.
 
-5. Type in the email address that was provided to you and then click **Next**
+    ![Enter code and click next](assets/enter-code.png)
+
+5. Pick the account that was provided to you. If you can't see it on screen then log in.
+
+    ![Screenshot of the account selection page](assets/account-selection.png)
 
 6. Then type in your password and click **Sign in**
 
@@ -221,7 +249,7 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
 8. Refresh the Auth Profiles section by clicking on the **Refresh** button next to "Auth Profiles"
 
-    ![Screenshot of the Auth Profiles section with the Refresh button]()
+    ![Screenshot of the Auth Profiles section with the Refresh button](assets/refresh-auth-profiles.png)
 
     You should now see at least one auth profile. If you have more than one, you can select the one you want to use by clicking on the **Select Auth Profile** button next to the auth profile.
 
@@ -235,7 +263,7 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
     This gets a list of all the environments that you have access to. You should see the **Dev** environment listed as one of them. This is the one we want to eventually connect to. 
 
-    ![TODO: Screenshot of pac org list]()
+    ![Screenshot of pac org list](assets/org-list.png)
 
 10. Then in the terminal, type the following command and then press **Enter**:
 
@@ -245,16 +273,16 @@ The Power Platform Tools extension is a Visual Studio Code extension that allows
 
     You should then see confirmation that you have successfully selected the **Dev** org for the current auth profile.
 
-    ![TODO: Screenshot of pac org select confirmation]()
+    ![Screenshot of pac org select confirmation](assets/org-select.png)
 
 11. To have further confirmation that you have successfully connected to the **Dev** environment, in the terminal type the following command and then press **Enter**:
 
     ```bash
     pac org who
     ```
-    This command will return information about the environment that you are connected to. You should see the **Dev** environment listed as well as other unique information about the environment including the User email you're connected as. 
+    This command will return information about the environment that you are connected to. You should see the **Dev** environment listed as well as other unique information about the environment including the User email you're connected as.
 
-    ![TODO: Screenshot of pac org who confirmation information]()
+    ![Screenshot of pac org who confirmation information](assets/org-confirmation.png)
 
 ## Next lab
 
