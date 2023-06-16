@@ -294,7 +294,7 @@ Now that we know about the ins and outs of a solution, including how to interact
 
     ![Coral 3D object](assets/coral-3d-object.png)
 
-Now you know the app works in the **Dev** Environment. Let's go ahead and learn about pipelines!
+Now you know the app works in the **Dev** Environment. Let's go ahead and learn about how to work with multiple people on a solution!
 
 ## Next lab
 
