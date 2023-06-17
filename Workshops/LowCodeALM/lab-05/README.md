@@ -10,8 +10,8 @@ This lab will consist of the following tasks:
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
 1. Go to the [maker portal](https://make.powerapps.com)
-1. Check if you are in the `Dev` environment and if not, switch to that environment
-    ![](./assets/check-environment-dev.png)
+1. Check if you are in the `Prod` environment and if not, switch to that environment
+    ![](./assets/check-environment-prod.png)
 1. Look for the `Deployment Pipeline Configuration` app, hover on it and select the play button
     ![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
 1. This will open the `Deployment Pipeline Configuration` app and will enable you to modify your pipeline. Select the `My first pipeline` pipeline
