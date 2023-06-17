@@ -49,11 +49,15 @@ In this task, you will act like you're a colleague who wants to change the Mixed
   
 1. Position the button below the others, add the following formula (yes, this is an incorrect formula, but you will learn why later in this lab) for the **OnSelect** property in the formula bar:  
 
-    ```Navigate('Tutorial Screen', ScreenTransition.Fade```  
+    ```
+    Navigate('Tutorial Screen', ScreenTransition.Fade
+    ```  
     
     Change the **text** property on the right to:  
     
-    ```Tutorial Screen```
+    ```
+    Tutorial Screen
+    ```
       
     ![](./assets/add-screen-change-button-props.png)
           
@@ -113,12 +117,16 @@ In task 03, you will learn how to sync the latest changes back to your Codespace
   
 1. Change your directory to the directory where you cloned the solution to by running the following command in your terminal:  
   
-    `cd assets/export/MixedRealityWorkshop/`  
+    ```
+    cd assets/export/MixedRealityWorkshop/
+    ```  
       
     ![](./assets/sync-change-directory.png)
 1. Now, we are in the right directory to sync the latest changes. Run the following command in your terminal to get the latest changes:  
   
-    `pac solution sync --processCanvasApps`  
+    ```
+    pac solution sync --processCanvasApps
+    ```  
     
     > **Command Explanation:** 
     >
@@ -134,7 +142,9 @@ In task 03, you will learn how to sync the latest changes back to your Codespace
 
 1. It's time to pack your synced solution. Run the following command in your terminal to pack your solution to a managed solution:
   
-    `pac solution pack --folder ./src/ --zipfile ../Packed_MR_Solution.zip --packagetype Managed --processCanvasApps`  
+    ```
+    pac solution pack --folder ./src/ --zipfile ../Packed_MR_Solution.zip --packagetype Managed --processCanvasApps
+    ```  
       
     > **Command Explanation:** 
     >
