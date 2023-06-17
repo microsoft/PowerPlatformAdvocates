@@ -48,8 +48,11 @@ In this task, you will act like you're a colleague who wants to change the Mixed
     ![](./assets/add-screen-rightclick-paste.png)
   
 1. Position the button below the others, add the following formula (yes, this is an incorrect formula, but you will learn why later in this lab) for the **OnSelect** property in the formula bar:  
+
     ```Navigate('Tutorial Screen', ScreenTransition.Fade```  
+    
     Change the **text** property on the right to:  
+    
     ```Tutorial Screen```
       
     ![](./assets/add-screen-change-button-props.png)
