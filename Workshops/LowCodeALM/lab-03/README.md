@@ -168,7 +168,9 @@ Before you commit the changes, you of course want to make sure there are no crit
   
 1. Run the following command in the terminal:
   
-    `pac solution check --path ../Packed_MR_Solution.zip --outputDirectory ../checker-reports --geo Europe`
+    ```
+    pac solution check --path ../Packed_MR_Solution.zip --outputDirectory ../checker-reports --geo Europe
+    ```
     
     > **Command Explanation:** 
     >
