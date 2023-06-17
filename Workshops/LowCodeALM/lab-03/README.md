@@ -35,7 +35,7 @@ In this task, you will act like you're a colleague who wants to change the Mixed
           
     ![](./assets/add-screen-add-new-screen.png)
           
-1. In the tree view on the left scroll down until you see **Screen1**, select the **elipsis** next to it, and select **Rename**
+1. In the tree view on the left scroll down until you see **Screen1**, select the **elipsis** next to it, select **Rename**, and rename it to `Tutorial Screen`
   
     ![](./assets/add-screen-rename-new-screen.png)
   
