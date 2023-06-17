@@ -116,8 +116,15 @@ In task 03, you will learn how to sync the latest changes back to your Codespace
 1. Now, we are in the right directory to sync the latest changes. Run the following command in your terminal to get the latest changes:  
   
     `pac solution sync --processCanvasApps`  
+    
+    > **Command Explanation:** 
+    >
+    > ```pac solution sync``` is the command that we are using to sync the latest version (that we just published in the maker portal) of the solution that we cloned in an earlier stage.
+    >
+    > ```--processCanvasApps``` is the parameter that we use to unpack the canvas apps in the solution.
+    > 
+    > Notice that you don't have to add the solution name now. The Power Platform CLI is smart enough to get that from the current directory
   
-    Notice that you don't have to add the solution name now. The Power Platform CLI is smart enough to get that from the current directory
 1. Next, you will see a lot of changes in the source control section again, select the `source control` icon in the left menu, select the `Overview screen.fx.yaml` file and you will be able to see all the changes that we made to that screen. Feel free to check out the other files that changed  
   
     ![](./assets/sync-changes-to-overview-screen.png)
@@ -126,7 +133,17 @@ In task 03, you will learn how to sync the latest changes back to your Codespace
   
     `pac solution pack --folder ./src/ --zipfile ../Packed_MR_Solution.zip --packagetype Managed --processCanvasApps`  
       
-    This command will both pack the unpacked canvas app as well as the solution, so it will create a new file (the solution zip file) and update a file (the packed canvas app - msapp)
+    > **Command Explanation:** 
+    >
+    > ```pac solution pack``` is the command that we are using to pack the solution we just synced.
+    >
+    > ```--folder ./src/``` is to point at the src folder that contains the solution.
+    > 
+    > ```--zipfile ../Packed_MR_Solution.zip``` is the path and the filename of the zip-file we want to generate of the solution.
+    >
+    > ```--packagetype Managed``` is to make sure we are packing a managed solution.
+    > 
+    > ```--processCanvasApps``` is the parameter that we use to indicate that we also want to pack the unpacked canvas apps in the unpacked solution folder.
   
 This file was needed as a prerequisite for task 04. Let's move on to the next task.
 
