@@ -65,7 +65,7 @@ In this task, you will act like you're a colleague who wants to change the Mixed
   
     ![](./assets/add-screen-rename-button.png)
   
-1. Save the app and publish it
+1. Select the publish icon (this will save and publish the app)
   
     ![](./assets/add-screen-save-publish.png)
   
