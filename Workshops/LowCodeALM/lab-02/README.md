@@ -297,7 +297,36 @@ Now that we know about the ins and outs of a solution, including how to interact
 
     ![Coral 3D object](assets/coral-3d-object.png)
 
-Now you know the app works in the **Dev** Environment. Let's go ahead and learn about how to work with multiple people on a solution!
+    With the app working as expected - let's go ahead and **Save** and **Publish** the app.
+
+19. Close the app preview by clicking on the **X** in the top right-hand corner of the screen
+
+    ![Close app preview](assets/close-app-preview.png)
+
+20. Go ahead and **Save** the app by clicking on the **Save** button in the top right-hand corner of the screen. Once the app has been saved, click on the **Publish** button in the top right-hand corner of the screen as well. 
+
+    ![Save app](assets/save-and-publish-app.png)
+
+21. Once the **Publish** dialog box appears, click **Publish this version** to publish the app to the **Dev** environment.
+
+    ![Publish app](assets/publish-app.png)
+
+    The app is now published to the environment and can be used by anyone who has access to the it.
+
+22. Now that the ```Mixed Reality App``` is published - exit the app by clicking the **Back** button in the top left-hand corner of the screen
+
+    ![Back button](assets/back-button.png)
+
+23. A popup dialog will appear asking you to confirm if you want to leave the app. Select **Leave**
+
+    ![Leave app](assets/leave-app.png)
+
+    You will then be redirected back to the **Mixed Reality Workshop** solution view.
+
+    ![Mixed Reality Workshop solution](assets/back-to-solution.png)
+
+
+Now that you know that the app works in the **Dev** Environment and that the latest version has been published - Let's go ahead and learn about how to work with multiple people on a solution!
 
 ## Next lab
 
