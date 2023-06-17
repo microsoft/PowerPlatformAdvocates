@@ -6,13 +6,13 @@ In this workshop, you will learn how to apply Application Lifecycle Management i
 
 In this lab, you will login to the account you are going to use during the workshop and you will create developer environments. You will also setup a GitHub account and a codespace.
 
-[Lab 01 - Tenant Setup](./lab-01/readme.md)
+[Lab 01 - Tenant Setup](./lab-01/README.md)
 
 ## Lab 02 - Work with solutions
 
 In lab 02, you will learn about how to work with solutions. You will learn how to import a solution and how to export and unpack a solution. Then, you will inspect the solution to see what the structure of the solution is. After that, you will learn how to do the export and unpack more easily by cloning a solution.
 
-[Lab 02 - Work with Solutions](./lab-02/readme.md)
+[Lab 02 - Work with Solutions](./lab-02/README.md)
 
 ## Lab 03 - Work with solutions with a team
 
