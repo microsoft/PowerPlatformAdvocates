@@ -197,6 +197,14 @@ Before you commit the changes, you of course want to make sure there are no crit
   
     ![](./assets/checker-sarif-error.png)
 
+The SARIF-viewer tells us that we can review the issues in design mode of the app. We won't do that now, but these issues can be found by selecting the **App checker** icon, and selecting the **chevron ＞** next to Formulas.
+
+![](./assets/checker-app-checker-formulas.png)
+
+Next you will see the explanation of the errors in the sidebar.
+
+![](./assets/checker-app-formula-errors.png)
+
 This task ends here, you won't have to fix all the errors. You know how this can be done and how you can read the SARIF-file.
 
 ## Task 05: Commit the changes to the new branch
