@@ -68,11 +68,11 @@ In this task, you will act like you're a colleague who wants to change the Mixed
   
 1. Select back to go back to the solution
   
-        ![](./assets/add-screen-back.png)
+    ![](./assets/add-screen-back.png)
   
 1. Confirm that you want to leave the app
   
-        ![](./assets/add-screen-leave-app.png)
+    ![](./assets/add-screen-leave-app.png)
   
 These were all the changes you had to do for the MR app. Let's move onto the next task.
 
