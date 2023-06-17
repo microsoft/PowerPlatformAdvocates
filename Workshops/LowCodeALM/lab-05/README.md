@@ -28,8 +28,8 @@ In this task, you will learn how to extend the pipeline and add an approval befo
 In this task, you will learn how to create an approval flow that will handle the approval before deploying to production.
 
 1. Go to the [maker portal](https://make.powerapps.com)
-1. Check if you are in the `Dev` environment and if not, switch to that environment
-    ![](./assets/check-environment-dev.png)
+1. Check if you are in the `Prod` environment and if not, switch to that environment
+    ![](./assets/check-environment-prod.png)
 1. Select `Flows` in the left navigation, select `New flow` in the command bar at the top and select `Automated cloud flow` 
     ![](./assets/extend-pipeline-create-automated-cloud-flow.png)
 1. This will open a pop up where you can name your flow and configure a trigger. Name your flow `My first pipeline production approval`, search for `action`, select the Microsoft Dataverse trigger called `When an action is performed` and select the blue `Create` button.  
