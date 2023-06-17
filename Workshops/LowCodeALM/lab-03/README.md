@@ -156,8 +156,16 @@ Before you commit the changes, you of course want to make sure there are no crit
 1. Run the following command in the terminal:
   
     `pac solution check --path ../Packed_MR_Solution.zip --outputDirectory ../checker-reports --geo Europe`
-  
-    This command uses the `--path` parameter to point to the zip file you just generated at the end of the previous task, the `--outputDirectory` parameter points to the directory where you want to save the results and last but not least, the `--geo` parameter shows against which region the checker should check.
+    
+    > **Command Explanation:** 
+    >
+    > ```pac solution check``` is the command that we are using to check the solution for errors.
+    >
+    > ```--path ../Packed_MR_Solution.zip``` is to point at the path of the solution we just packed.
+    > 
+    > ```--outputDirectory ../checker-reports``` is to make sure the outputs get saved to the `checker-reports` directory one level higher of the current directory.
+    >
+    > ```--geo Europe``` is to select the geography of the solution checker API. Europe is closest in this case.
   
 1. The results will show up in the terminal after a while
   
