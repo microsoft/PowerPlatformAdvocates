@@ -202,6 +202,8 @@ There are two main folders here. The **Unpacked_MR_solution** folder which was c
 
 In short, you can achieve almost the same things with the separate commands as with the clone command. It all depends on which parameters you add and what input you give.
 
+> To learn more about all the parameters you can add to all the different commands in the `pac solution` command group, make sure to check out the [documentation](https://aka.ms/pac/solution).
+
 ## Task 8: Review solution on the Maker Portal
 
 Now that we know about the ins and outs of a solution, including how to interact with them through the Power Platform CLI - let's go ahead and review the solution in it's entirety on the Power Platform Maker Portal and check that everything is working as expected.
