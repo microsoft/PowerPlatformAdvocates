@@ -195,12 +195,12 @@ There are two main folders here. The **Unpacked_MR_solution** folder which was c
 
 | **MixedRealityWorkshop** | **Unpacked_MR_solution** | Explanation |
 |--------------|-----------|------------|
-| ![Clone](assets/cloned-difference-1.png) | ![Unpack](assets/unpack-difference-1.png) | TODO Daniel  |
-| ![Clone](assets/clone-canvas.png) | ![Unpack](assets/unpack-canvas.png)  | TODO Daniel |
-| ![Clone](assets/connectors-folder.png) | ![Unpack](assets/connectors-folder.png)  | TODO Daniel |
-| ![Clone](assets/other-folder.png) | ![Unpack](assets/other-folder.png)  | TODO Daniel |
+| ![Clone](assets/cloned-difference-1.png) | ![Unpack](assets/unpack-difference-1.png) | The difference in this case is that the `MixedRealityWorkshop` directory contains a `src` directory, a `.gitignore` file and a `.cdsproj` file, the unpacked version only has the contents of the `src` directory.  |
+| ![Clone](assets/clone-canvas.png) | ![Unpack](assets/unpack-canvas.png)  | You used the `--processCanvasApps` parameter with the `pac solution clone` command. This led to the unpacking of the canvas app, while in the export and unpack you didn't use the `--processCanvasApps` parameter, and left the `msapp` file packed. |
+| ![Clone](assets/connectors-folder.png) | ![Unpack](assets/connectors-folder.png)  | For the `Connectors` directory, there is no difference between the two methods. |
+| ![Clone](assets/other-folder.png) | ![Unpack](assets/other-folder.png)  | For the `Other` directory, there is no difference between the two methods. |
 
-TODO Daniel: Closing statement
+In short, you can achieve almost the same things with the separate commands as with the clone command. It all depends on which parameters you add and what input you give.
 
 ## Task 8: Review solution on the Maker Portal
 
