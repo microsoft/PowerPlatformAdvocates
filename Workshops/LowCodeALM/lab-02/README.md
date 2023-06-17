@@ -2,15 +2,16 @@
 
 In this lab, you will go through the following tasks:
 
-* Uploading assets to OneDrive
-* Importing a solution zip file
-* Exporting a solution from a Power Platform environment
-* Unpacking the exported solution
-* Cloning a solution
-* Inspecting the solution folders
-* Reviewing the solution in the Power Apps Maker Portal
+* Upload assets to OneDrive
+* Import a solution zip file
+* Export a solution from an environment
+* Unpack the exported solution
+* Clone a solution from an environment
+* Commit Changes
+* Review export/unpack folder vs clone folder
+* Review solution on the Maker Portal
 
-## Task 1: Uploading assets to OneDrive
+## Task 1: Upload assets to OneDrive
 
 In this task, you will be uploading a couple of assets to your OneDrive. The solution we will be working with later uses **OneDrive for Business** as a connector to retrieve files and images and their respective information directly from OneDrive to be used in a Canvas App.
 
