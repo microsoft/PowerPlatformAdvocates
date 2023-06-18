@@ -10,17 +10,29 @@ This lab will consist of the following tasks:
 In this task, you will learn how to extend the pipeline and add an approval before deploying to production.
 
 1. Go to the [maker portal](https://make.powerapps.com)
+
 1. Check if you are in the `Prod` environment and if not, switch to that environment
+
     ![](./assets/check-environment-prod.png)
+
 1. Look for the `Deployment Pipeline Configuration` app, hover on it and select the play button
+
     ![](./assets/extend-pipeline-open-deployment-pipeline-configuration-app.png)
+
 1. This will open the `Deployment Pipeline Configuration` app and will enable you to modify your pipeline. Select the `My first pipeline` pipeline
+
     ![](./assets/extend-pipeline-select-pipeline.png)
+
 1. On the next screen, scroll down to the deployment stages and select the `Deploy to prod` deployment stage by selecting the name
+
     ![](./assets/extend-pipeline-select-deploy-to-prod-stage.png)
+
 1. Enable the check box in the `Pre-Deployment Step Required` field and select the `Save & Close` button in the command bar at the top
+
     ![](./assets/extend-pipeline-enable-pre-deployment-step.png)
+
 1. Check in the Deployment Stages subgrid if the `Pre-Deployment Step Required` field is changed to yes. If that's correct, you are done with this task, if not, go back to step 5 and try again 
+
     ![](./assets/extend-pipeline-enable-pre-deployment-step-saved.png)
 
 ## Task 2: Create a cloud flow that handles the approval
