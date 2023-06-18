@@ -220,7 +220,11 @@ In this task, you are going to find out if the approval you configured in the la
 
     ![](./assets/run-deploy-to-prod-deployment-notes.png)
 
-1. This will trigger the Power Automate cloud flow, and because we are working on a fresh environment, it can take a while before the approval solution is deployed. Best is to take a biological break now, since it can take 5-10 minutes before your next step
+1. Next, you will see the following screen, that shows a yellow box which states that `Your request to deploy here is pending.`
+
+    ![](./assets/run-deploy-to-prod-pending.png)
+
+1. This message is showing because our changes in the beginning of the lab made sure that the Power Automate cloud flow is now triggered. We are working on a fresh environment, so it can take a while before the approval solution is deployed. Best is to take a break now, since it can take 5-10 minutes before your next step
 
 1. Open a new browser tab and go to [Outlook web](https://outlook.office.com) and wait for the approval email. After 5-10 minutes (only the first time!) it should arrive
 
