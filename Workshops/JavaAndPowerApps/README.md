@@ -11,8 +11,8 @@ This lab is all about setting up your environment. This is what you need to get 
 
 :link: [Lab 0 - Setup your environment](/Workshops/JavaAndPowerApps/Lab0/)
 
-### Lab 1 - Getting the Java API up and running in Azure
-This lab will help you deploy the Java API to Azure using the Azure Developer CLI.
+### Lab 1 - Getting the Java API, DotNet (optional) & Python (optional) APIs up and running in Azure
+This lab will help you deploy the Java API, DotNet (optional) & Python (optional) APIs to Azure using the Azure Developer CLI.
 
 1. :link: [Lab 1 - Getting the Java API up and running in Azure](/Workshops/JavaAndPowerApps/Lab1/)
 2. :link: [Lab 1.1 - Getting the DotNet API up and running in Azure (Optional)](/Workshops/JavaAndPowerApps/Lab1.1/)

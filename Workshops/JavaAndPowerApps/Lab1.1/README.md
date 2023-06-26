@@ -91,4 +91,4 @@ We will be adding some data in the next lab.
 
 > **Note**: The ```azd up``` command will create Azure resources that will incur costs to your Azure subscription. Once you are done with the workshop, You can clean up those resources manually via the Azure portal or with the [```azd down``` command](https://github.com/Azure-Samples/todo-java-mongo#clean-up-resources).
 
-### Next: [Lab 2 - Adding data with the ToDo API](/Workshops/JavaAndPowerApps/Lab2.1/)
+### Next: [Lab 2.1 - Adding data with the DotNet ToDo API](/Workshops/JavaAndPowerApps/Lab2.1/)

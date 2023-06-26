@@ -126,4 +126,4 @@ Scroll down to where you see the Server Response. You should see the 200 respons
 
 ![Screenshot of the response code and the response body with the 3 Shopping list items](/Workshops/JavaAndPowerApps/Lab2.1/assets/shopping-list-items.png)
 
-### Next: [Lab 3 - Creating a Custom Connector](/Workshops/JavaAndPowerApps/Lab3.1/)
+### Next: [Lab 3.1 - Creating a Custom Connector with DotNet ToDo API](/Workshops/JavaAndPowerApps/Lab3.1/)
