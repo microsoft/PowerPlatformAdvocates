@@ -1,6 +1,6 @@
 # Lab 1 - Getting the Java API up and running in Azure
 
-This workshop is adapting the [ToDo Application Azure sample with a Java API.](https://github.com/Azure-Samples/todo-java-mongo). The sample comprises of a "complete ToDo application that includes everything you need to build, deploy, and monitor an Azure solution. This application uses the Azure Developer CLI (azd) to get you up and running on Azure quickly, React.js for the Web application, Java for the API, Azure Cosmos DB API for MongoDB for storage, and Azure Monitor for monitoring and logging. It includes application code, tools, and pipelines that serve as a foundation from which you can build upon and customize when creating your own solutions."
+This workshop is adapting the [ToDo Application Azure sample with a Java API](https://github.com/Azure-Samples/ASA-Samples-Web-Application). The sample comprises of a "complete ToDo application that includes everything you need to build and deploy an Azure solution. This application uses the Azure Developer CLI (azd) to get you up and running on Azure quickly, React.js for the Web application, Java for the API and Azure Database for PostgreSQL flexible server for storage. It includes application code, tools, and pipelines that serve as a foundation from which you can build upon and customize when creating your own solutions."
 
 If you want to learn more about the sample and it's architecture, you can check out the Github repo linked above. For this workshop, we're only interested in the Java API which will serve as the backend for the ToDo application we'll be building with Power Apps.
 
@@ -14,7 +14,7 @@ The following prerequisites are required to install this application. Please ens
 * [Java 17 or later](https://learn.microsoft.com/en-us/java/openjdk/install)
 * [Node.js with npm (16.13.1+)](https://nodejs.org/)
 
-## Step 2 - Installing the azd template (Adapted from [here](https://github.com/Azure-Samples/todo-java-mongo#quickstart))
+## Step 2 - Installing the azd template (Adapted from [here](https://github.com/Azure-Samples/ASA-Samples-Web-Application#quickstart))
 
 The fastest way for you to get this API up and running on Azure is to use the ```azd up``` command. This single command will create and configure all the necessary Azure resources that we need.
 
@@ -53,7 +53,13 @@ Once you have successfully authenticated, you'll see this message in your browse
 
 Close the browser tab and return to the terminal.
 
-5. Run the following command to package a deployable copy of your application, provision the template's infrastructure to Azure and also deploy the application code to those newly provisioned resources.
+5. Run the following command to enable Azure Spring Apps feature for AZD.
+
+```bash
+azd config set alpha.springapp on
+```
+
+6. Run the following command to package a deployable copy of your application, provision the template's infrastructure to Azure and also deploy the application code to those newly provisioned resources.
 
 ```bash
 azd up
@@ -72,22 +78,21 @@ This command will prompt you for the following information:
 >
 > You will see a progress indicator as it packages, provisions and deploys your application.
 
-When ```azd up``` is complete it will output the following URLs:
+When ```azd up``` is complete it will output the following URL:
 
 * Azure Portal link to view resources
 * ToDo Web application frontend
-* ToDo API application
 
 ![Screenshot of URLs that were created and deployed](/Workshops/JavaAndPowerApps/Lab1/assets/urls.png)
 
-Click the deployed service API URL to launch the ToDo OpenAPI definition.
+Copy the deployed Web URL and add the suffix of `/swagger-ui.html`, paste in your browser and launch the ToDo OpenAPI definition.
 
 > **Note**: Bookmark this API URL or keep it somewhere safe for later reference in Lab 3.
 
-![Screenshot  of the ToDo OpenAPI definition](/Workshops/JavaAndPowerApps/Lab1/assets/openapi-definition.png)
+![Screenshot of the ToDo OpenAPI definition](/Workshops/JavaAndPowerApps/Lab1/assets/openapi-definition.png)
 
 We will be adding some data in the next lab.
 
-> **Note**: The ```azd up``` command will create Azure resources that will incur costs to your Azure subscription. Once you are done with the workshop, You can clean up those resources manually via the Azure portal or with the [```azd down``` command](https://github.com/Azure-Samples/todo-java-mongo#clean-up-resources).
+> **Note**: The ```azd up``` command will create Azure resources that will incur costs to your Azure subscription. Once you are done with the workshop, You can clean up those resources manually via the Azure portal or with the [```azd down``` command](https://github.com/Azure-Samples/ASA-Samples-Web-Application#next-steps).
 
 ### Next: [Lab 2 - Adding data with the ToDo API](/Workshops/JavaAndPowerApps/Lab2/)
