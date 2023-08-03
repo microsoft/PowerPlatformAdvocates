@@ -78,10 +78,7 @@ This command will prompt you for the following information:
 >
 > You will see a progress indicator as it packages, provisions and deploys your application.
 
-When ```azd up``` is complete it will output the following URL:
-
-* Azure Portal link to view resources
-* ToDo Web application endpoint
+When ```azd up``` is complete, it will output the deployed ToDo Web application endpoint:
 
 ![Screenshot of URLs that were created and deployed](/Workshops/JavaAndPowerApps/Lab1/assets/urls.png)
 
