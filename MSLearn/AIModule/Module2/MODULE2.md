@@ -1,6 +1,6 @@
-# MODULE 2: BUILDING A POWER APPS CANVAS APP FOR A REAL ESTATE SOLUTION WITH POWER APPS COPILOT
+# Building a Power Apps Canvas App for a real estate solution with Power Apps Copilot
 
-In this module, you will be exploring AI to generate a table of data and create a new app within Power Apps using the Copilot tool.
+In this module, you will be exploring AI to generate a table of data and creating a new app within Power Apps using the Copilot tool.
 
 **Learning Objectives**
 
@@ -16,25 +16,21 @@ In this module you’ll:
 - You'll need a Power Apps Developer environment (based in the United States region) with a licensed user to complete these exercises.
 - Complete the previous module in this Learning Path
 
-## INTRODUCTION TO POWER APPS COPILOT (4 MINS)
+## Introduction to Power Apps Copilot
 
 With Power Apps Copilot, you can build an app, including the data behind it, just by describing what you need through multiple steps of conversation. Your apps will have copilot-powered experiences built in from the first screen—so your users can discover insights in conversation instead of mouse-clicks.
 
 The AI assistant is available from the Power Apps home screen. You can tell the AI assistant what kind of information you want to collect, track, or show and the assistant will generate a Dataverse table and use it to build your canvas app.
 
-## EXERCISE – CREATE A CANVAS APP WITH POWER APPS COPILOT (15 MINS)
+## Exercise – Create a Canvas App with Power Apps Copilot
 
-In this unit, you’ll create a mobile application leveraging Power Apps Copilot.  This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
+In this unit, you’ll create a mobile application leveraging Power Apps Copilot. This app will be used by field agents to browse real estate inventory and manage appointments for showings and the data will be stored in Dataverse.
 
-Before you begin, watch this video for a brief overview of what to expect when creating your first Power App with Copilot.
-
-> **Note:**
+> [!NOTE]
 >
 > Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus).
 
-### EXPLORE THE EXCEL TO POWER APP FUNCTIONALITY
-
-> **Note:**
+> [!NOTE]
 >
 > Within this lab, notice that your results for data may vary from those within the screenshots and images throughout the lab. This is because Power Apps is using OpenAI to generate data for the lab that changes daily.
 
@@ -44,13 +40,13 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
     `build an app to manage real estate showings`
 
-    Then, select the Send button.
+    Then, select the **Send** button.
 
-    ![The text field is selected and the prompt is entered.](assets/images/copilot-chat-prompt.png)
+    ![Screenshot of Power Apps Copilot prompt text field.](assets/images/copilot-chat-prompt.png)
 
 2. After the AI Copilot generates a table based on your prompt, look through the table to see what columns have been created for the start of your table.
 
-    ![The table is displayed.](assets/images/copilot-table.png)
+    ![Screenshot showing a generated table based on your prompt.](assets/images/copilot-table.png)
 
     Let's explore further within modifying and adding to the already generated table.
 
@@ -62,7 +58,7 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
     You'll see that Copilot has provided feedback that the table has been updated and you should also see the new column added to the table:
 
-    ![The table is displayed with the new column.](assets/images/copilot-table-new-column.png)
+    ![Screenshot of Copilot chat confirming that the table has been updated and the new column in the table.](assets/images/copilot-table-new-column.png)
 
 4. Now type the following into the chat:
 
@@ -72,21 +68,21 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
     Notice how a new column has been added to the table displaying the client’s email:
 
-    ![The table is displayed with the new column.](assets/images/copilot-table-new-column-email.png)
+    ![Screenshot of the new generated Client email column.](assets/images/copilot-table-new-column-email.png)
 
-    > **Note**
+    > [!NOTE]
     >
     > Remember that the data that is generated in your table may vary from the data shown within the table in the screenshots and images for the lab.
 
-    > **Note**
+    > [!NOTE]
     >
     > In the bottom left corner of the screen, notice that there is a section titled Suggestions. This section provides you with different suggestions on how you can add to and modify your table.
 
-    ![The suggestions section is displayed.](assets/images/copilot-suggestions.png)
+    ![Screenshot showing list of suggestions to ask Copilot.](assets/images/copilot-suggestions.png)
 
     Notice that to the right of the screen, it appears to look as if you're having a conversation with a Copilot AI bot while adding to and modifying your table. Here's where you can scroll through and view the changes or additions you have made to your table.
 
-    ![The chat is displayed.](assets/images/copilot-chat.png)
+    ![Screenshot showing Copilot conversation history.](assets/images/copilot-chat.png)
 
 5. Now, let’s edit the **Status** column within the table. In the text box within the **Copilot** pane, type and send:
 
@@ -96,12 +92,12 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 6. Select the **Status** column name **drop down**, and select **View column**. Here, you can view the columns’ properties and the current status details and data.
 
-    ![The status column is displayed.](assets/images/copilot-status-column.png)
+    ![Screenshot of Status column properties with the updates choices.](assets/images/copilot-status-column.png)
 
-    > **Note**
+    > [!NOTE]
     >
-    > If your column choices are not the same as the ones shown in the screenshot - you can type the following command into the **Copilot** pane text box and send: 
-    > 
+    > If your column choices are not the same as the ones shown in the screenshot - you can type the following command into the **Copilot** pane text box and send:
+    >
     > `the status choices should be Pending, Confirmed, Cancelled, and Completed`
 
     Select the **X** in the top right corner of the pane to close out.
@@ -114,7 +110,7 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
     Notice that five more rows of data are added for each of the existing columns within the table.
 
-    ![The table is displayed with the new rows.](assets/images/copilot-table-new-rows.png)
+    ![Screenshot of Real Estate Showings table with 5 added rows of data.](assets/images/copilot-table-new-rows.png)
 
     Now looking through your table, you should have a number of columns. However, for the sake of following the rest of the modules in this learning path - let's try and remove some of the columns that we won't be using.
 
@@ -133,19 +129,19 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 8. Let's create the app now. In the bottom right corner of the screen, select the **Create app** button.
 
-    ![The create app button is highlighted.](assets/images/copilot-create-app.png)
+    ![Screenshot of Create App button at the bottom of the screen.](assets/images/copilot-create-app.png)
 
 9. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the **Skip** button.
 
     You should now be viewing the app, that has been built for you, in **Edit** mode:
 
-    ![The app is displayed.](assets/images/copilot-app.png)
+    ![Screenshot of the generated app in Power Apps Studio.](assets/images/copilot-app.png)
 
 10. To the left of the screen, select the **Data** icon from the navigation bar. Notice that a **Dataverse** table has been created by the Copilot and is now in the **Environments** section.
 
-    ![The data icon is highlighted.](assets/images/copilot-data.png)
+    ![Screenshot of Real Estate Showings Dataverse table in the Data panel of Power Apps Studio.](assets/images/copilot-data.png)
 
-    > **Note**
+    > [!NOTE]
     >
     > Copilot is currently only supported for Dataverse. You cannot use any other data access point at this time.
 
@@ -155,17 +151,17 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 12. From the menu, select **Edit data**.
 
-    ![The edit data option is highlighted.](assets/images/copilot-edit-data.png)
+    ![Screenshot showing the action of selecting the Edit Data option.](assets/images/copilot-edit-data.png)
 
 13. The Edit Table dialog appears. Here's where you can come and add your own columns to the table, or modify existing columns.
 
-    ![The edit table dialog is displayed.](assets/images/edit-table.png)
+    ![Screenshot of the Edit Table dialog with the Real Estate Properties data.](assets/images/edit-table.png)
 
 14. Select the **ID** column header from the table.
 
 15. From the drop-down, select the **Edit column** option.
 
-    ![The edit column option is highlighted.](assets/images/copilot-edit-column.png)
+    ![Screenshot showing the action of editing a column within the Edit Table dialog.](assets/images/copilot-edit-column.png)
 
     In this example, we don't want the Data Type of the column to be a Single line of text. Let's change that.
 
@@ -173,13 +169,13 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 17. Select **Save**.
 
-    ![The save button is highlighted.](assets/images/save-column.png)
+    ![Screenshot highlighting the Autonumber data type as well as the Save button.](assets/images/save-column.png)
 
 18. Select the **Close** button in the bottom right corner of the **Edit table** dialog.
 
 19. Notice that the table now says **Refreshed** within the Data pane.
 
-    ![The refreshed table is displayed.](assets/images/copilot-refreshed-table.png)
+    ![Screenshot showing that the Real Estate Showings table has been refreshed.](assets/images/copilot-refreshed-table.png)
 
 20. We have to modify the gallery in the application so that it displays the relevant data. Select the **Tree view** icon to return to the Tree view.
 
@@ -199,21 +195,21 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
     A single record in the gallery should now look like this:
 
-    ![The gallery is displayed.](assets/images/showings-gallery.png)
+    ![Screenshot of a single record in the real estate showings gallery.](assets/images/showings-gallery.png)
 
 25. On the app main screen, select the **Form** control.
 
-    ![The form control is highlighted.](assets/images/copilot-form-control.png)
+    ![Screenshot of selected form control from the app main screen.](assets/images/copilot-form-control.png)
 
 26. On the **Properties** pane on the right, under the **Fields** property, select **Edit fields**.
 
-    ![The edit fields option is highlighted.](assets/images/copilot-edit-fields.png)
+    ![Screenshot showing the Edit Fields option in the Properties pane.](assets/images/copilot-edit-fields.png)
 
 27. Now within the **Fields** pane, expand the **ID** field.
 
 28. From the **Control type** drop-down, change the type to **View text**.
 
-    ![The view text option is highlighted.](assets/images/copilot-view-text.png)
+    ![Screenshot showing the action of changing the ID control type to View Text.](assets/images/copilot-view-text.png)
 
     Because we previously changed the ID field to Autonumber, we don’t want the users putting in their own number; Dataverse is going to autonumber it for us.
 
@@ -223,11 +219,11 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 31. From the top of the screen, select the Play button.
 
-    ![The play button is highlighted.](assets/images/copilot-play.png)
+    ![Screenshot of the Power Apps Studio play button.](assets/images/copilot-play.png)
 
 32. Within the pane to the left of the app, select the **+New** button.
 
-    ![The new button is highlighted.](assets/images/copilot-new.png)
+    ![Screenshot highlighting the new record button in the Power App](assets/images/copilot-new.png)
 
 33. Although you could modify the form to autofill the fields for you, we're going to do so ourselves to show that the app works.
 
@@ -241,15 +237,15 @@ Before you begin, watch this video for a brief overview of what to expect when c
     - Status: `Pending`
     - Address: `210 Pine Road, Portland, OR 97204`
 
-    > **Note**
+    > [!NOTE]
     >
-    > This address is one of the addresses from the Excel file in Module 1. The same file which we uploaded and turned into the **Real Estate Properties** table. 
+    > This address is one of the addresses from the Excel file in Module 1. The same file which we uploaded and turned into the **Real Estate Properties** table.
     >
     > Usually, you would have a lookup field to the **Real Estate Properties** table, but we're going to keep it simple for this lab.
 
 35. Then select the checkmark in the top right corner of the screen.
 
-    ![The checkmark is highlighted.](assets/images/copilot-checkmark.png)
+    ![Screenshot of completed form with the checkmark to save icon highlighted.](assets/images/copilot-checkmark.png)
 
 36. Now, select the **X** in the top right corner to close out of the app.
 
@@ -259,7 +255,7 @@ Before you begin, watch this video for a brief overview of what to expect when c
 
 37. From the top of your screen, select the **Save** button to save the new app you have created.
 
-    ![The save button is highlighted.](assets/images/copilot-save.png)
+    ![Screenshot of Save button in the Power Apps Studio.](assets/images/copilot-save.png)
 
     If asked, save app name as **Real Estate Showings**.
 
