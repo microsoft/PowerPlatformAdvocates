@@ -30,152 +30,154 @@ In this unit, you’ll create a mobile application with data from an Excel table
 >
 > Power Apps requires either a Microsoft 365 license or a free trial. Learn more about your licensing options. [Microsoft products include Microsoft Power Apps and Power Automate](https://learn.microsoft.com/en-us/power-platform/admin/pricing-billing-skus).
 
-1. Go to [make.powerapps.com](https://make.powerapps.com/) and Sign In with your Power Apps credentials.
+1. Go to [make.powerapps.com](https://make.powerapps.com/) and **Sign In** with your Power Apps credentials.
 
-2. From the Power Apps home screen, select Start with data.
+2. From the Power Apps home screen, select **Start with data**.
 
-    ![Start with data](assets/images/start-with-data.png)
+    ![Screenshot of Start with Data tile on the Power Apps Home Screen](assets/images/start-with-data.png)
 
-3. Then select Upload an Excel file.
+3. Then select **Upload an Excel file**.
 
-    ![Upload an Excel file](assets/images/upload-an-excel-file.png)
+    ![Screenshot of the Upload an Excel file tile within the Start with Data section](assets/images/upload-an-excel-file.png)
 
-4. Click Select from device and navigate to the location where the RealEstateProperties.xlsx Excel file is saved and upload it. The maximum file size limit is 5 GB.
+4. Click **Select from device** and navigate to the location where the **RealEstateProperties.xlsx** Excel file is saved and upload it. The maximum file size limit is 5 GB.
 
-    ![Select from device](assets/images/select-from-device.png)
+    ![Screenshot of the Select from device button used to upload the Excel file](assets/images/select-from-device.png)
 
 5. A table which is based on the data from the RealEstateProperties.xlsx Excel file will be generated. Click the pencil edit icon next to the table name to change it.
 
-    ![Edit table name](assets/images/change-generated-table-name.png)
+    ![Screenshot of generated table based on data from the Excel file](assets/images/change-generated-table-name.png)
 
-6. On the Edit Table pop up, enter Real Estate Property as the Display name, Real Estate Properties as the Plural Name, and make sure that Address is selected as the Primary column. Select Save.
+6. On the **Edit Table** pop up, enter **Real Estate Property** as the Display name, **Real Estate Properties** as the Plural Name, and make sure that **Address** is selected as the Primary column. Select **Save**.
 
-    ![Edit table](assets/images/edit-table-pop-up.png)
+    ![Screenshot of table properties including Display name, Plural name, and Primary column](assets/images/edit-table-pop-up.png)
 
-7. Select the Create app button on the bottom right-hand corner of the screen.
+7. Select the **Create app** button on the bottom right-hand corner of the screen.
 
-    ![Create app](assets/images/create-app.png)
+    ![Screenshot of the Create app button at the bottom of the screen](assets/images/create-app.png)
 
-8. When the app first loads, a dialog may appear saying: Welcome to Power Apps Studio. If so, select the Skip button.
+8. When the app first loads, a dialog may appear saying: **Welcome to Power Apps Studio**. If so, select the Skip button.
 
 9. You should now be viewing the app that has been generated for you in Edit mode.
 
-    ![Generated app](assets/images/generated-app.png)
+    ![Screenshot of the generated app in Power Apps Studio](assets/images/generated-app.png)
 
-10. To the left of the screen, select the Data icon from the navigation bar. Notice that a Dataverse table, based on the RealEstateProperties.xlsx Excel file, has been created.
+10. To the left of the screen, select the **Data** icon from the navigation bar. Notice that a Dataverse table, based on the **RealEstateProperties.xlsx** Excel file, has been created.
 
-    ![Dataverse table](assets/images/dataverse-table-from-excel.png)
+    ![Screenshot of Data panel on the left hand side of the screen](assets/images/dataverse-table-from-excel.png)
 
-11. Select the Tree view icon to return to the Tree view.
+11. Select the **Tree view** icon to return to the Tree view.
 
-    ![Tree view](assets/images/tree-view.png)
+    ![Screenshot of Tree view panel on the left hand side of the screen](assets/images/tree-view.png)
 
-12. On the app main screen, click on the gallery displaying the Real Estate Properties and then click on RecordsGallery1 in the Tree view to expand it.
+12. On the app main screen, click on the gallery displaying the Real Estate Properties and then click on **RecordsGallery1** in the Tree view to expand it.
 
-    ![Records gallery](assets/images/properties-gallery-expand.png)
+    ![Screenshot of gallery displaying the Real Estate Property details](assets/images/properties-gallery-expand.png)
 
-13. Select the ellipsis (…) next to the NextArrow and delete it.
+13. Select the **ellipsis (…)** next to the NextArrow and delete it.
 
-    ![Delete NextArrow](assets/images/delete-next-arrow.png)
+    ![Screenshot showing the delete NextArrow action](assets/images/delete-next-arrow.png)
 
-14. Select the RecordsGallery1 and then select the edit button to put the gallery in edit mode.
+14. Select the **RecordsGallery1** and then select the edit button to put the gallery in edit mode.
 
-    ![Edit gallery](assets/images/gallery-edit.png)
+    ![Screenshot showing the action of placing the gallery in edit mode](assets/images/gallery-edit.png)
 
-15. Reduce the width and move the position of the Title component so that it is towards the right-hand side of the template cell.
+15. Reduce the width and move the position of the **Title** component so that it is towards the right-hand side of the template cell.
 
-    ![Move Title](assets/images/address-title-reduced.png)
+    ![Screenshot showing the action of adjusting the size and position of the Title component](assets/images/address-title-reduced.png)
 
-    The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above. 
+    The other components should reposition alongside the Title component. If not, then move them until it looks like the screenshot above.
 
-16. Make sure that the gallery is still in edit mode. Select the Title.
+16. Make sure that the gallery is still in edit mode. Select the **Title**.
 
-17. Make sure that the Text value of the Title component is set to the following formula:
+17. Make sure that the **Text** value of the **Title** component is set to the following formula:
 
     `ThisItem.Address`
 
-    ![Title formula](assets/images/set-title-to-address.png)
+    ![Screenshot of the text property in the formula bar](assets/images/set-title-to-address.png)
 
-18. Now select the Subtitle component in the gallery.
+18. Now select the **Subtitle** component in the gallery.
 
-19. Set the Text value of the Subtitle to the following formula: 
+19. Set the **Text** value of the **Subtitle** to the following formula:
 
     `ThisItem.Size`
 
-20. Using the tool bar at the top of the page, change the Size to 13.
+20. Using the tool bar at the top of the page, change the **Size** to 13.
 
-    ![Size 13](assets/images/change-font-size.png)
+    ![Screenshot of the size set to 13 in the toolbar](assets/images/change-font-size.png)
 
-21. Finally, select the Body component in the gallery.
+21. Finally, select the **Body** component in the gallery.
 
-22. Set the Text value of the Body to the following formula:
+22. Set the **Text** value of the **Body** to the following formula:
 
     `ThisItem.Price`
 
 23. Your gallery should now look like this:
 
-    ![Gallery](assets/images/gallery-check-after-edits.png)
+    ![Screenshot of real estate property gallery correctly formatted](assets/images/gallery-check-after-edits.png)
 
-24. Select the RecordsGallery1 and then select the edit button to put the gallery in edit mode. Then click on Insert > search for Image > and then select the Image component.
+24. Select the **RecordsGallery1** and then select the edit button to put the gallery in edit mode. Then click on **Insert >** search for **Image >** and then select the **Image** component.
 
-    ![Insert Image](assets/images/insert-image.png)
+    ![Screenshot showing the action of inserting an image](assets/images/insert-image.png)
 
 25. The image will then be added to your gallery. Reposition and resize the image so that it is in the center of each gallery cell.
 
-    ![Image](assets/images/center-image.png)
+    ![Screenshot of centered image in the gallery](assets/images/center-image.png)
 
-26. Now to use Power Apps Ideas. Make sure the gallery is still in edit mode. And select the gallery body containing the Price. Then click the lightbulb icon which appears above it.
-    
-    ![Lightbulb](assets/images/click-lightbulb.png)
+26. Now to use Power Apps Ideas. Make sure the gallery is still in edit mode. And select the gallery body containing the Price. Then select the **arrow** next to the lightbulb icon which appears above it. Next, select **Text formatting**.
+
+    ![Screenshot of gallery with selected price component](assets/images/click-lightbulb.png)
 
 27. Enter this output in the Desired format text box:
 
     `$350,000`
 
-    Then press Enter.
+    Then press **Enter**.
 
-    ![Desired format](assets/images/ideas-format.png)
+    ![Screenshot showing the Desired format of the price property](assets/images/ideas-format.png)
 
 28. Select the generated formula. Then select Apply.
 
-    ![Apply](assets/images/select-formula-then-click-apply.png)
+    ![Screenshot of the generated formula and the apply button](assets/images/select-formula-then-click-apply.png)
 
-    With Power Apps Ideas, the example \($350,000\) which you gave generated a formula:
+    > [!NOTE]
+    >
+    > With Power Apps Ideas, the example \($350,000\) which you gave generated a formula:
+    >
+    > `(Text(ThisItem.Price, "$#,##0", "en-US"))` which is now updated in the formula bar for the Price gallery control.
 
-     `(Text(ThisItem.Price, "$#,##0", "en-US"))` which is now updated in the formula bar for the Price gallery control.
-
-29. Now let’s do the same for the Size control in the subtitle of the gallery. Make sure the gallery is in edit mode. And select the subtitle containing the Size. Then click the lightbulb icon which appears above it.
+29. Now let’s do the same for the **Size** control in the subtitle of the gallery. Make sure the gallery is in edit mode. And select the subtitle containing the Size. Then select the **arrow** next to the lightbulb icon which appears above it. Next, select **Text formatting**.
 
 30. Enter this output in the Desired format text box:
 
     `Size: 1,800 sq ft`
 
-    Then press Enter.
+    Then press **Enter**.
 
     You may notice that the ideas section is empty. This may be caused by the lack of information or context required to generate a formula.
 
-    ![Size ideas](assets/images/no-ideas.png)
+    ![Screenshot of an empty formula](assets/images/no-ideas.png)
 
-31. So, let’s add more examples. Click + Add examples at least 2 more times.
+31. So, let’s add more examples. Click **+ Add examples** at least 2 more times.
 
-    ![Add examples](assets/images/add-examples.png)
+    ![Screenshot of the add examples button inside Power Apps Ideas](assets/images/add-examples.png)
 
 32. Select 2 Current formats and then provide 2 corresponding Desired formats.
 
-    ![Current formats](assets/images/more-examples.png)
+    ![Screenshot of Current Format options matching the desired format options](assets/images/more-examples.png)
 
 33. With the added context, Power Apps Ideas now generates a suitable formula for you:
 
-    ![Size formula](assets/images/correct-generated-formula.png)
+    ![Screenshot of the Power Apps Ideas generated formula](assets/images/correct-generated-formula.png)
 
-34. Select the generated formula. Then select Apply.
+34. Select the **generated formula**. Then select **Apply**.
 
     Your gallery should now be looking like this:
 
-    ![Gallery](assets/images/updated-gallery.png)
+    ![Screenshot of formatted gallery](assets/images/updated-gallery.png)
 
-35. Save the app.
+35. **Save** the app.
 
-36. Exit the app to return to the Power Apps home page.
+36. **Exit** the app to return to the Power Apps home page.
 
-    ![Exit app](assets/images/exit-app.png)
+    ![Screenshot of Back button used to exit the app](assets/images/exit-app.png)
