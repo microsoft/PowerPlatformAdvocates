@@ -1,4 +1,4 @@
-# MODULE 1: BUILDING A POWER APPS CANVAS APP FOR A REAL ESTATE SOLUTION WITH DATA FROM EXCEL
+# MODULE 1: Building a Power Apps Canvas App for a real estate solution with data from Excel
 
 In this module, you will begin creating a Power Platform solution which revolves around a real estate company and its operations, starting with a Power Apps Canvas App that will be used by the real estate agents to manage their properties. The data for this app is stored in an Excel file and you will use the AI Copilot Excel to App functionality to create the app. You’ll also use Power Apps Ideas to generate and speed up the formula authoring experience to add additional functionality to the app.
 

@@ -1,6 +1,4 @@
-# CREATE POWER PLATFORM SOLUTIONS WITH AI AND COPILOT
-
-BY APRIL DUNNAM AND GOMOLEMO MOHAPI
+# Create Power Platform solutions with AI and Copilot
 
 Do you want to create intelligent apps for your organization fast? Then this path is for you. It introduces you to creating Power Platform solutions with Copilot to speed up development and add AI functionality to make your solutions more intelligent.
 
