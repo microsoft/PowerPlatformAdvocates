@@ -1,6 +1,6 @@
 # Building Power Automate flows for a real estate solution with Power Automate Copilot
 
-This module will cover creating flows using the Power Automate Copilot.
+This module will cover creating flows using the Power Automate Copilot. It will show how to refine your flow with the copilot as well as how to use the format by example AI capabilities.
 
 Copilot in Power Automate is the perfect tool to help you automate tedious tasks and save time. It's easy to use and you can now create workflows faster and more efficiently.
 
@@ -15,6 +15,8 @@ Copilot in Power Automate is the perfect tool to help you automate tedious tasks
 - A Power Platform environment in a US preview region
 
 ## Introduction to Power Automate Copilot
+
+Copilot is like having your own virtual assistant in Power Automate! It's a powerful feature that makes workflow automation a breeze. It uses AI and machine learning to analyze your processes and generate smart suggestions for actions and automations. The best part? You don't need to be a coding expert to benefit from Copilot. It's designed to help you create efficient workflows without the hassle of complex programming.
 
 Power Automate makes it possible for you to not just describe a flow to create, but also improve and iterate on your flows with AI-driven conversations. This next-generation AI-based Copilot in Power Automate sits inside the flow studio and helps with every flow that’s being built or changed.
 
@@ -314,3 +316,42 @@ Follow these steps to create a flow using Copilot.
 58. Check the flow and notice that the flow is now marked as **Succeeded** in the run history.
 
     ![Screenshot displaying how the flow is marked as succeeded.](assets/images/power-automate-copilot-flow-succeeded.png)
+
+## When should you use Copilot in Power Automate?
+
+Knowing when to leverage Copilot in Power Automate is essential to maximize its benefits. Copilot is particularly helpful with the following situations:
+
+Streamline and optimize workflows: Copilot is a valuable tool when you need to simplify and optimize your workflow automation process. It offers contextual suggestions and recommendations, making it ideal for users who want to streamline their workflows without extensive programming knowledge.
+
+Accelerate workflow development: Copilot excels at analyzing existing flows, triggers, actions, and expressions. It identifies patterns and understands your goals, helping you accelerate workflow development. By suggesting ways to automate repetitive or time-consuming tasks, Copilot saves you valuable time and effort.
+
+Explore new possibilities: Copilot is perfect for users who want to explore new possibilities and expand the capabilities of their workflows. It can anticipate your needs and suggest actions you may not have considered. With Copilot's alternative approaches and out-of-the-box thinking, you can drive innovation and push the boundaries of what's possible in your Power Automate workflows.
+
+
+## Check your knowledge
+
+1. What is the purpose of Copilot in Power Automate?
+
+    - To generate random suggestions for workflow development
+    - **To provide contextual suggestions and recommendations for workflow automation**
+    - To replace the need for programming knowledge in workflow creation
+    - To optimize Power Automate desktop app integration
+
+2. How does Copilot assist in workflow development?
+
+    - By generating random actions and parameters for workflows
+    - **By analyzing existing flows, triggers, and actions to suggest relevant steps**
+    - By automating the entire workflow creation process without user input
+    - By offering coding expertise for complex programming tasks
+
+3. When should you use Copilot in Power Automate?
+    - Only when you are a beginner in workflow automation
+    - When you want to slow down the workflow development process
+    - **When you need to streamline and optimize your workflow automation**
+    - Only when you have extensive programming knowledge
+
+## Summary
+
+In this module, you built a workflow for a real estate showing request using Power Automate Copilot. You learned how to use Copilot to create a flow from scratch and how to refine your flow with the copilot.
+
+Copilot in Power Automate is a powerful tool that can help you build your workflows faster and more efficiently. By providing suggestions and recommendations based on best practices and industry standards, Copilot can help you create workflows that are more effective and efficient. We encourage you to try using Copilot in your own workflows and see how it can help you streamline your business processes. With Copilot, you can take your Power Automate workflows to the next level.
