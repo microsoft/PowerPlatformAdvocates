@@ -181,3 +181,34 @@ In this unit, you’ll create a mobile application with data from an Excel table
 36. **Exit** the app to return to the Power Apps home page.
 
     ![Screenshot of Back button used to exit the app](assets/images/exit-app.png)
+
+## Check your knowledge
+
+Answer the following questions to see what you've learned.
+
+1. What is the primary purpose of the Excel to App feature in Power Apps?
+
+   - It allows you to create a Power Pages website with data from an Excel file
+   - It allows you to create a Model-Driven App with data from an Excel file
+   - **It allows you to create a Canvas App with data from an Excel file**
+   - It allows you to create a Canvas App with data from a Word file
+
+2. What is the maximum file size limit for the Excel file that can be uploaded to Power Apps?
+
+   - 1 GB
+   - 2 GB
+   - 3 GB
+   - **5 GB**
+
+3. After uploading an Excel file in Power Apps using Excel to App and creating the app, which data source is used?
+
+   - **Dataverse**
+   - SharePoint
+   - OneDrive
+   - SQL Server
+
+## Summary
+
+In this module, you starting building a Power Platform solution which revolves around a real estate company and its operations, starting with a Power Apps Canvas App that will be used by the real estate agents to manage their properties.
+
+The data for this app was stored in an Excel file and you used the AI Copilot Excel to App feature to create a Canvas App with data from the Excel file. You also learned how to use Power Apps Ideas to generate and speed up the formula authoring experience to add additional functionality and formatting to the app.
