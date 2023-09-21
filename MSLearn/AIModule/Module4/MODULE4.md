@@ -1,32 +1,48 @@
-# MODULE 4: ADDING INTELLIGENCE WITH AI BUILDER AND GPT
+# Adding intelligence with AI Builder and GPT
 
-This module will introduce the Generate Text with GPT capability in AI Builder. It will touch on how to write instructions and how to use the model in Power Automate. [To be continued]
+This module will introduce the Create Text with GPT capability in AI Builder. It will touch on how to write instructions and how to use the model in Power Automate.
 
-## INTRODUCTION TO AI BUILDER (4 MINS)
+**Learning Objectives**
 
-TBD
+- Learn about what AI Builder is and how it can be used to add intelligence to your apps and automations
+- Explore what the Create Text with GPT model in AI Builder is and how it can be used to generate text
+- Learn how to use the Create Text with GPT model in Power Automate
 
-## INTRODUCTION TO CREATE TEXT WITH GPT (4 MINS)
+**Prerequisites**
 
-TBD
+- You'll need a Power Apps Developer environment (based in the United States region) with a licensed user to complete these exercises
+- Dataverse database installed on the environment
+- An AI Builder add-on or trial
 
-## EXERCISE – GENERATE TEXT WITH GPT IN AI BUILDER (15 MINS)
+## Introduction To AI Builder
 
-TBD - also explain scenario of people emailing to book a showing of a property and how we can use GPT to extract the relevant information from the email.
+AI Builder is a Microsoft Power Platform capability that helps you improve your business performance by automating processes and predicting outcomes. By using AI Builder, you can quickly bring AI to your apps and flows that connect to your business data that is stored in the underlying data platform (Microsoft Dataverse) or in various cloud data sources, such as SharePoint, OneDrive, or Azure.
 
-[Add note about GPT action not being supported by Power Automate Copilot so we're going to be using the traditional experience]
+AI models that you create in AI Builder can help provide intelligence to enhance your business. AI Builder simplifies the AI creation experience by giving people with any level of technical skill the ability to add AI capabilities to their apps and flows without writing code. AI Builder also provides prebuilt AI models, where you don't need to gather data to build and train the model. You can start to use the intelligence right away.
+
+## Introduction to the Create Text with GPT AI Builder Model
+
+The Create Text with GPT model in AI Builder is a text generation model powered by Azure OpenAI Service, which is built on Generative Pre-trained Transformer (GPT) technology. GPT models are a type of natural language processing model. GPT models are trained on a large body of content to generate human-like text from a prompt. When you combine them with workflow automation, you can use AI models like GPT to automate a variety of tasks. For example, you can build workflows to automatically generate drafts of emails, customer service responses, and product descriptions. You can also use them to generate scripts that allow customer service agents to respond quickly to customer inquiries.
+
+When creating prompts for the Create Text with GPT AI Builder model, you need to remember that a prompt has 2 parts; the _instruction_ and the _context_. The instruction tells the model what it should do. The context is the information the model needs to follow the instruction. In an automation task, the instruction is constant and the context is provided by dynamic content.
+
+## Exercise – Generate Text with GPT In AI Builder and Power Automate
+
+In this unit, you'll be building a Power Automate flow that uses the Create Text with GPT AI Builder model to extract information from an email sent by a customer requesting a real estate showing. The Create Text with GPT model will extract the customer's name, address of the property they want to view, date, and time of the showing from the email and then send a message to a Teams channel with the extracted information.
+
+This extracted information can then be used to create a record in a Dataverse table. However, that is beyond the scope of this lab.
 
 1. Sign into [Power Automate](https://make.powerautomate.com/).
 
 2. On the left pane, select **Create** and then **Automated cloud flow**.
 
-    ![Select Automated Cloud Flow](assets/images/select-automated-cloud-flow.png)
+    ![Screenshot of the Create Automated Cloud flow action.](assets/images/select-automated-cloud-flow.png)
 
 3. Give the flow the name: `Extract details for Real Estate Showing`.
 
 4. In the **Search all triggers** box, type "when an email arrives" and select the **When an email arrives** trigger.
 
-    ![Select When an email arrives)](assets/images/select-when-an-email-arrives.png)
+    ![Screenshot of the flow name and the Office 365 Outlook trigger.](assets/images/select-when-an-email-arrives.png)
 
 5. Select **Create**.
 
@@ -34,9 +50,9 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 7. In the **Subject filter** box, type "[Query]".
 
-    ![Add Subject Filter](assets/images/add-subject-filter.png)
+    ![Screenshot of the When a new email arrives trigger with the Subject filter property highlighted.](assets/images/add-subject-filter.png)
 
-    > **Note:** 
+    > [!NOTE]
     >
     > This will ensure that the flow only runs when the subject of the email contains the word "Query" (for the purpose of this lab).
     >
@@ -44,15 +60,15 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 8. Select **New step** and then select **AI Builder**.
 
-    ![Select AI Builder](assets/images/select-ai-builder.png)
+    ![Screenshot of the AI Builder connector in Power Automate.](assets/images/select-ai-builder.png)
 
 9. Then select **Create text with GPT** in the list of actions.
 
-    ![Select Create text with GPT](assets/images/select-create-text-with-gpt.png)
+    ![Screenshot of the Create text with GPT action in Power Automate.](assets/images/select-create-text-with-gpt.png)
 
 10. Select **Create prompt** and then select **Start from blank**.
 
-    ![Select Start from Blank](assets/images/select-start-from-blank.png)
+    ![Screenshot of some of the Create Text with GPT prompt templates with Start from blank highlighted.](assets/images/select-start-from-blank.png)
 
 11. Paste the following text into the **Describe the text the model should create** box:
 
@@ -64,13 +80,13 @@ TBD - also explain scenario of people emailing to book a showing of a property a
     [Start of text]
     Good day, 
 
-    I hope this email finds you well. My name is Gomolemo Mohapi, and I am currently in the market for a new property. I came across your listing for the property located at 210 Pine Road, Portland, OR 97204, and am very interested in learning more about it.
+    I hope this email finds you well. My name is <Your name>, and I am currently in the market for a new property. I came across your listing for the property located at 210 Pine Road, Portland, OR 97204, and am very interested in learning more about it.
 
     I would like to kindly request a viewing of this property on September 15th at 3:30 PM. I believe this time is within the normal hours for showings, but if there are any conflicts or alternate time suggestions, please let me know at your earliest convenience.
     [End of text]
     ```
 
-    ![Paste Text](assets/images/paste-text.png)
+    ![Screenshot of the full prompt from above in the Create prompt window.](assets/images/paste-text.png)
 
     In this prompt, we're used the basic formula for creating a GPT prompt. We have the **Instruction**:
 
@@ -86,13 +102,13 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
     After a few seconds of preparing a response, it should be able to extract the relevant information from the example prompt:
 
-    ![Test it out response](assets/images/test-it-out-response.png)
+    ![Screenshot of the test response with the extracted information.](assets/images/test-it-out-response.png)
 
 13. Now select **Use prompt in flow**.
 
 14. Delete the example email from the **Prompt** and replace it with the **Body** dynamic content of the email from the trigger
 
-    ![Replace prompt with email body](assets/images/replace-prompt-with-email-body.png)
+    ![Screenshot of the updated prompt text together with the email body dynamic content.](assets/images/replace-prompt-with-email-body.png)
 
     Now whenever an email arrives, GPT will attempt to extract the relevant information from the email body.
 
@@ -110,7 +126,7 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 18. In the **Suggested text** box, add the **Text** dynamic content from the **Create text with GPT** action.
 
-    ![Add Text dynamic content](assets/images/add-text-dynamic-content.png)
+    ![Screenshot displaying the action of adding dynamic content to the start and wait for an approval of text action.](assets/images/add-text-dynamic-content.png)
 
 19. In the **Assigned to** box, type the email address you're using for this lab.
 
@@ -118,9 +134,9 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
     `Please review the extracted information and edit as necessary.`
 
-    The action should look similar to the following: 
+    The action should look similar to the following:
 
-    ![Approval action](assets/images/approval-action.png)
+    ![Screenshot of how the approval action should appear like.](assets/images/approval-action.png)
 
 21. Now select **New step**, search for **Control**, and select **Condition**.
 
@@ -128,13 +144,13 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 23. Select **is equal to** for the condition and then type `Approve` for **Choose a value**.
 
-    ![Add condition](assets/images/add-condition.png)
+    ![Screenshot of the Condition action with the outcome value.](assets/images/add-condition.png)
 
 24. In the **If yes** box, select **Add an action** and then search for **Teams** and select **Post a message in a chat or channel**.
 
 25. Select **Flow bot** from the **Post as** dropdown menu, and then select **Chat with Flow bot** from the **Post in** dropdown menu.
 
-    ![Post in Teams](assets/images/post-in-teams.png)
+    ![Screenshot displaying the action of selecting the Chat with flow bot option.](assets/images/post-in-teams.png)
 
 26. In the **Recipient** box, type the email address you're using for this lab.
 
@@ -148,17 +164,17 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 28. Select **Add dynamic content** and then select **From** from the **When a new email arrives** action.
 
-    ![Add dynamic content](assets/images/add-dynamic-content.png)
+    ![Screenshot of updated post message in chat or channel action.](assets/images/add-dynamic-content.png)
 
 29. Beneath the Client Email line, select the **Accepted text** dynamic content from the **Start and wait for an approval of text** action.
 
-    ![Add Accepted text dynamic content](assets/images/add-accepted-text-dynamic-content.png)
+    ![Screenshot of updated post message in chat or channel action with the accepted text dynamic content.](assets/images/add-accepted-text-dynamic-content.png)
 
     This will send a direct Teams message to you with the Client Email and the Accepted text from the approval action reminding you to create a record in the Real Estate Showings Power App.
 
-    Of course, you can automate the record creation by converting the extracted entities into a JSON object and then using that to create a record in the Real Estate Showings Power App. However, that is beyond the scope of this lab.
+    Of course, you can automate the record creation by converting the extracted entities into a JSON object and then using that to create a record in the Real Estate Showings Power App and Dataverse table. However, that is beyond the scope of this lab.
 
-    In the **If no** box, you can add a **Send an email** action to notify the sender that there wasn't enough information to book the showing. However, you can add that in your own time. 
+    In the **If no** box, you can add a **Send an email** action to notify the sender that there wasn't enough information to book the showing. However, you can add that in your own time.
 
 30. For now, let's save the flow and test it out. Select **Save** and then **Test**.
 
@@ -176,12 +192,41 @@ TBD - also explain scenario of people emailing to book a showing of a property a
 
 33. Open Outlook and you should see the email that you've sent to yourself followed by the **Approval** request with the extracted information:
 
-    ![Approval request](assets/images/approval-request.png)
+    ![Screenshot of the Approval Request in the Outlook inbox.](assets/images/approval-request.png)
 
 34. Select **Approve** and then open Teams. You should see a message from the Flow bot with the extracted information once arrpoved:
 
-    ![Teams message](assets/images/teams-message.png)
+    ![Screenshot of the Teams message confirming the extracted date.](assets/images/teams-message.png)
 
 35. Going back to your Power Automate flow, you should see that flow ran successfully:
 
-    ![Flow run](assets/images/flow-run.png)
+    ![Screenshot displaying the successfully ran flow.](assets/images/flow-run.png)
+
+## Check your knowledge
+
+Answer the following questions to see what you've learned.
+
+1. What is text generation?
+
+    - **A type of natural language processing task that involves generating text from a given input.**
+    - A type of machine-learning algorithm that can classify text into different categories.
+    - A type of data visualization technique that uses text to represent data.
+
+2. What can you use the text generation capability for?
+
+    - Chatbots
+    - Language translation
+    - Content creation
+    - **All are correct**
+
+3. What is an _instruction_ and _context_ in the Create Text with GPT model?
+
+    - **The instruction tells the model what it should do. The context is the information the model needs to follow the instruction.**
+    - The instruction is the information the model needs to follow. The context tells the model what it should do.
+    - The instruction and context are the same thing.
+
+## Summary
+
+In this module, you learned about what AI Builder is and how it can be used to add intelligence to your apps and automations. You also explored what the Create Text with GPT model in AI Builder is and how it can be used to generate text. Finally, you learned how to use the Create Text with GPT model in Power Automate by building a flow that extracts information from an email sent by a customer requesting a real estate showing and then sends a message to a Teams channel with the extracted information.
+
+An important thing to remember is that AI-generated content can be factually incorrect, inappropriate, or biased. We strongly recommend that you institute a practice of inserting [human oversight](https://learn.microsoft.com/en-us/ai-builder/azure-openai-textgen#human-oversight) in workflows that use AI-generated text before it's posted or used anywhere. This can be done by adding an approval step to your flow.
