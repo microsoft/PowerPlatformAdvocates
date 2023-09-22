@@ -41,7 +41,7 @@ In this unit, you will create a bot using Power Virtual Agents Copilot. You will
 
     ![Screenshot of the bot name and language.](assets/images/bot-name-and-language.png)
 
-    > [!IMPORTANT]
+    > [!NOTE]
     >
     > You should also be seeing the **Boost your conversations with generative answers** option:
     >
