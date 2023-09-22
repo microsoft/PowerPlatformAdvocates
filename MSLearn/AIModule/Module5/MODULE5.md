@@ -45,7 +45,7 @@ In this unit, you will create a bot using Power Virtual Agents Copilot. You will
     >
     > You should also be seeing the **Boost your conversations with generative answers** option:
     >
-    > ![Screenshot of the Boost your conversations with generative answers option.](./assets/images/boost-your-conversations.png)
+    > ![Screenshot of the Boost your conversations with generative answers option.](assets/images/boost-your-conversations.png)
     >
     > Here you can fill in your favorite Real Estate Website and the idea is that once you create the bot, any question that the bot can't answer - it will search the website you provided for the answer. This is a great way to quickly create a bot that can answer a lot of questions without having to manually create topics.
     >
