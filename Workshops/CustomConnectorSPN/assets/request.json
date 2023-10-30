@@ -1,0 +1,21 @@
+{
+  "invitedUserDisplayName": "string",
+  "invitedUserEmailAddress": "string",
+  "invitedUserMessageInfo": {
+    "ccRecipients": [
+      {
+        "emailAddress": {
+          "address": "string",
+          "name": "string"
+        }
+      }
+    ],
+    "customizedMessageBody": "string",
+    "messageLanguage": "string"
+  },
+  "sendInvitationMessage": false,
+  "inviteRedirectUrl": "string",
+  "inviteRedeemUrl": "string",
+  "resetRedemption": false,
+  "invitedUserType": "string"
+}
