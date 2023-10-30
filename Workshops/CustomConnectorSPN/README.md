@@ -128,7 +128,16 @@ Creating an app registration is fairly simple if you know how it works. This par
     ![Permission status changed to granted](./assets/app-registration-granted-consent.png)
 
 1. Select **Certificates & secrets** in the left navigation
-1. Create a new client secret by selecting
+1. In the `Clients secrets` tab, create a new client secret by selecting the **New client secret** button
+
+    ![New client secret](./assets/app-registration-create-client-secret.png)
+
+1. Enter `LabSecret` as the **Description**
+1. Leave **Expires** on the recommended (default) value
+1. Select the blue **Add** button at the bottom
+1. Copy the value of the client secret we just created and save it in a safe place
+
+    ![Copy the value of the client secret](./assets/app-registration-copy-client-secret.png)
 
 ## Finish the connector
 
