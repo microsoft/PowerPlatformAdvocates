@@ -105,7 +105,28 @@ Creating an app registration is fairly simple if you know how it works. This par
 
 1. In the side panel, select Microsoft Graph
 1. Select Delegated permissions
-1. In the search box, type `User.Invite`
+1. In the search box, type `User.Invite`, (1) expand the `User` part, (2) select the checkbox in front of `User.Invite.All` and (3) select the blue **Add permissions** button
+
+    ![Add delegated permission User.Invite.All to be able to invite guest users to the organization](./assets/app-registration-add-delegated-permission.png)
+
+1. After adding the permission, you will see that the delegated permission `User.Invite.All` is added to the `Configured permissions` section, but it's not yet granted. This means we will have to grant admin consent, but we will not do this yet, since we also have to add the application permission for the same permission
+1. Select the **Add a permission** button again
+1. In the side panel, select Microsoft Graph
+1. Select Application permissions
+1. In the search box, type `User.Invite`, (1) expand the `User` part, (2) select the checkbox in front of `User.Invite.All` and (3) select the blue **Add permissions** button
+
+    ![Add application permission User.Invite.All to be able to invite guest users to the organization](./assets/app-registration-add-application-permission.png)
+
+1. Take a look at the status of the permissions, it should show that the permissions we just added are not granted yet
+
+    ![Grant admin consent for permissions](./assets/app-registration-grant-consent.png)
+
+1. Select the **Grant admin consent** button
+1. In the confirmation pop up, select the blue **Yes** button
+1. Now, the status should be changed to `Granted`
+
+    ![Permission status changed to granted](./assets/app-registration-granted-consent.png)
+
 1. Select **Certificates & secrets** in the left navigation
 1. Create a new client secret by selecting
 
