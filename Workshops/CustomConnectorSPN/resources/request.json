@@ -13,7 +13,7 @@
     "customizedMessageBody": "string",
     "messageLanguage": "string"
   },
-  "sendInvitationMessage": false,
+  "sendInvitationMessage": true,
   "inviteRedirectUrl": "string",
   "inviteRedeemUrl": "string",
   "resetRedemption": false,

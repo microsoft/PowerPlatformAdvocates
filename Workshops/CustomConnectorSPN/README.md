@@ -8,7 +8,8 @@ When building a connector, the first thing that you need to do is read the docs.
 
 To learn more about the Invitation Manager, go to the [API reference](https://aka.ms/invitationmanager) on the Microsoft Graph learn website. On this page, you can read more about what the operation does, what the methods, properties and relationships are. In most cases, there also is a JSON representation of the resource (like in this case, the invitation resource).
 
-Again, learning about the API is one of the most important steps when you are building a connector. Knowing what the API does will benefit you in the rest of the process of building a connector massively.
+>> !IMPORTANT
+>> Learning about the API is one of the most important steps when you are building a connector. Knowing what the API does will benefit you in the rest of the process of building a connector massively.
 
 ## Create the connector
 
@@ -26,12 +27,14 @@ In this lab, we will start creating a connector from blank. This is something yo
 1. Enter **Invitation Manager** as the name and select the blue **Continue** button
 1. This will open the custom connector UI. Here we will do most of our work. Add the following description:
 
-  ```text
-  Use this connector to invite guests to your organization. When the invited guest accepts the invitation, they will get added as a guest/member to the organization.
-  ```
+    ```text
+    Use this connector to invite guests to your organization. When the invited guest accepts the invitation, they will get added as a guest/member to the organization.
+    ```
 
 1. Next, make sure to add `graph.microsoft.com` as the host
 1. Add `/v1.0/` as the Base URL
 1. Select **Security** at the bottom to move to the security section
 
-  ![General tab in the custom connectors UI](./assets/custom-connector-move-to-security.png)
+    ![General tab in the custom connectors UI](./assets/custom-connector-move-to-security.png)
+
+1.
