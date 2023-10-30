@@ -69,6 +69,40 @@ In this lab, we will start creating a connector from blank. This is something yo
 > [!IMPORTANT]
 > For this section, you have to be able to create an app registration. In most organizations, this is not possible for end users. Make sure to have a dev environment and your own Microsoft 365 Developer Tenant, because it's highly likely you will not be able to finish this lab otherwise. If you don't know how to do this, watch [this video](https://www.youtube.com/watch?v=KYym2M9YocQ) by April Dunnam
 
+Creating an app registration is fairly simple if you know how it works. This part of the lab is going to guide you through the whole process.
+
+1. Go to the Azure Portal by adding a new tab in your browser. Enter [https://portal.azure.com](https://portal.azure.com) to go to the Azure Portal
+1. If you're not logged in yet, make sure to log in with your developer account
+1. Go to **Microsoft Entra ID** (This was previously named Azure Active Directory) by either searching for it or selecting it through the services part on the portal home page
+1. Select **App registrations** in the left navigation
+1. You might already see a couple of applications here. Select the **New registration** button at the top
+
+    ![New Entra ID app registration](./assets/entra-id-new-registration.png)
+
+1. Enter `Invitation Manager - Custom Connector` as the name of the application
+1. Select the blue **Register** button at the bottom
+1. Next, you will see the overview page of your app registration, here you can find a bunch of helpful resources, like the *Application (client) ID*, the *Directory (tenant) ID* and more.
+1. Open notepad (or another tool with the same functionality and copy the **Application (client) ID** and the **Directory (tenant) ID** to that and make sure to save it to a local file, so that you can find it back later
+1. Go back to the overview page of your app registration and select the **Add a Redirect URI** on that page
+1. Select the **Add a platform** link at the top
+1. In the side panel, select **Web**
+1. Copy and paste the following URI into the Redirect URIs input box:
+
+    ```Text
+    https://global.consent.azure-apim.net/redirect
+    ```
+
+1. Select the blue **Configure** button at the bottom of the side panel
+1. Select **API permissions** in the left navigation
+1. We need API permissions for our app registrations, but how do we know which API permissions are needed for the Invitation Manager operation? Open the [Microsoft Graph API Docs](https://aka.ms/invitationmanager) in a new browser tab
+1. In the *permissions* part of that page, we can see that in the *Least privileged permissions* column for both the *delegated* and the *application* permission types, `User.Invite.All` is needed. Close the tab after checking the permissions
+
+    ![Graph API Invitation Manager Permissions](./assets/graph-api-permissions.png)
+
+1. Let's add them in the API permissions section in the app registration.
+1. Select **Certificates & secrets** in the left navigation
+1. Create a new client secret by selecting
+
 ## Finish the connector
 
 ## Test the connector
