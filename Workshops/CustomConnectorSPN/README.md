@@ -99,7 +99,13 @@ Creating an app registration is fairly simple if you know how it works. This par
 
     ![Graph API Invitation Manager Permissions](./assets/graph-api-permissions.png)
 
-1. Let's add them in the API permissions section in the app registration.
+1. Let's add them in the API permissions section in the app registration. Select the **Add a permission** button in the API permissions section
+
+    ![Add a permission](./assets/app-registration-add-permission.png)
+
+1. In the side panel, select Microsoft Graph
+1. Select Delegated permissions
+1. In the search box, type `User.Invite`
 1. Select **Certificates & secrets** in the left navigation
 1. Create a new client secret by selecting
 
