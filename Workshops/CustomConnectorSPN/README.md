@@ -372,7 +372,7 @@ Let's fix these issues.
 1. In the left navigation, select **Custom connectors**
 1. Look for the **Invitation Manager** custom connector and select the **pencil icon** next to it, to open it into edit mode
 1. Select **3. Definition** at the top
-1. In the **Request section**, select **Content-Type** under `Headers` and select **Edit**
+1. In the **Request** section, select **Content-Type** under `Headers` and select **Edit**
 
     ![Edit content-type field](./assets/improve-connector-edit-content-type.png)
 
@@ -380,10 +380,102 @@ Let's fix these issues.
 1. Set the **Is required** value to `Yes`
 1. Set the **Visibility** to `Internal`
 1. When done, select the **Back button** at the top of the parameter settings
-1. In the **Request section**, select **body** under `body` and select **Edit**
+1. In the **Request** section, select **body** under `body` and select **Edit**
 
     In the following screen, you can see a lot of the request fields we just saw in the cloud flow. You can change these fields one by one.
 
     ![Overview of the body payload](./assets/improve-connector-edit-body.png)
 
-1.
+1. In the **Body** section, select **inviteRedeemUrl** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Invite Redeem URL details](./assets/edit-property-invite-redeem-url.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **inviteRedirectUrl** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Invite Redirect URL details](./assets/edit-property-invite-redirect-url.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **invitedUserDisplayName** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Invited User Display Name details](./assets/edit-property-invite-display-name.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **invitedUserEmailAddress** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Invited User Email Address details](./assets/edit-property-invite-email-address.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body.
+1. In the **Body** section, select **address** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![CC Email Address details](./assets/edit-property-cc-address.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **name** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![CC Display Name details](./assets/edit-property-cc-name.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **customizedMessageBody** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Customized Message Body details](./assets/edit-property-customized-message-body.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **messageLanguage** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Message Language details](./assets/edit-property-message-language.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **invitedUserType** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Invited User Type details](./assets/edit-property-invited-user-type.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **resetRedemption** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Reset Redemption details](./assets/edit-property-reset-redemption.png)
+
+    Description:
+
+    ```text
+    Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments.
+    ```
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. In the **Body** section, select **sendInvitationMessage** and select **Edit**
+1. Make sure to change the properties to match the following:
+
+    ![Send Invitation Message details](./assets/edit-property-send-invitation-message.png)
+
+1. Select the **Back button** on the top of the Schema Property box to move back to the body
+1. Select the **Back button** on the top of the Parameter box to move back to the definition
+1. Select the **Update connector** button on the top of the screen
+
+## Test the connector again in one of the products
+
+Let's try out the connector again now!
+
+1. Go to [https://make.powerautomate.com](https://make.powerautomate.com)
+1. Select **My flows** in the left navigation
+1. Select the **Invitation Manager** cloud flow by selecting the display name
+1. Select the **Edit with new designer** button on the top
+1. Select the **Create an invitation** card in the cloud flow
+1. At the left side, you will see a panel where you can see the **Invited User Email Address** and the **Invite Redirect URL**, which are the two properties that we marked as important
+
+    ![Edit cloud flow in new designer](./assets/edit-new-designer.png)
+
+You will be able to select **Show all** under the `Advanced parameters` if you want to see all parameters. This way you can check if the connector updated correctly.
+
+## End of the lab
+
+This is the end of the lab. We hope you enjoyed it! Take a look at the rest of [this GitHub Repository](https://aka.ms/pp/advocates) to check out other workshops as well.
