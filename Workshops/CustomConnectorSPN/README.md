@@ -157,7 +157,7 @@ Now we have finished setting up the app registration, we can set our focus on th
     ```User.Invite.All```
 
 > [!NOTE]
-> The above details (app ID, app secret, etc) are for OAuth auth, not for the application (SPN) permissions. The SPN details will live in the connection.
+> The security details (app ID, app secret, etc) in the security section are for OAuth (delegated) authentication, not for the application (SPN) permissions. The SPN details will live in the connection.
 
 Move to the next section (Definition), by selecting **Definition** at the bottom right.
 
