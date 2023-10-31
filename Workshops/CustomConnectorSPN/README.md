@@ -208,7 +208,7 @@ In the definition section, you have to add the actions and triggers you want in 
     }
     ```
 
-1. Next, select the **Import** button. This will import the sample request and import this into our connector
+1. Select the **Import** button. This will import the sample request and import this into our connector
 
     > [!IMPORTANT]
     >
@@ -216,14 +216,172 @@ In the definition section, you have to add the actions and triggers you want in 
 
     ![Import request](./assets/custom-connector-import-request.png)
 
+1. Next, we are going to make sure that the response that comes back from the API, also gets parsed when using the Power Platform. To ensure this works, we need to define a response. Scroll down to the **Response** section and select the button that says **default** and has a gray background
+
+    ![default response in response section](./assets/custom-connector-response.png)
+
+1. In the next screen, replace `default` in the **Name** text box with `201`. This is because we are expecting to get a 201 HTTP Code back after the request
+1. Select the blue **Import from sample** button at the top
+1. For the **Headers** text box, enter the following header:
+
+    ```Content-Type application/json```
+
+1. For the **Body**, copy the following request body and paste it in the text box. This is a sample JSON body, I got from the learn page for the create an invitation operation in the Microsoft Graph API
+
+    ```json
+    {
+      "id": "7b92124c-9fa9-406f-8b8e-225df8376ba9",
+      "inviteRedeemUrl": "https://invitations.microsoft.com/redeem/?tenant=04dcc6ab-388a-4559-b527-fbec656300ea&user=7b92124c-9fa9-406f-8b8e-225df8376ba9&ticket=VV9dmiExBsfRIVNFjb9ITj9VXAd07Ypv4gTg%2f8PiuJs%3d&lc=1033&ver=2.0",
+      "invitedUserDisplayName": "Fabrikam Admin",
+      "invitedUserEmailAddress": "admin@fabrikam.com",
+      "resetRedemption": false,
+      "sendInvitationMessage": false,
+      "invitedUserMessageInfo": {
+          "messageLanguage": "",
+          "ccRecipients": [
+          {
+              "emailAddress": {
+              "name": "",
+              "address": ""
+              }
+          }
+          ],
+          "customizedMessageBody": ""
+      },
+      "inviteRedirectUrl": "https://myapp.contoso.com",
+      "status": "Completed",
+      "invitedUser": {
+          "id": "243b1de4-ad9f-421c-a933-d55305fb165d"
+      }
+    }
+    ```
+
+1. Select the **Import** button. This will import the sample response and import this into our connector
+
+    > [!IMPORTANT]
+    >
+    > The request section should look like this now:
+
+    ![Import request](./assets/custom-connector-201-response-finished.png)
+
+    Now, we only have to go back by selecting the back button in the screenshot below:
+
+    ![Import request](./assets/custom-connector-201-response-back.png)
+
+1. Select the **Create connector** button at the top
+
+This will take a little while, but it will save the connector to the Power Platform.
+
+> [!NOTE]
+> There is also a **Code** section in the custom connector UI, but in this lab, we won't go into detail about that. If you want to, you can learn more about it [here](https://aka.ms/cc/code).
+
 ## Test the connector
 
-TODO
+Now we are at the moment we want to test if everything is alright with our connector. In this lab, we will test in multiple ways:
+
+- We will test inside of the custom connector UI (which is a technical test to see if we don't get any errors)
+- We wil test inside of Power Automate, to see if the user experience is good or not. We don't want to build connectors that are not very maker friendly
+
+Let's start with the test inside of the custom connector UI.
+
+1. Select **5. Test** at the top of the connector UI
+
+    ![Move to the test section](./assets/custom-connector-move-to-test.png)
+
+1. In the following page, scroll down to see the operations you can test. In this case, you will see a gray **Test operation** button. This is because we haven't created a connection yet for the connector
+1. Scroll up a bit, and select the **New connection** button in the `Connections` part
+
+    ![New connection](./assets/custom-connector-new-connection.png)
+
+    This will redirect you to a new connection experience, where you can configure your connection.
+
+1. We have created a connector that works with both delegated and application permissions, so we have to select the connection type of our choice in the first dropdown. In this case, let's select **Service Principal Connection**
+
+    > [!NOTE]
+    > In this case, we chose Service Principal Connection, but we could've also chosen `OAuth Connection`.
+
+1. In the **Client ID** text box, paste the `Client ID` we copied to notepad
+1. In the **Client Secret** text box, paste the `Client Secret` we saved in a safe place at the end of our last task
+1. In the **Tenant** text box, paste the `Directory (tenant) ID` we copied to notepad
+1. Select the blue **Create connection** button
+1. In the left navigation, select **Custom connectors**
+1. Look for the **Invitation Manager** custom connector and select the **pencil icon** next to it, to open it into edit mode
+1. Select **5. Test** at the top
+
+    Now we can see that the **Test operation** button is blue instead of gray.
+
+1. In the **Content-Type** text box, enter `application/json`
+1. In the **invitedUserDisplayName** text box, enter your name
+1. In the **invitedUserEmailAddress** text box, enter your work email address
+1. In the **sendInvitationMessage** text box, enter `true`
+1. In the **inviteRedirectUrl** text box, enter `https://office.com`
+1. Select the blue **Test operation** button to test out the invitation
+
+    ![Operation test successful](./assets/custom-connector-test-operation-successful.png)
+
+1. Now, you will receive an email in your mailbox where you can accept the invitation:
+
+    ![Invitation Email received](./assets/custom-connector-test-invitation-received.png)
+
+    It also shows that after the acceptance of the invitation, you will be sent to `https://office.com`. This is a very simple scenario, but ideally you would give the guest access to resources inside your organization, like a Power App, or a SharePoint site. But we will skip that for this lab.
+
+### Remove the invited user from Entra ID
+
+1. Go to [https://portal.azure.com](https://portal.azure.com)
+1. Go to **Microsoft Entra ID** (This was previously named Azure Active Directory) by either searching for it or selecting it through the services part on the portal home page
+1. Select **Users** in the left navigation
+1. Select the invited user by **selecting the checkbox in front of the guest user** that you invited in the earlier section
+1. Delete the user by selecting the **delete button** at the top
+
+    ![Remove invited user](./assets/entra-id-remove-invited-user.png)
+
+1. Select the blue **OK** button as the confirmation
 
 ## Test the connector in one of the products
 
-TODO
+Of course, we also want to see how our connector works in Power Automate. So let's do that!
 
-## Download the connector to your own machine
+1. Go to [https://make.powerautomate.com](https://make.powerautomate.com)
+1. Select **Create** in the left navigation
+1. Select **Instant cloud flow**
+1. Enter **Invitation Manager** as the name of the flow
+1. Select the **Manually trigger a flow** trigger
+1. Select the blue **Create** button
 
-TODO
+    ![Create test cloud flow](./assets/test-cloud-flow-create-flow.png)
+
+1. Select the **New step** button
+1. Select the **Custom** tab to see all custom connectors
+1. Select the **Invitation Manager** connector
+1. Select the **Create an invitation** action
+
+Now we can see a couple of issues:
+
+- A field like content-type is very technical for makers, it might be good to hide this field for makers and set the default to `application/json`
+- The names of the inputs aren't very useful to the makers (invitedUserDisplayName, invitedUserEmailAddress, etc aren't the most useful names to makers)
+
+Let's fix these issues.
+
+## Improve the connector for makers
+
+1. Select the **save button** at the top of the cloud flow
+1. Select the **back button** at the top left
+
+    ![Go back to the cloud flow overview page](./assets/test-cloud-flow-back.png)
+
+1. In the left navigation, select **Custom connectors**
+1. Look for the **Invitation Manager** custom connector and select the **pencil icon** next to it, to open it into edit mode
+1. Select **3. Definition** at the top
+1. In the **Request section**, select **Content-Type** under `Headers` and select **Edit**
+
+    ![Edit content-type field](./assets/improve-connector-edit-content-type.png)
+
+1. Change the **Default value** to `application/json`
+1. Set the **Is required** value to `Yes`
+1. Set the **Visibility** to `Internal`
+1. When done, select the **Back button** at the top of the parameter settings
+1. In the **Request section**, select **body** under `body` and select **Edit**
+
+    In the following screen, you can see a lot of the request fields we just saw in the cloud flow. You can change these fields one by one.
+
+    ![Overview of the body payload](./assets/improve-connector-edit-body.png)
