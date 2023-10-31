@@ -385,3 +385,5 @@ Let's fix these issues.
     In the following screen, you can see a lot of the request fields we just saw in the cloud flow. You can change these fields one by one.
 
     ![Overview of the body payload](./assets/improve-connector-edit-body.png)
+
+1.
