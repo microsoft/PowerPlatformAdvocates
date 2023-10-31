@@ -156,9 +156,12 @@ Now we have finished setting up the app registration, we can set our focus on th
 
     ```User.Invite.All```
 
-    Move to the next section (Definition), by selecting **Definition** at the bottom right.
+> [!NOTE]
+> The above details (app ID, app secret, etc) are for OAuth auth, not for the application (SPN) permissions. The SPN details will live in the connection.
 
-    ![Move to definition tab](./assets/custom-connector-move-to-definition.png)
+Move to the next section (Definition), by selecting **Definition** at the bottom right.
+
+![Move to definition tab](./assets/custom-connector-move-to-definition.png)
 
 ### Definition section
 
