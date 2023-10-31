@@ -141,8 +141,89 @@ Creating an app registration is fairly simple if you know how it works. This par
 
 ## Finish the connector
 
+### Security section
+
+Now we have finished setting up the app registration, we can set our focus on the custom connector again! Let's go back to the browser tab where we left of and continue setting up the custom connector!
+
+1. Select the checkbox in front of **Enable Service Principal support**
+1. In the **Client ID** text box, paste the client ID we copied to notepad
+1. In the **Client Secret** text box, paste the client secret we saved in a safe place at the end of our last task
+1. In the **Resource URL** text box, enter the following URL:
+
+    ```https://graph.microsoft.com```
+
+1. In the **Scope** text box, enter the following permission:
+
+    ```User.Invite.All```
+
+    Move to the next section (Definition), by selecting **Definition** at the bottom right.
+
+    ![Move to definition tab](./assets/custom-connector-move-to-definition.png)
+
+### Definition section
+
+In the definition section, you have to add the actions and triggers you want in your connector. In this case, we only want to add the **Create an invitation** action.
+
+1. Select the **New action** button in the `Actions` section on the left
+1. In the **Summary** text box, enter `Create an invitation`
+1. In the **Description** text box, enter `Use this action to create a new invitation. An invitation adds an external user to the organization.`
+1. In the **Operation ID** text box, enter `CreateInvitation`
+1. In the `Request` section, select the **Import from sample** button
+
+    > [!NOTE]
+    > This will open a side panel where you can import a sample request
+
+1. In the **Verb** part of the side panel, select **Post**
+1. For URL, enter the following URL:
+
+      ```/invitations```
+
+1. In the **Headers** text box, enter the following header:
+
+    ```Content-Type application/json```
+
+1. For the **Body**, copy the following request body and paste it in the text box. This is a sample JSON body, I got from the learn page for the create an invitation operation in the Microsoft Graph API
+
+    ```json
+    {
+      "invitedUserDisplayName": "string",
+      "invitedUserEmailAddress": "string",
+      "invitedUserMessageInfo": {
+        "ccRecipients": [
+          {
+            "emailAddress": {
+              "address": "string",
+              "name": "string"
+            }
+          }
+        ],
+        "customizedMessageBody": "string",
+        "messageLanguage": "string"
+      },
+      "sendInvitationMessage": true,
+      "inviteRedirectUrl": "string",
+      "inviteRedeemUrl": "string",
+      "resetRedemption": false,
+      "invitedUserType": "string"
+    }
+    ```
+
+1. Next, select the **Import** button. This will import the sample request and import this into our connector
+
+    > [!IMPORTANT]
+    >
+    > The request section should look like this now:
+    >
+    > ![Import request](./assets/custom-connector-import-request.png)
+
 ## Test the connector
+
+TODO
 
 ## Test the connector in one of the products
 
+TODO
+
 ## Download the connector to your own machine
+
+TODO
