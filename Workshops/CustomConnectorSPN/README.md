@@ -213,8 +213,8 @@ In the definition section, you have to add the actions and triggers you want in 
     > [!IMPORTANT]
     >
     > The request section should look like this now:
-    >
-    > ![Import request](./assets/custom-connector-import-request.png)
+
+    ![Import request](./assets/custom-connector-import-request.png)
 
 ## Test the connector
 
