@@ -283,7 +283,7 @@ This will take a little while, but it will save the connector to the Power Platf
 Now we are at the moment we want to test if everything is alright with our connector. In this lab, we will test in multiple ways:
 
 - We will test inside of the custom connector UI (which is a technical test to see if we don't get any errors)
-- We wil test inside of Power Automate, to see if the user experience is good or not. We don't want to build connectors that are not very maker friendly
+- We will test inside of Power Automate, to see if the user experience is good or not. We don't want to build connectors that are not very maker friendly
 
 Let's start with the test inside of the custom connector UI.
 
