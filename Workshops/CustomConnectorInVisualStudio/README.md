@@ -53,7 +53,7 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Select **.NET 8.0** (Install SDK and latest version of Visual Studio 2022 if you do not see this option) ➡️Select **Microsoft identity platform** ➡️ **Create**.
    ![project-framework.png](./assets/project-framework.png)
 
-1. Select **Next**
+1. Select **Next**.  
    ![identity-platform.png](./assets/identity-platform.png)
 
 1. Select your **Azure Subscription** (You will need to login if you have not already done so) ➡️Select your **Tenant** ➡️Select **Create new**.
@@ -66,13 +66,13 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Ensure that the **new application is selected** ➡️ Select **Next**.
    ![select-application](./assets/select-application.png)
 
-1. You can add permissions to Microsoft Graph or another application if required, however in this lab you will not call any downstream APIs. Select **Next**.
+1. You can add permissions to Microsoft Graph or another application if required, however in this lab you will not call any downstream APIs. Select **Next**.  
    ![api-permissions](./assets/api-permissions.png)
 
-1. Select **Finish**.
+1. Select **Finish**.  
    ![create-api-finish](./assets/create-api-finish.png)
 
-1. When the project configuration is finished, select **Close**.
+1. When the project configuration is finished, select **Close**.  
       ![project-configuration-finished](./assets/project-configuration-finished.png)
 
 1. If you have GitHub Copilot installed, you can use the following prompt:
@@ -349,19 +349,19 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Choose your **Developer Environment**, select the `Order Admin Connector` solution:
       ![connected-service-config](./assets/connected-service-config.png)
 
-1. Use + to add a new **Custom Connector** named `OrderAdmin_Connector`:
+1. Use + to add a new **Custom Connector** named `OrderAdmin_Connector`  
      ![new-custom-connector](./assets/new-custom-connector.png)
 
-1. Use + to add a new public **dev tunnel** named `PowerPlatform` :
+1. Use + to add a new public **dev tunnel** named `PowerPlatform`.  
       ![new-devtunnel](./assets/new-devtunnel.png)
 
-1. Select **Finish**. Your custom connector will be created in the Power Platform environment you selected using the `OpenAPI` schema of your Web API. Select **Close**.
+1. Select **Finish**. Your custom connector will be created in the Power Platform environment you selected using the `OpenAPI` schema of your Web API. Select **Close**.  
       ![create-connector-finished](./assets/create-connector-finished.png)
 
       > [!NOTE]
       > You can repeat this process to update your connector by selecting an existing on rather than creating a new one.
 
-1. Press `F5` in your project. If this is the first time you have accessed the dev tunnel in this session you will receive a confirmation dialog. Select **Continue**.
+1. Press `F5` in your project. If this is the first time you have accessed the dev tunnel in this session you will receive a confirmation dialog. Select **Continue**.  
       ![confirm-dev-tunnel](./assets/confirm-dev-tunnel.png)
 
 1. Notice that the API is now access via public Dev Tunnel URL.
@@ -646,10 +646,10 @@ Since the API is deployed as a custom connector, you can now test using Power Pl
 1. Select the **Test** Tab/Dropdown, and select **+ New connection**
    ![test-connection](./assets/test-connection.png)
 
-1. On the dialog, select **Create**.
+1. On the dialog, select **Create**.  
    ![create-connection-test](./assets/create-connection-test.png)
 
-1. You will see an error dialog similar to the following dialog.
+1. You will see an error dialog similar to the following dialog.  
    ![sign-in-error-redirect-url](./assets/sign-in-error-redirect-url.png)
 
    > [!NOTE]
@@ -692,7 +692,7 @@ Now that your Web API has been tested you need to deploy it to an Azure App Serv
 
 1. Inside the Web API Visual Studio Project, right click on the **eShopOrderAdmin** **Web API** project ➡️Select **Publish**
    ![publish-project](./assets/publish-project.png)
-1. Select **Azure**.
+1. Select **Azure**.  
    ![publish-azure](./assets/publish-azure.png)
 1. Select **Azure App Service (Linux)** ➡️ Select **Next**.
    ![publish-linux](./assets/publish-linux.png)
@@ -827,7 +827,7 @@ Having the ability to version control your solution and track changes between di
    }
    ````
 
-   You can find the Environment ID by selecting the cog settings icon on the top right of [make.powerapps.com](https://make.powerapps.com)  ➡️  Select **Developer Resources**.
+   You can find the Environment ID by selecting the cog settings icon on the top right of [make.powerapps.com](https://make.powerapps.com)  ➡️  Select **Developer Resources**.  
    ![developer-resources](./assets/developer-resources.png)
 
    Learn more about the PowerShell commands: [Microsoft.PowerApps.Administration.PowerShell Module | Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/?view=pa-ps-latest)
@@ -894,7 +894,7 @@ Now you have built and deployed the custom connector, tested and setup for healt
 
 1. Select **Connect** and follow the login.
 
-1. Since this is a new connector deployed with a different prefix you will receive the sign in error with direct URI missing. **Copy** the URL has before:
+1. Since this is a new connector deployed with a different prefix you will receive the sign in error with direct URI missing. **Copy** the URL has before:  
    ![sign-in-error-redirect-url-2](./assets/sign-in-error-redirect-url-2.png)
 
 1. Back inside VS Code, run the same command as before with the new URL:
@@ -903,7 +903,7 @@ Now you have built and deployed the custom connector, tested and setup for healt
    AddRedirectUrlToApp $appId "<Copied URL>"
    ```
 
-1. Once the Redirect URL is added, re-run the adding connector as above. This time, select Allow access,  the login will work and the connector added as a data source.
+1. Once the Redirect URL is added, re-run the adding connector as above. This time, select Allow access,  the login will work and the connector added as a data source.  
    ![allow-access](./assets/allow-access.png)
 
 1. Press `F5` to run the app ➡️ Select `Order.Add`, and enter some values, then select **POST**
@@ -1056,10 +1056,10 @@ If you need to change the schema of your connector, this can be easily done usin
 
 1. Deploy your updated project to Azure using **Right Click on the Project** -> **Publish** -> **Publish**
 
-1. To update the schema in your canvas app, open the **Order Admin App** from the Order Admin App solution first remove the connector connection.
+1. To update the schema in your canvas app, open the **Order Admin App** from the Order Admin App solution first remove the connector connection.  
     ![Remove Connector](./assets/remove-connector.png)
 
-1. Add the connector back in as before.
+1. Add the connector back in as before.  
      ![Add Connector Back](./assets/add-connector-back.png)
 
 1. You can use the new schema by replacing the columns on the table in Power Apps:
