@@ -2,7 +2,7 @@
 
 ## Background
 
-We take a step further from Lab 1 by creating a .NET API using the .NET Azure OpenAI SDK, creating Azure Resources with the Azure Developer CLI, deploying the API to Azure App Service and Azure API Management and Creating a Custom Connector from API Management.
+We take a step further from Lab 1 by creating a .NET API using the .NET Azure OpenAI SDK and creating a Custom Connector from Visual Studio.
 
 ## Definitions
 
@@ -17,18 +17,6 @@ Learn More: [Introduction to .NET [Microsoft Learn]](https://learn.microsoft.com
 The Azure OpenAI client library for .NET is an adaptation of OpenAI's REST APIs that provides an idiomatic interface and rich integration with the rest of the Azure SDK ecosystem. It can connect to Azure OpenAI resources or to the non-Azure OpenAI inference endpoint, making it a great choice for even non-Azure OpenAI development.
 
 Learn More: [Azure OpenAI client library for .NET [Microsoft Learn]](https://learn.microsoft.com/en-us/dotnet/api/overview/azure/ai.openai-readme?view=azure-dotnet-preview)
-
-### What is Azure App Service?
-
-Azure App Service is an HTTP-based service for hosting web applications, REST APIs, and mobile back ends. You can develop in your favorite language, be it .NET, .NET Core, Java, Node.js, PHP, and Python. Applications run and scale with ease on both Windows and Linux-based environments.
-
-Learn More: [Azure App Service Overview [Microsoft Learn]](https://learn.microsoft.com/en-us/azure/app-service/overview)
-
-### What is Azure API Management?
-
-Azure API Management is a hybrid, multicloud management platform for APIs across all environments. As a platform-as-a-service, API Management supports the complete API lifecycle.
-
-Learn More: [What is Azure API Management? [Microsoft Learn]](https://learn.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
 
 ### What is the Power Platform?
 
