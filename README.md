@@ -16,7 +16,7 @@ Welcome to Power Platform Advocates GitHub repository. In this repo, the Power P
 
 ## Labs
 
-- [Lab: Use service principal auth for custom connectors](/Workshops/CustomConnectorSPN/README.md)
+- [Use service principal auth for custom connectors](/Workshops/CustomConnectorSPN/README.md)
 
 ## Contributing
 
