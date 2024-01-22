@@ -14,6 +14,10 @@ Welcome to Power Platform Advocates GitHub repository. In this repo, the Power P
 - [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
 
+## Labs
+
+- [Lab: Use service principal auth for custom connectors](/Workshops/CustomConnectorSPN/README.md)
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
