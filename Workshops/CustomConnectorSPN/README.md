@@ -28,7 +28,7 @@ To learn more about the Invitation Manager, go to the [API reference](https://ak
 
 In this lab, we will start by creating a connector from blank. This is something you can do in the maker portal.
 
-1. Go to the Power Automate maker portal via [https:/make.powerautomate.com](https:/make.powerautomate.com)
+1. Go to the Power Automate maker portal via [https://make.powerautomate.com](https://make.powerautomate.com)
 
     ![The Power Automate Maker Portal](./assets/make-powerautomate-home.png)
 
