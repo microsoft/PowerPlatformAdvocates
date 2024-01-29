@@ -1,4 +1,4 @@
-# Lab 1: Laying the Foundation: Azure OpenAI Service and Power Platform
+# Lab 1 - Laying the Foundation: Azure OpenAI Service and Power Platform
 
 ## Background
 
@@ -21,7 +21,7 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](Images/lets-learn-power-1.png)
+![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-1.png)
 
 Date of Livestream: {TBD}
 
@@ -31,7 +31,13 @@ Date of Livestream: {TBD}
 
 1. Go to [portal.azure.com](portal.azure.com) and login with your Azure account.
 
-1. Create a Resource Group and name it `PodcastCopilotPowerApp`.
+1. Search for and select **Resource Groups**.
+
+1. Click on **+ Create**.
+
+    ![Create Resource Group](assets/create-resource-group.png)
+
+1. Name it `PodcastCopilotPowerApp` and click on **Review + Create**. Then click on **Create**.
 
 1. Create a new Azure OpenAI Service resource by clicking [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI) and set the following parameters:
 
@@ -43,7 +49,9 @@ Date of Livestream: {TBD}
 
     This resource will be used to access the Whisper and GPT-3.5 models.
 
-1. Click on **Review + Create** and then **Create** to create the resource.
+    ![Create Azure OpenAI Service Resource](assets/create-azure-openai-service-resource.png)
+
+1. Click on **Next** until you get to the **Review + Submit** page and then click on **Create** to create the resource.
 
 1. Create another new Azure OpenAI Service resource by clicking [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI) and set the following parameters:
 
@@ -55,7 +63,7 @@ Date of Livestream: {TBD}
 
     This resource will be used to access the Dall.E 3 model.
 
-1. Click on **Review + Create** and then **Create** to create the resource.
+1. Click on **Next** until you get to the **Review + Submit** page and then click on **Create** to create the resource.
 
 ### Creating the Bing Search Resource in Azure
 
@@ -67,6 +75,10 @@ Date of Livestream: {TBD}
     - **Region**: `Global`
     - **Pricing Tier**: Select the `F1` pricing tier
 
+1. Read the **Terms** and **Notice** and select the checkbox to agree to them.
+
+    ![Terms confirmation for Bing Search](assets/bing-search-terms.png)
+
 1. Click on **Review + Create** and then **Create** to create the resource.
 
 1. Open up your `PodcastCopilotPowerApp` resource group in the Azure portal.
@@ -75,6 +87,8 @@ Date of Livestream: {TBD}
 
 1. Select **Keys and Endpoint** on the left menu and note down the **Key 1** value somewhere safe.
 
+    ![Bing Search Key](assets/bing-search-key.png)
+
 ### Creating model deployments in Azure OpenAI Studio
 
 1. Open up your `PodcastCopilotPowerApp` resource group in the Azure portal.
@@ -82,6 +96,8 @@ Date of Livestream: {TBD}
 1. Select the `podcastcopilotwe-{your initials}` resource.
 
 1. On the top menu, click on **Go to Azure OpenAI Studio**.
+
+    ![Go to Azure OpenAI Studio](assets/go-to-azure-openai-studio.png)
 
 1. In the Azure OpenAI Studio, click on **Deployments** on the left menu.
 
@@ -93,6 +109,8 @@ Date of Livestream: {TBD}
 
     Click **Create** to create the deployment.
 
+    ![Create GPT-3.5 Turbo Deployment](assets/create-gpt35turbo-deployment.png)
+
 1. Click on **+ Create New Deployment** again and set the following parameters:
 
     - **Select a model**: `whisper`
@@ -103,11 +121,15 @@ Date of Livestream: {TBD}
 
 1. Select the **gpt35turbo** deployment and click on **Open in Playground**.
 
+    ![Open GPT-3.5 Turbo Deployment in Playground](assets/open-gpt35turbo-deployment-in-playground.png)
+
 1. In the playground, click on **View Code** and note down the following somewhere safe:
 
     - **Deployment Name**: `gpt35turbo`
     - **Endpoint**: `https://podcastcopilotwe-{your initials}.openai.azure.com/`
     - **Key**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+    ![GPT-3.5 Turbo Playground endpoint and key](assets/gpt35turbo-playground-endpoint-and-key.png)
 
 1. Once complete, do the same for the `whisper` deployment.
 
@@ -121,7 +143,11 @@ Date of Livestream: {TBD}
 
 1. Now in the top right corner, click on your name and then under `Current Resource`; select **Switch**.
 
+    ![Switch Azure OpenAI Service Resource](assets/switch-azure-openai-service-resource.png)
+
 1. Select the **podcastcopilotsc-{your initials}** resource and then select **Use Resource**.
+
+    ![Select Azure OpenAI Service Resource](assets/select-azure-openai-service-resource.png)
 
 1. Click on **Deployments** on the left menu and then select **Create New Deployment** and set the following parameters:
 
@@ -141,4 +167,4 @@ Date of Livestream: {TBD}
 
 ...and that's it! You've now created all the Azure OpenAI resources you need to get started.
 
----> Lab 2: [Bridging the Gap: .NET APIs, Azure and Custom Connectors](../Lab2/LAB2.md)
+### ➡️ [Lab 2 - Bridging the Gap: .NET APIs, Azure and Custom Connectors](../Lab2/README.md)
