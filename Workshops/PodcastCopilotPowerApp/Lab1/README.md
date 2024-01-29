@@ -21,7 +21,7 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](ASSETS/lets-learn-power-1.png)
+![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-1.png)
 
 Date of Livestream: {TBD}
 
