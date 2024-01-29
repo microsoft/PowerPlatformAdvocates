@@ -1,4 +1,4 @@
-# Lab 2: Bridging the Gap: .NET APIs, Azure and Custom Connectors
+# Lab 2 - Bridging the Gap: .NET APIs, Azure and Custom Connectors
 
 ## Background
 
@@ -40,7 +40,7 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](Images/lets-learn-power-2.png)
+![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-2.png)
 
 Date of Livestream: {TBD}
 
@@ -76,13 +76,19 @@ Date of Livestream: {TBD}
 
 1. Open up Visual Studio and click on **Create a new project**.
 
+    ![Create a new Visual Studio project](assets/visual-studio-create-new-project.png)
+
 1. Search for "Web API" and select **ASP.NET Core Web API**. Make sure you've selected the C# project template.
+
+    ![Select the ASP.NET Core Web API project template](assets/visual-studio-select-web-api-project.png)
 
 1. Click **Next**.
 
 1. Name your project ``PodcastAppAPI`` and click **Next**.
 
 1. Make sure that the Framework is set to **.NET 8**, Authentication type is set to **None** and that it's configured for **HTTPS**. Click **Create**.
+
+    ![Configure the project settings](assets/visual-studio-configure-project-settings.png)
 
 1. Once the project has been created, open the **Solution Explorer** and right-click on the **PodcastAppAPI** project and select **Open in Terminal**.
 
@@ -102,7 +108,9 @@ Date of Livestream: {TBD}
 
 1. Once the command has completed, add a new class to the project by right-clicking on the **PodcastAppAPI** project and selecting **Add > Class**. Name the class ``PodcastCopilot``.
 
-1. Add the following two using statements to the top of the ``PodcastCopilot`` class:
+    ![Add a new class to the project](assets/visual-studio-add-new-class.png)
+
+1. Add the following using statements to the top of the ``PodcastCopilot`` class:
 
     ```csharp
     using System.Web;
@@ -187,14 +195,16 @@ Date of Livestream: {TBD}
     }
     ```
 
-1. Add the following class to the project:
+1. Right click on the **PodcastAppAPI** project and select **Add > Class**. Name the class ``BingSnippet``. Add the following code to the class:
 
     ```csharp
     public class BingSnippet
     {
-        public string bio { get; set; }
+        public string? bio { get; set; }
     }
     ```
+
+    ![Bing snippet class](assets/visual-studio-bing-snippet-class.png)
 
 1. Then add the following code to the PodcastCopilot class to perform the third step of the PodcastCopilot process; **Getting the guest bio**:
 
@@ -324,7 +334,7 @@ Date of Livestream: {TBD}
 
 ### Updating the Program.cs file with the Minimal API implementation
 
-1. Open the **Program.cs** file and replace all the code in this file with: 
+1. Open the **Program.cs** file and replace all the code in this file with:
 
     ```csharp
     var builder = WebApplication.CreateBuilder(args);
@@ -400,6 +410,8 @@ Date of Livestream: {TBD}
 
 1. In the solution explorer, right-click on the **Connected Services** node and select **Add** > **Microsoft Power Platform**.
 
+    ![Add a new connected service](assets/visual-studio-add-connected-service.png)
+
 1. Ensure you're signed in with the same account as your Power Apps Developer Plan, and configure the following settings:
 
     - **Environment**: Select an environment of your choosing
@@ -410,13 +422,18 @@ Date of Livestream: {TBD}
 
     Click **Next** and then **Finish**.
 
+    ![Configure the connected service](assets/visual-studio-configure-connected-service.png)
+
 1. Once the Dependency configuration process has completed, close the pop-up window.
 
 1. Run the application, and in the browser window; click **Continue** to connect to your Developer Tunnel.
 
+    ![Connect to the Developer Tunnel](assets/visual-studio-connect-to-dev-tunnel.png)
+
+1. Once the Developer Tunnel has connected, you'll see all API operations which you can test to see if they're working correctly.
+
+    ![Test the API operations](assets/visual-studio-test-api-operations.png)
+
 ...and that's it! You've now created a .NET API using the .NET Azure OpenAI SDK and created a Custom Connector from Visual Studio where you'll be able to use the API within the Power Platform.
 
----> Lab 3: [The Final Touch: Power Apps and Power Virtual Agents Integration](../Lab3/LAB3.md)
-
-
-
+### ➡️ [Lab 3 - The Final Touch: Power Apps and Microsoft Copilot Studio](../Lab3/README.md)
