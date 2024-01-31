@@ -1,4 +1,4 @@
-# Lab 3 - The Final Touch: Power Apps and Power Virtual Agents Integration
+# Lab 3 - The Final Touch: Power Apps and Microsoft Copilot Studio Integration
 
 ## Background
 
@@ -135,8 +135,6 @@ Date of Livestream: {TBD}
 
 1. Use the **Preview** button to test the app. Enter the link to the podcast episode in the **Text Input** control and click the **Generate Post** button. The social media blurb and image should be displayed.
 
-...and that's it! You've successfully built a Power App that uses the Custom Connector to generate a social media post and image from a Podcast URL using AI!
-
 Because the main functionality of the app is encapsulated in the Custom Connector, you can easily reuse this connector in other Power Apps or other parts of the Power Platform including Microsoft Copilot Studio.
 
 ### Using the connector in Microsoft Copilot Studio
@@ -171,3 +169,88 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 1. Add a new node by clicking on the **+** icon below the **Trigger** node.
 
     ![Adding a new node](assets/add-node.png)
+
+1. Select **Send a message** and enter the following message:
+
+    ```
+    Sure thing! I can do that for you.
+    ```
+
+1. Then add another node and select **Ask a question** and enter the following question:
+
+    ```
+    What is the link to the podcast episode?
+    ```
+
+1. Beneath **Identify**, select the **User's entire response** option and then **Save response as** ``podcastURL``.
+
+    ![Adding a question to the topic](assets/add-question.png)
+
+1. Now add another node and select **Call an action** and then click on **Create a flow**. This will open Power Automate in a new tab.
+
+1. Click on **When Power Virtual Agents calls a flow** and then under **Parameters** - select **+ Add an input**.
+
+1. Select **Text** and enter ``podcastURL`` in both fields. Then close the pane.
+
+    ![Adding an input parameter to the Power Automate flow](assets/add-input-parameter.png)
+
+1. Then insert a new step between the 2 nodes and select **Add an action**.
+
+1. On the left-hand pane, select **Custom** under runtime and select the **PodcastCopilot_Connector** connector.
+
+    ![Adding the Custom Connector to the Power Automate flow](assets/add-custom-connector.png)
+
+1. First select the **Get Transcription** action and place your curser in the **BlobUrl** field and select the **thunder bolt** icon to open the **Dynamic content** pane.
+
+    ![Adding the Get Transcription action to the Power Automate flow](assets/add-get-transcription.png)
+
+1. Then select **podcastURL** from the **Dynamic content** pane.
+
+    ![Adding the podcastURL parameter to the Get Transcription action](assets/add-podcast-url.png)
+
+1. Add another action but this time, select the **GetGuestName** action. For the **Transcription** field, select the **body/text** field from the **Dynamic content** pane.
+
+    ![Adding the Get Guest Name action to the Power Automate flow](assets/add-get-guest-name.png)
+
+1. In that same pattern;
+
+    - Add the **GetGuestBio** action and in the **GuestName** field, select **message/content** from the **Dynamic content** pane.
+    - Add the **GetSocialMediaBlurb** action and in the **Transcription** field, select **body/text** from the **GetTranscription** section from the **Dynamic content** pane. In the **Bio** field, select **bio** from the **Dynamic content** pane.
+    - Add the **GetDallEPrompt** action and in the **SocialBlurb** field, select **message/content** from the **GetSocialMediaBlurb** section from the **Dynamic content** pane.
+    - Add the **GetImage** action and in the **Prompt** field, select **message/content** from the **GetDallEPrompt** section from the **Dynamic content** pane.
+
+1. Finally, select the **Return value(s) to Power Virtual Agents** action and select **+ Add an output**. Select **Text** and enter ``socialPost`` in the first fields and **message/content** from the **GetSocialMediaBlurb** section from the **Dynamic content** pane in the second field.
+
+    ![Adding the Return value(s) to Power Virtual Agents action to the Power Automate flow](assets/add-return-value.png)
+
+1. Select **+ Add an output** once more, select **Text** and enter ``SocialImage`` in the first fields and **body/url** from the **GetImage** section from the **Dynamic content** pane in the second field.
+
+1. Change the name of the flow to ``Generate Social Media Post Flow`` and click **Save**.
+
+    ![Saving the Power Automate flow](assets/save-flow.png)
+
+1. Once it has been saved, close the tab and return to Microsoft Copilot Studio.
+
+1. Re-add the **Call an action** node, and select the **Generate Social Media Post Flow** flow.
+
+    ![Adding the Generate Social Media Post Flow to the topic](assets/add-flow.png)
+
+1. In the resulting **Action** node, add the **podcastURL** variable to the **Power Automate Inputs** section.
+
+1. Then add another node and select **Send a message** and enter the following message:
+
+    ```
+    Here is the social media post I generated for you:
+    ```
+
+1. Click on the **Insert variable** icon and select the **socialPost** variable.
+
+    ![Adding the socialPost variable to the topic](assets/add-social-post.png)
+
+1. Do the same with the **SocialImage** variable. Add a message below the last which says ``Here is the image I generated for you:`` and then add the **SocialImage** variable.
+
+    ![Adding the SocialImage variable to the topic](assets/add-social-image.png)
+
+1. Finally, add another node to end conversation and click **Save**.
+
+...and that's it! You've successfully built a Power App and Copilot that uses the Custom Connector to generate a social media post and image from a Podcast URL using AI!
