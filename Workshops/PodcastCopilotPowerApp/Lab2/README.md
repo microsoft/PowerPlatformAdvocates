@@ -51,14 +51,14 @@ Date of Livestream: {TBD}
 1. Open up a command prompt and run the following commands one command at a time:
 
     ```bash
-    setx AZURE_OPENAI_KEY_WE "REPLACE_WITH_YOUR_KEY_VALUE_HERE"
+    setx AZURE_OPENAI_KEY_WE "REPLACE_WITH_YOUR_WEST_EUROPE_KEY_VALUE_HERE"
     setx AZURE_OPENAI_ENDPOINT_WE "https://podcastcopilotwe-{your initials}.openai.azure.com/"
     ```
 
     The above would be for the West Europe resource key and endpoint.
 
     ```bash
-    etx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_KEY_VALUE_HERE" 
+    etx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_SWEDEN_CENTRAL_KEY_VALUE_HERE" 
     setx AZURE_OPENAI_ENDPOINT_SC "https://podcastcopilotsc-{your initials}.openai.azure.com/"    
     ```
 
@@ -95,7 +95,7 @@ Date of Livestream: {TBD}
 1. In the terminal window, run the following command to install the prerelease version of the Azure OpenAI SDK:
 
     ```bash
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.13
     ```
 
 1. Then run the following command to install the Newtonsoft.Json package:
@@ -158,7 +158,8 @@ Date of Livestream: {TBD}
         {
             DeploymentName = "whisper",
             AudioData = BinaryData.FromStream(audioStreamFromBlob),
-            ResponseFormat = AudioTranscriptionFormat.Verbose
+            ResponseFormat = AudioTranscriptionFormat.Verbose,
+            Filename = "file.mp3"
         };
 
         Response<AudioTranscription> transcriptionResponse = await clientWE.GetAudioTranscriptionAsync(
@@ -180,8 +181,8 @@ Date of Livestream: {TBD}
             DeploymentName = "gpt35turbo",
             Messages =
             {
-                new ChatRequestSystemMessage(@"Extract the guest's name from a Podcast Transcript. 
-                        Provide only the guest's full name. Gomolemo Mohapi will never be the guest."),
+                new ChatRequestSystemMessage(@"Extract the guest name on the Beyond the Tech podcast from the following transcript.
+                    Beyond the Tech is hosted by Kevin Scott and Christina Warren, so they will never be the guests"),
                 new ChatRequestUserMessage(transcription)
             },
             Temperature = (float)0.7
@@ -278,7 +279,7 @@ Date of Livestream: {TBD}
     {
         var completionOptions = new ChatCompletionsOptions()
         {
-            DeploymentName = "GPTModel",
+            DeploymentName = "gpt35turbo",
             Messages =
         {
             new ChatRequestSystemMessage(
