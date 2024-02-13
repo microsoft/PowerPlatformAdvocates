@@ -213,29 +213,46 @@ Do you want to continue? (Y/N)
             return
         }
 
+        # Check that the application does not already exist
+        $existingApp = az ad app list --query "[?displayName=='$newAppName']" | ConvertFrom-Json
+        if ($null -ne $existingApp)
+        {
+            throw "An application with the name '$newAppName' already exists"
+        }
 
+        # Check that the API application exists
+        $apiApp = az ad app list --query "[?displayName=='$apiAppName']" | ConvertFrom-Json
+        if ($null -eq $apiApp)
+        {
+            throw "The API application '$apiAppName' does not exist. Please check you have run all the steps before this script"
+        }
 
         # Create the application registration
         Write-Host  "Registering Application '$newAppName'"
         $subscriptionId = az account show --query id -o tsv
-       
+        # Check that there is an active subscription
+        if ($null -eq $subscriptionId)
+        {
+            throw "No active subscription found. Please run 'az account set --subscription <subscription name or id>' to set the active subscription"
+        }
+
         $app = az ad app create --display-name $newAppName --query appId -o tsv 
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         $redirectUrl = "https://oauth.pstmn.io/v1/callback";
         Write-Host  "Registering Postman Redirect Url ${redirecturl}"
         AddRedirectUrlToApp -appId:$app -redirectUrl:$redirectUrl
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         # Create a new client secret and store it
         Write-Host  "Creating Client Secret"
         $secret = az ad app credential reset --id $app --query password -o tsv
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         $keyVaultResourceGroup = az keyvault show --name $keyVaultName --query "resourceGroup" -o tsv
@@ -244,18 +261,18 @@ Do you want to continue? (Y/N)
         Write-Host  "Adding Client Secret to key vault '$keyVaultName'"
         az keyvault secret set --name $vaultSecretName --vault-name $keyVaultName --value $secret >> $null
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         # Add the API permission to the application
         Write-Host  "Adding API access to '${apiAppName}'"
         $apiApp = az ad app list --query "[?displayName=='$apiAppName']" | ConvertFrom-Json
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
-        if ($apiApp -eq $null)
+        if ($null -eq $apiApp)
         {
-            Write-Error "Could not find the API application '$apiAppName'"
+            throw "Could not find the API application '$apiAppName'"
         }
 
         $apiId = $apiApp.appId
@@ -265,7 +282,7 @@ Do you want to continue? (Y/N)
         Write-Host  "Adding Permissions to the application scope '${apiUserAccessScope}"
         az ad app permission add --id $app --api $apiId --api-permissions "$scopeId=Scope"  >> $null
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
 
@@ -324,7 +341,7 @@ Do you want to continue? (Y/N)
         Set-Content -Path .\create-env-vars.pfx -Value $pfxScript
         pac pfx run --file "create-env-vars.pfx" >> $null
         if ($? -eq $false) {
-                Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         # Grant admin consent for all users in the tenant to use this delegated scope permission
@@ -332,7 +349,7 @@ Do you want to continue? (Y/N)
         Write-Host  "Granting Admin Permissions to the application scope '${apiUserAccessScope}"
         az ad app permission admin-consent --id $app
         if ($? -eq $false) {
-            Write-Error "${$_.Exception}"
+            throw $_.Exception
         }
 
         # return the new application details
