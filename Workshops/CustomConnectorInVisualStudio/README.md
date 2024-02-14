@@ -318,8 +318,8 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Press `F5` to run the project. A new browser window will open and you will see the swagger UI showing the Open API definition for your API.
       ![swagger-ui](./assets/swagger-ui.png)
 
-     > [!NOTE]
-     > If this is the first time you have run an HTTPS Web API then you will be prompted `Would you like to trust the ASP.NET Core SSL Certificate`, and `Do you want to install this certificate`. Select **Yes** for both of these. If you get the error `Your connection isn't private` inside the Edge, then expand **Advanced** and select **Continue to localhost (unsafe)**
+   > [!NOTE]
+   >If this is the first time you have run an HTTPS Web API then you will be prompted `Would you like to trust the ASP.NET Core SSL Certificate`, and `Do you want to install this certificate`. Select **Yes** for both of these. If you get the error `Your connection isn't private` inside the Edge, then expand **Advanced** and select **Continue to localhost (unsafe)**
 
 1. Expand **GET /orders** ➡️ Select **Try it out** ➡️ Select **Execute**.
       You should see the sample orders created in the constructor. This is all running inside your instance of Visual Studio so you can set breakpoints.
@@ -361,8 +361,8 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Select **Finish**. Your custom connector will be created in the Power Platform environment you selected using the `OpenAPI` schema of your Web API. Select **Close**.  
       ![create-connector-finished](./assets/create-connector-finished.png)
 
-      > [!NOTE]
-      > You can repeat this process to update your connector by selecting an existing on rather than creating a new one.
+   > [!NOTE]
+   > You can repeat this process to update your connector by selecting an existing on rather than creating a new one.
 
 1. Press `F5` in your project. If this is the first time you have accessed the dev tunnel in this session you will receive a confirmation dialog. Select **Continue**.  
       ![confirm-dev-tunnel](./assets/confirm-dev-tunnel.png)
@@ -413,8 +413,8 @@ In order to test authentication, you must now create an application registration
      pac auth select --index <Index>
      ```
 
-     > [!NOTE]
-     > You can also change the auth profile and create new ones using the Power Platform Extension on the VS Code Activity Bar
+   > [!NOTE]
+   > You can also change the auth profile and create new ones using the Power Platform Extension on the VS Code Activity Bar
 
 1. Ensure you are authenticated with the Power Platform and the **correct environment** is selected using `pac env who`. You can change the environment by using:
 
@@ -424,8 +424,8 @@ In order to test authentication, you must now create an application registration
 
      ![pac-env-who](./assets/pac-env-who.png)
 
-     > [!NOTE]
-     > You can also change the environment using the Power Platform Extension on the VS Code Activity Bar
+   > [!NOTE]
+   > You can also change the environment using the Power Platform Extension on the VS Code Activity Bar
 
 1. Create a new **resource group** for our **Azure Key Vault** (you can alternatively use an existing resource group and skip this step)
      Find the possible locations using:
@@ -480,13 +480,13 @@ In order to test authentication, you must now create an application registration
      az keyvault update --name $keyVaultName --set properties.enableRbacAuthorization=true     
      ```
 
-    > [!IMPORTANT]
-    > If you change the prefix `kv-OrderAdmin-dev-` be sure not to exceed 18 characters since key vaults names can only be 24 characters in length.
+   > [!IMPORTANT]
+   > If you change the prefix `kv-OrderAdmin-dev-` be sure not to exceed 18 characters since key vaults names can only be 24 characters in length.
 
      ![create-key-vault-script](./assets/create-key-vault-script.png)
 
-     > [!NOTE]
-     > Role based access control (RBAC) is enabled on the key vault since it is required for the Power Platform Environment Variable integration used later in this lab.
+   > [!NOTE]
+   > Role based access control (RBAC) is enabled on the key vault since it is required for the Power Platform Environment Variable integration used later in this lab.
 
 1. Assign the **Dataverse** permission to the Key Vault using the following:
 
@@ -501,9 +501,9 @@ In order to test authentication, you must now create an application registration
 
      ![assign-keyvault-user-roles](./assets/assign-keyvault-user-roles.png)
 
-     > [!NOTE]
-     > The application ID 00000007-0000-0000-c000-000000000000 is the Dataverse registration that is given access.
-     > See [Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets) for more information
+   > [!NOTE]
+   > The application ID 00000007-0000-0000-c000-000000000000 is the Dataverse registration that is given access.
+   > See [Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets) for more information
 
 1. Download [create-application-registration.psm1](scripts/create-application-registration.psm1) and save in your current folder `c:\src\OrderAdminConnector`.
      Change `C:\src\` to match your own project root directory.
@@ -543,8 +543,8 @@ In order to test authentication, you must now create an application registration
      Note down the output that will be similar to the following:
      ![secret-created](./assets/secret-created.png)
 
-     > [!IMPORTANT]
-     > Do not close this terminal because you will need the assigned variables below.
+   > [!IMPORTANT]
+   > Do not close this terminal because you will need the assigned variables below.
 
 1. Ensure that the Visual Studio project is **running** and **copy the swagger URL** that will be exposed via dev tunnel.
      ![copy-swagger-url](./assets/copy-swagger-url.png)
@@ -575,8 +575,8 @@ Now that you have a service principal and the service running using a dev tunnel
      - **Client Secret**: `0M.........84`
      - **Scope**: api://ef1901d2-7bef-4434-bb2e-ada742b1a291/access_as_user offline_access
 
-     > [!NOTE]
-     > If you want to use the Auto-refresh Token feature, you must append the scope offline_access to the Scope (separated by a space).
+   > [!NOTE]
+   > If you want to use the Auto-refresh Token feature, you must append the scope offline_access to the Scope (separated by a space).
 
 1. Select **Get New Access Token**. A new browser window will popup and you will be either automatically logged in, or prompted to log in.
 
@@ -587,8 +587,8 @@ Now that you have a service principal and the service running using a dev tunnel
 1. Select the **Variables** tab ➡️ Update the **Current Value** of the **baseUrl** variable to match the base url of the dev tunnel that is created for your Web Api project ➡️ Select **Save**
     ![postman-variable-baseurl](./assets/postman-variable-baseurl.png)
 
-    > [!NOTE]
-    > The base URL will be the same as the base URL of your swagger file. E.g. <https://abcdefg123.usw2.devtunnels.ms>
+   > [!NOTE]
+   > The base URL will be the same as the base URL of your swagger file. E.g. <https://abcdefg123.usw2.devtunnels.ms>
 
 1. Select the `List Orders` operation ➡️ Uncheck `startDate` and `endDate` ➡️Select **Send**.
     You should see a **Response Status** of **200 OK**, and the sample orders returned.
@@ -658,8 +658,8 @@ Since the API is deployed as a custom connector, you can now test using Power Pl
 1. You will see an error dialog similar to the following dialog.  
    ![sign-in-error-redirect-url](./assets/sign-in-error-redirect-url.png)
 
-   > [!NOTE]
-   > This is because the redirect URL has not been configured in the Application Registration. Since the authentication is being configured using Environment Variables, at this time the redirect URL is not provided until you see this error. This may change in the future.
+    > [!NOTE]
+    > This is because the redirect URL has not been configured in the Application Registration. Since the authentication is being configured using Environment Variables, at this time the redirect URL is not provided until you see this error. This may change in the future.
 
 1. Copy the URL from the error dialog. Switch back to your PowerShell terminal and use the following command to add the Redirect URL to the application registration.
 
