@@ -480,10 +480,11 @@ In order to test authentication, you must now create an application registration
      az keyvault update --name $keyVaultName --set properties.enableRbacAuthorization=true     
      ```
 
+     ![create-key-vault-script](./assets/create-key-vault-script.png)
+
 > [!IMPORTANT]
 > If you change the prefix `kv-OrderAdmin-dev-` be sure not to exceed 18 characters since key vaults names can only be 24 characters in length.
 
-     ![create-key-vault-script](./assets/create-key-vault-script.png)
 
 > [!NOTE]
 > Role based access control (RBAC) is enabled on the key vault since it is required for the Power Platform Environment Variable integration used later in this lab.
