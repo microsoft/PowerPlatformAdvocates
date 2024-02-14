@@ -325,9 +325,9 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
       You should see the sample orders created in the constructor. This is all running inside your instance of Visual Studio so you can set breakpoints.
       ![test-get-orders-swashbuckle-ui](./assets/test-get-orders-swashbuckle-ui.png)
 
-1. Stop the running project by closing the browser tab that was opened automatically.
+24. Stop the running project by closing the browser tab that was opened automatically.
 
-1. To ensure that the Update and Delete endpoints can only be performed by a specific set of users, you must add an Authorization Policy.
+25. To ensure that the Update and Delete endpoints can only be performed by a specific set of users, you must add an Authorization Policy.
       Inside `OrderAdminEndpoints.cs` above  `public class OrderAdminEndpoints : Controller`, add the following
 
       ```csharp
@@ -335,42 +335,42 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
       [AuthorizeForScopes(ScopeKeySection = "AzureAd:Scopes")]
       ```
 
-1. Above `public void Delete(Guid id)` add the following:
+26. Above `public void Delete(Guid id)` add the following:
 
       ```csharp
        [Authorize(Roles = "CanDeleteOrders")]
       ```
 
-1. Navigate to [make.powerapps.com](https://make.powerapps.com) and select your **Developer Environment**. If you do not have one, [Create a developer environment with the Power Apps Developer Plan](https://learn.microsoft.com/en-us/power-platform/developer/create-developer-environment).
+27. Navigate to [make.powerapps.com](https://make.powerapps.com) and select your **Developer Environment**. If you do not have one, [Create a developer environment with the Power Apps Developer Plan](https://learn.microsoft.com/en-us/power-platform/developer/create-developer-environment).
 
-1. Create a new **Solution** named `OrderAdminConnector` with a solution publisher of your choice.
+28. Create a new **Solution** named `OrderAdminConnector` with a solution publisher of your choice.
       ![order-admin-connector-solution](./assets/order-admin-connector-solution.png)
 
-1. Inside Visual Studio, Expand **Connected Services** ➡️ Select **Add** ➡️ Select **Microsoft Power Platform** ➡️ Select **Create**.
+29. Inside Visual Studio, Expand **Connected Services** ➡️ Select **Add** ➡️ Select **Microsoft Power Platform** ➡️ Select **Create**.
       ![add-power-platform-connected-service](./assets/add-power-platform-connected-service.png)
 
-1. Choose your **Developer Environment**, select the `Order Admin Connector` solution:
+30. Choose your **Developer Environment**, select the `Order Admin Connector` solution:
       ![connected-service-config](./assets/connected-service-config.png)
 
-1. Use + to add a new **Custom Connector** named `OrderAdmin_Connector`  
+31. Use + to add a new **Custom Connector** named `OrderAdmin_Connector`  
      ![new-custom-connector](./assets/new-custom-connector.png)
 
-1. Use + to add a new public **dev tunnel** named `PowerPlatform`.  
+32. Use + to add a new public **dev tunnel** named `PowerPlatform`.  
       ![new-devtunnel](./assets/new-devtunnel.png)
 
-1. Select **Finish**. Your custom connector will be created in the Power Platform environment you selected using the `OpenAPI` schema of your Web API. Select **Close**.  
+33. Select **Finish**. Your custom connector will be created in the Power Platform environment you selected using the `OpenAPI` schema of your Web API. Select **Close**.  
       ![create-connector-finished](./assets/create-connector-finished.png)
 
 > [!NOTE]
 > You can repeat this process to update your connector by selecting an existing on rather than creating a new one.
 
-1. Press `F5` in your project. If this is the first time you have accessed the dev tunnel in this session you will receive a confirmation dialog. Select **Continue**.  
+34. Press `F5` in your project. If this is the first time you have accessed the dev tunnel in this session you will receive a confirmation dialog. Select **Continue**.  
       ![confirm-dev-tunnel](./assets/confirm-dev-tunnel.png)
 
-1. Notice that the API is now access via public Dev Tunnel URL.
+35. Notice that the API is now access via public Dev Tunnel URL.
       ![dev-tunnel-url](./assets/dev-tunnel-url.png)
 
-1. Now that authentication is configured on your API, if you repeat a test of the /order endpoint you will receive a **401 Unauthorized** response.
+36. Now that authentication is configured on your API, if you repeat a test of the /order endpoint you will receive a **401 Unauthorized** response.
       ![test-401-error](./assets/test-401-error.png)
 
 ## ✅Creating Service Principal for custom connector
@@ -480,15 +480,15 @@ In order to test authentication, you must now create an application registration
      az keyvault update --name $keyVaultName --set properties.enableRbacAuthorization=true     
      ```
 
-   > [!IMPORTANT]
-   > If you change the prefix `kv-OrderAdmin-dev-` be sure not to exceed 18 characters since key vaults names can only be 24 characters in length.
+> [!IMPORTANT]
+> If you change the prefix `kv-OrderAdmin-dev-` be sure not to exceed 18 characters since key vaults names can only be 24 characters in length.
 
      ![create-key-vault-script](./assets/create-key-vault-script.png)
 
 > [!NOTE]
 > Role based access control (RBAC) is enabled on the key vault since it is required for the Power Platform Environment Variable integration used later in this lab.
 
-1. Assign the **Dataverse** permission to the Key Vault using the following:
+5. Assign the **Dataverse** permission to the Key Vault using the following:
 
      ```powershell
      # Assign the Dataverse application as "Key Vault Secrets User"
@@ -505,10 +505,10 @@ In order to test authentication, you must now create an application registration
 > The application ID 00000007-0000-0000-c000-000000000000 is the Dataverse registration that is given access.
 > See [Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets) for more information
 
-1. Download [create-application-registration.psm1](scripts/create-application-registration.psm1) and save in your current folder `c:\src\OrderAdminConnector`.
+6. Download [create-application-registration.psm1](scripts/create-application-registration.psm1) and save in your current folder `c:\src\OrderAdminConnector`.
      Change `C:\src\` to match your own project root directory.
 
-1. Run the following PowerShell to import the command:
+7. Run the following PowerShell to import the command:
 
      ```powershell
      Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
@@ -518,7 +518,7 @@ In order to test authentication, you must now create an application registration
      This will register the functions that are used to create the application registration and environment variables. Review the content of this script.
      ![register-create-app-reg-script](./assets/register-create-app-reg-script.png)
 
-1. Run the following - update the `solutionPrefix` to match your (the variables `$keyVaultName` is already defined above):
+8. Run the following - update the `solutionPrefix` to match your (the variables `$keyVaultName` is already defined above):
 
      ```powershell
      $appId = RegisterApplicationAndSecret `
@@ -546,7 +546,7 @@ In order to test authentication, you must now create an application registration
 > [!IMPORTANT]
 > Do not close this terminal because you will need the assigned variables below.
 
-1. Ensure that the Visual Studio project is **running** and **copy the swagger URL** that will be exposed via dev tunnel.
+9. Ensure that the Visual Studio project is **running** and **copy the swagger URL** that will be exposed via dev tunnel.
      ![copy-swagger-url](./assets/copy-swagger-url.png)
 
 ## ✅Testing using Postman
@@ -556,10 +556,10 @@ Now that you have a service principal and the service running using a dev tunnel
 1. Open **Postman** and select **Import** and paste the `swagger.json` URL into the Import dialog:
      ![import-swagger](./assets/import-swagger.png)
 
-1. Select **Import**.
+2. Select **Import**.
      ![import-postman-collection](./assets/import-postman-collection.png)
 
-1. Select the imported **OrderAdmin Collection** ➡️ **Authorization** tab.
+3. Select the imported **OrderAdmin Collection** ➡️ **Authorization** tab.
      Fill out the values in the Configure New Token section using the values returned from the script above.
      ![postman-auth-setup](./assets/postman-auth-setup.png)
 
@@ -578,26 +578,26 @@ Now that you have a service principal and the service running using a dev tunnel
 > [!NOTE]
 > If you want to use the Auto-refresh Token feature, you must append the scope offline_access to the Scope (separated by a space).
 
-1. Select **Get New Access Token**. A new browser window will popup and you will be either automatically logged in, or prompted to log in.
+4. Select **Get New Access Token**. A new browser window will popup and you will be either automatically logged in, or prompted to log in.
 
-1. Once complete, select **Use Token**:
+5. Once complete, select **Use Token**:
 
     ![use-token](./assets/use-token.png)
 
-1. Select the **Variables** tab ➡️ Update the **Current Value** of the **baseUrl** variable to match the base url of the dev tunnel that is created for your Web Api project ➡️ Select **Save**
+6. Select the **Variables** tab ➡️ Update the **Current Value** of the **baseUrl** variable to match the base url of the dev tunnel that is created for your Web Api project ➡️ Select **Save**
     ![postman-variable-baseurl](./assets/postman-variable-baseurl.png)
 
 > [!NOTE]
 > The base URL will be the same as the base URL of your swagger file. E.g. <https://abcdefg123.usw2.devtunnels.ms>
 
-1. Select the `List Orders` operation ➡️ Uncheck `startDate` and `endDate` ➡️Select **Send**.
+7. Select the `List Orders` operation ➡️ Uncheck `startDate` and `endDate` ➡️Select **Send**.
     You should see a **Response Status** of **200 OK**, and the sample orders returned.
     ![test-list-orders-postman](./assets/test-list-orders-postman.png)
 
-1. Select the `Delete` operation and select **Send**. You should see a **Response status** of `403 Forbidden`. This is because your user does not have the `CanDeleteOrders` role as specified by `[Authorize(Roles = "CanDeleteOrders")]` on the `Delete` endpoint.
+8. Select the `Delete` operation and select **Send**. You should see a **Response status** of `403 Forbidden`. This is because your user does not have the `CanDeleteOrders` role as specified by `[Authorize(Roles = "CanDeleteOrders")]` on the `Delete` endpoint.
     ![test-delete-postman-403](./assets/test-delete-postman-403.png)
 
-1. To create the Application Role `CanDeleteOrders`, open VSCode again and use the following:
+9. To create the Application Role `CanDeleteOrders`, open VSCode again and use the following:
 
     ```powershell
     $apiAppName = "OrderAdmin"
@@ -614,12 +614,12 @@ Now that you have a service principal and the service running using a dev tunnel
     az ad app update --id $apiAppId.appId --app-roles "[$rolesJson]"
     ```
 
-1. You must also assign a user to the enterprise application app role ([Manage users and groups assignment to an application | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal?pivots=portal))
+10. You must also assign a user to the enterprise application app role ([Manage users and groups assignment to an application | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/assign-user-or-group-access-portal?pivots=portal))
 
     Navigate to Enterprise Applications in the **Azure Portal**, and select your Enterprise Application named `OrderAdmin`, or alterative perform a search for the `OrderAdmin` Service Principal ➡️ Select **Users and groups** ➡️ Select **Add user/group** ➡️ Select **None selected**, and search for your user ➡️ Select **Assign**.
     ![assign-app-role](./assets/assign-app-role.png)
 
-1. Return to **Postman**, select the **Authorization** tab on the `OrderAdmin` collection and repeat **Get New Access Token**. Re-send the **Delete** request. You should now see a status of `200 OK.`
+11. Return to **Postman**, select the **Authorization** tab on the `OrderAdmin` collection and repeat **Get New Access Token**. Re-send the **Delete** request. You should now see a status of `200 OK.`
 
 ## ✅Configuring and Testing the Custom Connector
 
@@ -628,13 +628,13 @@ Since the API is deployed as a custom connector, you can now test using Power Pl
 1. Right click on the **Microsoft Power Platform Connected Service** and select **Open Power Apps**:
    ![open-powerapps-connected-services](./assets/open-powerapps-connected-services.png)
 
-1. Select the Edit Icon:
+2. Select the Edit Icon:
    ![edit-new-connector](./assets/edit-new-connector.png)
 
-1. You should see the **base URL** of your dev tunnel in the **Host** property.
+3. You should see the **base URL** of your dev tunnel in the **Host** property.
    ![dev-tunnel-host](./assets/dev-tunnel-host.png)
 
-1. Select the **Security** tab/dropdown item ➡️ Select **Edit** ➡️ Select the **Authentication Type** of **OAuth 2.0** ➡️ Select **Azure Active Directory** as the **Identity Provider**.
+4. Select the **Security** tab/dropdown item ➡️ Select **Edit** ➡️ Select the **Authentication Type** of **OAuth 2.0** ➡️ Select **Azure Active Directory** as the **Identity Provider**.
    Enter the values from the `RegisterApplicationAndSecret` script that are listed under the connector auth section. These environment variables should be deployed to your environment as part of that script. The secret will be pointing to the supplied Azure Key Value.  
    ![set-connection-auth](./assets/set-connection-auth.png)
 
@@ -647,21 +647,21 @@ Since the API is deployed as a custom connector, you can now test using Power Pl
    - **Resource URL:** `@environmentVariables("ppa_OrderAdmin_ResourceUrl")`
    - **Scope:** `@environmentVariables("ppa_OrderAdmin_Scope")`
 
-1. Select **Update connector**
+5. Select **Update connector**
 
-1. Select the **Test** Tab/Dropdown, and select **+ New connection**
+6. Select the **Test** Tab/Dropdown, and select **+ New connection**
    ![test-connection](./assets/test-connection.png)
 
-1. On the dialog, select **Create**.  
+7. On the dialog, select **Create**.  
    ![create-connection-test](./assets/create-connection-test.png)
 
-1. You will see an error dialog similar to the following dialog.  
+8. You will see an error dialog similar to the following dialog.  
    ![sign-in-error-redirect-url](./assets/sign-in-error-redirect-url.png)
 
 > [!NOTE]
 > This is because the redirect URL has not been configured in the Application Registration. Since the authentication is being configured using Environment Variables, at this time the redirect URL is not provided until you see this error. This may change in the future.
 
-1. Copy the URL from the error dialog. Switch back to your PowerShell terminal and use the following command to add the Redirect URL to the application registration.
+9. Copy the URL from the error dialog. Switch back to your PowerShell terminal and use the following command to add the Redirect URL to the application registration.
 
    ```powershell
    AddRedirectUrlToApp $appId "<Copied URL>"
@@ -719,10 +719,10 @@ A very important aspect of all Power Platform development is that components are
 1. Open [make.powerapps.com](https://make.powerapps.com) and navigate to Solution. Select the **Order Admin Connector** solution you created earlier, and use **Add existing** ➡️ **More** ➡️ **Environment variable**.
    ![add-existing-connection-ref](./assets/add-existing-connection-ref.png)
 
-1. Search for `OrderAdmin` ➡️ Select **all Environment variables** ➡️ **Next**.
+2. Search for `OrderAdmin` ➡️ Select **all Environment variables** ➡️ **Next**.
    ![select-env-vars](./assets/select-env-vars.png)
 
-1. Uncheck **Include current value** for each Environment Variable ➡️ Select **Add**.
+3. Uncheck **Include current value** for each Environment Variable ➡️ Select **Add**.
    ![exclude-values](./assets/exclude-values.png)
 
 > [!IMPORTANT]
@@ -731,18 +731,18 @@ A very important aspect of all Power Platform development is that components are
    At this time, environment variable values are added into the solution even if the Include current value checkbox is unchecked. To remove, select each **environment variable** at a time ➡️ Select the ellipsis next to the **Current Value** ➡️ Select **Remove from this solution**.
    ![remove-value](./assets/remove-value.png)
 
-1. Since the values of the environment variables are not included in the solution so that they are not deployed, to edit them you must open the **Default Solution**.
+4. Since the values of the environment variables are not included in the solution so that they are not deployed, to edit them you must open the **Default Solution**.
    ![open-default-solution](./assets/open-default-solution.png)
 
-1. Search for `OrderAdmin` ➡️ Select the `OrderAdmin Host` environment variable ➡️ Select the **ellipsis** ➡️ Select **Edit**.
+5. Search for `OrderAdmin` ➡️ Select the `OrderAdmin Host` environment variable ➡️ Select the **ellipsis** ➡️ Select **Edit**.
 
-1. Enter the host into the **Current Value** without the leading `https://` or the trailing `/` (e.g. `orderadmin20231215.azurewebsites.net`) ➡️ **Save**.
+6. Enter the host into the **Current Value** without the leading `https://` or the trailing `/` (e.g. `orderadmin20231215.azurewebsites.net`) ➡️ **Save**.
    ![host-variable-edit](./assets/host-variable-edit.png)
 
 > [!IMPORTANT]
 > Since you are doing this in the default solution, the variable will not be deployed as part of the Order Admin Connector solution.
 
-1. Repeat the edit process for the `OrderAdmin Secret` environment variable. Note how it is referencing your **Azure Key Vault** rather than storing the secret in the solution.
+7. Repeat the edit process for the `OrderAdmin Secret` environment variable. Note how it is referencing your **Azure Key Vault** rather than storing the secret in the solution.
    ![secret-environment-variable](./assets/secret-environment-variable.png)
 
 ## ✅Adding Solution to Source Control
@@ -888,34 +888,34 @@ Now you have built and deployed the custom connector, tested and setup for healt
 
    ![create-app](./assets/create-app.png)
 
-1. Open **make.powerapps.com** ➡️ Select **+ Create** in the left navigation pane➡️ **More data sources**
+2. Open **make.powerapps.com** ➡️ Select **+ Create** in the left navigation pane➡️ **More data sources**
    ![import-app-1](./assets/import-app-1.png)
 
-1. Select **Open** ➡️ **Browser** ➡️ Select the **msapp** that was created in the folder you ran the above script from.
+3. Select **Open** ➡️ **Browser** ➡️ Select the **msapp** that was created in the folder you ran the above script from.
 
    ![open-app-2](./assets/open-app-2.png)
 
-1. Select **Data** from the left toolbar, then **+ Add data**. Search for the **OrderAdmin** connector and select it to add it to your app.
+4. Select **Data** from the left toolbar, then **+ Add data**. Search for the **OrderAdmin** connector and select it to add it to your app.
    ![add-datasource](./assets/add-datasource.png)
 
-1. Select **Connect** and follow the login.
+5. Select **Connect** and follow the login.
 
-1. Since this is a new connector deployed with a different prefix you will receive the sign in error with direct URI missing. **Copy** the URL has before:  
+6. Since this is a new connector deployed with a different prefix you will receive the sign in error with direct URI missing. **Copy** the URL has before:  
    ![sign-in-error-redirect-url-2](./assets/sign-in-error-redirect-url-2.png)
 
-1. Back inside VS Code, run the same command as before with the new URL:
+7. Back inside VS Code, run the same command as before with the new URL:
 
    ```powershell
    AddRedirectUrlToApp $appId "<Copied URL>"
    ```
 
-1. Once the Redirect URL is added, re-run the adding connector as above. This time, select Allow access,  the login will work and the connector added as a data source.  
+8. Once the Redirect URL is added, re-run the adding connector as above. This time, select Allow access,  the login will work and the connector added as a data source.  
    ![allow-access](./assets/allow-access.png)
 
-1. Press `F5` to run the app ➡️ Select `Order.Add`, and enter some values, then select **POST**
+9. Press `F5` to run the app ➡️ Select `Order.Add`, and enter some values, then select **POST**
    ![add-error](./assets/add-error.png)
 
-1. Notice how this gives an error. The reason is that the `Order.Add` does not need the `id` parameter. You can remove this by editing the `Post` button `OnSelect` to be (with the id parameter removed):
+10. Notice how this gives an error. The reason is that the `Order.Add` does not need the `id` parameter. You can remove this by editing the `Post` button `OnSelect` to be (with the id parameter removed):
 
    ```javascript
    IfError(
@@ -937,34 +937,34 @@ Now you have built and deployed the custom connector, tested and setup for healt
 
    You can also delete the `id` `TextBox` from this page.
 
-1. Press `F5` and select **POST** again and the response should be **OK**
+11. Press `F5` and select **POST** again and the response should be **OK**
 
-1. Navigate back to the menu, and select `Orders.List`
+12. Navigate back to the menu, and select `Orders.List`
 
-1. Select **GET**, and you should see the order that you added returned.
+13. Select **GET**, and you should see the order that you added returned.
      ![order-get-ok](./assets/order-get-ok.png)
 
-1. Cloud flows or apps that use custom connectors cannot be imported in the same solution as the custom connector (at this time), so you must create a new Solution for your Order Admin app, and add the App to this solution using Add Existing.
+14. Cloud flows or apps that use custom connectors cannot be imported in the same solution as the custom connector (at this time), so you must create a new Solution for your Order Admin app, and add the App to this solution using Add Existing.
 
-1. Save the Power App as **Order Admin App**
+15. Save the Power App as **Order Admin App**
     ![save-app](./assets/save-app.png)
 
-1. Navigate back to [make.powerapps.com](https://make.powerapps.com) and select **Solutions** ➡️ Select **New solution** ➡️ Set the name as **Order Admin App** with the same solution publisher as the connector ➡️ Select **Create**:
+16. Navigate back to [make.powerapps.com](https://make.powerapps.com) and select **Solutions** ➡️ Select **New solution** ➡️ Set the name as **Order Admin App** with the same solution publisher as the connector ➡️ Select **Create**:
      ![new-app-solution](./assets/new-app-solution.png)
 
-1. Select **Add existing** ➡️ Select **App** ➡️ Select **Canvas App** ➡️ Select the **Outside Dataverse** tab ➡️ Select the **Order Admin App**
+17. Select **Add existing** ➡️ Select **App** ➡️ Select **Canvas App** ➡️ Select the **Outside Dataverse** tab ➡️ Select the **Order Admin App**
      ![add-existing-canvas-app](./assets/add-existing-canvas-app.png)
 
 > [!NOTE]
 > Since the app was created by importing the msapp file, it is Outside of Dataverse until added into this solution
 
-1. Navigate back to the list of solutions and select the **Order Admin App** solution ➡️ Select **Export Solution** ➡️ Select **Next** ➡️ Select **Export**
+18. Navigate back to the list of solutions and select the **Order Admin App** solution ➡️ Select **Export Solution** ➡️ Select **Next** ➡️ Select **Export**
      ![export-solution-ui](./assets/export-solution-ui.png)
 
-1. Repeat this process for the **Order Admin Connector** solution.
+19. Repeat this process for the **Order Admin Connector** solution.
      ![export complete](./assets/export-complete.png)
 
-1. Download each solution and save to your `OrderAdminConnector` folder.
+20. Download each solution and save to your `OrderAdminConnector` folder.
      You can also perform this operation using the following command at your PowerShell terminal:
 
      ```powershell
