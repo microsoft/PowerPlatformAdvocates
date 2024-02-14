@@ -18,7 +18,7 @@ The type - either String or Secret.
 The value of the environment variable.
 
 .EXAMPLE
-Create-ApplicationRegistration -schemaName "ppa" -displayName "App1" -type "Srring" -value "Value1"
+Create-ApplicationRegistration -schemaName "ppa" -displayName "App1" -type "String" -value "Value1"
 #>
 function GetUpsertEnvironmentVariablePfx($schemaName,$displayName,$type,$value) {
     Write-Host "Environment Variable '$schemaName' with value '$value'"
