@@ -380,10 +380,10 @@ In order to test authentication, you must now create an application registration
 1. Create a new folder named `c:\src\OrderAdminConnector`.
      Change `C:\src\` to match your own project root directory.
 
-1. Open the `c:\src\OrderAdminConnector` using **VSCode** and open a **PowerShell** terminal.
+2. Open the `c:\src\OrderAdminConnector` using **VSCode** and open a **PowerShell** terminal.
      You must have the **Azure CLI** and Power Platform VS Code extension installed. Refer to the pre-requisites.
 
-1. Ensure you are authenticated with Azure using
+3. Ensure you are authenticated with Azure using
 
      ```powershell
      az login
@@ -393,15 +393,15 @@ In order to test authentication, you must now create an application registration
 
      ![az-login-select-subscription](./assets/az-login-select-subscription.png)
 
-1. Run the following command at the terminal to create a Power Platform CLI auth profile if you do not yet have one.
+4. Run the following command at the terminal to create a Power Platform CLI auth profile if you do not yet have one.
 
      ```powershell
      pac auth create --deviceCode
      ```
 
-1. Follow the instructions to open a new browser window and paste in the device code. You must login using the account that is linked to the same Power Platform environment that you used earlier.
+5. Follow the instructions to open a new browser window and paste in the device code. You must login using the account that is linked to the same Power Platform environment that you used earlier.
 
-1. Ensure that you are connected to the correct auth profile by using:
+6. Ensure that you are connected to the correct auth profile by using:
 
      ```powershell
      pac auth list
@@ -416,7 +416,7 @@ In order to test authentication, you must now create an application registration
 > [!NOTE]
 > You can also change the auth profile and create new ones using the Power Platform Extension on the VS Code Activity Bar
 
-1. Ensure you are authenticated with the Power Platform and the **correct environment** is selected using `pac env who`. You can change the environment by using:
+7. Ensure you are authenticated with the Power Platform and the **correct environment** is selected using `pac env who`. You can change the environment by using:
 
      ```powershell
      pac env select --environment "<Name of your environment>" 
@@ -427,7 +427,7 @@ In order to test authentication, you must now create an application registration
 > [!NOTE]
 > You can also change the environment using the Power Platform Extension on the VS Code Activity Bar
 
-1. Create a new **resource group** for our **Azure Key Vault** (you can alternatively use an existing resource group and skip this step)
+8. Create a new **resource group** for our **Azure Key Vault** (you can alternatively use an existing resource group and skip this step)
      Find the possible locations using:
 
      ```powershell
@@ -449,7 +449,7 @@ In order to test authentication, you must now create an application registration
 
      ![create-key-vault](./assets/create-key-vault.png)
 
-1. You must be a member of the **User Access Administrator** and **Key Vault Administrator** on your subscription to manage the access control on a key vault.
+9. You must be a member of the **User Access Administrator** and **Key Vault Administrator** on your subscription to manage the access control on a key vault.
 
      ```powershell
      # Set the subscription and user principal name
@@ -462,7 +462,7 @@ In order to test authentication, you must now create an application registration
 
      ![subscription-roles](./assets/subscription-roles.png)
 
-1. If you do not see the two roles `Key Vault Administrator` and `User Access Administrator`, then use the following:
+10. If you do not see the two roles `Key Vault Administrator` and `User Access Administrator`, then use the following:
 
      ```powershell
      # Assign the "Key Vault Administrator" and "User Access Administrator" role to the user
@@ -472,7 +472,7 @@ In order to test authentication, you must now create an application registration
 
      ![add-key-vault-roles](./assets/add-key-vault-roles.png)
 
-1. Create a key vault using the following. Since key vault names are globally unique, the script creates a random suffix.
+11. Create a key vault using the following. Since key vault names are globally unique, the script creates a random suffix.
 
      ```powershell
      $keyVaultName = "kv-OrderAdmin-dev-" + (-join ((48..57) + (97..122) | Get-Random -Count 5 | % {[char]$_}))
@@ -488,7 +488,7 @@ In order to test authentication, you must now create an application registration
 > [!NOTE]
 > Role based access control (RBAC) is enabled on the key vault since it is required for the Power Platform Environment Variable integration used later in this lab.
 
-5. Assign the **Dataverse** permission to the Key Vault using the following:
+12. Assign the **Dataverse** permission to the Key Vault using the following:
 
      ```powershell
      # Assign the Dataverse application as "Key Vault Secrets User"
@@ -505,10 +505,10 @@ In order to test authentication, you must now create an application registration
 > The application ID 00000007-0000-0000-c000-000000000000 is the Dataverse registration that is given access.
 > See [Use environment variables for Azure Key Vault secrets - Power Apps | Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/environmentvariables-azure-key-vault-secrets) for more information
 
-6. Download [create-application-registration.psm1](scripts/create-application-registration.psm1) and save in your current folder `c:\src\OrderAdminConnector`.
+13. Download [create-application-registration.psm1](scripts/create-application-registration.psm1) and save in your current folder `c:\src\OrderAdminConnector`.
      Change `C:\src\` to match your own project root directory.
 
-7. Run the following PowerShell to import the command:
+14. Run the following PowerShell to import the command:
 
      ```powershell
      Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
@@ -518,7 +518,7 @@ In order to test authentication, you must now create an application registration
      This will register the functions that are used to create the application registration and environment variables. Review the content of this script.
      ![register-create-app-reg-script](./assets/register-create-app-reg-script.png)
 
-8. Run the following - update the `solutionPrefix` to match your (the variables `$keyVaultName` is already defined above):
+15. Run the following - update the `solutionPrefix` to match your (the variables `$keyVaultName` is already defined above):
 
      ```powershell
      $appId = RegisterApplicationAndSecret `
@@ -546,7 +546,7 @@ In order to test authentication, you must now create an application registration
 > [!IMPORTANT]
 > Do not close this terminal because you will need the assigned variables below.
 
-9. Ensure that the Visual Studio project is **running** and **copy the swagger URL** that will be exposed via dev tunnel.
+16. Ensure that the Visual Studio project is **running** and **copy the swagger URL** that will be exposed via dev tunnel.
      ![copy-swagger-url](./assets/copy-swagger-url.png)
 
 ## ✅Testing using Postman
