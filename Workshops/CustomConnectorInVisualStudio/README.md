@@ -321,7 +321,7 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 > [!NOTE]
 >If this is the first time you have run an HTTPS Web API then you will be prompted `Would you like to trust the ASP.NET Core SSL Certificate`, and `Do you want to install this certificate`. Select **Yes** for both of these. If you get the error `Your connection isn't private` inside the Edge, then expand **Advanced** and select **Continue to localhost (unsafe)**
 
-1. Expand **GET /orders** ➡️ Select **Try it out** ➡️ Select **Execute**.
+23. Expand **GET /orders** ➡️ Select **Try it out** ➡️ Select **Execute**.
       You should see the sample orders created in the constructor. This is all running inside your instance of Visual Studio so you can set breakpoints.
       ![test-get-orders-swashbuckle-ui](./assets/test-get-orders-swashbuckle-ui.png)
 
