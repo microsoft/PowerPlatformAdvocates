@@ -260,7 +260,7 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
       }
       ```
 
-1. Select **Create new file** and **save as** `C:\src\OrderAdmin\Controllers\OrderRepository.cs`
+1. Select **Create new file** and **save as** `C:\src\OrderAdmin\Controllers\OrderAdminEndpoint.cs`
       Change `C:\src\` to match your own project root directory.
       If you do not have GitHub copilot, you can simply copy the source above into this location.
 
@@ -318,6 +318,9 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Press `F5` to run the project. A new browser window will open and you will see the swagger UI showing the Open API definition for your API.
       ![swagger-ui](./assets/swagger-ui.png)
 
+     > [!NOTE]
+     > If this is the first time you have run an HTTPS Web API then you will be prompted `Would you like to trust the ASP.NET Core SSL Certificate`, and `Do you want to install this certificate`. Select **Yes** for both of these. If you get the error `Your connection isn't private` inside the Edge, then expand **Advanced** and select **Continue to localhost (unsafe)**
+
 1. Expand **GET /orders** ➡️ Select **Try it out** ➡️ Select **Execute**.
       You should see the sample orders created in the constructor. This is all running inside your instance of Visual Studio so you can set breakpoints.
       ![test-get-orders-swashbuckle-ui](./assets/test-get-orders-swashbuckle-ui.png)
@@ -332,7 +335,7 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
       [AuthorizeForScopes(ScopeKeySection = "AzureAd:Scopes")]
       ```
 
-1. Above `public ActionResult Delete(Guid id)` add the following:
+1. Above `public void Delete(Guid id)` add the following:
 
       ```csharp
        [Authorize(Roles = "CanDeleteOrders")]
@@ -343,7 +346,7 @@ Visual Studio makes it easy to create a Web API and deploy it to Azure using the
 1. Create a new **Solution** named `OrderAdminConnector` with a solution publisher of your choice.
       ![order-admin-connector-solution](./assets/order-admin-connector-solution.png)
 
-1. Inside Visual Studio, Expand **Connected Services** ➡️ Select **Add** ➡️Select **Microsoft Power Platform**.
+1. Inside Visual Studio, Expand **Connected Services** ➡️ Select **Add** ➡️ Select **Microsoft Power Platform** ➡️ Select **Create**.
       ![add-power-platform-connected-service](./assets/add-power-platform-connected-service.png)
 
 1. Choose your **Developer Environment**, select the `Order Admin Connector` solution:
@@ -563,7 +566,7 @@ Now that you have a service principal and the service running using a dev tunnel
      For example, you would fill in the details similar to:
 
      - **Type**: OAuth 2.0
-     - **Header Prefix**: Bearer\
+     - **Header Prefix**: Bearer
      - **Grant type**: Authorization Code
      - **Authorize using browser**: Yes
      - **Auth URL**: <https://login.microsoftonline.com/.../oauth2/v2.0/authorize>
@@ -631,7 +634,7 @@ Since the API is deployed as a custom connector, you can now test using Power Pl
 1. You should see the **base URL** of your dev tunnel in the **Host** property.
    ![dev-tunnel-host](./assets/dev-tunnel-host.png)
 
-1. Select the **Security** tab/dropdown item ➡️ Select the **Authentication Type** of **OAuth 2.0** ➡️ Select **Azure Active Directory** as the **Identity Provider**.
+1. Select the **Security** tab/dropdown item ➡️ Select **Edit** ➡️ Select the **Authentication Type** of **OAuth 2.0** ➡️ Select **Azure Active Directory** as the **Identity Provider**.
    Enter the values from the `RegisterApplicationAndSecret` script that are listed under the connector auth section. These environment variables should be deployed to your environment as part of that script. The secret will be pointing to the supplied Azure Key Value.  
    ![set-connection-auth](./assets/set-connection-auth.png)
 
