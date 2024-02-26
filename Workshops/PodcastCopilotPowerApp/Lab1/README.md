@@ -191,10 +191,18 @@ We'll be using Azure Blob Storage to store the podcast snippet audio file. This 
 
     ![Go to Storage Account resource](assets/go-to-storage-account.png)
 
-1. On the left-hand side, click on **Containers** and then click on **+ Container**.
+1. On the left-hand side panel, scroll down to the **Settings** section and click on **Configuration**.
+
+1. Then look for the **Allow Blob anonymous access** setting and set it to `Enabled`.
+
+    ![Enable Blob anonymous access](assets/enable-blob-anonymous-access.png)
+
+1. Click **Save** at the top of the page to save the changes.
+
+1. Once saved - on the left-hand side, scroll up to the **Data Storage** section and click on **Containers** and then click on **+ Container**.
 
     - **Name**: `audio`
-    - **Public access level**: `Blob (anonymous read access for blobs only)`
+    - **Anonymous access level**: `Blob (anonymous read access for blobs only)`
 
     Click on **Create** to create the container.
 
