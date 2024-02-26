@@ -165,6 +165,41 @@ Date of Livestream: {TBD}
     - **Endpoint**: `https://podcastcopilotsc-{your initials}.openai.azure.com/`
     - **Key**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 
+### Uploading Podcast Snippet to Azure Blob Storage
+
+We'll be using Azure Blob Storage to store the podcast snippet audio file. This will allow us to easily test our API and application with a real-world audio file.
+
+1. Navigate to the [PodcastSnippet.mp3 file](../PodcastSnippet.mp3) within this repository and download it to your local machine.
+
+1. Go to [portal.azure.com](portal.azure.com) and login with your Azure account.
+
+1. Navigate to [Create a storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) and set the following parameters:
+
+    - **Subscription**: Select your Azure subscription
+    - **Resource Group**: Select the **PodcastCopilotPowerApp** resource group
+    - **Storage account name**: `podcaststorage{your initials}` (e.g. `podcaststoragejd` to make it unique)
+    - **Location**: `East US`
+    - **Performance**: `Standard`
+    - **Redundancy**: `Geo-redundant storage (GRS)`
+    - Ensure that **Make read access to data available in the event of regional unavailability** is selected`
+
+    Click on **Review + Create** and then **Create** to create the storage account.
+
+1. Once the storage account is created, click on **Go to resource**.
+
+    ![Go to Storage Account resource](assets/go-to-storage-account.png)
+
+1. On the left-hand side, click on **Containers** and then click on **+ Container**.
+
+    - **Name**: `audio`
+    - **Public access level**: `Blob (anonymous read access for blobs only)`
+
+    Click on **Create** to create the container.
+
+1. Once the container is created, click on the **audio** container and then click on **Upload**.
+
+1. 
+
 ...and that's it! You've now created all the Azure OpenAI resources you need to get started.
 
 ### ➡️ [Lab 2 - Bridging the Gap: .NET APIs, Azure and Custom Connectors](../Lab2/README.md)
