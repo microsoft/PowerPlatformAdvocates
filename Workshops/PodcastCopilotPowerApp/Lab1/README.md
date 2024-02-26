@@ -171,6 +171,8 @@ We'll be using Azure Blob Storage to store the podcast snippet audio file. This 
 
 1. Navigate to the [PodcastSnippet.mp3 file](../PodcastSnippet.mp3) within this repository and download it to your local machine.
 
+    ![Download Podcast Snippet](assets/download-podcast-snippet.png)
+
 1. Go to [portal.azure.com](portal.azure.com) and login with your Azure account.
 
 1. Navigate to [Create a storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) and set the following parameters:
@@ -198,7 +200,13 @@ We'll be using Azure Blob Storage to store the podcast snippet audio file. This 
 
 1. Once the container is created, click on the **audio** container and then click on **Upload**.
 
-1. 
+1. Upload the `PodcastSnippet.mp3` file you downloaded earlier and then click on **Upload**.
+
+    ![Upload Podcast Snippet to Azure Blob Storage](assets/upload-podcast-snippet.png)
+
+1. Once uploaded, click on the `PodcastSnippet.mp3` file and then copy the **URL** value.
+
+    Note down this URL somewhere safe.
 
 ...and that's it! You've now created all the Azure OpenAI resources you need to get started.
 
