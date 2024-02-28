@@ -51,14 +51,14 @@ Date of Livestream: {TBD}
 1. Open up a command prompt and run the following commands one command at a time:
 
     ```bash
-    setx AZURE_OPENAI_KEY_WE "REPLACE_WITH_YOUR_KEY_VALUE_HERE"
+    setx AZURE_OPENAI_KEY_WE "REPLACE_WITH_YOUR_WEST_EUROPE_KEY_VALUE_HERE"
     setx AZURE_OPENAI_ENDPOINT_WE "https://podcastcopilotwe-{your initials}.openai.azure.com/"
     ```
 
     The above would be for the West Europe resource key and endpoint.
 
     ```bash
-    etx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_KEY_VALUE_HERE" 
+    etx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_SWEDEN_CENTRAL_KEY_VALUE_HERE" 
     setx AZURE_OPENAI_ENDPOINT_SC "https://podcastcopilotsc-{your initials}.openai.azure.com/"    
     ```
 
@@ -95,7 +95,7 @@ Date of Livestream: {TBD}
 1. In the terminal window, run the following command to install the prerelease version of the Azure OpenAI SDK:
 
     ```bash
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.12
+    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.13
     ```
 
 1. Then run the following command to install the Newtonsoft.Json package:
@@ -143,13 +143,13 @@ Date of Livestream: {TBD}
         new AzureKeyCredential(keySC));
     ```
 
-1. Then below the above code, add the following code to perform the first step of the PodcastCopilot process; **Audio Transcription**:
+1. Then below the above code, add the following code to perform **Audio Transcription**:
 
     ```csharp
-    //Step 1: Get Audio Transcription
-    public static async Task<AudioTranscription> GetTranscription(string blobUrl)
+    //Get Audio Transcription
+    public static async Task<AudioTranscription> GetTranscription(string podcastUrl)
     {
-        var decodededUrl = HttpUtility.UrlDecode(blobUrl);
+        var decodededUrl = HttpUtility.UrlDecode(podcastUrl);
 
         HttpClient httpClient = new HttpClient();
         Stream audioStreamFromBlob = await httpClient.GetStreamAsync(decodededUrl);
@@ -158,21 +158,22 @@ Date of Livestream: {TBD}
         {
             DeploymentName = "whisper",
             AudioData = BinaryData.FromStream(audioStreamFromBlob),
-            ResponseFormat = AudioTranscriptionFormat.Verbose
+            ResponseFormat = AudioTranscriptionFormat.Verbose,
+            Filename = "file.mp3"
         };
 
-        Response<AudioTranscription> transcriptionResponse = await clientWE.GetAudioTranscriptionAsync(
-            transcriptionOptions);
+        Response<AudioTranscription> transcriptionResponse = 
+            await clientWE.GetAudioTranscriptionAsync(transcriptionOptions);
         AudioTranscription transcription = transcriptionResponse.Value;
 
         return transcription;
     }
     ```
 
-1. Then add the following code to perform the second step of the PodcastCopilot process; **Guest Name Extraction**:
+1. Then add the following code to perform **Guest Name Extraction**:
 
     ```csharp
-    //Step 2: Extract Guest Name
+    //Extract Guest Name from transcription
     public static async Task<ChatCompletions> GetGuestName(string transcription)
     {
         var completionOptions = new ChatCompletionsOptions()
@@ -180,8 +181,8 @@ Date of Livestream: {TBD}
             DeploymentName = "gpt35turbo",
             Messages =
             {
-                new ChatRequestSystemMessage(@"Extract the guest's name from a Podcast Transcript. 
-                        Provide only the guest's full name. Gomolemo Mohapi will never be the guest."),
+                new ChatRequestSystemMessage(@"Extract the guest name on the Beyond the Tech podcast from the following transcript.
+                    Beyond the Tech is hosted by Kevin Scott and Christina Warren, so they will never be the guests"),
                 new ChatRequestUserMessage(transcription)
             },
             Temperature = (float)0.7
@@ -206,10 +207,10 @@ Date of Livestream: {TBD}
 
     ![Bing snippet class](assets/visual-studio-bing-snippet-class.png)
 
-1. Then add the following code to the PodcastCopilot class to perform the third step of the PodcastCopilot process; **Getting the guest bio**:
+1. Then add the following code to the PodcastCopilot class to perform **Guest bio extraction from Bing**:
 
     ```csharp
-    //Step 3: Get Guest Bio
+    //Extract guest bio from Bing
     public static async Task<BingSnippet> GetGuestBio(string guestName)
     {
         var client = new HttpClient();
@@ -218,6 +219,7 @@ Date of Livestream: {TBD}
 
         HttpResponseMessage response = await client.GetAsync($"{bingSearchUrl}?q={guestName}");
 
+        //response.EnsureSuccessStatusCode();
         string responseBody = await response.Content.ReadAsStringAsync();
 
         // Parse responseBody as JSON and extract the bio.
@@ -231,34 +233,45 @@ Date of Livestream: {TBD}
 
         return newBingSnippet;
     }
+    ```
 
 1. Then add the following code to perform the next step of the PodcastCopilot process; **Creating a Social Media Blurb**:
 
     ```csharp
-    //Step 4: Create Social Media Blurb
-    public static async Task<ChatCompletions> GetSocialMediaBlurb(string transcription, string bio)
+    //Creating a Social Media Blurb
+    public static async Task<ChatCompletions> GetSocialMediaBlurb(string podcastUrl)
     {
+        //Get Podcast Transcription
+        var transcription = await GetTranscription(podcastUrl);
+
+        //Get Guest Name
+        var guestName = await GetGuestName(transcription.Text);
+
+        //Get Guest Bio
+        var bio = await GetGuestBio(guestName.Choices[0].Message.Content);
+
+        //Creates social media blurb
         var completionOptions = new ChatCompletionsOptions()
         {
             DeploymentName = "gpt35turbo",
             Messages =
-            {
-                new ChatRequestSystemMessage(
-                    @"You are a helpful large language model that can create a 
-                    LinkedIn promo blurb for episodes of the podcast 
-                    Behind the Tech, when given transcripts of the podcasts.
-                    The Behind the Tech podcast is hosted by Kevin Scott.\n"
-                ),
-                new ChatRequestUserMessage(
-                    @"Create a short summary of this podcast episode 
-                    that would be appropriate to post on LinkedIn to    
-                    promote the podcast episode. The post should be 
-                    from the first-person perspective of Kevin Scott, 
-                    who hosts the podcast.\n" +
-                    $"Here is the transcript of the podcast episode: {transcription} \n" +
-                    $"Here is the bio of the guest: {bio} \n"
-                )
-            },
+        {
+            new ChatRequestSystemMessage(
+                @"You are a helpful large language model that can create a 
+                LinkedIn promo blurb for episodes of the podcast 
+                Behind the Tech, when given transcripts of the podcasts.
+                The Behind the Tech podcast is hosted by Kevin Scott.\n"
+            ),
+            new ChatRequestUserMessage(
+                @"Create a short summary of this podcast episode 
+                that would be appropriate to post on LinkedIn to    
+                promote the podcast episode. The post should be 
+                from the first-person perspective of Kevin Scott, 
+                who hosts the podcast.\n" +
+                $"Here is the transcript of the podcast episode: {transcription.Text} \n" +
+                $"Here is the bio of the guest: {bio.bio} \n"
+            )
+        },
             Temperature = (float)0.7
         };
 
@@ -270,15 +283,15 @@ Date of Livestream: {TBD}
     }
     ```
 
-1. Then add the following code to perform the next step of the PodcastCopilot process; **Creating Dall.E prompt**:
+1. Then add the following code to perform the next step of the PodcastCopilot process; **Creating a Dall.E prompt**:
 
     ```csharp
-    //Step 5: Generate a Dall-E prompt
+    //Generate a Dall-E prompt
     public static async Task<ChatCompletions> GetDallEPrompt(string socialBlurb)
     {
         var completionOptions = new ChatCompletionsOptions()
         {
-            DeploymentName = "GPTModel",
+            DeploymentName = "gpt35turbo",
             Messages =
         {
             new ChatRequestSystemMessage(
@@ -308,15 +321,22 @@ Date of Livestream: {TBD}
     }
     ```
 
-1. Then add the following code to perform the next step of the PodcastCopilot process; **Generating the Dall.E image**:
+1. Then add the following code to perform the next step of the PodcastCopilot process; **Generating the social media image from DallE**:
 
     ```csharp
-    //Step 6: Generate a Dall-E image
-    public static async Task<ImageGenerationData> GetImage(string prompt)
+    //Generate a social media image from Dall-E
+    public static async Task<ImageGenerationData> GetSocialMediaImage(string podcastUrl)
     {
+        //Get Social Media Blurb
+        var socialBlurb = await GetSocialMediaBlurb(podcastUrl);
+
+        //Get Dall-E Prompt
+        var dallEPrompt = await GetDallEPrompt(socialBlurb.Choices[0].Message.Content);
+
+        //Geneate social image
         var generationOptions = new ImageGenerationOptions()
         {
-            Prompt = prompt + ", high-quality digital art",
+            Prompt = dallEPrompt.Choices[0].Message.Content + ", high-quality digital art",
             ImageCount = 1,
             Size = ImageSize.Size1024x1024,
             Style = ImageGenerationStyle.Vivid,
@@ -363,46 +383,22 @@ Date of Livestream: {TBD}
 1. Then replace the ```//Implement Minimal APIs``` comment with the following code:
 
     ```csharp
-    app.MapGet("/GetTranscription/{blobUrl}", (string blobUrl) =>
+    app.MapGet("/GetSocialMediaBlurb/{podcastUrl}", (string podcastUrl) =>
     {
-        return PodcastAppAPI.PodcastCopilot.GetTranscription(blobUrl);
-    })
-        .WithName("GetTranscription")
-        .WithOpenApi();
-
-    app.MapGet("/GetGuestName/{transcription}", (string transcription) =>
-    {
-        return PodcastAppAPI.PodcastCopilot.GetGuestName(transcription);
-    })
-        .WithName("GetGuestName")
-        .WithOpenApi();
-
-    app.MapGet("/GetGuestBio/{guestName}", (string guestName) =>
-    {
-        return PodcastAppAPI.PodcastCopilot.GetGuestBio(guestName);
-    })
-        .WithName("GetGuestBio")
-        .WithOpenApi();
-
-    app.MapGet("/GetSocialMediaBlurb/{transcription}/{bio}", (string transcription, string bio) =>
-    {
-        return PodcastAppAPI.PodcastCopilot.GetSocialMediaBlurb(transcription, bio);
+        return PodcastAppAPI.PodcastCopilot.GetSocialMediaBlurb(podcastUrl);
     })
         .WithName("GetSocialMediaBlurb")
+        .WithSummary("Generate Social Media Blurb")
+        .WithDescription("Generates a blurb / social media post for a podcast episode based on the podcast url provided.")
         .WithOpenApi();
 
-    app.MapGet("/GetDallEPrompt/{socialBlurb}", (string socialBlurb) =>
+    app.MapGet("/GetSocialMediaImage/{podcastUrl}", (string podcastUrl) =>
     {
-        return PodcastAppAPI.PodcastCopilot.GetDallEPrompt(socialBlurb);
+        return PodcastAppAPI.PodcastCopilot.GetSocialMediaImage(podcastUrl);
     })
-        .WithName("GetDallEPrompt")
-        .WithOpenApi();
-
-    app.MapGet("/GetImage/{prompt}", (string prompt) =>
-    {
-        return PodcastAppAPI.PodcastCopilot.GetImage(prompt);
-    })
-        .WithName("GetImage")
+        .WithName("GetSocialMediaImage")
+        .WithSummary("Generate Social Media Image")
+        .WithDescription("Generates an image for social media based on the podcast url provided.")
         .WithOpenApi();
     ```
 
@@ -414,7 +410,7 @@ Date of Livestream: {TBD}
 
 1. Ensure you're signed in with the same account as your Power Apps Developer Plan, and configure the following settings:
 
-    - **Environment**: Select an environment of your choosing
+    - **Power Platform environments**: Select an environment of your choosing
     - **Solution**: Select a solution of your choosing
     - **Custom Connector**: Create a new custom connector and call it ``PodcastCopilot_Connector``
     - **OpenAPI specification**: Select the ``Auto-generate the OpenAPI V2 Specification`` option
@@ -430,7 +426,7 @@ Date of Livestream: {TBD}
 
     ![Connect to the Developer Tunnel](assets/visual-studio-connect-to-dev-tunnel.png)
 
-1. Once the Developer Tunnel has connected, you'll see all API operations which you can test to see if they're working correctly.
+1. Once the Developer Tunnel has connected, you'll see two API operations which you can test to see if they're working correctly.
 
     ![Test the API operations](assets/visual-studio-test-api-operations.png)
 
