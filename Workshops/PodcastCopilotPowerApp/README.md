@@ -29,3 +29,7 @@ In this lab, we take a step further from Lab 1 by creating a .NET API using the 
 In this lab, we bring it all together. We will build the Power App UI, connect to the Custom Connector, and publish the social media post to LinkedIn. As a bonus, we will also see how to implement this workflow with Microsoft Copilot Studio.
 
 🚀 [The Final Touch: Power Apps and Microsoft Copilot Studio Integration](./Lab3/README.md)
+
+## Feedback
+
+We hope that you'll find this content valuable and if you do, we'd love to hear your feedback! Please fill out our [feedback form](https://aka.ms/pp/advocates/feedback) so we can use your feedback to keep providing valuable content!
