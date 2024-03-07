@@ -11,20 +11,26 @@ This lab is all about setting up your environment. This is what you need to get 
 
 :link: [Lab 0 - Setup your environment](/Workshops/JavaAndPowerApps/Lab0/)
 
-### Lab 1 - Getting the Java API up and running in Azure
-This lab will help you deploy the Java API to Azure using the Azure Developer CLI.
+### Lab 1 - Getting the Java API, DotNet (optional) & Python (optional) APIs up and running in Azure
+This lab will help you deploy the Java API, DotNet (optional) & Python (optional) APIs to Azure using the Azure Developer CLI.
 
-:link: [Lab 1 - Getting the Java API up and running in Azure](/Workshops/JavaAndPowerApps/Lab1/)
+1. :link: [Lab 1 - Getting the Java API up and running in Azure](/Workshops/JavaAndPowerApps/Lab1/)
+2. :link: [Lab 1.1 - Getting the DotNet API up and running in Azure (Optional)](/Workshops/JavaAndPowerApps/Lab1.1/)
+3. :link: [Lab 1.2 - Getting the Python API up and running in Azure (Optional)](/Workshops/JavaAndPowerApps/Lab1.2/)
 
 ### Lab 2 - Adding data with the ToDo API
 Now that you've got our API up and running in Azure, let's add some data so it's there, ready and waiting, for us to play with in Power Apps.
 
-:link: [Lab 2 - Adding data with the ToDo API](/Workshops/JavaAndPowerApps/Lab2/)
+1. :link: [Lab 2 - Adding data with the Java ToDo API](/Workshops/JavaAndPowerApps/Lab2/)
+2. :link: [Lab 2.1 - Adding data with the DotNet ToDo API (Optional)](/Workshops/JavaAndPowerApps/Lab2.1/)
+3. :link: [Lab 2.2 - Adding data with the Python ToDo API (Optional)](/Workshops/JavaAndPowerApps/Lab2.2/)
 
 ### Lab 3 - Creating a Custom Connector
 This lab will help you enable your Power App to interact with the API in the previous lab, by creating a Custom Connector.
 
-:link: [Lab 3 - Creating a Custom Connector](/Workshops/JavaAndPowerApps/Lab3/)
+1. :link: [Lab 3 - Creating a Custom Connector with the Java API](/Workshops/JavaAndPowerApps/Lab3/)
+2. :link: [Lab 3.1 - Creating a Custom Connector with the DotNet API (Optional)](/Workshops/JavaAndPowerApps/Lab3.1/)
+3. :link: [Lab 3.2 - Creating a Custom Connector with the Python API (Optional)](/Workshops/JavaAndPowerApps/Lab3.2/)
 
 ### Lab 4 - Testing a Custom Connector
 With the Custom Connector created, this lab will take you through the necessary steps to test it and to make sure that it's working appropriately.
