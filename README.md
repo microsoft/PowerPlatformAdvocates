@@ -1,6 +1,6 @@
 # Power Platform Advocates
 
-Welcome to Power Platform Advocates GitHub repository. In this repo, the Power Platform Advocates team will add presentations and workshops.
+Welcome to Power Platform Advocates GitHub repository. You'll find advocacy created workshops, labs and presentations in this repo. We hope that you'll find this content valuable and if you do, we'd love to hear your feedback!  Please fill out our [feedback form](https://aka.ms/pp/advocates/feedback) so we can use your feedback to keep providing valuable content!
 
 ## Presentations
 
