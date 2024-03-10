@@ -147,7 +147,7 @@ Date of Livestream: {TBD}
 
     ```csharp
     //Get Audio Transcription
-    public static async Task<AudioTranscription> GetTranscription(string podcastUrl)
+    public static async Task<string> GetTranscription(string podcastUrl)
     {
         var decodededUrl = HttpUtility.UrlDecode(podcastUrl);
 
@@ -162,11 +162,11 @@ Date of Livestream: {TBD}
             Filename = "file.mp3"
         };
 
-        Response<AudioTranscription> transcriptionResponse = 
-            await clientWE.GetAudioTranscriptionAsync(transcriptionOptions);
+        Response<AudioTranscription> transcriptionResponse = await clientWE.GetAudioTranscriptionAsync(
+            transcriptionOptions);
         AudioTranscription transcription = transcriptionResponse.Value;
 
-        return transcription;
+        return transcription.Text;
     }
     ```
 
@@ -174,7 +174,7 @@ Date of Livestream: {TBD}
 
     ```csharp
     //Extract Guest Name from transcription
-    public static async Task<ChatCompletions> GetGuestName(string transcription)
+    public static async Task<string> GetGuestName(string transcription)
     {
         var completionOptions = new ChatCompletionsOptions()
         {
@@ -192,26 +192,15 @@ Date of Livestream: {TBD}
             completionOptions);
         ChatCompletions completion = completionsResponse.Value;
 
-        return completion;
+        return completion.Choices[0].Message.Content;
     }
     ```
-
-1. Right click on the **PodcastAppAPI** project and select **Add > Class**. Name the class ``BingSnippet``. Add the following code to the class:
-
-    ```csharp
-    public class BingSnippet
-    {
-        public string? bio { get; set; }
-    }
-    ```
-
-    ![Bing snippet class](assets/visual-studio-bing-snippet-class.png)
 
 1. Then add the following code to the PodcastCopilot class to perform **Guest bio extraction from Bing**:
 
     ```csharp
-    //Extract guest bio from Bing
-    public static async Task<BingSnippet> GetGuestBio(string guestName)
+    //Get Guest Bio from Bing
+    public static async Task<string> GetGuestBio(string guestName)
     {
         var client = new HttpClient();
 
@@ -219,59 +208,43 @@ Date of Livestream: {TBD}
 
         HttpResponseMessage response = await client.GetAsync($"{bingSearchUrl}?q={guestName}");
 
-        //response.EnsureSuccessStatusCode();
         string responseBody = await response.Content.ReadAsStringAsync();
 
         // Parse responseBody as JSON and extract the bio.
         JObject searchResults = JObject.Parse(responseBody);
         var bio = searchResults["webPages"]["value"][0]["snippet"].ToString();
 
-        var newBingSnippet = new BingSnippet()
-        {
-            bio = bio
-        };
-
-        return newBingSnippet;
+        return bio;
     }
     ```
 
 1. Then add the following code to perform the next step of the PodcastCopilot process; **Creating a Social Media Blurb**:
 
     ```csharp
-    //Creating a Social Media Blurb
-    public static async Task<ChatCompletions> GetSocialMediaBlurb(string podcastUrl)
+    //Create Social Media Blurb
+    public static async Task<string> GetSocialMediaBlurb(string transcription, string bio)
     {
-        //Get Podcast Transcription
-        var transcription = await GetTranscription(podcastUrl);
-
-        //Get Guest Name
-        var guestName = await GetGuestName(transcription.Text);
-
-        //Get Guest Bio
-        var bio = await GetGuestBio(guestName.Choices[0].Message.Content);
-
-        //Creates social media blurb
         var completionOptions = new ChatCompletionsOptions()
         {
             DeploymentName = "gpt35turbo",
             Messages =
-        {
-            new ChatRequestSystemMessage(
-                @"You are a helpful large language model that can create a 
-                LinkedIn promo blurb for episodes of the podcast 
-                Behind the Tech, when given transcripts of the podcasts.
-                The Behind the Tech podcast is hosted by Kevin Scott.\n"
-            ),
-            new ChatRequestUserMessage(
-                @"Create a short summary of this podcast episode 
-                that would be appropriate to post on LinkedIn to    
-                promote the podcast episode. The post should be 
-                from the first-person perspective of Kevin Scott, 
-                who hosts the podcast.\n" +
-                $"Here is the transcript of the podcast episode: {transcription.Text} \n" +
-                $"Here is the bio of the guest: {bio.bio} \n"
-            )
-        },
+            {
+                new ChatRequestSystemMessage(
+                    @"You are a helpful large language model that can create a 
+                    LinkedIn promo blurb for episodes of the podcast 
+                    Behind the Tech, when given transcripts of the podcasts.
+                    The Behind the Tech podcast is hosted by Kevin Scott.\n"
+                ),
+                new ChatRequestUserMessage(
+                    @"Create a short summary of this podcast episode 
+                    that would be appropriate to post on LinkedIn to    
+                    promote the podcast episode. The post should be 
+                    from the first-person perspective of Kevin Scott, 
+                    who hosts the podcast.\n" +
+                    $"Here is the transcript of the podcast episode: {transcription} \n" +
+                    $"Here is the bio of the guest: {bio} \n"
+                )
+            },
             Temperature = (float)0.7
         };
 
@@ -279,7 +252,7 @@ Date of Livestream: {TBD}
             completionOptions);
         ChatCompletions completion = completionsResponse.Value;
 
-        return completion;
+        return completion.Choices[0].Message.Content;
     }
     ```
 
@@ -287,7 +260,7 @@ Date of Livestream: {TBD}
 
     ```csharp
     //Generate a Dall-E prompt
-    public static async Task<ChatCompletions> GetDallEPrompt(string socialBlurb)
+    public static async Task<string> GetDallEPrompt(string socialBlurb)
     {
         var completionOptions = new ChatCompletionsOptions()
         {
@@ -317,26 +290,19 @@ Date of Livestream: {TBD}
 
         ChatCompletions completion = completionsResponse.Value;
 
-        return completion;
+        return completion.Choices[0].Message.Content;
     }
     ```
 
 1. Then add the following code to perform the next step of the PodcastCopilot process; **Generating the social media image from DallE**:
 
     ```csharp
-    //Generate a social media image from Dall-E
-    public static async Task<ImageGenerationData> GetSocialMediaImage(string podcastUrl)
+    //Create social media image with a Dall-E
+    public static async Task<string> GetImage(string prompt)
     {
-        //Get Social Media Blurb
-        var socialBlurb = await GetSocialMediaBlurb(podcastUrl);
-
-        //Get Dall-E Prompt
-        var dallEPrompt = await GetDallEPrompt(socialBlurb.Choices[0].Message.Content);
-
-        //Geneate social image
         var generationOptions = new ImageGenerationOptions()
         {
-            Prompt = dallEPrompt.Choices[0].Message.Content + ", high-quality digital art",
+            Prompt = prompt + ", high-quality digital art",
             ImageCount = 1,
             Size = ImageSize.Size1024x1024,
             Style = ImageGenerationStyle.Vivid,
@@ -348,9 +314,55 @@ Date of Livestream: {TBD}
         Response<ImageGenerations> imageGenerations =
             await clientSC.GetImageGenerationsAsync(generationOptions);
 
-        return imageGenerations.Value.Data[0];
+        return imageGenerations.Value.Data[0].Url.ToString();
     }
     ```
+
+Now that we've created the PodcastCopilot class which contains the methods to perform the process which takes a podcast URL and returns a social media post and image for that podcast, we can move on to creating the SocialMediaPost class.
+
+### Creating the SocialMediaPost Class
+
+1. Right click on the **PodcastAppAPI** project and select **Add > Class**. Name the class ``SocialMediaPost``. Add the following code to the class:
+
+    ```csharp
+    public class SocialMediaPost
+    {
+        public string ImageUrl { get; set; }
+        public string Blurb { get; set; }
+    }
+    ```
+
+    The class should look like this:
+
+    ![Social Media Post class](assets/visual-studio-social-media-post-class.png)
+
+With the SocialMediaPost class created, we can now add one more more method to the PodcastCopilot class to return a SocialMediaPost object.
+
+### Updating the PodcastCopilot Class
+
+1. Open the **PodcastCopilot** class and add the following method to the class:
+
+    ```csharp
+    public static async Task<SocialMediaPost> GenerateSocialMediaPost(string podcastUrl)
+    {
+        var transcription = await GetTranscription(podcastUrl);
+        var guestName = await GetGuestName(transcription);
+        var guestBio = await GetGuestBio(guestName);
+        var generatedBlurb = await GetSocialMediaBlurb(transcription, guestBio);
+        var dallePrompt = await GetDallEPrompt(generatedBlurb);
+        var generatedImage = await GetImage(dallePrompt);
+
+        var socialMediaPost = new SocialMediaPost()
+        {
+            ImageUrl = generatedImage,
+            Blurb = generatedBlurb
+        };
+
+        return socialMediaPost;
+    }
+    ```
+
+And with that, we can move on updating the Program.cs file to implement the Minimal API.
 
 ### Updating the Program.cs file with the Minimal API implementation
 
@@ -383,24 +395,17 @@ Date of Livestream: {TBD}
 1. Then replace the ```//Implement Minimal APIs``` comment with the following code:
 
     ```csharp
-    app.MapGet("/GetSocialMediaBlurb/{podcastUrl}", (string podcastUrl) =>
+    app.MapGet("/GenerateSocialMediaPost/{podcastUrl}", (string podcastUrl) =>
     {
-        return PodcastAppAPI.PodcastCopilot.GetSocialMediaBlurb(podcastUrl);
+        return PodcastAppAPI.PodcastCopilot.GenerateSocialMediaPost(podcastUrl);
     })
-        .WithName("GetSocialMediaBlurb")
-        .WithSummary("Generate Social Media Blurb")
-        .WithDescription("Generates a blurb / social media post for a podcast episode based on the podcast url provided.")
-        .WithOpenApi();
-
-    app.MapGet("/GetSocialMediaImage/{podcastUrl}", (string podcastUrl) =>
-    {
-        return PodcastAppAPI.PodcastCopilot.GetSocialMediaImage(podcastUrl);
-    })
-        .WithName("GetSocialMediaImage")
-        .WithSummary("Generate Social Media Image")
-        .WithDescription("Generates an image for social media based on the podcast url provided.")
+        .WithName("GetSocialMediaPost")
+        .WithSummary("Generate Social Media Post")
+        .WithDescription("Generates a blurb / social media post with an image for a podcast episode based on the podcast url provided.")
         .WithOpenApi();
     ```
+
+Now we will be turning our API into a Custom Connector so that it can be used within the Power Platform.
 
 ### Creating a Custom Connector from Visual Studio
 
@@ -426,9 +431,17 @@ Date of Livestream: {TBD}
 
     ![Connect to the Developer Tunnel](assets/visual-studio-connect-to-dev-tunnel.png)
 
-1. Once the Developer Tunnel has connected, you'll see two API operations which you can test to see if they're working correctly.
+    Once the Developer Tunnel has connected, you'll see a single API operation which you can test to see if it's working correctly.
 
-    ![Test the API operations](assets/visual-studio-test-api-operations.png)
+1. Click on the **GenerateSocialMediaPost** operation to expand it and then click on the **Try it out** button.
+
+    ![Try out the GenerateSocialMediaPost operation](assets/visual-studio-try-out-operation.png)
+
+1. Enter the url of the podcast episode you uploaded to Azure Blob Storage in Lab 1 and click **Execute**.
+
+1. And then after a couple of seconds, you should see the response from the API operation showing an image URL and a social media blurb all generated from the podcast audio with Azure OpenAI.
+
+    ![The response from the API operation](assets/visual-studio-api-operation-response.png)
 
 ...and that's it! You've now created a .NET API using the .NET Azure OpenAI SDK and created a Custom Connector from Visual Studio where you'll be able to use the API within the Power Platform.
 
