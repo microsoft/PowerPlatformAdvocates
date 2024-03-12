@@ -12,6 +12,12 @@ Power Apps is a suite of apps, services, and connectors, as well as a data platf
 
 Learn More: [What is Power Apps? [Microsoft Learn]](https://learn.microsoft.com/en-us/power-apps/powerapps-overview)
 
+### What is Microsoft Copilot Studio
+
+Microsoft Copilot Studio lets you create powerful AI-powered copilots for a range of requests—from providing simple answers to common questions to resolving issues requiring complex conversations. Engage with customers and employees in multiple languages across websites, mobile apps, Facebook, Microsoft Teams, or any channel supported by the Azure Bot Framework.
+
+Learn More: [Microsoft Copilot Studio overview [Microsoft Learn]](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
+
 ### What is Power Fx?
 
 Power Fx is the low-code language that will be used across Microsoft Power Platform. It's a general-purpose, strong-typed, declarative, and functional programming language.
@@ -32,7 +38,7 @@ Date of Livestream: {TBD}
 
 ### Creating the Power App
 
-1. Log into [Power Apps](https://make.powerapps.com/) and sign in with your Power Apps Developer account.
+1. Log into [Power Apps](https://make.powerapps.com/) and sign in with your Power Apps Developer account. Make sure you're in the same environment you selected for the Custom Connector you created in Lab 2.
 
 1. Click **+ Create** on the left-hand navigation pane and select **Blank app**.
 
@@ -81,17 +87,17 @@ Date of Livestream: {TBD}
     //Generate a social media blurb / post
     Set(
         socialMediaBlurb,
-        First(PodcastCopilot_Connector.GetSocialMediaBlurb(txtPodcastURL.Text).choices).message.content
+        PodcastCopilot_Connector.GetSocialMediaPost(txtPodcastURL.Text).blurb
     );
 
     //Generate a social media image
     Set(
         socialImage,
-        PodcastCopilot_Connector.GetSocialMediaImage(txtPodcastURL.Text).url
+        PodcastCopilot_Connector.GetSocialMediaPost(txtPodcastURL.Text).imageUrl
     );
     ```
 
-    This formula will call the two API operations in the Custom Connector that 1) Generates a social media post / blurb and 2) Generates a social media image. The resulting social media blurb will be stored in a variable called ``socialMediaBlurb``. The resulting image will be stored in a variable called ``socialImage``.
+    This formula will call the single API operation in the Custom Connector and it will return a Social Media Post record with a 1) blurb and 2) imageUrl. The resulting social media blurb will be stored in a variable called ``socialMediaBlurb``. The resulting image will be stored in a variable called ``socialImage``.
 
 1. Now select the **lblSocialPost** control and add the following formula to the **Text** property:
 
@@ -117,7 +123,7 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
 ### Using the connector in Microsoft Copilot Studio
 
-1. Log into [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) and sign in with your Microsoft account. The same account you've been using for this workshop.
+1. Log into [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) and sign in with your Microsoft account. The same account you've been using for this workshop. Make sure you're in the same environment you selected for the Custom Connector you created in Lab 2.
 
 1. On the home page, click **+ Create a copilot**.
 
@@ -135,36 +141,138 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
 1. Once saved, click **Topics & Plugins** on the left-hand navigation pane.
 
-1. On the top navigation pane, click **+ Create** > **Plugin action (preview)**.
+1. On the top navigation pane, click **+ Create** > **Topic** > **From blank**.
 
-    ![Creating a plugin action in the copilot](assets/create-plugin-action.png)
+    ![Creating a blank topic in the copilot](assets/create-blank-topic.png)
 
-1. In the **Add an action** dialog box, enter `podcastcopilot` in the search field and click **Search**.
+1. Rename the topic to ``Generate Social Media Post``.
 
-    Two actions representing the API operations should be displayed:
+    ![Renaming the topic](assets/rename-topic.png)
 
-    ![Searching for the Podcast Copilot actions](assets/search-podcast-copilot.png)
+1. In the **Trigger** description, enter ``Generates a social media post for a podcast episode``.
 
-1. Select **Generate Social Media Blurb** to begin setting this up. 
+    ![Adding a trigger description](assets/trigger-description.png)
 
-1. Then click **Next** to confirm the **PodcastCopilot_Connector** connector and to make a connection.
+1. Add a new node and select **Ask a question** and set the following:
 
-1. Review the action details and click **Finish**.
+    * **Message**: ``What is the URL of the podcast episode you would like to generate a social media post for?``
+    * **Identify**: Select **User's entire response**
+    * **Save user response as**: ``podcastURL``
 
-1. Do the same steps for the **Generate Social Media Image** action.
+    ![Adding a question node](assets/add-question-node.png)
 
-    Once complete, you should have two actions in the **Topics & Plugins** section.
+1. Add another node but this time select **Call an action** and in the **Select an action** pop up, select **Create a flow** which will then launch Power Automate.
 
-    ![The Podcast Copilot actions in the copilot](assets/podcast-copilot-actions.png)
+    ![Adding a call an action node](assets/add-action-node.png)
 
-1. Make sure you're running the PodcastCopilotAPI in Visual Studio before testing the copilot in Copilot Studio. Click on **Test your copilot** on the bottom left corner of the screen.
+1. Select the **When Power Virtual Agents calls a flow** trigger and in the pop up, under **Parameters**, click **+ Add an input** and select **Text**.
 
-1. In the copilot test panel, click the Refresh icon to refresh the copilot and test the new actions. Then click the sparkle icon to turn on the dynamic tracing mode.
+1. Replace **Input** with ``podcastURL`` and replace **Please enter your input** with ``Url of the podcast episode``.
 
-    ![Refreshing the copilot](assets/refresh-copilot.png)
+    ![Adding a parameter to the flow trigger](assets/add-parameter.png)
 
-    Now you are able to test the copilot and see in real-time how the dynamic chaining works and how the copilot is making the plugin calls.
+1. Close the pop up and add an action into the flow between the trigger and the end node. In the **Add an action** dialog, search for ``podcastcopilot`` and select **Generate Social Media Post**.
 
-1. Test the copilot by asking it to generate a social media post for a podcast episode and a social media image. You can use the same podcast episode link you used in the Power App.
+    ![Adding the Generate Social Media Post action](assets/add-generate-social-media-post.png)
+
+1. Create a connection to the **PodcastCopilot_Connector** by clicking on **Create New**.
+
+    ![Creating a new connection](assets/create-new-connection.png)
+
+1. Once the connection has been created, click into the **podcastUrl** field and then select the **Dynamic Content** icon.
+
+    ![Selecting dynamic content](assets/select-dynamic-content.png)
+
+1. Select **podcastURL** from the list of dynamic content.
+
+1. Close the dialog. Then select the **Return value(s) to Power Virtual Agents** node. In the dialog, click **+ Add an output** and select **Text**. Add another output and select **Text**. Configure the outputs as follows:
+
+    * **Output**: ``blurb``
+    * **Value**: Select **body/blurb** from the Dynamic Content list
+
+    * **Output**: ``imageUrl``
+    * **Value**: Select **body/imageUrl** from the Dynamic Content list
+
+    ![Adding outputs to the return value node](assets/add-outputs.png)
+
+1. Close the dialog, rename the flow to **Generate Social Media Post**, and click **Save**.
+
+    Once Saved, you can close Power Automate and return to Microsoft Copilot Studio.
+
+1. Once you're back in Copilot Studio, click **Done** on the *Save and Refresh* dialog to update the new flow in the flow list.
+
+    ![Saving and refreshing the flow](assets/save-and-refresh.png)
+
+1. Once again, add a node and select **Call an action** but this time in the **Select an action** pop up, select the **Generate Social Media Post** Power Automate flow you just created.
+
+1. Once added, set the input to the **podcastURL** variable.
+
+    ![Setting the input for the flow](assets/set-input.png)
+
+1. Add another node and select **Send a message**. In the message node, select **+ Add** and select **Adaptive Card**.
+
+1. Click on the Adaptive Card and under the **Adaptive Card properties**, expand the card content and change **Edit JSON** to **Edit Formula**. 
+
+    ![Changing the adaptive card format](assets/change-adaptive-card-format.png)
+
+1. Copy the following formula and paste it into the **Adaptive Card**:
+
+    ```json
+    {
+    '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+    type: "AdaptiveCard",
+    version: "1.3",
+    body: [
+        {
+        type: "TextBlock",
+        text: "Generated Post",
+        size: "Large",
+        weight: "Bolder",
+        horizontalAlignment: "Center",
+        spacing: "Medium"
+        },
+        {
+        type: "Image",
+        size: "large",
+        url: Topic.imageUrl,
+        horizontalAlignment: "Center"
+        },
+        {
+        type: "RichTextBlock",
+        inlines: [
+            {
+            type: "TextRun",
+            size: "medium",
+            text: Topic.blurb
+            }
+        ]
+        }
+    ]
+    }
+    ```
+
+    This formula will display the generated social media blurb and image formatted neatly in an adaptive card.
+
+1. Close the adaptive card and click **Save** to save the topic.
+
+### Testing the Copilot
+
+1. Once saved, open the **PodcastCopilotAPI** project in Visual Studio and run the project.
+
+1. While the API is running, go back to Microsoft Copilot Studio and click **Test your copilot** on the bottom left corner of the screen. This will open the copilot test panel.
+
+1. Click on the **Refresh** icon on the test panel to refresh the copilot and test the new topic.
+
+1. Ask the following question: ``Generate a social media post for my podcast episode``
+
+    The copilot should then respond with:
+
+    ![Copilot response asking for the podcast URL](assets/copilot-response.png)
+
+1. Respond with the url of the podcast audio snippet you uploaded to Azure blob storage in Lab 1.
+
+    After a couple of seconds, the copilot should then respond with the social media blurb and image generated from the podcast episode formatted in an adaptive card.
+
+    ![Copilot response with the social media blurb and image](assets/copilot-response-with-adaptive-card.png)
 
 ...and that's it! You've successfully built a Power App and Copilot that uses the Custom Connector to generate a social media post and image from a Podcast URL using AI!

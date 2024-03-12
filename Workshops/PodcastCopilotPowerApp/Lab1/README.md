@@ -135,7 +135,7 @@ Date of Livestream: {TBD}
 
 1. Click on **Deployments** on the left menu and select the **whisper** deployment. Then click on **Open in Playground**.
 
-1. Scroll down to the **Next Steps** section, select the **podcastcopilotsc-{your initials}** resource and then note down the following somewhere safe:
+1. Scroll down to the **Next Steps** section, select the **podcastcopilotwe-{your initials}** resource and then note down the following somewhere safe:
 
     - **Deployment Name**: `whisper`
     - **Endpoint**: `https://podcastcopilotwe-{your initials}.openai.azure.com/`
