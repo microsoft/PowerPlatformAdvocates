@@ -2,7 +2,16 @@
 
 This workshop explores the integration of the Power Platform with advanced AI models to create a dynamic application inspired by Kevin Scott’s Microsoft Build 2023 demo (https://github.com/microsoft/podcastcopilot).
 
-Make it easy to generate a social media post promoting a new episode of your podcast. Starting from a podcast URL, we journey through speech-to-text transcription to generate a transcript of the podcast, given that transcript, we perform guest identification and guest bio retrieval, followed by social media post generation with image creation, and finally, posting to LinkedIn from Power Apps or Copilot Studio. All powered by Azure OpenAI Service, .NET and the Power Platform!
+Make it easy to generate a social media post promoting a new episode of your podcast:
+
+* Starting from the podcast URL, you get the transcription with the **Whisper** model
+* Given that transcript, you use **GPT** to extract the name of the guest
+* With the guest name, you retrieve their bio with **Bing Search**
+* With the transcription and the guest bio, you generate a social media blurb with **GPT**
+* With the social media blurb, you generate a relevant DALL-E prompt with **GPT**
+* Finally, you use **DALL-E** to generate an image for the social media post with the prompt
+
+Then you'll learn how to surface this process in a Power App or through a copilot using Microsoft Copilot Studio all powered by Azure OpenAI Service, .NET and the Power Platform!
 
 ## Agenda
 
@@ -12,13 +21,13 @@ This lab is all about setting up your environment. This is what you need to get 
 
 🚀 [Setup your environment](./Lab0/README.md)
 
-### 🤖 Lab 1  - Laying the Foundation: Azure OpenAI Service and Power Platform
+### 🤖 Lab 1  - Laying the Foundation: Azure OpenAI Service
 
 In this lab, we're going to dive into the world of Azure OpenAI Service. We introduce the service, describe the models, and guide you through creating deployments. Setting the stage for seamless AI integration.
 
 🚀 [Laying the Foundation: Azure OpenAI Service and Power Platform](./Lab1/README.md)
 
-### 🔧 Lab 2 - Bridging the Gap: .NET APIs, Azure, and Custom Connectors
+### 🔧 Lab 2 - Bridging the Gap: .NET APIs and Custom Connectors
 
 In this lab, we take a step further from Lab 1 by creating a .NET API using the .NET Azure OpenAI SDK and creating a Custom Connector from Visual Studio.
 
@@ -26,7 +35,7 @@ In this lab, we take a step further from Lab 1 by creating a .NET API using the 
 
 ### 📱 Lab 3 - The Final Touch: Power Apps and Microsoft Copilot Studio Integration
 
-In this lab, we bring it all together. We will build the Power App UI, connect to the Custom Connector, and publish the social media post to LinkedIn. As a bonus, we will also see how to implement this workflow with Microsoft Copilot Studio.
+In this lab, we bring it all together. We will build the Power App UI, connect to the Custom Connector, and create the AI generated social media post. As a bonus, we will also see how to implement this workflow with Microsoft Copilot Studio as well.
 
 🚀 [The Final Touch: Power Apps and Microsoft Copilot Studio Integration](./Lab3/README.md)
 

@@ -58,7 +58,7 @@ Date of Livestream: {TBD}
     The above would be for the West Europe resource key and endpoint.
 
     ```bash
-    etx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_SWEDEN_CENTRAL_KEY_VALUE_HERE" 
+    setx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_SWEDEN_CENTRAL_KEY_VALUE_HERE" 
     setx AZURE_OPENAI_ENDPOINT_SC "https://podcastcopilotsc-{your initials}.openai.azure.com/"    
     ```
 
