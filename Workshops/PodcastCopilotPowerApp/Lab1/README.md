@@ -21,9 +21,9 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-> 📹 Click on the thumbnail below to watch a video walkthrough of this lab.
+> 📹 Click the image below to watch a video walkthrough of this lab.
 
-[![Build a Podcast Copilot with .NET and Power Apps: Setting up the Azure OpenAI Service YouTube Video](https://img.youtube.com/vi/9SLirsMqbVI/hqdefault.jpg)](https://aka.ms/PowerPodcast/Episode1)
+[![Build a Podcast Copilot with .NET and Power Apps: Setting up the Azure OpenAI Service YouTube Video](assets/lets-learn-power-1.png)](https://aka.ms/PowerPodcast/Episode1)
 
 ## Instructions
 
