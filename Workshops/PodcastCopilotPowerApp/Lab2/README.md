@@ -22,13 +22,13 @@ Learn More: [Azure OpenAI client library for .NET [Microsoft Learn]](https://lea
 
 The Power Platform provides organizations with the opportunity to empower their team members to build their own solutions through an intuitive low-code or no-code set of services. These services help simplify the process of building solutions. With Power Platform, solutions can be built in days or weeks, as opposed to months or years. Microsoft Power Platform is composed of five key products: Power Apps, Power Automate, Power BI, Power Virtual Agents, and Power Pages.
 
-Learn More: [Power Platform](https://www.microsoft.com/en-us/power-platform)
+Learn More: [Power Platform](https://aka.ms/PowerPodcast/PowerPlatformOverview)
 
 ### What is a Custom Connector?
 
 While Azure Logic Apps, Microsoft Power Automate, and Microsoft Power Apps offer over 1,000 connectors to connect to Microsoft and verified services, you may want to communicate with services that aren't available as prebuilt connectors. Custom connectors address this scenario by allowing you to create (and even share) a connector with its own triggers and actions.
 
-Learn More: [Custom connectors [Microsoft Learn]](https://learn.microsoft.com/en-us/connectors/custom-connectors/)
+Learn More: [Custom connectors [Microsoft Learn]](https://aka.ms/PowerPodcast/CustomConnectorsOverview)
 
 ## Prerequisites
 
@@ -40,9 +40,11 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-2.png)
+> 📹 Click the image below to watch a video walkthrough of this lab.
 
-Date of Livestream: {TBD}
+{VIDEO COMING 18 April 2024}
+
+<!--![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-2.png)-->
 
 ## Instructions
 
