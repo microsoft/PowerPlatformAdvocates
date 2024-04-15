@@ -1,4 +1,4 @@
-# Lab 1 - Laying the Foundation: Azure OpenAI Service and Power Platform
+# Lab 1 - Laying the Foundation: Azure OpenAI Service
 
 ## Background
 
@@ -10,7 +10,7 @@ Dive into the world of Azure OpenAI Service. We introduce the service, describe 
 
 Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-4, GPT-4 Turbo with Vision, GPT-3.5-Turbo, and Embeddings model series. In addition, the new GPT-4 and GPT-3.5-Turbo model series have now reached general availability. These models can be easily adapted to your specific task including but not limited to content generation, summarization, image understanding, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
 
-Learn More: [What is Azure OpenAI Service? [Microsoft Learn]](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview)
+Learn More: [What is Azure OpenAI Service? [Microsoft Learn]](https://aka.ms/PowerPodcast/AOAI)
 
 ## Prerequisites
 
@@ -21,15 +21,15 @@ For this lab, make sure you have the following ready:
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-1.png)
+> 📹 Click the image below to watch a video walkthrough of this lab.
 
-Date of Livestream: {TBD}
+[![Build a Podcast Copilot with .NET and Power Apps: Setting up the Azure OpenAI Service YouTube Video](assets/lets-learn-power-1.png)](https://aka.ms/PowerPodcast/Episode1)
 
 ## Instructions
 
 ### Creating the Azure OpenAI Service Resources
 
-1. Go to [portal.azure.com](portal.azure.com) and login with your Azure account.
+1. Go to [portal.azure.com](https://aka.ms/PowerPodcast/AzurePortal) and login with your Azure account.
 
 1. Search for and select **Resource Groups**.
 

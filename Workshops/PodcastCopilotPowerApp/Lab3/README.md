@@ -10,19 +10,19 @@ The final lab brings it all together. We will build the Power App UI, connect to
 
 Power Apps is a suite of apps, services, and connectors, as well as a data platform, that provides a rapid development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your data stored either in the underlying data platform (Microsoft Dataverse) or in various online and on-premises data sources (such as SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on).
 
-Learn More: [What is Power Apps? [Microsoft Learn]](https://learn.microsoft.com/en-us/power-apps/powerapps-overview)
+Learn More: [What is Power Apps? [Microsoft Learn]](https://aka.ms/PowerPodcast/PowerAppsOverview)
 
 ### What is Microsoft Copilot Studio
 
 Microsoft Copilot Studio lets you create powerful AI-powered copilots for a range of requests—from providing simple answers to common questions to resolving issues requiring complex conversations. Engage with customers and employees in multiple languages across websites, mobile apps, Facebook, Microsoft Teams, or any channel supported by the Azure Bot Framework.
 
-Learn More: [Microsoft Copilot Studio overview [Microsoft Learn]](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-what-is-copilot-studio)
+Learn More: [Microsoft Copilot Studio overview [Microsoft Learn]](https://aka.ms/PowerPodcast/CopilotStudioOverview)
 
 ### What is Power Fx?
 
 Power Fx is the low-code language that will be used across Microsoft Power Platform. It's a general-purpose, strong-typed, declarative, and functional programming language.
 
-Learn More: [Microsoft Power Fx overview [Microsoft Learn]](https://learn.microsoft.com/en-us/power-platform/power-fx/overview)
+Learn More: [Microsoft Power Fx overview [Microsoft Learn]](https://aka.ms/PowerPodcast/PowerFxOverview)
 
 ## Prerequisites
 
@@ -30,9 +30,9 @@ For this lab, just make sure you've completed the previous three labs.
 
 ### Video Overview of Lab:
 
-![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-3.png)
+> 📹 Click the image below to watch a video walkthrough of this lab.
 
-Date of Livestream: {TBD}
+{VIDEO COMING 25 April 2024}
 
 ## Instructions
 
