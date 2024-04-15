@@ -148,5 +148,7 @@ In the tracing mode view, the plugin action for the custom prompt will be trigge
 
 Congratulations, you’ve now learnt how to create an AI Plugin by creating a custom prompt with one of the Power Platform Prompt samples, and how to create this as a plugin action in Copilot Studio.
 
+This is the end of lab 03, select the link below to move to the next lab.
+
 [⏭️ Move to lab 04](../lab-04/README.md)
 

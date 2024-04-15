@@ -64,12 +64,26 @@ Compile a list of learning resources for mastering the subject provided by the u
 
     ![Update plugin action](assets/4.1_13_UpdatePluginAction.jpg)
 
-17.	Now let’s test the updated copilot by triggering the recently created Topic. Navigate Topics and select the Topic created earlier.
+17.	Now let’s test the updated copilot by triggering the recently created Topic. Navigate to **Topics** and select the Topic created earlier.
 
-    ![4.1_14_SelectCustomTopic]
+    ![Select Custom Topic](assets/4.1_14_SelectCustomTopic.jpg)
 
-18.	Select Test copilot on the top right.
+18.	Select **Test copilot** on the top right.
 
-19. enter a prompt such as, **Can you please provide me with learning resources for building with Power Apps**
+    ![Test Copilot](assets/4.1_15_TestCopilot.jpg)
+
+19. Enter a prompt such as, **Can you please provide me with learning resources for building with Power Apps**
+
+    ![Prompt](assets/4.1_16_EnterPrompt.jpg)
 
 20.	The Topic will be triggered with a message sent to the user about compiling the list of learning resources, followed by the prompt response as copilot executed the AI Plugin action. In the tracing mode view, you’ll see that the Topic succeeded with the green tick icon displayed.
+
+    ![Prompt Response](assets/4.1_17_PromptResponse.jpg)
+
+## Next lab
+
+Congratulations, you created a custom topic and added the prompt plugin created in [lab 02](../lab-02/README.md) as a plugin action.
+
+This is the end of lab 04, select the link below to move to the next lab.
+
+[⏭️ Move to lab 05](../lab-05/README.md)

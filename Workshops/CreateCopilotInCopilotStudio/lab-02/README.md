@@ -89,6 +89,8 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
 ## Next lab
 
-Congratulations, you create a copilot with external and internal data sources for Generative Answers. This is the end of lab 02, select the link below to move to the next lab.
+Congratulations, you create a copilot with external and internal data sources for Generative Answers. 
+
+This is the end of lab 02, select the link below to move to the next lab.
 
 [⏭️ Move to lab 03](../lab-03/README.md)
