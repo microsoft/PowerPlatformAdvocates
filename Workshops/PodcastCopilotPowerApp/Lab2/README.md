@@ -42,9 +42,7 @@ For this lab, make sure you have the following ready:
 
 > 📹 Click the image below to watch a video walkthrough of this lab.
 
-{VIDEO COMING 18 April 2024}
-
-<!--![Laying the Foundation: Azure OpenAI Service and Power Platform Video Thumbnail](assets/lets-learn-power-2.png)-->
+[![Build a Podcast Copilot with .NET and Power Apps: .NET APIs and Custom Connectors YouTube Video](assets/lets-learn-power-2.png)](https://aka.ms/PowerPodcast/Episode2)
 
 ## Instructions
 
