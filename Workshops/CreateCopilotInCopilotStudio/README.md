@@ -2,11 +2,11 @@
 
 In this workshop, you will learn how to create a custom Copilot using out-of-the-box capabilities in Microsoft Copilot Studio. This includes building automation with Power Automate. This workshop consists of multiple labs:
 
-## Lab 01 - Environment Setup
+## Lab 01 - Tenant Setup
 
-In this lab, you will login to the account you are going to use during the workshop. You will also switch to your dedicated developer environment.
+In this lab, you will login to the account you are going to use during the workshop and you will create a developer environment. This developer enivronment will be your dedicated developer environment to use for the workshop.
 
-[Lab 01 - Environment Setup](./lab-01/README.md)
+[Lab 01 - Tenant Setup](./lab-01/README.md)
 
 ## Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers
 
