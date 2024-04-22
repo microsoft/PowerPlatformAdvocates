@@ -82,8 +82,8 @@ Compile a list of learning resources for mastering the subject provided by the u
 
 ## Next lab
 
-Congratulations, you created a custom topic and added the prompt plugin created in [lab 02](../lab-02/README.md) as a plugin action.
+Congratulations! 🥳 You created a custom topic and added the prompt plugin created in [lab 02](../lab-02/README.md) as a plugin action.
 
-This is the end of lab 04, select the link below to move to the next lab.
+This is the end of Lab 04 - Create a custom topic with a plugin action for Generative Action, select the link below to move to the next lab.
 
-[⏭️ Move to lab 05](../lab-05/README.md)
+[⏭️ Move to Lab 05 - Automation in copilot with Power Automate cloud flows](../lab-05/README.md)

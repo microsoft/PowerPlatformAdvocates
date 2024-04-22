@@ -7,8 +7,9 @@ In this lab, you will go through the following tasks:
 * [1.3 Create developer environment](#13-create-developer-environment)
 * [1.4 Sign into Microsoft Copilot Studio and select developer environment](#14-sign-into-microsoft-copilot-studio-and-select-developer-environment)
 * [1.5 Create new SharePoint site and upload file](#15-create-new-sharepoint-site-and-upload-file)
+*1.6 Copoy SharePoint site URL
 
-## 1.1: Create a new browser profile (Microsoft Edge)
+## 1.1 Create a new browser profile (Microsoft Edge)
 
 It's always good to have a separate browser profile for your work and for workshops like this. This way you can keep all of your credentials separate and not have to worry about logging out of your personal / work accounts.
 
@@ -61,47 +62,47 @@ With the credentials that were provided to you, log into the account you are goi
 
 1. Browse to [https://www.office.com](https://www.office.com) and select **Sign in**.
 
-    ![Microsoft 365 Sign In](assets/1.0_08_SignIn.jpg)
+    ![Microsoft 365 Sign In](assets/1.2_01_SignIn.jpg)
 
 1. On the sign-in screen, enter the email address that was provided to you and then click **Next**.
 
-    ![Enter email address](assets/1.0_09_EnterCredentials.jpg)
+    ![Enter email address](assets/1.2_02_EnterCredentials.jpg)
 
 1. Enter the password and click **Sign in**.
 
-    ![Enter password](assets/1.0_10_EnterCredentials.jpg)
+    ![Enter password](assets/1.2_03_EnterCredentials.jpg)
 
 1. A dialog will appear and this is where you'll need to set up your account as an authenticated account in the Microsoft Authenticator app on your mobile device. This is required to authenticate yourself in order to sign-in. Select **Next**.
 
-    ![Authentication dialog](assets/1.0_11_Authentication.jpg)
+    ![Authentication dialog](assets/1.2_04_Authentication.jpg)
 
 1. Install the Microsoft Authenticator app on your mobile if you don't already have through the **Apple App store** for iOS devices or **Google Play** store for Android you're prompted to stay signed in, click **Yes**.
 
-    ![Authentication dialog](assets/1.0_12_Authentication.jpg)
+    ![Authentication dialog](assets/1.2_05_Authentication.jpg)
 
 1. Open the Microsoft Authenticator app on your **mobile phone**, select the **+ icon** and select **Work or school account**.
 
 1. On your Edge browser, select Next.
 
-    ![Authentication dialog](assets/1.0_13_Authentication.jpg)
+    ![Authentication dialog](assets/1.2_06_Authentication.jpg)
 
 1. Scan the **QR code** on your Edge browser using the **Microsoft Authenticator app** on your mobile phone. 
 
-    ![Scan QR code](assets/1.0_14_Authentication.jpg)
+    ![Scan QR code](assets/1.2_07_Authentication.jpg)
 
 1. A notification from the Microsoft Authenticator app will appear on you mobile phone, this is to approve the sign in request. Enter the number seen on your Edge browser.
 
-    ![Approve sign in](assets/1.0_15_Authentication.jpg)
+    ![Approve sign in](assets/1.2_08_Authentication.jpg)
 
 1. Once approved, a dialog will appear asking you to remain signed in. **Tick** the checkbox and select **Yes**.
 
-    ![Stay signed in](assets/1.0_16_Authentication.jpg)
+    ![Stay signed in](assets/1.2_08_Authentication.jpg)
 
 1. You'll now be logged onto Microsoft 365 with your user account.
 
-    ![Signed in](assets/1.0_17_SignedIn.jpg)
+    ![Signed in](assets/1.2_10_SignedIn.jpg)
 
-## 1.3: Create developer environment
+## 1.3 Create developer environment
 
 Developer environments are very helpful when you want to try out features, they are meant to be short living environments.
 
@@ -158,11 +159,11 @@ In this workshop, we will create the environments through the Power Platform Adm
 
 1.	Switch to the developer environment you created earlier for your account by selecting the cog wheel on the top right.
 
-    ![Select Developer environment](assets/1.0_25_SelectDEVEnvironment.jpg)
+    ![Select Developer environment](assets/1.4_01_SelectDEVEnvironment.jpg)
 
 1. The developer environment will now be selected and this will be the environment you'll build your custom copilot in.
 
-    ![Next](assets/1.0_26_DEVEnvironmentSelected.jpg)
+    ![Next](assets/1.4_02_DEVEnvironmentSelected.jpg)
 
 ## 1.5 Create new SharePoint site and upload file
 
@@ -174,12 +175,88 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     ![Select SharePoint](assets/1.5_02_SelectSharePoint.jpg)
 
-1. 
+1. SharePoint will load. Select **+ Create  site** to create a new SharePoint site.
 
-Select SharePoint.
+    ![Create site](assets/1.5_03_CreateNewSharePointSite.jpg)
+
+1. A dialog will appear to guide you in creating a new SharePoint site. Select **Communication site**.
+
+    ![Select Communication site](assets/1.5_04_SelectCommunicationSite.jpg)
+
+1. In the next step, a list of Microsoft templates will load by default.
+
+    ![List of templates](assets/1.5_05_SelectSharePointTemplate.jpg)
+
+1. Scroll down and select the **Human Resources** template.
+
+    ![Select Human Resources template](assets/1.5_06_SelectHumanResourcesSharePointTemplate.jpg)
+
+1. Select **Use template** to create a new SharePoint site using the Human Resources template.
+
+    ![Select use template](assets/1.5_07_SelectUseTemplate.jpg)
+
+1. Enter information for your site. The following is an example:
+
+    | Field | Value |
+    | --- | --- |
+    | Site name | Contoso Human Resources|
+    | Site description | A site for Contoso employees regarding Human Resources.|
+    | Site address | ContosoHumanResources |
+
+    ![Site information](assets/1.5_08_SiteInformation.jpg)
+
+1. In the final step, a language can be selected for the SharePoint site. By default it will be **English**. Leave the Language as **English** and select **Create site**,
+
+    ![Site language](assets/1.5_09_SiteLanguage.jpg)
+
+1. The SharePoint site will provision for the next 1 to 5 minutes. When complete, the Home page of the Human Resources SharePoint site will load with suggestions of actions. Select **Upload a document**.
+
+    ![Upload a document](assets/1.5_10_UploadADocument.jpg)
+
+1. Download the [Contoso Employee Handbook PDF file](assets/Contoso%20Employee%20Handbook.pdf) and then upload it to the Documents library by selecting **Upload** and then select **Files**.
+
+    ![Upload to SharePoint Document library](assets/1.5_11_UploadFiles.jpg)
+
+1. Windows file explorer will open, navigate to the path of the  **downloaded Contoso Employee Handbook PDF file** from step 11 and select **Open**. 
+
+    ![Select PDF file](assets/1.5_12_SelectFile.jpg)
+
+1. The file will be uploaded and the progress of the upload will be visible on the right hand side of the document library.
+
+    ![Upload in progress](assets/1.5_13_FileUploadingInProgress.jpg)
+
+1. Confirmation of the uploaded file will be displayed.
+
+    ![File successfully uploaded](assets/1.5_14_FileUploaded.jpg)
+
+
+## 1.6 Copy SharePoint Site URL
+
+1. Select the **CH icon** on the left hand side of the Documents library.
+
+    ![Select CH icon](assets/1.6_01_SelectIcon.jpg)
+
+1. **Copy** the SharePoint site URL.
+
+    ![Copy SharePoint site URL](assets/1.6_02_CopyURL.jpg)
+
+### Relaunch SharePoint Site
+1. If you happen to exit your Edge browser tab with the SharePoint site, select the **waffle icon** to view the menu and select **SharePoint**.
+
+    ![Select waffle icon](assets/1.6_03_WaffleIcon.jpg)
+
+2. The SharePoint site will show under **Following** or **Recent** on the left hand side or **Frequent sites** in the middle.
+
+    ![Select site](assets/1.6_04_SelectSite.jpg)
+
+3. Select the SharePoint site and **copy the SharePoint URL**.
+
+    ![Copy SharePoint site URL](assets/1.6_02_CopyURL.jpg)
 
 ## Next lab
 
-This is the end of lab 01, select the link below to move to the next lab.
+Congratulations! 🎉 You've now created a developer environment to work in for building a custom copilot in Microsoft Copilot Studio and created a new SharePoint site that will be used as an internal source for generative answers in the next lab.
 
-[⏭️ Move to lab 02](../lab-02/README.md)
+This is the end of Lab 01 - Tenant setup, select the link below to move to the next lab.
+
+[⏭️ Move to Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers](../lab-02/README.md)

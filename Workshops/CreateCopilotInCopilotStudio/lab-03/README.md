@@ -1,4 +1,4 @@
-# Lab 02 - Create an AI Plugin using a Power Platform component for Generative Actions
+# Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions
 
 AI Plugins can be used to extend Microsoft Copilot, or used within a custom copilot as a plugin action. You can create multiple types of AI plugins in Microsoft Copilot Studio:
 - **Prompt plugins**, which use AI Builder and natural language understanding to target the specific scenarios and workflows within your business.
@@ -150,9 +150,9 @@ In the tracing mode view, the plugin action for the custom prompt will be trigge
 
 ## Next lab
 
-Congratulations, you’ve now learnt how to create an AI Plugin by creating a custom prompt with one of the Power Platform Prompt samples, and how to create this as a plugin action in Copilot Studio.
+Congratulations! 🙌🏻 You’ve now learnt how to create an AI Plugin by creating a custom prompt with one of the Power Platform Prompt samples, and how to create this as a plugin action in Copilot Studio.
 
-This is the end of lab 03, select the link below to move to the next lab.
+This is the end of Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions, select the link below to move to the next lab.
 
-[⏭️ Move to lab 04](../lab-04/README.md)
+[⏭️ Move to Lab 04 - Create a custom topic with a plugin action for Generative Action](../lab-04/README.md)
 

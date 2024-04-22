@@ -63,9 +63,12 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Update generative answers](assets/2.2_01_UpdateGenerativeAnswers.jpg)
 
-2. Enter [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com/) in the sources field and select **Add**.
+2. Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select **Add**.
 
-    ![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
+> [!TIP]  
+> If you've forgotten to the SharePoint site URL, head to the [previous lab](../lab-01/README.md/#16-copy-sharepoint-site-url) to copy the SharePoint site URL and return to this lab to proceed.
+
+   ![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
 
 3.	Select **Save**.
 
@@ -89,8 +92,8 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
 ## Next lab
 
-Congratulations, you create a copilot with external and internal data sources for Generative Answers. 
+Congratulations! 👏🏻  You've created a copilot with external and internal data sources for Generative Answers. 
 
-This is the end of lab 02, select the link below to move to the next lab.
+This is the end of Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers, select the link below to move to the next lab.
 
-[⏭️ Move to lab 03](../lab-03/README.md)
+[⏭️ Move to Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions](../lab-03/README.md)

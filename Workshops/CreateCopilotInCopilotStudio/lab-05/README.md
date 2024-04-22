@@ -144,6 +144,6 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
 ## End of lab and workshop
 
-Congratulations, you’ve now learnt how to create a Power Automate cloud flow to perform automation where the prompt plugin response is included in a message posted to a Microsoft Teams channel.
+Congratulations! 🎇 You’ve now learnt how to create a Power Automate cloud flow to perform automation where the prompt plugin response is included in a message posted to a Microsoft Teams channel.
 
 You’ve now reached the end of this lab and workshop 🎉
