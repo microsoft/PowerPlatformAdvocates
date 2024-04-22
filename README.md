@@ -13,6 +13,7 @@ Welcome to Power Platform Advocates GitHub repository. You'll find advocacy crea
 - [Power Apps & Java](/Workshops/JavaAndPowerApps/README.md)
 - [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
+- [Build a Custom Copilot in Copilot Studio](/Workshops/BuildCustomCopilotInCopilotStudio/README.md)
 
 ## Labs
 
