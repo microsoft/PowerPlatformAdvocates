@@ -2,17 +2,18 @@
 
 In this lab, you will go through the following tasks:
 
-* Creating a new browser profile
-* Logging into the user account you are going to use during the workshop
-* Creating a developer environment
-* Select the developer enivronment to work in
-* Create a SharePoint site and upload a file into a document library
+* [1.1 Create a new browser profile (Microsoft Edge)](#11-create-a-new-browser-profile-microsoft-edge)
+* [1.2 Log on to your account and set up authentication in Microsoft Authenticator app](#12-log-on-to-your-account-and-set-up-authentication-in-microsoft-authenticator-app)
+* [1.3 Create developer environment](#13-create-developer-environment)
+* [1.4 Sign into Microsoft Copilot Studio and select developer environment](#14-sign-into-microsoft-copilot-studio-and-select-developer-environment)
+* [1.5 Create new SharePoint site and upload file](#15-create-new-sharepoint-site-and-upload-file)
 
-## Task 1: Create a new browser profile (Microsoft Edge)
+## 1.1: Create a new browser profile (Microsoft Edge)
 
 It's always good to have a separate browser profile for your work and for workshops like this. This way you can keep all of your credentials separate and not have to worry about logging out of your personal / work accounts.
 
 1. Open Microsoft Edge.
+
 1. Select the **profile icon** on the top left corner and select **+ Set up new personal profile**
 
     ![Set up new peronsal profile](assets/1.0_01_NewEdgeProfile.jpg)
@@ -27,7 +28,20 @@ It's always good to have a separate browser profile for your work and for worksh
 
 1. Enter a name for your new Edge profile - _Example: Nestor Wilke - CS workshop_, and select **Update**.
 
-    ![Name Edge profile](assets/1.0_04_NameEdgeProfile.jpg)  
+    ![Name Edge profile](assets/1.0_04_NameEdgeProfile.jpg)
+
+1. In the **Profiles** settings, select **Profile preferences**.
+
+    ![Profile preferences](assets/1.0_04.1_Profile%20Preferences.jpg)
+
+1. Disable the setting **Account based profile switching**.
+
+    ![Disable account based profile switching setting](assets/1.0_04.1_DisableProfileSwitching.jpg)
+
+1. The setting will now be disabled. Any apps you open from Microsoft 365 waffle menu will now load in the current Edge browser profile.
+
+    ![Account based profile switching setting now disabled](assets/1.0_04.1_ProfileSwitchingDisabled.jpg)
+
 
 1. Close the tab and in the Edge Welcome tab, select **Start without your data**.
 
@@ -41,7 +55,7 @@ It's always good to have a separate browser profile for your work and for worksh
 
 ![Browser theme](assets/1.0_07_EdgeProfileSetup.jpg)
 
-## Task 2: Log on to your account
+## 1.2 Log on to your account and set up authentication in Microsoft Authenticator app
 
 With the credentials that were provided to you, log into the account you are going to use during the workshop.
 
@@ -87,7 +101,7 @@ With the credentials that were provided to you, log into the account you are goi
 
     ![Signed in](assets/1.0_17_SignedIn.jpg)
 
-## Task 3: Create developer environments
+## 1.3: Create developer environment
 
 Developer environments are very helpful when you want to try out features, they are meant to be short living environments.
 
@@ -122,17 +136,47 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     ![Create new Developer Environment](assets/1.0_20_NewEnvironment.jpg)
 
-1. Scroll down and you'll see other options, leave them as-is, **do not upate**.
+1. Scroll down and you'll see other options, leave them as-is, **do not upate**. Select **Next**.
 
-    ![Next](assets/1.0_21_NewEnvironmentNext.jpg
+    ![Next](assets/1.0_21_NewEnvironmentNext.jpg)
+    
+1. The environment is now provisioning in the background with a State of _Preparing_. Wait for 5-10 minutes.
 
-## 1.1 Sign into Microsoft Copilot Studio
+    ![Provisioning new environment](assets/1.0_22_PreparingEnvironment.jpg)
+
+1. Select **Refresh** to refresh the environment list.
+
+    ![Refresh environment list](assets/1.0_23_RefreshEnvironment.jpg)
+
+1. The new developer enivronment will be listed with a State of _Ready_.
+
+    ![New developer enivornment ready](assets/1.0_24_NewEnvironmentReady.jpg)
+
+## 1.4 Sign into Microsoft Copilot Studio and select developer environment
 
 1.	Navigate to [https://copilotstudio.microsoft.com/](https://copilotstudio.microsoft.com/) using the username and credential provided.
 
-2.	Switch to the developer environment for your account by selecting the cog wheel on the top right.
+1.	Switch to the developer environment you created earlier for your account by selecting the cog wheel on the top right.
 
-    ![Screenshot of a switching to the user's developer environment](assets/1.0_01_SelectEnvironment.jpg)
+    ![Select Developer environment](assets/1.0_25_SelectDEVEnvironment.jpg)
+
+1. The developer environment will now be selected and this will be the environment you'll build your custom copilot in.
+
+    ![Next](assets/1.0_26_DEVEnvironmentSelected.jpg)
+
+## 1.5 Create new SharePoint site and upload file
+
+1. Select the waffle icon on the top left hand side of Microsoft Copilot Studio to view the menu.
+
+    ![Select Menu](assets/1.5_01_SelectMenu.jpg)
+
+1. Select SharePoint from the menu.
+
+    ![Select SharePoint](assets/1.5_02_SelectSharePoint.jpg)
+
+1. 
+
+Select SharePoint.
 
 ## Next lab
 
