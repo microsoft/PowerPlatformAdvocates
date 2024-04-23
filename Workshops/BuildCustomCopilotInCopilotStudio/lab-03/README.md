@@ -17,102 +17,100 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Select Copilots](assets/3.1_01_SelectCopilots.jpg)
 
-2.	Select **Extend (preview)** in the left-hand side menu and select **Add Power Platform components**.
+1.	Select **Extend (preview)** in the left-hand side menu and select **Add Power Platform components**.
     
     ![Add Power Platform Components](assets/3.1_02_PowerPlatformComponents.jpg)
 
-3. Select **Content and insights**.
+1. Select **Content and insights**.
 
     ![Select Content and insights](assets/3.1_03_SelectContentAndInsights.jpg)
 
-4.	A new browser tab will appear with the Power Apps maker portal. Select **Add a Power Platform component** as an AI plugin. 
+1.	A new browser tab will appear with the Power Apps maker portal. Select **Add a Power Platform component** as an AI plugin. 
 
     ![Add Power Platform Component](assets/3.1_04_AddPowerPlatformComponent.jpg)
 
-6.	Select **Generate content or extract insights**.
+1.	Select **Generate content or extract insights**.
 
     ![Generate Content or Extract Insights](assets/3.1_05_GenerateContentOrExtractInsights.jpg)
 
-6.	The **Prompt** dialog will appear, where you’ll see the following
+1.	The **Prompt** dialog will appear, where you’ll see the following
 
-- **Prompt settings** on the right hand side which contains 
-    - **Prompt details** where the **Name** of the prompt is entered.
-    - **Input** where the inputs for the prompt can be added or deleted.
-- **Prompt** on the top left hand side which is where you can enter your prompt. You can also start from a template.
-- **Prompt response** on the bottom left hand side which is where you can select **Test prompt** and the response will generate based on the prompt.
+    - **Prompt settings** on the right hand side which contains         
+        - **Prompt details** where the **Name** of the prompt is entered.
+        - **Input** where the inputs for the prompt can be added or deleted.
+    - **Prompt** on the top left hand side which is where you can enter your prompt. You can also start from a template.
+    - **Prompt response** on the bottom left hand side which is where you can select **Test prompt** and the response will generate based on the prompt.
 
-7.	Instead of creating a custom prompt from scratch or using a template, a prompt from the Power Platform Prompt Samples library can be used. In a new browser tab, navigate to [https://aka.ms/power-prompts](https://aka.ms/power-prompts) and filter to __“AI Builder”__ by ticking the checkbox on the left hand side.
+1.	Instead of creating a custom prompt from scratch or using a template, a prompt from the Power Platform Prompt Samples library can be used. In a new browser tab, navigate to [https://aka.ms/power-prompts](https://aka.ms/power-prompts) and filter to __“AI Builder”__ by ticking the checkbox on the left hand side.
 
     ![Filter](assets/3.1_06_Filter.jpg)
 
-8.	Select the **[“Learning Resources Prompt”](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-powerplatform-prompts-learning-resources/)** and copy the prompt.
+1.	Select the **[“Learning Resources Prompt”](https://adoption.microsoft.com/en-us/sample-solution-gallery/sample/pnp-powerplatform-prompts-learning-resources/)** and copy the prompt.
 
     ![Prompt Value](assets/3.1_07_PromptValue.jpg)
 
-9.	Go back to the Power Apps maker portal with the Prompt dialog. Paste the copied prompt value in the **Prompt** box on the top left hand side.
+1.	Go back to the Power Apps maker portal with the Prompt dialog. Paste the copied prompt value in the **Prompt** box on the top left hand side.
 
     ![Prompt](assets/3.1_08_Prompt.jpg)
 
-10.	Expand the **Prompt details** section and enter name for the prompt such as `Learning Resources`
-
-
+1.	Expand the **Prompt details** section and enter name for the prompt such as `Learning Resources`
 
     ![Name](assets/3.1_09_Name.jpg)
 
-11.	Expand the **Input section** and select **+ Add input**.
+1.	Expand the **Input section** and select **+ Add input**.
 
     ![Add Input](assets/3.1_10_AddInput.jpg)
 
-12.	Enter a name for the input such as `Subject` and enter sample data such as, `Building with Power Apps`.
+1.	Enter a name for the input such as `Subject` and enter sample data such as, `Building with Power Apps`.
 
     ![Input](assets/3.1_11_Input.jpg)
 
-13.	Next, the input needs to be inserted into the prompt. In the Prompt, delete **[text]** and select **+ Insert** and select **subject**. The input of subject as now been added to the prompt as an input.
+1.	Next, the input needs to be inserted into the prompt. In the Prompt, delete **[text]** and select **+ Insert** and select **subject**. The input of subject as now been added to the prompt as an input.
 
     ![Input Added To Prompt](assets/3.1_12_InputAddedToPrompt.jpg)
 
-14.	Test the prompt before saving the custom prompt. Select **Test prompt** on the bottom left hand side. A response to the prompt regarding the value provided in the sample data of the subject input is returned. Links are provided for each of the learning resources generated by the AI-powered prompt. You can also maximize the prompt response box to enlarge the prompt response dialog.
+1.	Test the prompt before saving the custom prompt. Select **Test prompt** on the bottom left hand side. A response to the prompt regarding the value provided in the sample data of the subject input is returned. Links are provided for each of the learning resources generated by the AI-powered prompt. You can also maximize the prompt response box to enlarge the prompt response dialog.
 
     ![Prompt Response Of Test](assets/3.1_13_PromptResponseOfTest.jpg)
 
-15.	Select **Save custom prompt**. The prompt will be created as an AI plugin and it will appear after some time on the list of AI plugins.
+1.	Select **Save custom prompt**. The prompt will be created as an AI plugin and it will appear after some time on the list of AI plugins.
 
     ![AI Plugin Created](assets/3.1_14_AIPluginCreated.jpg)
 
-16.	Navigate back to Copilot Studio and refresh your browser tab. The AI plugin will now be visible in the list.
+1.	Navigate back to Copilot Studio and refresh your browser tab. The AI plugin will now be visible in the list.
 
     ![AI Plugin Copilot Studio](assets/3.1_15_AIPluginCopilotStudio.jpg)
 
-17.	The AI plugin can now be added to the copilot created earlier. Select **Copilots** on the left hand side menu and select your Copilot.
+1.	The AI plugin can now be added to the copilot created earlier. Select **Copilots** on the left hand side menu and select your Copilot.
 
     Select Actions on the left hand side menu and select + Create.
 
     ![Create Plugin Action](assets/3.1_16_CreatePluginAction.jpg)
 
-18.	In the search field enter the name of your custom prompt from Step 9 and select **Search**.
+1.	In the search field enter the name of your custom prompt from Step 9 and select **Search**.
     
     ![Search For Custom Prompt](assets/3.1_17_SearchForCustomPrompt.jpg)
 
-19.	 Scroll down until you find your custom prompt. It’ll have the Dataverse icon. Select your custom prompt.
+1.	 Scroll down until you find your custom prompt. It’ll have the Dataverse icon. Select your custom prompt.
     ![2.3_18_SelectCustomPrompt](assets/3.1_18_SelectCustomPrompt.jpg)
 
-20.	In the next step, the inputs and outputs can be configured. Since the custom prompt already has the input defined and the output is the response from the AI Builder action - Generate content or extract insights, these need to be added to the plugin action. For the **input**, select **Add** and **select subject**.
+1.	In the next step, the inputs and outputs can be configured. Since the custom prompt already has the input defined and the output is the response from the AI Builder action - Generate content or extract insights, these need to be added to the plugin action. For the **input**, select **Add** and **select subject**.
 
     ![Input Subject](assets/3.1_19_InputSubject.jpg)
 
-21.	The description is important to provide as this helps the AI determine how to fill this input. Enter a description for the subject such as **subject of the learning resource**. Select **Back**.
+1.	The description is important to provide as this helps the AI determine how to fill this input. Enter a description for the subject such as **subject of the learning resource**. Select **Back**.
     
     ![Input Subject](assets/3.1_19_InputSubject.jpg)
 
-22.	Next add the output, select **Add** and select **Text**.
+1.	Next add the output, select **Add** and select **Text**.
 
     ![Output Text](assets/3.1_21_OutputText.jpg)
 
-23.	Enter a a display name value such as `text` and enter a description for the text output such as `The AI generated response`.
+1.	Enter a a display name value such as `text` and enter a description for the text output such as `The AI generated response`.
 
     ![Output Configuration](assets/3.1_22_OutputConfiguration.jpg)
 
-24.	Scroll down and there are two options which can be left as-is. 
+1.	Scroll down and there are two options which can be left as-is. 
     - **Respond to the user after running this action** is ticked by default. 
     - **How do you want to display information to the user?** allows you to modify how the result should be returned. By default the first one in the following list is selected,
         - AI dynamically generates a message (default)
@@ -124,37 +122,37 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Output back](assets/3.1_23_OutputBack.jpg)
 
-25.	Select **Finish**. The custom prompt has now been created as a plugin action in Copilot Studio.
+1.	Select **Finish**. The custom prompt has now been created as a plugin action in Copilot Studio.
 
     ![Finish](assets/3.1_24_Finish.jpg)
 
-26.	To test the plugin action, the setting of Dynamic chaining with generative actions (preview) needs to be enabled. Select **Go to Generative AI**.
+1.	To test the plugin action, the setting of Dynamic chaining with generative actions (preview) needs to be enabled. Select **Go to Generative AI**.
 
     ![Go To Generative AI](assets/3.1_25_GoToGenerativeAI.jpg)
 
-27.	Scroll down and enable **Dynamic chaining with generative actions (preview)** by selecting the toggle. Select **Save**.
+1.	Scroll down and enable **Dynamic chaining with generative actions (preview)** by selecting the toggle. Select **Save**.
     
     ![Enable Dynamic Chaining](assets/3.1_26_EnableDynamicChaining.jpg)
 
-28.	Select the **Sparkle icon** to view tracing mode.
+1.	Select the **Sparkle icon** to view tracing mode.
 
     ![Sparkle Icon](assets/3.1_27_SparkleIcon.jpg)
 
-29.	Select the **refresh** icon on the chat to test the copilot.
+1.	Select the **refresh** icon on the chat to test the copilot.
 
-![Refresh](assets/3.1_28_Refresh.jpg)
+    ![Refresh](assets/3.1_28_Refresh.jpg)
 
-30.	Enter the following prompt, 
+1.	Enter the following prompt, 
 
-```
-Can you please provide me with learning resources for building with Power Apps
-```
+    ```
+    Can you please provide me with learning resources for building with Power Apps
+    ```
 
-In the tracing mode view, the plugin action for the custom prompt will be triggered and the input value of subject is populated with Power Apps as AI recognized this is the subject in the prompt.
+    In the tracing mode view, the plugin action for the custom prompt will be triggered and the input value of subject is populated with Power Apps as AI recognized this is the subject in the prompt.
 
-   ![TestPrompt Input Subject](assets/3.1_30_TestPromptInputSubject.jpg)
+    ![TestPrompt Input Subject](assets/3.1_30_TestPromptInputSubject.jpg)
 
-31.	After a few seconds, an answer is returned from the AI Builder action of the custom prompt in plain natural language and is populated in the text output as seen in tracing mode. 
+1.	After a few seconds, an answer is returned from the AI Builder action of the custom prompt in plain natural language and is populated in the text output as seen in tracing mode. 
 
     ![Test Prompt Response](assets/3.1_29_TestPromptResponse.jpg)
 

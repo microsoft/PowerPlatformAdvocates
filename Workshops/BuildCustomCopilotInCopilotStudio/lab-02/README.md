@@ -68,38 +68,38 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
     ![Update generative answers](assets/2.2_01_UpdateGenerativeAnswers.jpg)
 
 1. Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select **Add**.
-> [!TIP]  
-> To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
+    > [!TIP]  
+    > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
-![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
+    ![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
 
-3. Select **Save**.
+1. Select **Save**.
 
-![Save](assets/2.2_03_SaveSources.jpg)
+    ![Save](assets/2.2_03_SaveSources.jpg)
 
-4.	Refresh the chat for the copilot.
+1.	Refresh the chat for the copilot.
 
     ![Refresh](assets/2.2_04_RefreshCopilot.jpg)
 
-5. We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question, 
+1. We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question, 
 
-```
-What is the time off policy?
-```
+    ```
+    What is the time off policy?
+    ```
 
-This time Copilot uses the internal link [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com) to return the answer it found in a document in plain natural language. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it.
+    This time Copilot uses the internal link [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com) to return the answer it found in a document in plain natural language. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it.
 
-![Time off](assets/2.2_05_TimeOffInternalSource.jpg)
+    ![Time off](assets/2.2_05_TimeOffInternalSource.jpg)
 
-6.	Try entering another question, 
+1.	Try entering another question, 
 
-```
-What holidays do Contoso employees have off?
-```
+    ```
+    What holidays do Contoso employees have off?
+    ```
     
-You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
+    You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
 
-   ![Holidays for Contoso employees](assets/2.2_06_HolidaysInternalSource.jpg)
+    ![Holidays for Contoso employees](assets/2.2_06_HolidaysInternalSource.jpg)
 
 ## Next lab
 

@@ -9,9 +9,9 @@ With connectors you can access various services (both within the Microsoft ecosy
 There are many connectors available, ranging from connections between and to Microsoft services like Office 365, SharePoint, and Dynamics 365, all the way to connections to third-party services like Twitter, Google services, Salesforce, and more. 
 
 These connectors are categorized as:
-- Standard Connectors, which are available in most Power Automate plans
-- Premium Connectors, which require specific Power Automate plans
-- Custom Connectors, which let you connect to any publicly available API for services not covered by existing connectors
+- **Standard Connectors**  which are available in most Power Automate plans
+- **Premium Connectors** which require specific Power Automate plans
+- **Custom Connectors** which let you connect to any publicly available API for services not covered by existing connectors
 
 ## How do connectors work with Microsoft Copilot Studio?
 
@@ -34,15 +34,15 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Close Test copilot](assets/5.1_01_CloseTestCopilot.jpg)
 
-2.	Select the **pencil icon** to edit the Topic.
+1.	Select the **pencil icon** to edit the Topic.
 
     ![Edit Topic](assets/5.1_02_EditTopic.jpg)
 
-3.	Select the **+** icon in the authoring canvas to add a new node. This time select **Ask a question**
+1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Ask a question**.
     
     ![Ask a question](assets/5.1_03_AskAQuestion.jpg)
 
-4.	Enter a question such as, 
+1.	Enter a question such as, 
 
     ```
     Do you want me to post a message to the General channel in the Contoso Microsoft Teams Group asking the channel members to review the compiled learning resources?
@@ -50,102 +50,102 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
     
     ![Question](assets/5.1_04_EnterQuestion.jpg)
 
-5. Select **+ New option** to add the options of Yes, No
+1. Select **+ New option** to add the options of Yes, No
 
     ![Question options](assets/5.1_05_QuestionOptions.jpg)
 
-6.	Select **Var1** in the **Save user response as field** and update the name to **VarSendMessage**
+1.	Select **Var1** in the **Save user response as field** and update the name to **VarSendMessage**
 
     ![Variable Name](assets/5.1_06_VariableName.jpg)
 
-7.	Scroll down in the authoring canvas and under the **Condition** where the **VarSendMessage is equal to Yes**, select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select **Create a cloud flow**
+1.	Scroll down in the authoring canvas and under the **Condition** where the **VarSendMessage is equal to Yes**, select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select **Create a cloud flow**
 
     ![Create cloud flow](assets/5.1_07_CreateACloudFlow.jpg)
 
-8.	Enter a name for the cloud flow such as, **Send Teams message to manager with prompt response**
+1.	Enter a name for the cloud flow such as, 
 
+    ```
+    Send Teams message to manager with prompt response
+    ```
     ![Cloud flow name](assets/5.1_08_CloudFlowName.jpg)
 
-9.	Next, an input value needs to be added to the trigger. The value will be passed from the copilot to the cloud flow. Select **Text**. Enter **text generated** as the input and select the **<** icon to collapse the trigger editing pane.
+1.	Next, an input value needs to be added to the trigger. The value will be passed from the copilot to the cloud flow. Select **Text**. Enter **text generated** as the input and select the **<** icon to collapse the trigger editing pane.
 
     ![Input](assets/5.1_10_Input.jpg)
 
-10.	Select the **+** icon on the cloud flow designer canvas and enter **Post a message in a chat or channel** to search for the Microsoft Teams action. Select the action.
+1.	Select the **+** icon on the cloud flow designer canvas and enter **Post a message in a chat or channel** to search for the Microsoft Teams action. Select the action.
 
     ![Add an action](assets/5.1_11_AddAnAction.jpg)
 
-12.	Select the following in the input parameter fields,
-- Post As
-    - User
-- Post In
-    - Channel
-- Team
-    - Contoso
-- Channel
-    - General
-- Message
-    - Enter a description message for the users in the Teams channel and select the **thunder** icon to insert the text generated output from the trigger of the cloud flow into the message content.
+1.	Select the following in the input parameter fields,
+    | Field | Value | Note |
+    | --- | --- | --- |
+    | Post As | User | |
+    | Post In | Channel | |
+    | Team | Contoso | |
+    | Channel | General | |
+    | Message | [Content of your choice] | Enter a description message for the users in the Teams channel and select the **thunder** icon to insert the text generated output from the trigger of the cloud flow into the message content.|
 
     ![Configure Action](assets/5.1_12_ConfigureAction.jpg)
 
-12.	To complete the end user experience, the cloud flow can send a link to the posted Teams message to the user in copilot as a response. Select the last action in the cloud flows, **Return value(s) to Power Virtual Agents** and select **+ Add an output**. 
+1.	To complete the end user experience, the cloud flow can send a link to the posted Teams message to the user in copilot as a response. Select the last action in the cloud flows, **Return value(s) to Power Virtual Agents** and select **+ Add an output**. 
 
     ![Add an output](assets/5.1_13_AddAnOutput.jpg)
 
-13.	Select **text**, enter message link as the input. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
+1.	Select **text**, enter message link as the input. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
 
     ![Message Link dynamic content](assets/5.1_14_MessageLinkDynamicContent.jpg)
 
-14.	Select **Add**.
+1.	Select **Add**.
 
     ![Add](assets/5.1_15_Add.jpg)
 
-15.	The output value is now updated with the **Message Link** output from the **Post message in a chat or channel action**. Select **Save** on the top right hand side of the cloud flow designer.
+1.	The output value is now updated with the **Message Link** output from the **Post message in a chat or channel action**. Select **Save** on the top right hand side of the cloud flow designer.
 
     ![Save](assets/5.1_16_Save.jpg)
 
-16.	Wait until you receive the confirmation message that the cloud flow has been saved.
+1.	Wait until you receive the confirmation message that the cloud flow has been saved.
 
     ![Saved notification](assets/5.1_17_Saved.jpg)
 
-17.	Navigate back to the browser tab with Microsoft Copilot Studio and select **Done**.
+1.	Navigate back to the browser tab with Microsoft Copilot Studio and select **Done**.
 
     ![Done](assets/5.1_18_Done.jpg)
 
-18. The cloud flow will now appear. Select the cloud flow.
+1. The cloud flow will now appear. Select the cloud flow.
 
     ![Select cloud flow](assets/5.1_19_SelectCloudFlow.jpg)
 
-18.	In the Power Automate action node, select the **>** icon for the input and select **text**.
+1.	In the Power Automate action node, select the **>** icon for the input and select **text**.
 
     ![Input Text](assets/5.1_20_InputText.jpg)
 
-19.	Select the **+** icon in the authoring canvas to add a new node. This time select **Send a message**
+1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Send a message**
 
     ![Send a message](assets/5.1_21_SendAMessage.jpg)
 
-20.	Enter a message and then select the **{x}** icon and in the **Custom tab** select **messagelink**
+1.	Enter a message and then select the **{x}** icon and in the **Custom tab** select **messagelink**
 
     ![Enter a message](assets/5.1_22_EnterAMessage.jpg)
 
-21.	Select **Save** on the top right hand side of the authoring canvas.
+1.	Select **Save** on the top right hand side of the authoring canvas.
 
     ![Save](assets/5.1_23_Save.jpg)
 
-22.	Select the **refresh** button in the chat user interface and enter the prompt, **Can you please provide me with learning resources for building with Power Apps**. Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
+1.	Select the **refresh** button in the chat user interface and enter the prompt, **Can you please provide me with learning resources for building with Power Apps**. Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
 
     ![Question](assets/5.1_24_Question.jpg)
 
-23.	Copilot will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the General channel in Microsoft Teams where the content includes the prompt response. Copilot will then send a message back to the user which contains a link to view the message posted in the Teams channel. 
+1.	Copilot will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the General channel in Microsoft Teams where the content includes the prompt response. Copilot will then send a message back to the user which contains a link to view the message posted in the Teams channel. 
 
     ![Copilot triggers cloud flow](assets/5.1_25_CopilotTriggersCloudFlow.jpg)
 
-24. Click on the link and open Microsoft Teams in the app. The posted Teams message created from the cloud flow will appear.
+1. Click on the link and open Microsoft Teams in the app. The posted Teams message created from the cloud flow will appear.
 
     ![Posted message to Microsoft Teams](assets/5.1_26_TeamsMessage.jpg)
 
-> [!NOTE]  
-> The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown for formatting and this is not covered in this workshop.
+    > [!NOTE]  
+    > The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown for formatting and this is not covered in this workshop.
 
 ## End of lab and workshop
 

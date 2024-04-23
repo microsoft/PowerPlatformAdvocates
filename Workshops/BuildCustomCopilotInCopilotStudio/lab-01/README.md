@@ -43,7 +43,6 @@ It's always good to have a separate browser profile for your work and for worksh
 
     ![Account based profile switching setting now disabled](assets/1.1_07_ProfileSwitchingDisabled.jpg)
 
-
 1. Close the tab and in the Edge Welcome tab, select **Start without your data**.
 
     ![Start without your data](assets/1.1_08_EdgeProfileSetup.jpg)
@@ -52,9 +51,9 @@ It's always good to have a separate browser profile for your work and for worksh
 
     ![Confirm and start browsing](assets/1.1_09_EdgeProfileSetup.jpg)
 
-1.   Next, you can configure your new browser theme. Keep it as the system default and select **Finish**.
+1. Next, you can configure your new browser theme. Keep it as the system default and select **Finish**.
 
-![Browser theme](assets/1.1_10_EdgeProfileSetup.jpg)
+    ![Browser theme](assets/1.1_10_EdgeProfileSetup.jpg)
 
 ## 1.2 Log on to your account and set up authentication in Microsoft Authenticator app
 
@@ -236,7 +235,6 @@ A new SharePoint sites needs to be created  which will be used in [Lab 02 - 2.2 
 
     ![File successfully uploaded](assets/1.5_14_FileUploaded.jpg)
 
-
 ## 1.6 Copy SharePoint site URL
 The SharePoint site URL will be referenced as an internal source in [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site)
 
@@ -250,8 +248,8 @@ The SharePoint site URL will be referenced as an internal source in [Lab 02 - 2.
 
 ### Relaunch SharePoint Site
 
-> [!NOTE]
-> You may have been redirected here from [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site) to copy the SharePoint URL.
+    > [!NOTE]
+    > You may have been redirected here from [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site) to copy the SharePoint URL.
 
 1. If you happen to exit your Edge browser tab with the SharePoint site, select the **waffle icon** to view the menu and select **SharePoint**.
 
