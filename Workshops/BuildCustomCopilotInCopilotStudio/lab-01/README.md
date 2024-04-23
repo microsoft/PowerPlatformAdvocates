@@ -43,7 +43,6 @@ It's always good to have a separate browser profile for your work and for worksh
 
     ![Account based profile switching setting now disabled](assets/1.1_07_ProfileSwitchingDisabled.jpg)
 
-
 1. Close the tab and in the Edge Welcome tab, select **Start without your data**.
 
     ![Start without your data](assets/1.1_08_EdgeProfileSetup.jpg)
@@ -52,9 +51,9 @@ It's always good to have a separate browser profile for your work and for worksh
 
     ![Confirm and start browsing](assets/1.1_09_EdgeProfileSetup.jpg)
 
-1.   Next, you can configure your new browser theme. Keep it as the system default and select **Finish**.
+1. Next, you can configure your new browser theme. Keep it as the system default and select **Finish**.
 
-![Browser theme](assets/1.1_10_EdgeProfileSetup.jpg)
+    ![Browser theme](assets/1.1_10_EdgeProfileSetup.jpg)
 
 ## 1.2 Log on to your account and set up authentication in Microsoft Authenticator app
 
@@ -154,6 +153,7 @@ In this workshop, we will create the environments through the Power Platform Adm
     ![New developer enivornment ready](assets/1.3_07_NewEnvironmentReady.jpg)
 
 ## 1.4 Sign into Microsoft Copilot Studio and select developer environment
+For this workshop, the custom copilot will be built in the newly created developer environment for your user account.
 
 1.	Navigate to [https://copilotstudio.microsoft.com/](https://copilotstudio.microsoft.com/) using the username and credential provided.
 
@@ -165,7 +165,9 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     ![Next](assets/1.4_02_DEVEnvironmentSelected.jpg)
 
-## 1.5 Create new SharePoint site and upload file
+## 1.5 Create new SharePoint site and upload PDF file
+
+A new SharePoint sites needs to be created  which will be used in [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site). A PDF file will also be uploaded int othe Document Library of the site.
 
 1. Select the waffle icon on the top left hand side of Microsoft Copilot Studio to view the menu.
 
@@ -213,7 +215,11 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     ![Upload a document](assets/1.5_10_UploadADocument.jpg)
 
-1. Download the [Contoso Employee Handbook PDF file](assets/Contoso%20Employee%20Handbook.pdf) and then upload it to the Documents library by selecting **Upload** and then select **Files**.
+1. Download the [Contoso Employee Handbook PDF file](assets/Contoso%20Employee%20Handbook.pdf).
+
+    ![Download PDF file](assets/1.5_15_DownloadFile.jpg)
+
+1. Then upload the Contoso Employee Handbook PDF file to the Documents library by selecting **Upload** and then select **Files**.
 
     ![Upload to SharePoint Document library](assets/1.5_11_UploadFiles.jpg)
 
@@ -229,8 +235,8 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     ![File successfully uploaded](assets/1.5_14_FileUploaded.jpg)
 
-
-## 1.6 Copy SharePoint Site URL
+## 1.6 Copy SharePoint site URL
+The SharePoint site URL will be referenced as an internal source in [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site)
 
 1. Select the **CH icon** on the left hand side of the Documents library.
 
@@ -241,17 +247,23 @@ In this workshop, we will create the environments through the Power Platform Adm
     ![Copy SharePoint site URL](assets/1.6_02_CopyURL.jpg)
 
 ### Relaunch SharePoint Site
+
+    > [!NOTE]
+    > You may have been redirected here from [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site) to copy the SharePoint URL.
+
 1. If you happen to exit your Edge browser tab with the SharePoint site, select the **waffle icon** to view the menu and select **SharePoint**.
 
     ![Select waffle icon](assets/1.6_03_WaffleIcon.jpg)
 
-2. The SharePoint site will show under **Following** or **Recent** on the left hand side or **Frequent sites** in the middle.
+1. The SharePoint site will show under **Following** or **Recent** on the left hand side or **Frequent sites** in the middle.
 
     ![Select site](assets/1.6_04_SelectSite.jpg)
 
-3. Select the SharePoint site and **copy the SharePoint URL**.
+1. Select the SharePoint site and **copy the SharePoint URL**.
 
     ![Copy SharePoint site URL](assets/1.6_02_CopyURL.jpg)
+
+    [⏭️ Return to Lab 02 - 2.1 Create a custom copilot with an external source](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site)
 
 ## Next lab
 
