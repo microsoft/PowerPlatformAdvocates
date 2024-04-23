@@ -6,6 +6,9 @@ AI Plugins can be used to extend Microsoft Copilot, or used within a custom copi
 - **Connector plugins**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
 - **OpenAI plugins**, which use connections to custom OpenAI models that you create.
 
+In this lab, you will learn how to do the following:
+* [3.1 Create a prompt plugin for generative actions](#31-create-a-prompt-plugin-for-generative-actions)
+
 ## 3.1 Create a prompt plugin for generative actions
 
 In this part of the lab we’ll be creating a **prompt plugin** which is the **Generate content or extract insights** action from the AI Builder connector. The experience to create prompt plugins in Copilot Studio is the same as in Power Apps. Any plugins you create in either Copilot Studio or Power Apps go to the plugin registry and populate in both apps.
@@ -50,7 +53,9 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Prompt](assets/3.1_08_Prompt.jpg)
 
-10.	Expand the **Prompt details** section and enter name for the prompt such as **Learning Resources**
+10.	Expand the **Prompt details** section and enter name for the prompt such as `Learning Resources`
+
+
 
     ![Name](assets/3.1_09_Name.jpg)
 
@@ -58,7 +63,7 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Add Input](assets/3.1_10_AddInput.jpg)
 
-12.	Enter a name for the input such as Subject and enter sample data such as, Building with Power Apps.
+12.	Enter a name for the input such as `Subject` and enter sample data such as, `Building with Power Apps`.
 
     ![Input](assets/3.1_11_Input.jpg)
 
@@ -103,13 +108,13 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Output Text](assets/3.1_21_OutputText.jpg)
 
-23.	Enter a a display name value such as **text** and enter a description for the text output such as **The AI generated response**.
+23.	Enter a a display name value such as `text` and enter a description for the text output such as `The AI generated response`.
 
     ![Output Configuration](assets/3.1_22_OutputConfiguration.jpg)
 
 24.	Scroll down and there are two options which can be left as-is. 
-    - Respond to the user after running this action which is ticked by default. 
-    - How do you want to display information to the user? which allows you to modify how the result should be returned. By default the first one in the following list is selected,
+    - **Respond to the user after running this action** is ticked by default. 
+    - **How do you want to display information to the user?** allows you to modify how the result should be returned. By default the first one in the following list is selected,
         - AI dynamically generates a message (default)
         - AI dynamically generates an adaptive card from an example you create – this is currently disabled and will be available in the future
         - You create a message
@@ -137,12 +142,17 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
 29.	Select the **refresh** icon on the chat to test the copilot.
 
-    ![Refresh](assets/3.1_28_Refresh.jpg)
+![Refresh](assets/3.1_28_Refresh.jpg)
 
-30.	Enter the prompt, **Can you please provide me with learning resources for building with Power Apps**
-In the tracing mode view, the plugin action for the custom prompt will be triggered and the input value of subject is populated with Power Apps as AI recognized this is the subject in the prompt. 
+30.	Enter the following prompt, 
 
-    ![TestPrompt Input Subject](assets/3.1_30_TestPromptInputSubject.jpg)
+```
+Can you please provide me with learning resources for building with Power Apps
+```
+
+In the tracing mode view, the plugin action for the custom prompt will be triggered and the input value of subject is populated with Power Apps as AI recognized this is the subject in the prompt.
+
+   ![TestPrompt Input Subject](assets/3.1_30_TestPromptInputSubject.jpg)
 
 31.	After a few seconds, an answer is returned from the AI Builder action of the custom prompt in plain natural language and is populated in the text output as seen in tracing mode. 
 

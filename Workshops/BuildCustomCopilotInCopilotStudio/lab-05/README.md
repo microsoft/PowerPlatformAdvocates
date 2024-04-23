@@ -1,6 +1,6 @@
 # Lab 05 - Automation in copilot with Power Automate cloud flows
 
-***What are connectors?***
+## What are connectors?
 
 Connectors from Microsoft Power Automate are a proxy or "wrapper" around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. Connectors let you connect your accounts and use a set of prebuilt actions and triggers to build your apps and workflows.
 
@@ -13,12 +13,14 @@ These connectors are categorized as:
 - Premium Connectors, which require specific Power Automate plans
 - Custom Connectors, which let you connect to any publicly available API for services not covered by existing connectors
 
-***How do connectors work with Microsoft Copilot Studio?***
+## How do connectors work with Microsoft Copilot Studio?
 
 Microsoft Power Automate connectors help extend the functionality of Microsoft Copilot Studio, enabling them to perform a wide range of tasks by connecting with various external services and applications. This integration empowers copilot makers to create more dynamic, responsive, and useful copilots, tailored to specific business needs and processes.
 
 You can use connectors that already exist in your Power Apps environment or create a flow from the Microsoft Copilot Studio authoring canvas and call copilot-ready connectors from copilot topics as a discrete Call an action node.
 
+In this lab, you will learn how to do the following:
+* [5.1 Creating a Power Automate cloud flow for copilot](#51-creating-a-power-automate-cloud-flow-for-copilot)
 
 ## 5.1 Creating a Power Automate cloud flow for copilot
 

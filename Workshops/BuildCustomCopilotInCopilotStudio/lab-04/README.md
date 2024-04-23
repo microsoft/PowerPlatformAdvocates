@@ -2,6 +2,9 @@
 
 A prompt plugin can also be executed inside of a Topic to create a controlled user experience and add further logic and/or processing of the copilot.  The prompt plugin can be added as a plugin action inside the authoring canvas.
 
+In this lab, you will learn how to do the following:
+* [4.1	Adding the prompt plugin as an action to a Topic](#41-adding-the-prompt-plugin-as-an-action-to-a-topic)
+
 ## 4.1	Adding the prompt plugin as an action to a Topic
 
 In this part of the lab you’ll learn how to add the prompt plugin created earlier to a Topic.
