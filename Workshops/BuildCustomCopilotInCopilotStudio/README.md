@@ -22,7 +22,7 @@ In this lab, you will learn how to create a prompt plugin and add this as an AI 
 
 ## Lab 04 - Create a custom topic with a plugin action for Generative Actions
 
-In this lab, you will learn how to create a custom topic for your copilot and call your prompt plugin from Lab 02. You will also learn how to test your Topic.
+In this lab, you will learn how to create a custom topic for your copilot and call your prompt plugin from Lab 03. You will also learn how to test your Topic.
 
 [Lab 04 - Create a custom topic with a plugin action for Generative Actions](./lab-04/README.md)
 
