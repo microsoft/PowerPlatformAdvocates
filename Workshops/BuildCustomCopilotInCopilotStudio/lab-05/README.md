@@ -144,8 +144,8 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Posted message to Microsoft Teams](assets/5.1_26_TeamsMessage.jpg)
 
-    > [!NOTE]  
-    > The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown for formatting and this is not covered in this workshop.
+> [!NOTE]  
+> The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown for formatting and this is not covered in this workshop.
 
 ## End of lab and workshop
 
