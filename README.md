@@ -14,6 +14,7 @@ Welcome to Power Platform Advocates GitHub repository. You'll find advocacy crea
 - [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
 - [Build a Custom Copilot in Copilot Studio](/Workshops/BuildCustomCopilotInCopilotStudio/README.md)
+- [Podcast Copilot with Azure OpenAI Service, .NET, and Power Platform](/Workshops/PodcastCopilotPowerApp/README.md)
 
 ## Labs
 
