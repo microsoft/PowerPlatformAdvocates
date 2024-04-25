@@ -98,9 +98,9 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Input Subject](assets/3.1_19_InputSubject.jpg)
 
-1.	The description is important to provide as this helps the AI determine how to fill this input. Enter a description for the subject such as **subject of the learning resource**. Select **Back**.
+1.	The description is important to provide as this helps the AI determine how to fill this input. Enter a description for the subject such as `subject of the learning resource`. Select **Back**.
     
-    ![Input Subject](assets/3.1_19_InputSubject.jpg)
+    ![Input Subject](assets/3.1_20_InputSubjectDescription.jpg)
 
 1.	Next add the output, select **Add** and select **Text**.
 

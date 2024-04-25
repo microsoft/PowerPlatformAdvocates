@@ -59,11 +59,7 @@ In this part of the lab you’ll learn how to add the prompt plugin created earl
 
     ![Send A Message](assets/4.1_11_SendAMessage.jpg)
 
-1.	The plugin action created earlier for the prompt plugin needs to be modified to prevent the plugin action executing outside of the Topic. Navigate to **Actions (preview)** in the left hand side menu and select the plugin action created earlier. Scroll down and under **Dynamic chaining**, *untick* the **Enabled checkbox**.
-
-    ![Update plugion action](assets/4.1_12_UpdatePluginAction.jpg)
-
-1.	Next, the response to the user needs to be disabled since the response will be returned from the Topic. In the Outputs tab untick the Respond to the user after running this action checkbox. Select the **Save** icon on the top right. 
+1.	The plugin action created earlier for the prompt plugin needs to be modified, the response to the user needs to be disabled since the response will be returned from the Topic. In the Outputs tab untick the Respond to the user after running this action checkbox. Select the **Save** icon on the top right. 
 
     ![Update plugin action](assets/4.1_13_UpdatePluginAction.jpg)
 

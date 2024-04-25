@@ -68,10 +68,11 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
     ![Update generative answers](assets/2.2_01_UpdateGenerativeAnswers.jpg)
 
 1. Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select **Add**.
-    > [!TIP]  
-    > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
     ![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
+
+> [!TIP]  
+> To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
 1. Select **Save**.
 
