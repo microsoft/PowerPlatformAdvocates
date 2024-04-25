@@ -32,7 +32,7 @@ For this lab, just make sure you've completed the previous three labs.
 
 > 📹 Click the image below to watch a video walkthrough of this lab.
 
-{VIDEO COMING 25 April 2024}
+[![Build a Podcast Copilot with .NET & Power Apps: Power Apps and Microsoft Copilot Studio Integration Video](assets/lets-learn-power-3.png)](https://aka.ms/PowerPodcast/Episode3)
 
 ## Instructions
 
