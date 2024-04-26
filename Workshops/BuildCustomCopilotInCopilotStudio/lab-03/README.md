@@ -92,6 +92,7 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
     ![Search For Custom Prompt](assets/3.1_17_SearchForCustomPrompt.jpg)
 
 1.	 Scroll down until you find your custom prompt. It’ll have the Dataverse icon. Select your custom prompt.
+
     ![2.3_18_SelectCustomPrompt](assets/3.1_18_SelectCustomPrompt.jpg)
 
 1.	In the next step, the inputs and outputs can be configured. Since the custom prompt already has the input defined and the output is the response from the AI Builder action - Generate content or extract insights, these need to be added to the plugin action. For the **input**, select **Add** and **select subject**.

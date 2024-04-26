@@ -42,20 +42,29 @@ In this part of the lab you will create a custom copilot and provide an external
 
     ![Copilot provisioning](assets/2.1_04_CreatingCopilot.jpg)
 
-1.	 If you see the following, select **Next** to understand the capabilities of building and/or extending copilots in Microsoft Copilot Studio. Once you reach the end, select Done.
+1.	If you see the following, select **Next** to understand the capabilities of building and/or extending copilots in Microsoft Copilot Studio. Once you reach the end, select Done.
+
     ![Capabilities summary](assets/2.1_05_CapabilitiesSummary.jpg)
 
 1.	Wait until you see a notification that confirms the copilot has been provisioned.
     
     ![Copilot notification](assets/2.1_06_CopilotProvisioned.jpg)
 
-1.	You can now test your copilot by entering the following question, **What is Copilot Studio?**
+1.	You can now test your copilot by entering the following question,
+
+    ```
+    What is Copilot Studio?
+    ```
 
 1.	Copilot uses the external link, [www.microsoft.com](www.microsoft.com), to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
 
     ![Copilot response](assets/2.1_07_CopilotResponse.jpg)
 
-1.	Try asking another question, What is the latest Xbox model?
+1.	Try asking another question, 
+
+    ```
+    What is the latest Xbox model?
+    ```
 
 1.	Copilot will respond again using information from the external link, [www.microsoft.com](www.microsoft.com). This is useful because it allows you to build copilots using existing information rather than creating specific topics based on requests that might be made by users.
 
@@ -74,15 +83,15 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 > [!TIP]  
 > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
-1. Select **Save**.
+3. Select **Save**.
 
     ![Save](assets/2.2_03_SaveSources.jpg)
 
-1.	Refresh the chat for the copilot.
+4.	Refresh the chat for the copilot.
 
     ![Refresh](assets/2.2_04_RefreshCopilot.jpg)
 
-1. We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question, 
+5. We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question, 
 
     ```
     What is the time off policy?
@@ -92,7 +101,7 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Time off](assets/2.2_05_TimeOffInternalSource.jpg)
 
-1.	Try entering another question, 
+6.	Try entering another question, 
 
     ```
     What holidays do Contoso employees have off?

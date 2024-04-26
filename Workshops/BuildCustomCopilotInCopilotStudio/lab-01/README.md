@@ -27,7 +27,7 @@ It's always good to have a separate browser profile for your work and for worksh
 
     ![Edit Edge profile](assets/1.1_03_EditEdgeProfile.jpg)  
 
-1. Enter a name for your new Edge profile - _Example: Nestor Wilke - CS workshop_, and select **Update**.
+1. Enter a name for your new Edge profile - Example: `Nestor Wilke - CS workshop`, and select **Update**.
 
     ![Name Edge profile](assets/1.1_04_NameEdgeProfile.jpg)
 
@@ -129,7 +129,7 @@ In this workshop, we will create the environments through the Power Platform Adm
 
     | Field | Value |
     | --- | --- |
-    | Name | [Username]'s  DEV Environment - _Example: Nestor Wilke's DEV Environment_|
+    | Name | [Username]'s  DEV Environment - Example: `Nestor Wilke's DEV Environment`|
     | Region | United States - Default |
     | Type | Developer |
     | Purpose | Developer environment for Copilot Studio workshop |
@@ -248,8 +248,8 @@ The SharePoint site URL will be referenced as an internal source in [Lab 02 - 2.
 
 ### Relaunch SharePoint Site
 
-    > [!NOTE]
-    > You may have been redirected here from [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site) to copy the SharePoint URL.
+> [!NOTE]   
+> You may have been redirected here from [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site) to copy the SharePoint URL.
 
 1. If you happen to exit your Edge browser tab with the SharePoint site, select the **waffle icon** to view the menu and select **SharePoint**.
 

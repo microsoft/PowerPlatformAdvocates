@@ -54,7 +54,7 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Question options](assets/5.1_05_QuestionOptions.jpg)
 
-1.	Select **Var1** in the **Save user response as field** and update the name to **VarSendMessage**
+1.	Select **Var1** in the **Save user response as field** and update the name to `VarSendMessage`
 
     ![Variable Name](assets/5.1_06_VariableName.jpg)
 
@@ -69,7 +69,7 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
     ```
     ![Cloud flow name](assets/5.1_08_CloudFlowName.jpg)
 
-1.	Next, an input value needs to be added to the trigger. The value will be passed from the copilot to the cloud flow. Select **Text**. Enter **text generated** as the input and select the **<** icon to collapse the trigger editing pane.
+1.	Next, an input value needs to be added to the trigger. The value will be passed from the copilot to the cloud flow. Select **Text**. Enter `text generated` as the name of the input and select the **<** icon to collapse the trigger editing pane.
 
     ![Input](assets/5.1_10_Input.jpg)
 
@@ -92,7 +92,7 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Add an output](assets/5.1_13_AddAnOutput.jpg)
 
-1.	Select **text**, enter message link as the input. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
+1.	Select **text** as type of output, enter message link as the name of the output. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
 
     ![Message Link dynamic content](assets/5.1_14_MessageLinkDynamicContent.jpg)
 
@@ -132,7 +132,13 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Save](assets/5.1_23_Save.jpg)
 
-1.	Select the **refresh** button in the chat user interface and enter the prompt, **Can you please provide me with learning resources for building with Power Apps**. Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
+1.	Select the **refresh** button in the chat user interface and enter the prompt, 
+
+    ```
+    Can you please provide me with learning resources for building with Power Apps
+    ```
+
+    Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
 
     ![Question](assets/5.1_24_Question.jpg)
 
@@ -145,7 +151,7 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
     ![Posted message to Microsoft Teams](assets/5.1_26_TeamsMessage.jpg)
 
 > [!NOTE]  
-> The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown for formatting and this is not covered in this workshop.
+> The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown or HTML for formatting and this is not covered in this workshop.
 
 ## End of lab and workshop
 

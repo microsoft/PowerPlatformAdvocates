@@ -31,7 +31,11 @@ In this part of the lab you’ll learn how to add the prompt plugin created earl
 
     ![Send A Message](assets/4.1_04_SendAMessage.jpg)
 
-1.	Enter a message such as, **Let me compile a list of learning resources for you, one moment please.**
+1.	Enter a message such as, 
+
+    ```
+    Let me compile a list of learning resources for you, one moment please.
+    ```
 
     ![Message Description](assets/4.1_05_MessageDescription.jpg)
 
@@ -51,7 +55,7 @@ In this part of the lab you’ll learn how to add the prompt plugin created earl
 
     ![Send A Message](assets/4.1_09_SendAMessage.jpg)
 
-1.	To insert the output value which is the prompt response of the plugin action, use a Power Fx expression. Select the Power Fx icon, enter Topic.Output.text and select Insert.
+1.	To insert the output value which is the prompt response of the plugin action, use a Power Fx expression. Select the Power Fx icon, enter `Topic.text` and select Insert.
     
     ![4.1_10_InsertPowerFx](assets/4.1_10_InsertPowerFx.jpg)
 
@@ -59,7 +63,11 @@ In this part of the lab you’ll learn how to add the prompt plugin created earl
 
     ![Send A Message](assets/4.1_11_SendAMessage.jpg)
 
-1.	The plugin action created earlier for the prompt plugin needs to be modified, the response to the user needs to be disabled since the response will be returned from the Topic. In the Outputs tab untick the Respond to the user after running this action checkbox. Select the **Save** icon on the top right. 
+1.	The plugin action created earlier for the prompt plugin needs to be modified to prevent the plugin action executing outside of the Topic. Navigate to **Actions (preview)** in the left hand side menu and select the plugin action created earlier. Scroll down and under **Dynamic chaining**, untick the **Enabled** checkbox.
+
+    ![Untick Enabled checkbox](assets/4.1_12_UpdatePluginAction.jpg)
+
+1. Next, the response to the user needs to be disabled since the response will be returned from the Topic. In the **Outputs** tab untick the **Respond to the user after running this action** checkbox. Select the **Save** icon on the top right. 
 
     ![Update plugin action](assets/4.1_13_UpdatePluginAction.jpg)
 
@@ -71,7 +79,11 @@ In this part of the lab you’ll learn how to add the prompt plugin created earl
 
     ![Test Copilot](assets/4.1_15_TestCopilot.jpg)
 
-1. Enter a prompt such as, **Can you please provide me with learning resources for building with Power Apps**
+1. Enter a prompt such as, 
+
+    ```
+    Can you please provide me with learning resources for building with Power Apps
+    ```
 
     ![Prompt](assets/4.1_16_EnterPrompt.jpg)
 
