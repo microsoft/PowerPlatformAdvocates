@@ -167,7 +167,7 @@ For this workshop, the custom copilot will be built in the newly created develop
 
 ## 1.5 Create new SharePoint site and upload PDF file
 
-A new SharePoint sites needs to be created  which will be used in [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site). A PDF file will also be uploaded int othe Document Library of the site.
+A new SharePoint sites needs to be created  which will be used in [Lab 02 - 2.2 Adding an internal source using a SharePoint site](../lab-02/README.md/#22-adding-an-internal-source-using-a-sharepoint-site). A PDF file will also be uploaded into the Document Library of the site.
 
 1. Select the waffle icon on the top left hand side of Microsoft Copilot Studio to view the menu.
 
