@@ -9,9 +9,7 @@ Welcome to Power Platform Advocates GitHub repository. You'll find advocacy crea
 ## Workshops
 
 - [Power Platform & Mixed Reality](/Workshops/MR/README.md)
-- [Power Apps & DotNet](/Workshops/DotNetAndPowerApps/README.md)
 - [Power Apps & Java](/Workshops/JavaAndPowerApps/README.md)
-- [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
 - [Build a Custom Copilot in Copilot Studio](/Workshops/BuildCustomCopilotInCopilotStudio/README.md)
 - [Podcast Copilot with Azure OpenAI Service, .NET, and Power Platform](/Workshops/PodcastCopilotPowerApp/README.md)
