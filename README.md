@@ -8,17 +8,19 @@ Welcome to Power Platform Advocates GitHub repository. You'll find advocacy crea
 
 ## Workshops
 
-- [Power Platform & Mixed Reality](/Workshops/MR/README.md)
+- [Build a Custom Copilot in Copilot Studio](/Workshops/BuildCustomCopilotInCopilotStudio/README.md)
+- [Low Code Application Lifecycle Management (ALM) Workshop](/Workshops/LowCodeALM/README.md)
 - [Power Apps & DotNet](/Workshops/DotNetAndPowerApps/README.md)
 - [Power Apps & Java](/Workshops/JavaAndPowerApps/README.md)
 - [Power Apps & Python](/Workshops/PythonAndPowerApps/README.md)
 - [Power BI & Synapse](/Workshops/SynapsePowerBI/README.md)
-- [Build a Custom Copilot in Copilot Studio](/Workshops/BuildCustomCopilotInCopilotStudio/README.md)
 - [Podcast Copilot with Azure OpenAI Service, .NET, and Power Platform](/Workshops/PodcastCopilotPowerApp/README.md)
+- [Power Platform & Mixed Reality](/Workshops/MR/README.md)
 
 ## Labs
 
-- [Use service principal auth for custom connectors](/Workshops/CustomConnectorSPN/README.md)
+- [Lab: Use service principal auth for custom connectors](/Workshops/CustomConnectorSPN/README.md)
+- [Power Platform custom connector using Visual Studio Web API with Entra ID auth and solution deployment](/Workshops/CustomConnectorInVisualStudio/README.md)
 
 ## Contributing
 
