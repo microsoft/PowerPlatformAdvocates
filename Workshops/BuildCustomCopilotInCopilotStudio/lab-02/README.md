@@ -143,9 +143,56 @@ You can now use a conversation first approach to create a custom Copilot where n
 
     ![Further guidance](assets/2.2_05_Tips.jpg)
 
-1.  Guidance will appear on adding websites for your Copilot. For example, enter the following,
+1.  Guidance will appear on adding websites for your Copilot. Next enter a public facing website URL address. For example, enter the following,
 
-    ![Further guidance](assets/2.2_03_Further%20guidance.jpg)
+    ```
+    www.microsoft.com
+    ```
+
+    ![Further guidance](assets/2.2_06_TipsForWebsites.jpg)
+
+1.  The final question will be based on what topics or tasks the Copilot should not help with. For example, enter the following,
+
+    ```
+    If asked religion or politics, politely decline to discuss and offer assistance with other inquiries.
+    ```
+
+    ![Topics to dismiss](assets/2.2_07_TopicsTasksToDismiss.jpg)
+
+1.  There are no further questions to answer but you can enter more details to make adjustments. Notice how on the right hand side pane that all your requirements are listed for you based on the natural language used to answer the questions asked. Select **I’m done**.
+
+    ![Done building copilot](assets/2.2_08_Done.jpg)
+
+1.  Notice how your Copilot has automatically been given a name based on the natural language used earlier to describe what your Copilot will help and assist with.
+
+    Before creating you Copilot, there’s also the options of
+
+    - Skip to configure – where you exit from this conversation first approach and create a custom copilot by not answering questions
+    - Select the ellipsis for additional options  (. . .) 
+        - **Restart copilot creation** – clears all answers in response to the question asked and starts at the beginning
+        - **Edit advanced settings** – update the solution and schema name as previously covered in 2.1 Available templates to create a custom Copilot
+        - **Cancel copilot creation** – cancels creating the copilot
+
+    ![Additional settings](assets/2.2_09_AdditionalSettings.jpg)
+
+1.  Select **Create** to create your custom Copilot.
+
+    ![Create copilot](assets/2.2_10_CreateCopilot.jpg)
+
+1. Copilot Studio will be in the process of setting up your custom Copilot.
+
+    ![Create copilot](assets/2.2_11_SettingUp.jpg)
+
+1.  When complete, the custom Copilot will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side.
+
+    ![Create copilot](assets/2.2_12_CustomCopilotCreated.jpg)
+
+1.  If you scroll down, you’ll see the description, the instructions and the knowledge source with the public website already configured. You can now test your copilot by entering the following question,
+
+    ```
+    What is Copilot Studio?
+    ```
+    ![Create copilot](assets/2.2_10_CreateCopilot.jpg)
 
 //## 2.2 Adding an internal source using a SharePoint site
 
