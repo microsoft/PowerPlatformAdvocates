@@ -26,17 +26,17 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
     ![Save Topic](assets/4.1_03_SaveTopic.jpg)
 
+1.	Select Details on the top right and in the Topic details tab enter the following information
+
+    | Field | Value |
+    | --- | --- |
+    | Name | Generate questions for a quiz |
+    | Display Name | Generate questions for a quiz |
+    | Description | Generate questions for a quiz based on the topic provided and the format requested |
+
+    ![Topic details](assets/4.1_04_TopicDetails.jpg)
+
 1.	Next, we’ll display a message to let the user know that copilot will go ahead and perform an action. Select the **+** icon in the authoring canvas to add a new node. Select **Send a message**.
-
-    ![Send A Message](assets/4.1_04_SendAMessage.jpg)
-
-1.	Enter a message such as, 
-
-    ```
-    Let me compile a list of learning resources for you, one moment please.
-    ```
-
-    ![Message Description](assets/4.1_05_MessageDescription.jpg)
 
 1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select the **Plugin (preview)** tab. The AI plugin of the custom prompt created earlier will be displayed, select it.
 
