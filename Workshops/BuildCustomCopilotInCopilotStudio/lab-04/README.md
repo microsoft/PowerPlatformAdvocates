@@ -50,51 +50,27 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
 1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select the **Plugin (preview)** tab. The prompt action created earlier will be displayed, select it.
 
-    ![Set Input Value To Subject](assets/4.1_07_AddAction.jpg)
+    ![Add action](assets/4.1_07_AddAction.jpg)
 
-1.	Select the **>** icon and select **Activity.Text** as the input value for the plugin action to use the user’s entire response and identify the subject value.
+1. The plugin action will be added to the authoring canvas with the outputs already configured. The input will need to be added. Select **+ Set value** and select **format**.
 
-    ![Set Value For Input](assets/4.1_08_SetValueForInput.jpg)
+    ![Set format input value](assets/4.1_08_SetInputValue.jpg)
 
-1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Send a message**
+1.  Select the **>** icon and in the **System** tab select **Activity.Text** as the input value for the action to use the user’s entire response and identify the format value.
 
-    ![Send A Message](assets/4.1_09_SendAMessage.jpg)
+    ![Set format input value](assets/4.1_09_SetInputValue.jpg)
 
-1.	To insert the output value which is the prompt response of the plugin action, use a Power Fx expression. Select the Power Fx icon, enter `Topic.text` and select Insert.
-    
-    ![4.1_10_InsertPowerFx](assets/4.1_10_InsertPowerFx.jpg)
+1.  Repeat the same steps for the other two inputs of **number** and **topic**.
 
-1.	The Send a message node will now display the output from the plugin action.	Select **Save** on the top right of the authoring canvas to save the updated Topic.
+    ![Set all input values](assets/4.1_10_SetInputValues.jpg)
 
-    ![Send A Message](assets/4.1_11_SendAMessage.jpg)
+1.  Next the setting needs to be updated to Classic to trigger Topics and process the actions within topics. Select Settings on the top right.
 
-1.	The plugin action created earlier for the prompt plugin needs to be modified to prevent the plugin action executing outside of the Topic. Navigate to **Actions (preview)** in the left hand side menu and select the plugin action created earlier. Scroll down and under **Dynamic chaining**, untick the **Enabled** checkbox.
+    ![Settings](assets/4.1_11_Settings.jpg)
 
-    ![Untick Enabled checkbox](assets/4.1_12_UpdatePluginAction.jpg)
+1.  In the Generative AI settings, select Classic and select Save.
 
-1. Next, the response to the user needs to be disabled since the response will be returned from the Topic. In the **Outputs** tab untick the **Respond to the user after running this action** checkbox. Select the **Save** icon on the top right. 
-
-    ![Update plugin action](assets/4.1_13_UpdatePluginAction.jpg)
-
-1.	Now let’s test the updated copilot by triggering the recently created Topic. Navigate to **Topics** and select the Topic created earlier.
-
-    ![Select Custom Topic](assets/4.1_14_SelectCustomTopic.jpg)
-
-1.	Select **Test copilot** on the top right.
-
-    ![Test Copilot](assets/4.1_15_TestCopilot.jpg)
-
-1. Enter a prompt such as, 
-
-    ```
-    Can you please provide me with learning resources for building with Power Apps
-    ```
-
-    ![Prompt](assets/4.1_16_EnterPrompt.jpg)
-
-1.	The Topic will be triggered with a message sent to the user about compiling the list of learning resources, followed by the prompt response as copilot executed the AI Plugin action. In the tracing mode view, you’ll see that the Topic succeeded with the green tick icon displayed.
-
-    ![Prompt Response](assets/4.1_17_PromptResponse.jpg)
+    ![Add action](assets/4.1_07_AddAction.jpg)
 
 ## Next lab
 
