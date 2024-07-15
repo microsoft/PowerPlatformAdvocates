@@ -138,22 +138,39 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
     Create 5 questions for a quiz based on geography and format the quiz as multi choice
     ```
 
-    ![Question](assets/5.1_23_TestCopilot.jpg)
+    ![Test copilot](assets/5.1_23_TestCopilot.jpg)
 
 1.  Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
 
     ![Question](assets/5.1_24_Question.jpg)
 
-1.	Copilot will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the General channel in Microsoft Teams where the content includes the prompt response. Copilot will then send a message back to the user which contains a link to view the message posted in the Teams channel. 
+1.	A message will appear as additional permissions need to be granted to run the Teams connector from the copilot. Select Connect 
 
-    ![Copilot triggers cloud flow](assets/5.1_25_CopilotTriggersCloudFlow.jpg)
+    ![Connect](assets/5.1_25_Connect.jpg)
 
-1. Click on the link and open Microsoft Teams in the app. The posted Teams message created from the cloud flow will appear.
+1. Select the **cog wheel** icon.
 
-    ![Posted message to Microsoft Teams](assets/5.1_26_TeamsMessage.jpg)
+    ![Connection settings](assets/5.1_26_Settings.jpg)
 
-> [!NOTE]  
-> The message in Microsoft Teams will look unformatted. Microsoft Teams uses markdown or HTML for formatting and this is not covered in this workshop.
+1.  Next select **Submit** to enable a connection to Microsoft Teams connector.
+
+    ![Microsoft Teams connection](assets/5.1_27_Connection.jpg)
+
+1.  The action will now have a status of **Connected**.
+
+    ![Connection settings](assets/5.1_28_Connected.jpg)
+
+1.  Navigate back to the browser tab with Microsoft Copilot Studio and select Retry.
+
+    ![Retry](assets/5.1_29_Retry.jpg)
+
+1.  Copilot will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the **General** channel in Microsoft Teams where the content includes the prompt response. Copilot will then send a message back to the user which contains a link to view the message posted in the Teams channel.
+
+    ![Flow executed](assets/5.1_30_FlowExecuted.jpg)
+
+1.  Click on the link and open Microsoft Teams in the web app. The posted Teams message created from the cloud flow will appear.
+
+    ![Teams message](assets/5.1_31_TeamsMessage.jpg)
 
 ## End of lab and workshop
 
