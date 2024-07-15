@@ -1,14 +1,17 @@
-# Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers
+# Lab 02 - Build a custom copilot with Microsoft Copilot Studio
 
-Generative answers in Microsoft Copilot Studio allow your copilot to find and present information from multiple sources such as internal or external websites, and uploaded files, without created topics.
+Copilot Studio empowers teams to quickly and easily create powerful copilots using a guided, no-code graphical experience without needing data scientists or developers.
 
-Generative answers can be used as primary information sources or as a fallback source when authored topics can't answer a user's query. Generative answers make your copilot valuable out-of-the-box and increase the number of topics your copilot is conversational in, without requiring any manual dialog tree authoring.
+There are two ways to create a custom copilot
+* Start with a template
+* Describe your copilot to create it using natural language
+
+Each method allows you to connect your data and knowledge sources to enable your custom copilot to access information and complete tasks.
 
 In this lab, you will learn how to do the following:
 * [2.1 Available templates to create a custom copilot](#21-available-templates-to-create-a-custom-copilot)
 * [2.2 Use natural language to create a custom copilot](#22-use-natural-language-to-create-a-custom-copilot)
-* [2.3 Adding an internal source using a SharePoint site]
-
+* [2.3 Adding an internal knowledge source using a SharePoint site](#223-adding-an-internal-source-using-a-sharepoint-site)
 
 ## 2.1 Available templates to create a custom Copilot
 
@@ -93,19 +96,7 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
     ![Weather copilot response](assets/2.1_15_Response.jpg)
 
-OLD:
-
-1.	You can now test your copilot by entering the following question,
-
-    ```
-    What is Copilot Studio?
-    ```
-
-1.	Copilot uses the external link, [www.microsoft.com](www.microsoft.com), to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
-
-2.2_01_DescribeToCreate
-
-Congratulations! 🎉 You’ve created a custom copilot using a template. Let’s next learn how to use natural language to build a custom copilot from scratch.
+🎓 You’ve created a custom copilot using a template. Let’s next learn how to use natural language to build a custom copilot from scratch.
 
 ## 2.2 Use natural language to create a custom Copilot
 
@@ -185,62 +176,92 @@ You can now use a conversation first approach to create a custom Copilot where n
 
 1.  When complete, the custom Copilot will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side.
 
-    ![Create copilot](assets/2.2_12_CustomCopilotCreated.jpg)
+    ![Copilot created](assets/2.2_12_CustomCopilotCreated.jpg)
 
 1.  If you scroll down, you’ll see the description, the instructions and the knowledge source with the public website already configured. You can now test your copilot by entering the following question,
 
     ```
     What is Copilot Studio?
     ```
-    ![Create copilot](assets/2.2_10_CreateCopilot.jpg)
+    ![Ask a question](assets/2.2_13_TestCopilot.jpg)
 
-//## 2.2 Adding an internal source using a SharePoint site
+1. Copilot uses the external link previously provided, www.microsoft.com, to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
 
-Next, you'll learn how to add an internal data source, SharePoint, for generative answers in your Copilot.
+    Try asking another question,
+    
+    ```
+    What is the latest Xbox model?
+    ```
 
-1. Navigate to **Update generative answers**.
+    Copilot will respond again using information from the external link, www.microsoft.com. This is useful because it allows you to build copilots using existing information rather than creating specific topics based on requests that might be made by users.
 
-    ![Update generative answers](assets/2.2_01_UpdateGenerativeAnswers.jpg)
+    ![Create copilot](assets/2.2_14_TestCopilot.jpg)
 
-1. Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select **Add**.
+🎓 You've created a copilot using natural language and can answer questions based on the website provided. Let's learn how to add an internal resource.
 
-    ![Add SharePoint internal source](assets/2.2_02_AddSharePointSource.jpg)
+## 2.3 Adding an internal source using a SharePoint site
+
+Knowledge in Microsoft Copilot Studio allows you to add enterprise data from Power Platform, Dynamics 365 data, and external systems, so your copilots provide relevant information and insights for your end users. In addition, knowledge can be incorporated with [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-conversations) in copilots. Published copilots that contain knowledge use the configured knowledge sources to ground the published copilot.
+
+Next, you'll learn how to add an internal data source, SharePoint, for generative answers in your copilot.
+
+1. In the Overview tab, select **+Add Knowledge**.
+
+    ![Add knowledge](assets/2.3_01_AddKnowledge.jpg)
+
+1. A list of knowledge sources will appear. Select SharePoint and OneDrive.
+
+    ![Add SharePoint internal source](assets/2.3_02_AddDataSource.jpg)
+
+1.  Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select Add.
+
+    ![SharePoint URL](assets/2.3_03_DataSourceURL.jpg)
 
 > [!TIP]  
 > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
-3. Select **Save**.
+4.  The SharePoint site is added as a Knowledge Source. Please note that the SharePoint Site will only be available to authenticated end-users, [learn more](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive). Select Add.
 
-    ![Save](assets/2.2_03_SaveSources.jpg)
+    ![Add data source](assets/2.3_04_AddDataSource.jpg)
 
-4.	Refresh the chat for the copilot.
+1.  The SharePoint site has now been added as a knowledge source for the Copilot.
 
-    ![Refresh](assets/2.2_04_RefreshCopilot.jpg)
+    ![Data source URL](assets/2.3_05_KnowledgeSources.jpg)
 
-5. We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question, 
+1.  Before we can test, the generative AI feature needs to be enabled. Select Settings on the top right of the Copilot.
+
+    ![Settings](assets/2.3_06_Settings.jpg)
+
+1.  Select Generative AI in the Settings menu on the left hand side pane, followed by selecting the Generative (preview) setting and select Save.
+
+    ![Settings](assets/2.3_07_GenerativeSetting.jpg)
+    
+1.  Select the X icon on the right hand side to return to the Copilot.  We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question,
 
     ```
-    What is the time off policy?
+    What happens if I'm sick and cannot work?
     ```
 
-    This time Copilot uses the internal link [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com) to return the answer it found in a document in plain natural language. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it.
+1.  This time Copilot uses the internal link [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com) to return the answer it found in a document in plain natural language. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it.
 
-    ![Time off](assets/2.2_05_TimeOffInternalSource.jpg)
+    ![Time off question](assets/2.3_08_Question1.jpg)
 
-6.	Try entering another question, 
+1.  Try entering another question, 
 
     ```
     What holidays do Contoso employees have off?
     ```
-    
-    You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
 
-    ![Holidays for Contoso employees](assets/2.2_06_HolidaysInternalSource.jpg)
+![Holidays question](assets/2.3_09_Question2.jpg)
+
+1.  You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
+
+    ![Holidays for Contoso employees](assets/2.3_10_AnswerToQuestion2.jpg)
 
 ## Next lab
 
 Congratulations! 👏🏻  You've created a copilot with external and internal data sources for Generative Answers. 
 
-This is the end of Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers, select the link below to move to the next lab.
+This is the end of Lab 02 - Build a custom copilot with Microsoft Copilot Studio, select the link below to move to the next lab.
 
 [⏭️ Move to Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions](../lab-03/README.md)
