@@ -66,11 +66,11 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
     ![Insert inputs](assets/3.1_12_InsertInputs.jpg)
 
-1.	Test the prompt before saving the custom prompt. Select Test prompt and a response to the prompt regarding the values provided in the sample data of the input is returned. You can also maximize the prompt response box to enlarge the prompt response dialog.
+1.	Test the prompt before saving the custom prompt. Select **Test prompt** and a response to the prompt regarding the values provided in the sample data of the input is returned. You can also **maximize** the prompt response box to enlarge the prompt response dialog.
 
     ![Prompt response](assets/3.1_13_PromptResponse.jpg)
 
-1.	Select **Finalize prompt**. Review the prompt, if any changes need to be made select Back otherwise select Create prompt action.
+1.	Select **Finalize prompt**. Review the prompt, if any changes need to be made select **Back** otherwise select **Create prompt action**.
     
     ![Finalize prompt](assets/3.1_14_FinalizePromptAction.jpg)
 
@@ -88,11 +88,11 @@ In this part of the lab we’ll be creating a **prompt plugin** which is the **G
 
 1.	On the final step of the action wizard, called _Review and Finish_, you can make changes to your action's configuration by clicking **Edit** next to the appropriate section. Usually, the name and description are prepopulated for you based on the action you selected.
 
-    Next, add the inputs and output for the action. Scroll down to Review inputs and outputs and select Edit.
+    Next, add the inputs and output for the action. Scroll down to Review inputs and outputs and select **Edit**.
 
     ![Review inputs and outputs](assets/3.1_18_InputsOutputs.jpg)
 
-1.	Select Add and select the input of number.
+1.	Select **Add** and select the input of **number**.
 
     ![Number input](assets/3.1_19_AddInput.jpg)
 
