@@ -26,7 +26,7 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
     ![Save Topic](assets/4.1_03_SaveTopic.jpg)
 
-1.	Select Details on the top right and in the Topic details tab enter the following information
+1.	Select Details on the top right and in the Topic details tab enter the following information,
 
     | Field | Value |
     | --- | --- |
@@ -38,13 +38,19 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
 1.	Next, we’ll display a message to let the user know that copilot will go ahead and perform an action. Select the **+** icon in the authoring canvas to add a new node. Select **Send a message**.
 
-1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select the **Plugin (preview)** tab. The AI plugin of the custom prompt created earlier will be displayed, select it.
+    ![Topic details](assets/4.1_05_SendAMessageNode.jpg)
 
-    ![Call An Action](assets/4.1_06_CallAnAction.jpg)
+1.	Enter a message such as,
+    
+    ```
+    Let me compile a list of questions for you, one moment please.
+    ```
 
-1.	The plugin action will be added to the authoring canvas with the outputs already configured. The input will need to be added. Select **+ Set value** and **select subject**.
+    ![Call An Action](assets/4.1_06_Message.jpg)
 
-    ![Set Input Value To Subject](assets/4.1_07_SetInputValueToSubject.jpg)
+1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select the **Plugin (preview)** tab. The prompt action created earlier will be displayed, select it.
+
+    ![Set Input Value To Subject](assets/4.1_07_AddAction.jpg)
 
 1.	Select the **>** icon and select **Activity.Text** as the input value for the plugin action to use the user’s entire response and identify the subject value.
 
