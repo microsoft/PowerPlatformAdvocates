@@ -34,13 +34,9 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
     ![Close Test copilot](assets/5.1_01_CloseTestCopilot.jpg)
 
-1.	Select the **pencil icon** to edit the Topic.
-
-    ![Edit Topic](assets/5.1_02_EditTopic.jpg)
-
 1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Ask a question**.
-    
-    ![Ask a question](assets/5.1_03_AskAQuestion.jpg)
+
+    ![Ask a question](assets/5.2_02_AskAQuestion.jpg)
 
 1.	Enter a question such as, 
 
@@ -48,26 +44,26 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
     Do you want me to post a message to the General channel in the Contoso Microsoft Teams Group asking the channel members to review the compiled learning resources?
     ```
     
-    ![Question](assets/5.1_04_EnterQuestion.jpg)
+    ![Enter a question](assets/5.2_03_EnterQuestion.jpg)
 
-1. Select **+ New option** to add the options of Yes, No
+1. Select **+ New option** to add the options of **Yes**, **No**. Next select **Var**1** in the **Save user response as** field
 
-    ![Question options](assets/5.1_05_QuestionOptions.jpg)
+    ![Question options](assets/5.2_04_QuestionOptions.jpg)
 
-1.	Select **Var1** in the **Save user response as field** and update the name to `VarSendMessage`
+1.	Update the name to **VarSendMessage**
 
-    ![Variable Name](assets/5.1_06_VariableName.jpg)
+    ![Variable Name](assets/5.2_05_VariableName.jpg)
 
 1.	Scroll down in the authoring canvas and under the **Condition** where the **VarSendMessage is equal to Yes**, select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select **Create a cloud flow**
 
-    ![Create cloud flow](assets/5.1_07_CreateACloudFlow.jpg)
+    ![Create cloud flow](assets/5.2_06_CreateACloudFlow.jpg)
 
 1.	Enter a name for the cloud flow such as, 
 
     ```
     Send Teams message to manager with prompt response
     ```
-    ![Cloud flow name](assets/5.1_08_CloudFlowName.jpg)
+    ![Cloud flow name](assets/5.2_07_CloudFlowName.jpg)
 
 1.	Next, an input value needs to be added to the trigger. The value will be passed from the copilot to the cloud flow. Select **Text**. Enter `text generated` as the name of the input and select the **<** icon to collapse the trigger editing pane.
 
