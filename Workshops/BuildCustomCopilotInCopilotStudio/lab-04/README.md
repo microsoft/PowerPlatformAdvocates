@@ -11,16 +11,15 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
 1.	In your copilot select the **Topics** tab, select **+ Add a topic** and select **From blank**.
 
-    ![Create Topic](assets/4.1_01_CreateTopic.jpg)
+    ![Add Topic](assets/4.1_01_AddTopic.jpg)
 
-1.	Enter a name for the Topic and in the description of the Trigger, enter 5 trigger phrases. 
+1.	Enter a name for the Topic such as Generate questions for a quiz and in the description of the Trigger, enter 5 trigger phrases. 
 
     Example: 
 
     ```
-    Compile a list of learning resources for mastering the subject provided by the user including links to the resources, provide a list of learning resources for the subject entered by the user including links to the resources, compile a list of learning resources including links to the resources for mastering the subject entered by the user, generate a list of learning resources for mastering the subject entered by the user including links to the resources, create a list of learning resources for mastering the subject provided by the user including links to the resources
+    Create a number of questions for a quiz based on a topic and format the quiz based on the instruction provided, creates a quiz with a number of questions based on the topic provided and formats the quiz, generate a quiz with a number of questions using the topic provide and format the questions, creates questions for a quiz on a specific topic and format, format a quiz by a number of questions based on the topic provided
     ```  
-
     ![Topic Trigger](assets/4.1_02_TopicTrigger.jpg)
 
 1.	Select **Save** on the top right of the authoring canvas to save the Topic.
