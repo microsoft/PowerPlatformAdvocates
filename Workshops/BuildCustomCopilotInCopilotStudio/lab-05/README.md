@@ -114,31 +114,33 @@ Should the user select Yes, a Power Automate cloud flow will be executed to send
 
 1. The cloud flow will now appear. Select the cloud flow.
 
-    ![Select cloud flow](assets/5.1_19_SelectCloudFlow.jpg)
+    ![Select cloud flow](assets/5.1_18_SelectFlow.jpg)
 
 1.	In the Power Automate action node, select the **>** icon for the input and select **text**.
 
-    ![Input Text](assets/5.1_20_InputText.jpg)
+    ![Input Text](assets/5.1_19_Input.jpg)
 
 1.	Select the **+** icon in the authoring canvas to add a new node. This time select **Send a message**
 
-    ![Send a message](assets/5.1_21_SendAMessage.jpg)
+    ![Send a message](assets/5.1_20_SendAMessage.jpg)
 
 1.	Enter a message and then select the **{x}** icon and in the **Custom tab** select **messagelink**
 
-    ![Enter a message](assets/5.1_22_EnterAMessage.jpg)
+    ![Enter a message](assets/5.1_21_EnterAMessage.jpg)
 
 1.	Select **Save** on the top right hand side of the authoring canvas.
 
-    ![Save](assets/5.1_23_Save.jpg)
+    ![Save](assets/5.1_22_Save.jpg)
 
-1.	Select the **refresh** button in the chat user interface and enter the prompt, 
+1.	Select the **refresh** button in the chat user interface, enter the following prompt and submit. 
 
     ```
-    Can you please provide me with learning resources for building with Power Apps
+    Create 5 questions for a quiz based on geography and format the quiz as multi choice
     ```
 
-    Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
+    ![Question](assets/5.1_23_TestCopilot.jpg)
+
+1.  Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
 
     ![Question](assets/5.1_24_Question.jpg)
 
