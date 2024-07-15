@@ -70,7 +70,19 @@ In this part of the lab you’ll learn how to add the prompt action created earl
 
 1.  In the Generative AI settings, select Classic and select Save.
 
-    ![Add action](assets/4.1_07_AddAction.jpg)
+    ![Classic setting](assets/4.1_12_ClassicSetting.jpg)
+
+1.  Exit from Settings by selecting X icon on the top right and select the Test on the top right to load the testing pane. Enter the following prompt and submit the prompt,
+
+    ```
+    Create 5 questions for a quiz based on geography and format the quiz as multi choice
+    ```
+
+    ![Prompt](assets/4.1_13_Prompt.jpg)
+
+1.  The Topic will be triggered and the action will be called inside of the topic. A response is returned using the prompt action.
+
+    ![Classic setting](assets/4.1_14_ActionResponse.jpg)
 
 ## Next lab
 
