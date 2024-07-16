@@ -8,23 +8,23 @@ In this lab, you will login to the account you are going to use during the works
 
 [Lab 01 - Tenant Setup](./lab-01/README.md)
 
-## Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers
+## Lab 02 - Build a custom copilot with Microsoft Copilot Studio
 
-In this lab, you will create a custom copilot with an external datasource and an internal datasource, and learn how to test your copilot as you build it.
+In this lab, you will create a custom copilot using a template and with natural language. You'll also learn how to add an an internal knowledge source, and how to test your copilot as you build it.
 
 [Lab 02 - Build a custom copilot with Microsoft Copilot Studio and Generative Answers](./lab-02/README.md)
 
-## Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions
+## Lab 03 - Create a Prompt action using a Power Platform connector for generative responses
 
-In this lab, you will learn how to create a prompt plugin and add this as an AI plugin to your copilot for generative actions. You will also learn how to test your AI plugin.
+In this lab, you will learn how to create a POrompt action and add this as an action to your copilot for generative responses. You will also learn how to test your Prompt action.
 
-[Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions](./lab-02/README.md)
+[Lab 03 - Create a Prompt action using a Power Platform connector for generative responses](./lab-02/README.md)
 
-## Lab 04 - Create a custom topic with a plugin action for Generative Actions
+## Lab 04 - Create a custom topic with a prompt action for generative responses
 
-In this lab, you will learn how to create a custom topic for your copilot and call your prompt plugin from Lab 03. You will also learn how to test your Topic.
+In this lab, you will learn how to create a custom topic for your copilot and call your prompt action from Lab 03. You will also learn how to test your Topic.
 
-[Lab 04 - Create a custom topic with a plugin action for Generative Actions](./lab-04/README.md)
+[Lab 04 - Create a custom topic with a prompt action for generative responses](./lab-04/README.md)
 
 ## Lab 05 - Automation in copilot with Power Automate cloud flows
 
