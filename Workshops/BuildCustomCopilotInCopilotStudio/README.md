@@ -16,9 +16,9 @@ In this lab, you will create a custom copilot using a template and with natural 
 
 ## Lab 03 - Create a Prompt action using a Power Platform connector for generative responses
 
-In this lab, you will learn how to create a POrompt action and add this as an action to your copilot for generative responses. You will also learn how to test your Prompt action.
+In this lab, you will learn how to create a Prompt action and add this as an action to your copilot for generative responses. You will also learn how to test your Prompt action.
 
-[Lab 03 - Create a Prompt action using a Power Platform connector for generative responses](./lab-02/README.md)
+[Lab 03 - Create a Prompt action using a Power Platform connector for generative responses](./lab-03/README.md)
 
 ## Lab 04 - Create a custom topic with a prompt action for generative responses
 
