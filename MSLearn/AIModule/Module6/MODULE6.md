@@ -35,5 +35,38 @@ Follow these steps to create a website using Copilot.
 1. In the center of the **Home** page within **Power Pages**, in the text field under **Start building your website with Copilot**, enter the following prompt:
 
     ```plaintext
-    Create a website for a real estate solution
+    Create a professional real estate website to showcase listings, services, and contact information
     ```
+
+    Select the **Submit** button.
+
+    ![Copilot prompt to create a real estate website](./assets/images/copilot-prompt.png)
+
+1. From the prompt, Copilot generates a site name and web address. Change the site name to be `Contoso Real Estate`. Then change the web address to be `contosorealestate-xxxx`.
+
+    > **Note:** The `xxxx` in the web address is a unique identifier that Copilot generates. You can change it but it's there to ensure that the web address is unique to you.
+
+    ![Copilot generated site name and web address](./assets/images/copilot-site-name.png)
+
+    Select **Next**.
+
+1. Now you'll be asked to pick a site layout. You either select _Try Again_ to get a new generated layout or select _Next_ to continue with the current layout. Select **Next** to continue.
+
+1. Copilot then generates more pages that could be used in the site based on the prompt. Select the following pages:
+
+    * **About Us**
+    * **Contact Us**
+    * **Listings**
+    * **Services**
+    
+    Then select **Done**. 
+    
+    Copilot will then set up and generate the full site. This may take a few minutes.
+
+    Once  generated, you'll be redirected to the site opened in the design studio where you can further customize the site.
+
+    ![Power Pages design studio with the generated site](./assets/images/copilot-generated-site.png)
+
+1. 
+
+
