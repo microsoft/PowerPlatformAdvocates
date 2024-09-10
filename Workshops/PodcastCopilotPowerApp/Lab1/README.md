@@ -104,23 +104,23 @@ For this lab, make sure you have the following ready:
 
 1. Select **+ Deploy model** > **Deploy base model**.
 
-1. In the **Select a model** window, search for and select `gpt-4o-mini`.
+1. In the **Select a model** window, search for and select `gpt-4`.
 
     Select **Confirm**.
 
-    ![Select GPT-4o-mini model](assets/select-gpt-4o-mini-model.png)
+    ![Select GPT-4 model](assets/select-gpt-4-model.png)
 
-1. In the **Deploy model gpt-4o-mini** window, set the following parameters:
+1. In the **Deploy model gpt-4** window, set the following parameters:
 
-    - **Deployment name**: `gpt4omini`
+    - **Deployment name**: `gpt4`
     - **Model version**: `Auto-update to default`
-    - **Deployment type**: `Global Standard`
+    - **Deployment type**: `Standard`
 
     > NOTE:
     >
     > Learn more about Azure OpenAI deployment types [here](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types)
 
-    Select **Deploy** to create the **gpt-4o-mini** deployment.
+    Select **Deploy** to create the **gpt-4** deployment.
 
 1. Now you're going to create a deployment for **Whisper**.
 
