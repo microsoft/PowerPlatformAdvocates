@@ -150,9 +150,11 @@ For this lab, make sure you have the following ready:
 
 1. In the playground, click on **View Code** and copy the **Endpoint** value and note it down somewhere safe.
 
-    ![DaLL-E 3 Playground Endpoint](assets/dalle3-playground-endpoint.png)
+    Also copy the **API Key** value and note it down somewhere safe.
 
-    This endpoint will be used in the next lab to connect to all your model deployments.
+    ![DaLL-E 3 Playground Endpoint](assets/dalle3-playground-endpoint-key.png)
+
+    This endpoint and key will be used in the next lab to connect to all your model deployments.
 
 ### Uploading Podcast Snippet to Azure Blob Storage
 
