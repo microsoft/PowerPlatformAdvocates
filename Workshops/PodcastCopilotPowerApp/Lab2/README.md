@@ -56,11 +56,21 @@ For this lab, make sure you have the following ready:
     setx BING_SEARCH_KEY "REPLACE_WITH_YOUR_BING_KEY_VALUE_HERE"
     ```
 
+    This saves the Bing Search key as an environment variable on your local machine. Replace **REPLACE_WITH_YOUR_BING_KEY_VALUE_HERE** with your Bing Search key.
+
     Press **Enter**.
 
     You should then see the following message:
 
     ![Environment variable set successfully](assets/environment-variable-set-successfully.png)
+
+1. Let's do the same to set the Azure OpenAI resource key as an environment variable. Paste the following command into the command prompt:
+
+    ```bash
+    setx AZURE_OPENAI_KEY_SC "REPLACE_WITH_YOUR_AZURE_OPENAI_KEY_HERE"
+    ```
+
+    Press **Enter**.
 
 ### Create a new .NET Web API Project
 
@@ -88,12 +98,6 @@ For this lab, make sure you have the following ready:
     dotnet add package Azure.AI.OpenAI --version 2.0.0-beta.5
     ```
 
-1. Next, run the following command to install the Azure Identity package:
-
-    ```bash
-    dotnet add package Azure.Identity
-    ```
-
 1. Then run the following command to install the Newtonsoft.Json package:
 
     ```bash
@@ -111,9 +115,11 @@ For this lab, make sure you have the following ready:
     ```csharp
     using System.Web;
     using Azure.AI.OpenAI;
-    using Azure.Identity;
     using Azure;
     using Newtonsoft.Json.Linq;
+    using OpenAI.Chat;
+    using OpenAI.Audio;
+    using OpenAI.Images;
     ```
 
 1. Inside the **PodcastCopilot** class, add the following code. Replace `{YOUR-ENDPOINT}` with the endpoint you copied from the model deployment in Lab 1:
@@ -121,6 +127,7 @@ For this lab, make sure you have the following ready:
     ```csharp
     //Initialize Endpoints and Key
     static string endpointSC = "{YOUR-ENDPOINT}";
+    static string keySC = Environment.GetEnvironmentVariable("AZURE_OPENAI_KEY_SC");
 
     static string bingSearchUrl = "https://api.bing.microsoft.com/v7.0/search";
     static string bingSearchKey = Environment.GetEnvironmentVariable("BING_SEARCH_KEY");
@@ -128,7 +135,7 @@ For this lab, make sure you have the following ready:
     //Instantiate OpenAI Client
     static AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
         new Uri(endpointSC),
-        new DefaultAzureCredential());
+        new AzureKeyCredential(keySC));
     ```
 
 1. Then below the above code, add the following code to perform **Audio Transcription**:
@@ -155,11 +162,11 @@ For this lab, make sure you have the following ready:
     //Extract Guest Name from transcription
     public static async Task<string> GetGuestName(string transcription)
     {
-        ChatClient client = azureOpenAIClient.GetChatClient("gpt4omini");
+        ChatClient client = azureOpenAIClient.GetChatClient("gpt4");
 
         ChatCompletion chatCompletion = await client.CompleteChatAsync(
         [
-                new SystemChatMessage(@"Extract only the guest name on the Beyond the Tech podcast from the following transcript. Beyond the Tech is hosted by Kevin Scott, so Kevin Scott never be the guest."),
+                new SystemChatMessage("Extract only the guest name on the Beyond the Tech podcast from the following transcript. Beyond the Tech is hosted by Kevin Scott, so Kevin Scott will never be the guest."),
                 new UserChatMessage(transcription)
         ]);
 
@@ -195,12 +202,12 @@ For this lab, make sure you have the following ready:
    //Create Social Media Blurb
     public static async Task<string> GetSocialMediaBlurb(string transcription, string bio)
     {
-        ChatClient client = azureOpenAIClient.GetChatClient("gpt4omini");
+        ChatClient client = azureOpenAIClient.GetChatClient("gpt4");
 
         ChatCompletion chatCompletion = await client.CompleteChatAsync(
         [
-                new SystemChatMessage("You are a helpful large language model that can create a LinkedIn promo blurb for episodes of the podcast Behind the Tech, when given transcripts of the podcasts. The Behind the Tech podcast is hosted by Kevin Scott."),
-                new UserChatMessage("Create a short summary of this podcast episode that would be appropriate to post on LinkedIn to promote the podcast episode. The post should be from the first-person perspective of Kevin Scott, who hosts the podcast. \n" +
+            new SystemChatMessage("You are a helpful large language model that can create a LinkedIn promo blurb for episodes of the podcast Behind the Tech, when given transcripts of the podcasts. The Behind the Tech podcast is hosted by Kevin Scott."),
+            new UserChatMessage("Create a short summary of this podcast episode that would be appropriate to post on LinkedIn to promote the podcast episode. The post should be from the first-person perspective of Kevin Scott, who hosts the podcast. \n" +
                 $"Here is the transcript of the podcast episode: {transcription} \n" +
                 $"Here is the bio of the guest: {bio}")
         ]);
@@ -215,7 +222,7 @@ For this lab, make sure you have the following ready:
     //Generate a Dall-E prompt
     public static async Task<string> GetDallEPrompt(string socialBlurb)
     {
-        ChatClient client = azureOpenAIClient.GetChatClient("gpt4omini");
+        ChatClient client = azureOpenAIClient.GetChatClient("gpt4");
 
         ChatCompletion chatCompletion = await client.CompleteChatAsync(
         [
