@@ -115,7 +115,7 @@ For this lab, just make sure you've completed the previous three labs.
 
     This will display the image in the image control.
 
-1. Use the **Preview** button to test the app. Enter the link to the podcast episode (the blob url we copied in Lab 1) in the **Text Input** control and click the **Generate Post** button. The social media blurb and image (both unique to you) should be displayed.
+1. Use the **Preview** button to test the app. Make sure that the API is running in Visual Studio before you run this Power App. Enter the link to the podcast episode (the blob url we copied in Lab 1) in the **Text Input** control and click the **Generate Post** button. The social media blurb and image (both unique to you) should be displayed:
 
     ![Testing the Power App](assets/test-power-app.png)
 
@@ -125,25 +125,29 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
 1. Log into [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) and sign in with your Microsoft account. The same account you've been using for this workshop. Make sure you're in the same environment you selected for the Custom Connector you created in Lab 2.
 
-1. On the home page, click **+ Create a copilot**.
+1. On the left navigation pane, select **Create**.
 
-    ![Creating a copilot in Microsoft Copilot Studio](assets/create-copilot.png)
+1. Then select **New copilot**.
 
-1. Name the copilot ``Podcast Copilot`` and click **Create**.
+    ![Select New copilot in Microsoft Copilot Studio](assets/new-copilot.png)
 
-1. Once the copilot has been created, click and expand **Settings** on the left-hand navigation pane.
+1. On the top right corner, select **Skip to Configure**.
 
-1. Select **Generative AI**.
+1. Name the copilot ``Podcast Copilot`` and select **Create**.
 
-1. On the main panel, scroll down until you see the **Dynamic chaining with generative actions** option. Enable it and then click **Save** in the top left corner.
+1. Once the copilot has been created, select **Settings** on the top right corner. Then select **Generative AI**.
 
-    ![Enabling Dynamic chaining with generative actions](assets/enable-dynamic-chaining.png)
+1. Under **How should your copilot interact with people?**, select the **Generative** option.
 
-1. Once saved, click **Topics & Plugins** on the left-hand navigation pane.
+    Then select **Save**.
 
-1. On the top navigation pane, click **+ Create** > **Topic** > **From blank**.
+    ![Selecting Generative AI](assets/select-generative-ai.png)
 
-    ![Creating a blank topic in the copilot](assets/create-blank-topic.png)
+    Once saved, exit the settings by clicking the **x** on the top right corner.
+
+1. On the top navigation pane, select **Topics**.
+
+1. Then select **+ Add a topic** > **From blank**.
 
 1. Rename the topic to ``Generate Social Media Post``.
 
@@ -165,7 +169,7 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
     ![Adding a call an action node](assets/add-action-node.png)
 
-1. Select the **When Power Virtual Agents calls a flow** trigger and in the pop up, under **Parameters**, click **+ Add an input** and select **Text**.
+1. Select the **Run a flow from Copilot** trigger and in the pop up, under **Parameters**, click **+ Add an input** and select **Text**.
 
 1. Replace **Input** with ``podcastURL`` and replace **Please enter your input** with ``Url of the podcast episode``.
 
@@ -179,25 +183,29 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
     ![Creating a new connection](assets/create-new-connection.png)
 
-1. Once the connection has been created, click into the **podcastUrl** field and then select the **Dynamic Content** icon.
+1. Once the connection has been created, click into the **PodcastUrl** field and then select the **Dynamic Content** icon.
 
     ![Selecting dynamic content](assets/select-dynamic-content.png)
 
 1. Select **podcastURL** from the list of dynamic content.
 
-1. Close the dialog. Then select the **Return value(s) to Power Virtual Agents** node. In the dialog, click **+ Add an output** and select **Text**. Add another output and select **Text**. Configure the outputs as follows:
+1. Close the dialog. Then select the **Respond to Copilot** node. In the dialog, click **+ Add an output** and select **Text**. Add another output and select **Text**. Configure the outputs as follows:
 
     * **Output**: ``blurb``
     * **Value**: Select **body/blurb** from the Dynamic Content list
+    * **Description**: `A social media blurb promoting the podcast episode`
+
+    <br>
 
     * **Output**: ``imageUrl``
     * **Value**: Select **body/imageUrl** from the Dynamic Content list
+    * **Description**: `The URL of the social media image which accompanies the social media blurb promoting the podcast episode`
 
     ![Adding outputs to the return value node](assets/add-outputs.png)
 
-1. Close the dialog, rename the flow to **Generate Social Media Post**, and click **Save**.
+1. Close the dialog, rename the flow to **Generate Social Media Post**, and click **Publish**.
 
-    Once Saved, you can close Power Automate and return to Microsoft Copilot Studio.
+    Once published, you can close Power Automate and return to Microsoft Copilot Studio.
 
 1. Once you're back in Copilot Studio, click **Done** on the *Save and Refresh* dialog to update the new flow in the flow list.
 
@@ -257,9 +265,9 @@ Because the main functionality of the app is encapsulated in the Custom Connecto
 
 ### Testing the Copilot
 
-1. Once saved, open the **PodcastCopilotAPI** project in Visual Studio and run the project.
+1. Once saved, open the **PodcastAppAPI** project in Visual Studio and run the project.
 
-1. While the API is running, go back to Microsoft Copilot Studio and click **Test your copilot** on the bottom left corner of the screen. This will open the copilot test panel.
+1. While the API is running, go back to Microsoft Copilot Studio and click **Test** on the top right corner. This will open the copilot test panel.
 
 1. Click on the **Refresh** icon on the test panel to refresh the copilot and test the new topic.
 

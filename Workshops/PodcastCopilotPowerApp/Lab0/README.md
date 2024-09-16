@@ -90,14 +90,6 @@ You can create an Azure account for free and receive 12 months of popular servic
 
     ![Screenshot showing a link to the Azure Portal](assets/ready-with-azure.png)
 
-### Request access to Azure OpenAI Service
-
-1. Complete the form at [https://aka.ms/oai/access] and on Question #18, select **GPT-3.5, GPT-3.5 Turbo, GPT-4, GPT-4 Turbo, and/or Embeddings Models**, **DALL-E 2 and/or DALL-E 3 models**, and **OpenAI Whisper model**.
-
-    These are the Azure OpenAI Service models that you will be using in this workshop.
-
-    ![Screenshot of the Azure OpenAI Service access request form question 18](assets/selected-openai-models.png)
-
 ### Download Visual Studio
 
 You can download Visual Studio Community Edition for free. Visual Studio is the IDE that you will be using in this workshop to create the API.

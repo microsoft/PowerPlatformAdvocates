@@ -17,7 +17,6 @@ Learn More: [What is Azure OpenAI Service? [Microsoft Learn]](https://aka.ms/Pow
 For this lab, make sure you have the following ready:
 
 - An active [Azure Subscription](https://azure.microsoft.com/en-us/free/)
-- Access to [Azure OpenAI Service](https://azure.microsoft.com/en-us/services/openai/)
 
 ### Video Overview of Lab:
 
@@ -27,7 +26,7 @@ For this lab, make sure you have the following ready:
 
 ## Instructions
 
-### Creating the Azure OpenAI Service Resources
+### Create an Azure OpenAI Service Resource
 
 1. Go to [portal.azure.com](https://aka.ms/PowerPodcast/AzurePortal) and login with your Azure account.
 
@@ -37,133 +36,125 @@ For this lab, make sure you have the following ready:
 
     ![Create Resource Group](assets/create-resource-group.png)
 
-1. Name it `PodcastCopilotPowerApp` and click on **Review + Create**. Then click on **Create**.
+1. Name it `PodcastCopilot` and click on **Review + Create**. Then click on **Create**.
 
-1. Create a new Azure OpenAI Service resource by clicking [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI) and set the following parameters:
+1. Create a new **Azure OpenAI Service** resource by clicking [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI) and set the following parameters:
 
-    - **Name**: `podcastcopilotwe-{your initials}` (e.g. `podcastcopilotwe-jd` to make it unique)
     - **Subscription**: Select your Azure subscription
-    - **Resource Group**: Select the resource group you created in the previous step
-    - **Location**: `West Europe`
+    - **Resource Group**: Select the **PodcastCopilot** resource group you created in the previous step
+    - **Region**: `Sweden Central`
+    - **Name**: `podcastcopilotsc-{your initials}` (e.g. `podcastcopilotwe-jd` to make it unique)
     - **Pricing Tier**: Select the `Standard S0` pricing tier
-
-    This resource will be used to access the Whisper and GPT-3.5 models.
 
     ![Create Azure OpenAI Service Resource](assets/create-azure-openai-service-resource.png)
 
-1. Click on **Next** until you get to the **Review + Submit** page and then click on **Create** to create the resource.
-
-1. Create another new Azure OpenAI Service resource by clicking [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI) and set the following parameters:
-
-    - **Name**: `podcastcopilotsc-{your initials}` (e.g. `podcastcopilotsc-jd` to make it unique)
-    - **Subscription**: Select your Azure subscription
-    - **Resource Group**: Select the resource group you created in the previous step
-    - **Location**: `Sweden Central`
-    - **Pricing Tier**: Select the `Standard S0` pricing tier
-
-    This resource will be used to access the Dall.E 3 model.
+    > NOTE:
+    >
+    > The **Sweden Central** region is selected as it is (at the time of writing) the only region that supports GPT-4, Whisper, and Dall.E 3 models all together.
+    >
+    > If you are interested in which models are supported in which regions, you can check out the [Azure OpenAI Service standard deployment model availability](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#standard-deployment-model-availability) page.
 
 1. Click on **Next** until you get to the **Review + Submit** page and then click on **Create** to create the resource.
 
-### Creating the Bing Search Resource in Azure
+### Create a Bing Search Resource in Azure
 
-1. Next we will create a Bing Search resource in Azure. Click this [link](https://ms.portal.azure.com/#create/Microsoft.BingSearch) and set the following parameters:
+1. Next we will create a **Bing Search** resource in Azure. Click this [link](https://ms.portal.azure.com/#create/Microsoft.BingSearch) and set the following parameters:
 
-    - **Name**: `podcastcopilotbing-{your initials}` (e.g. `podcastcopilotbing-jd` to make it unique)
     - **Subscription**: Select your Azure subscription
-    - **Resource Group**: Select the resource group you created in the previous step
+    - **Resource Group**: Select the **PodcastCopilot** resource group you created in a previous step
+    - **Name**: `podcastcopilotbing-{your initials}` (e.g. `podcastcopilotbing-jd` to make it unique)    
     - **Region**: `Global`
     - **Pricing Tier**: Select the `F1` pricing tier
 
-1. Read the **Terms** and **Notice** and select the checkbox to agree to them.
+1. Read the **Terms** and **Notices** and select the checkbox to agree to them.
 
     ![Terms confirmation for Bing Search](assets/bing-search-terms.png)
 
 1. Click on **Review + Create** and then **Create** to create the resource.
 
-1. Open up your `PodcastCopilotPowerApp` resource group in the Azure portal.
+1. Open up your `PodcastCopilot` resource group in the Azure portal.
 
 1. Select the `podcastcopilotbing-{your initials}` resource.
 
-1. Select **Keys and Endpoint** on the left menu and note down the **Key 1** value somewhere safe.
+1. Expand the **Resource Management** tab on the left-hand side, select **Keys and Endpoint** and note down the **Key 1** value somewhere safe.
 
     ![Bing Search Key](assets/bing-search-key.png)
 
-### Creating model deployments in Azure OpenAI Studio
+### Create model deployments in Azure OpenAI Studio
 
-1. Open up your `PodcastCopilotPowerApp` resource group in the Azure portal.
+1. Open up your **PodcastCopilot** resource group in the Azure portal.
 
-1. Select the `podcastcopilotwe-{your initials}` resource.
+1. Select the **podcastcopilotsc-{your initials}** resource.
 
 1. On the top menu, click on **Go to Azure OpenAI Studio**.
 
     ![Go to Azure OpenAI Studio](assets/go-to-azure-openai-studio.png)
 
+    > NOTE:
+    >
+    > In Azure OpenAI Studio, you may see the following banners alerting you to the studio's new look. Select **Explore the new experience** to continue in the updated studio.
+    >
+    > ![Azure OpenAI Studio New Look Banner 1](assets/azure-openai-studio-new-look-banner-1.png)
+    >
+    > ![Azure OpenAI Studio New Look Banner 2](assets/azure-openai-studio-new-look-banner-2.png)
+    >
+    > If you don't see these banners, then you're likely already in the updated studio.
+
 1. In the Azure OpenAI Studio, click on **Deployments** on the left menu.
 
-1. Click on **+ Create New Deployment** and set the following parameters:
+1. Select **+ Deploy model** > **Deploy base model**.
 
-    - **Select a model**: `GPT-35-Turbo`
+1. In the **Select a model** window, search for and select `gpt-4`.
+
+    Select **Confirm**.
+
+    ![Select GPT-4 model](assets/select-gpt-4-model.png)
+
+1. In the **Deploy model gpt-4** window, set the following parameters:
+
+    - **Deployment name**: `gpt4`
     - **Model version**: `Auto-update to default`
-    - **Deployment name**: `gpt35turbo`
+    - **Deployment type**: `Standard`
 
-    Click **Create** to create the deployment.
+    > NOTE:
+    >
+    > Learn more about Azure OpenAI deployment types [here](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types)
 
-    ![Create GPT-3.5 Turbo Deployment](assets/create-gpt35turbo-deployment.png)
+    Select **Deploy** to create the **gpt-4** deployment.
 
-1. Click on **+ Create New Deployment** again and set the following parameters:
+1. Now you're going to create a deployment for **Whisper**.
 
-    - **Select a model**: `whisper`
-    - **Model version**: `Auto-update to default`
-    - **Deployment name**: `whisper`
+    * Select **Deployments** on the left menu.
+    * Select **+ Deploy model** > **Deploy base model**.
+    * Search for and select `whisper` and then click **Confirm**.
+    * Set the following parameters:
+        - **Deployment name**: `whisper`
+        - **Model version**: `Auto-update to default`
+        - **Deployment type**: `Standard`
+    * Select **Deploy** to create the **whisper** deployment.
 
-    Click **Create** to create the deployment.
+1. Now you're going to create a deployment for **DaLL-E**.
 
-1. Select the **gpt35turbo** deployment and click on **Open in Playground**.
+    * Select **Deployments** on the left menu.
+    * Select **+ Deploy model** > **Deploy base model**.
+    * Search for and select `dall-e-3` and then click **Confirm**.
+    * Set the following parameters:
+        - **Deployment name**: `dalle3`
+        - **Model version**: `Auto-update to default`
+        - **Deployment type**: `Standard`
+    * Select **Deploy** to create the **dall-e-3** deployment.
 
-    ![Open GPT-3.5 Turbo Deployment in Playground](assets/open-gpt35turbo-deployment-in-playground.png)
+1. On the **dalle3** deployment details page, select **Open in Playground**.
 
-1. In the playground, click on **View Code** and note down the following somewhere safe:
+    ![Open DaLL-E 3 Deployment in Playground](assets/open-dalle3-deployment-in-playground.png)
 
-    - **Deployment Name**: `gpt35turbo`
-    - **Endpoint**: `https://podcastcopilotwe-{your initials}.openai.azure.com/`
-    - **Key**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+1. In the playground, click on **View Code** and copy the **Endpoint** value and note it down somewhere safe.
 
-    ![GPT-3.5 Turbo Playground endpoint and key](assets/gpt35turbo-playground-endpoint-and-key.png)
+    Also copy the **API Key** value and note it down somewhere safe.
 
-1. Once complete, do the same for the `whisper` deployment.
+    ![DaLL-E 3 Playground Endpoint](assets/dalle3-playground-endpoint-key.png)
 
-1. Click on **Deployments** on the left menu and select the **whisper** deployment. Then click on **Open in Playground**.
-
-1. Scroll down to the **Next Steps** section, select the **podcastcopilotwe-{your initials}** resource and then note down the following somewhere safe:
-
-    - **Deployment Name**: `whisper`
-    - **Endpoint**: `https://podcastcopilotwe-{your initials}.openai.azure.com/`
-    - **Resource Key**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
-
-1. Now in the top right corner, click on your name and then under `Current Resource`; select **Switch**.
-
-    ![Switch Azure OpenAI Service Resource](assets/switch-azure-openai-service-resource.png)
-
-1. Select the **podcastcopilotsc-{your initials}** resource and then select **Use Resource**.
-
-    ![Select Azure OpenAI Service Resource](assets/select-azure-openai-service-resource.png)
-
-1. Click on **Deployments** on the left menu and then select **Create New Deployment** and set the following parameters:
-
-    - **Select a model**: `dall-e-3`
-    - **Model version**: `Auto-update to default`
-    - **Deployment name**: `dalle3`
-
-    Click **Create** to create the deployment.
-
-1. Select the **dalle3** deployment and click on **Open in Playground**.
-
-1. Select **View Code** and note down the following somewhere safe:
-
-    - **Deployment Name**: `dalle3`
-    - **Endpoint**: `https://podcastcopilotsc-{your initials}.openai.azure.com/`
-    - **Key**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+    This endpoint and key will be used in the next lab to connect to all your model deployments.
 
 ### Uploading Podcast Snippet to Azure Blob Storage
 
@@ -178,9 +169,11 @@ We'll be using Azure Blob Storage to store the podcast snippet audio file. This 
 1. Navigate to [Create a storage account](https://ms.portal.azure.com/#create/Microsoft.StorageAccount-ARM) and set the following parameters:
 
     - **Subscription**: Select your Azure subscription
-    - **Resource Group**: Select the **PodcastCopilotPowerApp** resource group
+    - **Resource Group**: Select the **PodcastCopilot** resource group
     - **Storage account name**: `podcaststorage{your initials}` (e.g. `podcaststoragejd` to make it unique)
-    - **Location**: `East US`
+    - **Region**: `East US`
+    - **Primary service**: `Azure Blob Storage or Azure Data Lake Storage Gen 2`
+    - **Primary workload**: `Other`
     - **Performance**: `Standard`
     - **Redundancy**: `Geo-redundant storage (GRS)`
     - Ensure that **Make read access to data available in the event of regional unavailability** is selected`
@@ -191,7 +184,7 @@ We'll be using Azure Blob Storage to store the podcast snippet audio file. This 
 
     ![Go to Storage Account resource](assets/go-to-storage-account.png)
 
-1. On the left-hand side panel, scroll down to the **Settings** section and click on **Configuration**.
+1. On the left-hand side panel, scroll down and expand the **Settings** section and click on **Configuration**.
 
 1. Then look for the **Allow Blob anonymous access** setting and set it to `Enabled`.
 
