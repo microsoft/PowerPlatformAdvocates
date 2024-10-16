@@ -6,7 +6,7 @@ In this lab, you will go through the following tasks:
 * [1.2 Log on to your account and set up authentication in Microsoft Authenticator app](#12-log-on-to-your-account-and-set-up-authentication-in-microsoft-authenticator-app)
 * [1.3 Create developer environment](#13-create-developer-environment)
 * [1.4 Sign into Microsoft Copilot Studio and select developer environment](#14-sign-into-microsoft-copilot-studio-and-select-developer-environment)
-* [1.5 Create new SharePoint site and upload file](#15-create-new-sharepoint-site-and-upload-file)
+* [1.5 Create new SharePoint site and upload file](#15-create-new-sharepoint-site-and-upload-pdf-file)
 * [1.6 Copy SharePoint site URL](#16-copy-sharepoint-site-url)
 
 ## 1.1 Create a new browser profile (Microsoft Edge)
