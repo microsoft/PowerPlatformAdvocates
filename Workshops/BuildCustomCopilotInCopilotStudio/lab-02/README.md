@@ -80,11 +80,11 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
     ![Agent Topics and Actions](assets/2.1_12_TopicsActions.jpg)
 
-1.  You can now test the Weather copilot using the right hand side pane. Select the _What can I ask?_ question to see a list of suggested questions to ask the Weather copilot.
+1.  You can now test the Weather agent using the right hand side pane. Select the **What can I ask?** question to see a list of suggested questions to ask the Weather agent.
 
     ![Suggested questions](assets/2.1_13_TestAgent.jpg)
     
-1.  A list of questions will appear. Select _What is the current weather?_
+1.  A list of questions will appear. Select **What is the current weather?**
 
     ![Weather agent created](assets/2.1_14_SelectQuestion.jpg)
 
@@ -94,35 +94,38 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
     Seattle
     ```
 
-    ![Eneter city](assets/2.1_14_EnterCity.jpg)
+    ![Eneter city](assets/2.1_15_EnterCity.jpg)
 
-1.  Copilot will respond with a summary of the current weather for the city entered.
+1.  The Weather agent will respond with a summary of the current weather for the city entered.
 
-    ![Weather copilot response](assets/2.1_15_Response.jpg)
+    ![Weather agent response](assets/2.1_16_Response.jpg)
 
-🎓 You’ve created a custom copilot using a template. Let’s next learn how to use natural language to build a custom copilot from scratch.
+🎓 You’ve created an agent using a template. Let’s next learn how to use natural language to build an agent from scratch.
 
 ## 2.2 Use natural language to create an agent
 
-You can now use a conversation first approach to create a custom Copilot where natural language is used to describe the custom Copilot that you’d like to create.
+You can now use a conversation first approach to create an agent where natural language is used to describe the agent that you’d like to create.
 
-1.  Select Home on the left hand side menu and in the Describe your copilot to create it field, describe in natural language what your copilot should do. For example,
+1.  Select Home on the left hand side menu and in the Describe your copilot to create it field, describe in natural language what your agent should do. For example,
 
     ```
-    I want you to be a question and answering copilot that can answer common questions from users using the content of a website and a SharePoint site
+    I want you to be a question and answering assistant that can answer common questions from users using the content of a website and a SharePoint site
     ```
 
     ![City](assets/2.2_01_DescribeToCreate.jpg)
 
-1. Microsoft Copilot Studio then proceeds to use AI to ask you several questions to define the Copilot you want to build. For example the first question may be based on how your copilot will assist users. You can either select _What should I say?_ which will provide guidance or you can enter and describe what you’d like your copilot to do. The following is an example,
+1. Microsoft Copilot Studio then proceeds to use AI to ask you several questions to define the agent you want to build. For example the first question may be based on how your agent will assist users.
+
+    ![City](assets/2.2_02_DescribeTypeOfAssistance.jpg)
+
+    You can either select _What should I say?_ which will provide guidance, or you can enter and describe what you’d like your agent to do. The following is an example,
 
     ```
     help answer common product and support questions using the content of a website, and help answer HR questions from a SharePoint site
     ```
 
-    ![City](assets/2.2_02_DescribeTypeOfAssistance.jpg)
 
-1. The second question may be based on the tone of the Copilot. Again, a list of suggestions can be provided by selecting _What should I say?_
+1. The second question may be based on the tone of the agent. Again, a list of suggestions can be provided by selecting _What should I say?_
 
     ![Further guidance](assets/2.2_03_Further%20guidance.jpg)
 
@@ -264,8 +267,8 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
 ## Next lab
 
-Congratulations! 👏🏻  You've created a copilot with external and internal data sources for Generative Answers. 
+Congratulations! 👏🏻  You've configured your agent with external and internal data sources for [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio#add-and-manage-knowledge-for-generative-answers). 
 
-This is the end of Lab 02 - Build a custom copilot with Microsoft Copilot Studio, select the link below to move to the next lab.
+This is the end of Lab 02 - Build an agent with Microsoft Copilot Studio, select the link below to move to the next lab.
 
 [⏭️ Move to Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions](../lab-03/README.md)
