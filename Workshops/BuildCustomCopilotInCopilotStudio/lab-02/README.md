@@ -1,88 +1,92 @@
-# Lab 02 - Build a custom copilot with Microsoft Copilot Studio
+# Lab 02 - Build an agent with Microsoft Copilot Studio
 
-Copilot Studio empowers teams to quickly and easily create powerful copilots using a guided, no-code graphical experience without needing data scientists or developers.
+Copilot Studio empowers teams to quickly and easily create powerful agents using a guided, no-code graphical experience without needing data scientists or developers.
 
-There are two ways to create a custom copilot
+There are several ways to create an agent
 * Start with a template
-* Describe your copilot to create it using natural language
+* Describe your agent to create it using natural language
 
-Each method allows you to connect your data and knowledge sources to enable your custom copilot to access information and complete tasks.
+Each method allows you to connect your data and knowledge sources to enable your agent to access information and complete tasks.
 
 In this lab, you will learn how to do the following:
-* [2.1 Available templates to create a custom copilot](#21-available-templates-to-create-a-custom-copilot)
-* [2.2 Use natural language to create a custom copilot](#22-use-natural-language-to-create-a-custom-copilot)
+* [2.1 Available templates to create an agent copilot](#21-available-templates-to-create-an-agent)
+* [2.2 Use natural language to create an agent](#22-use-natural-language-to-create-an-agent)
 * [2.3 Adding an internal knowledge source using a SharePoint site](#223-adding-an-internal-source-using-a-sharepoint-site)
 
-## 2.1 Available templates to create a custom Copilot
+## 2.1 Available templates to create an agent
 
-In this part of the lab, you will learn of the several templates available to quickly get started in creating your own custom copilot.
+In this part of the lab, you will learn of the several templates available to quickly get started in creating your own agent.
 In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
-* Describe your copilot to create it – use natural language to build your copilot
-* Templates – these are a preview feature and helps you get started in creating your copilot
+* Describe your copilot to create it – use natural language to build your agent
+* Templates – these are a preview feature and helps you get started in creating your agent
 * Learning resources – multiple resources for further learning
 
     ![Copilot Studio Home](assets/2.1_01_CopilotStudioHome.jpg)
 
-1. To start with a template, select the **Weather template**.
+1. In the **Start with a template** section select **See more**.
 
-    ![Select Weather template](assets/2.1_02_SelectTemplate.jpg)
+    ![Select See more](assets/2.1_02_SeeMoreTemplates.jpg)
+
+1. Select the **Weather** template.
+
+    ![Select Weather template](assets/2.1_03_SelectWeatherTemplate.jpg)
     
 1.	You’ll see that the template already has some details filled in already
 
-    - **Name** – the name of the copilot.
-    - **Description** – describes the purpose of the Weather copilot and how it can help.
-    - **Instructions** – the primary purpose of the Weather Copilot and how it should act.
-    - **Connect your data** – authenticate to a Power Platform connector to enable Copilot to complete tasks and access information. In this template the MSN Weather connector is used.
-    - **Language** – the primary language of the copilot.
-    - **Knowledge** – add enterprise data from Power Platform, Dynamics 365 data, and external systems to enable Copilot to provide relevant information and insights for end users.
+    - **Language** – the primary language of the agent.
+    - **Name** – the name of the agent.
+    - **Description** – describes the purpose of the Weather agent and how it can help.
+    - **Instructions** – the primary purpose of the Weather agent and how it should act.
+    - **Connect your data** – authenticate to a Power Platform connector to enable the agent to complete tasks and access information. In this template the MSN Weather connector is used.
+    - **Knowledge** – add enterprise data from Power Platform, Dynamics 365 data, and external systems to enable the Weather agent to provide relevant information and insights for end users.
     
-    ![Weather copilot template](assets/2.1_03_WeatherCopilotTemplate.jpg)
+    ![Weather agent template](assets/2.1_04_WeatherTemplate.jpg)
 
 1.	Scroll down to **Connect your data**, select the ellipsis (. . .) and select **Edit**.
 
-    ![Connect data source](assets/2.1_04_ConnectDataSource.jpg)
+    ![Connect data source](assets/2.1_05_ConnectDataSource.jpg)
 
 1.	The Connection setup window will appear and a green tick will appear to let you know that the MSN Weather connector is now authenticated using your credentials. Select **Confirm**.
 
-    ![Confirm connection](assets/2.1_05_ConfirmConnectionSetup.jpg)
+    ![Confirm connection](assets/2.1_06_ConfirmConnectionSetup.jpg)
 
 1.	The status of the MSN Weather connector will now display as _Connected_ with a green tick.
 
-    ![Connected](assets/2.1_06_Connected.jpg)
+    ![Connected](assets/2.1_07_Connected.jpg)
 
-1.	Next, take a look at the Advanced Settings of the Copilot by selecting the ellipsis **(. . .)** and select **Edit advanced settings**.
+1.	Next, take a look at the Advanced Settings of the agent by selecting the ellipsis **(. . .)** and select **Edit advanced settings**.
 
-    ![Edit advanced settings](assets/2.1_07_AdvancedSettings.jpg)
+    ![Edit advanced settings](assets/2.1_08_AdvancedSettings.jpg)
 
 1.	This is where you can define the following settings,
 
-    - **Solution** – select the solution to create your copilot in. This allows you to deploy the copilot to a target environment by exporting the solution. By default Common Data Services Default Solution will be selected.
-    - **Schema Name** – by default this will be the name of your copilot. This is the unique name which can be used to embed or connect your copilot to other applications or services.
-    - **Classic copilot** – there’s also an option to create a classic copilot which is not covered in this lab.
+    - **Solution** – select the solution to create your agent in. This allows you to deploy the agent to a target environment by exporting the solution. By default Common Data Services Default Solution will be selected.
+    - **Schema Name** – by default this will be the name of your agent. This is the unique name which can be used to embed or connect your agent to other applications or services.
+    - **Classic copilot** – there’s also an option to create a classic agent which is not covered in this lab.
     
-    ![Advanced settings](assets/2.1_08_AdvancedSettings.jpg)
+    ![Advanced settings](assets/2.1_09_AdvancedSettings.jpg)
 
-1.  Select Cancel to exit Advanced Settings.
+1.  Select **Cancel** to exit Advanced Settings.
 
-1.  Select Create to create your Weather Copilot.
+1.  Select **Create** to create your Weather agent.
 
-    ![Create Weather copilot](assets/2.1_09_CreateWeatherCopilot.jpg)
+    ![Create Weather agent](assets/2.1_10_CreateWeatherAgent.jpg)
 
-1.  Copilot Studio will be in the process of setting up the Weather Copilot and when complete, the Weather Copilot will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side.
+1.  Copilot Studio will be in the process of setting up the Weather agent and when complete, the Weather agent will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side.
 
-    ![Weather copilot created](assets/2.1_10_WeatherCopilotCreated.jpg)
+    ![Weather agent](assets/2.1_11_WeatherAgentCreated.jpg)
 
-1.  Scroll down and you’ll see that the Topics and Actions are already configured from the template, enabling you to quickly create a Weather Copilot.
+1.  Scroll down and you’ll see that the Topics and Actions are already configured from the template, enabling you to quickly create a Weather agent.
 
-    ![Copilot Topics and Actions](assets/2.1_11_TopicsActions.jpg)
+    ![Agent Topics and Actions](assets/2.1_12_TopicsActions.jpg)
 
 1.  You can now test the Weather copilot using the right hand side pane. Select the _What can I ask?_ question to see a list of suggested questions to ask the Weather copilot.
 
-    ![Suggested questions](assets/2.1_12_TestCopilot.jpg)
+    ![Suggested questions](assets/2.1_13_TestAgent.jpg)
     
 1.  A list of questions will appear. Select _What is the current weather?_
 
-    ![Weather copilot created](assets/2.1_13_SelectQuestion.jpg)
+    ![Weather agent created](assets/2.1_14_SelectQuestion.jpg)
 
 1.  Enter a city for example,
 
@@ -98,7 +102,7 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
 🎓 You’ve created a custom copilot using a template. Let’s next learn how to use natural language to build a custom copilot from scratch.
 
-## 2.2 Use natural language to create a custom Copilot
+## 2.2 Use natural language to create an agent
 
 You can now use a conversation first approach to create a custom Copilot where natural language is used to describe the custom Copilot that you’d like to create.
 
