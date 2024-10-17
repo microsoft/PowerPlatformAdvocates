@@ -124,7 +124,6 @@ You can now use a conversation first approach to create an agent where natural l
     help answer common product and support questions using the content of a website, and help answer HR questions from a SharePoint site
     ```
 
-
 1. The second question may be based on the tone of the agent. Again, a list of suggestions can be provided by selecting _What should I say?_
 
     ![Further guidance](assets/2.2_03_Further%20guidance.jpg)
@@ -242,29 +241,31 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
 4.  The SharePoint site is added as a Knowledge Source. Please note that the SharePoint Site will only be available to authenticated end-users, [learn more](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive). Select Add.
 
-    ![Add data source](assets/2.3_04_AddDataSource.jpg)
+    ![Add SharePoint site as a data source](assets/2.3_04_AddSharePointSite.jpg)
 
-1.  The SharePoint site has now been added as a knowledge source for the Copilot.
+1.  The SharePoint site has now been added as a knowledge source for the agent.
 
-    ![Data source URL](assets/2.3_05_KnowledgeSources.jpg)
+    ![Data source URL](assets/2.3_05_Knowledge_SharePointSite.jpg)
 
-1.  Before we can test, the generative AI feature needs to be enabled. Select Settings on the top right of the Copilot.
+1.  We can now test the agent to confirm SharePoint is now a data source for generative answers. Select the **Refresh** icon in the **Test your agent** pane.
 
-    ![Settings](assets/2.3_06_Settings.jpg)
+    ![Refresh agent](assets/2.3_06_RefreshAgent.jpg)
 
-1.  Select Generative AI in the Settings menu on the left hand side pane, followed by selecting the Generative (preview) setting and select Save.
+1. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the Conversation Start Topic is dipslayed as it was triggered.
 
-    ![Settings](assets/2.3_07_GenerativeSetting.jpg)
-    
-1.  Select the X icon on the right hand side to return to the Copilot.  We can now test copilot to confirm SharePoint is now a data source for generative answers. Select the refresh icon and enter the question,
+    ![Track between topics](assets/2.3_07_TrackBetweenTopics.jpg)
+
+1. Next, and enter the following question to test the agent.
 
     ```
     What happens if I'm sick and cannot work?
     ```
+    
+    ![Test agent with Question 1](assets/2.3_08_TestAgent_Q1.jpg)
 
-1.  This time Copilot uses the internal link [https://m365x73059307.sharepoint.com/](https://m365x73059307.sharepoint.com) to return the answer it found in a document in plain natural language. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it.
+1.  A response is returned in natural language using the information retrieved from the uploaded document in the SharePoint site. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it. You can also see that the Conversational boosting Topic was called and the generative answers node succeeded in using the provided knowledge sources to answer the question.
 
-    ![Time off question](assets/2.3_08_Question1.jpg)
+    ![Response to Question 1](assets/2.3_09_TestAgent_Q1Response.jpg)
 
 1.  Try entering another question, 
 
@@ -272,11 +273,11 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
     What holidays do Contoso employees have off?
     ```
 
-![Holidays question](assets/2.3_09_Question2.jpg)
+    ![Test agent with Question 2](assets/2.3_11_TestAgent_Q2.jpg)
 
 1.  You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
 
-    ![Holidays for Contoso employees](assets/2.3_10_AnswerToQuestion2.jpg)
+    ![Response to Question 2](assets/2.3_11_TestAgent_Q2.jpg)
 
 ## Next lab
 
