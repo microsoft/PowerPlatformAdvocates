@@ -139,9 +139,9 @@ You can now use a conversation first approach to create an agent where natural l
 
 1.  Next question will be based on what external knowledge source the Copilot can refer to answer questions asked by users. A guide can be provided by selecting _Any tips?_
 
-    ![Further guidance](assets/2.2_05_Tips.jpg)
+    ![Further guidance](assets/2.2_05_PubliclyAccessibleWebsitesTips.jpg)
 
-1.  Guidance will appear on adding websites for your Copilot. Next enter a public facing website URL address. For example, enter the following,
+1.  Guidance will appear on adding websites for your agent. Next enter a public facing website URL address. For example, enter the following,
 
     ```
     www.microsoft.com
@@ -149,50 +149,59 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![Further guidance](assets/2.2_06_TipsForWebsites.jpg)
 
+1. You'll be asked whether you'd like to add more websites. Enter the following,
+
+    ```
+    No
+    ```
+    ![Add no further websites](assets/2.2_07_AddNoFurtherWebsites.jpg)
+
 1.  The final question will be based on what topics or tasks the Copilot should not help with. For example, enter the following,
 
     ```
     If asked religion or politics, politely decline to discuss and offer assistance with other inquiries.
     ```
 
-    ![Topics to dismiss](assets/2.2_07_TopicsTasksToDismiss.jpg)
+    ![Topics to dismiss](assets/2.2_08_TopicsTasksToDismiss.jpg)
 
-1.  There are no further questions to answer but you can enter more details to make adjustments. Notice how on the right hand side pane that all your requirements are listed for you based on the natural language used to answer the questions asked. Select **I’m done**.
+1.  There are no further questions to answer but you can enter more details to make adjustments. 
 
-    ![Done building copilot](assets/2.2_08_Done.jpg)
+    Notice how on the right hand side pane 
+    - your agent has automatically been given a name
+    - all your requirements for the agent you want to create are listed, this was based on the natural language entered to answer the questions asked by AI in creating an agent for you
 
-1.  Notice how your Copilot has automatically been given a name based on the natural language used earlier to describe what your Copilot will help and assist with.
+    ![Done building agent](assets/2.2_09_DoneWithInstructions.jpg)
 
-    Before creating you Copilot, there’s also the options of
+1.  Before creating you Copilot, there’s also the options of
 
-    - Skip to configure – where you exit from this conversation first approach and create a custom copilot by not answering questions
-    - Select the ellipsis for additional options  (. . .) 
+    - **Skip to configure** – where you exit from this conversation first approach and create a custom copilot by not answering questions
+    - Select the ellipsis for additional options  (**. . .**) 
         - **Restart copilot creation** – clears all answers in response to the question asked and starts at the beginning
         - **Edit advanced settings** – update the solution and schema name as previously covered in 2.1 Available templates to create a custom Copilot
         - **Cancel copilot creation** – cancels creating the copilot
 
-    ![Additional settings](assets/2.2_09_AdditionalSettings.jpg)
+    ![Additional settings](assets/2.2_10_AdditionalSettings.jpg)
 
-1.  Select **Create** to create your custom Copilot.
+1.  Select **Create** to create your agent.
 
-    ![Create copilot](assets/2.2_10_CreateCopilot.jpg)
+    ![Create agent](assets/2.2_11_CreateAgent.jpg)
 
-1. Copilot Studio will be in the process of setting up your custom Copilot.
+1. Copilot Studio will be in the process of setting up your agent.
 
-    ![Create copilot](assets/2.2_11_SettingUp.jpg)
+    ![Create copilot](assets/2.2_12_SettingUp.jpg)
 
-1.  When complete, the custom Copilot will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side.
+1.  When the setup is completed, the agent will be displayed in the center of Copilot Studio, followed by the testing pane on the right hand side. You'll see the **Name**, **Description** and **Instructions** used for your agent.
 
-    ![Copilot created](assets/2.2_12_CustomCopilotCreated.jpg)
+    ![Agent created](assets/2.2_13_AgentCreated.jpg)
 
-1.  If you scroll down, you’ll see the description, the instructions and the knowledge source with the public website already configured. You can now test your copilot by entering the following question,
+1.  If you scroll down, you’ll see the knowledge source with the public website already configured. You can now test your agent by entering the following question,
 
     ```
     What is Copilot Studio?
     ```
-    ![Ask a question](assets/2.2_13_TestCopilot.jpg)
+    ![Ask a question](assets/2.2_14_TestAgent_Q1.jpg)
 
-1. Copilot uses the external link previously provided, www.microsoft.com, to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
+1. The agent uses the external link previously provided, _www.microsoft.com_, to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
 
     Try asking another question,
     
@@ -200,29 +209,33 @@ You can now use a conversation first approach to create an agent where natural l
     What is the latest Xbox model?
     ```
 
-    Copilot will respond again using information from the external link, www.microsoft.com. This is useful because it allows you to build copilots using existing information rather than creating specific topics based on requests that might be made by users.
+    ![Ask another question](assets/2.2_15_TestAgent_Q2.jpg)
 
-    ![Create copilot](assets/2.2_14_TestCopilot.jpg)
+    The agent will respond again using information from the external link, _www.microsoft.com_. 
+    
+    ![Response to question](assets/2.2_16_TestAgent_Q2Response.jpg)
 
-🎓 You've created a copilot using natural language and can answer questions based on the website provided. Let's learn how to add an internal resource.
+    This is useful because it allows you to build agents using existing information rather than creating specific topics to cater for user requests.
+    
+🎓 You've created an agent using natural language and can answer questions based on the website provided. Let's learn how to add an internal resource.
 
 ## 2.3 Adding an internal source using a SharePoint site
 
-Knowledge in Microsoft Copilot Studio allows you to add enterprise data from Power Platform, Dynamics 365 data, and external systems, so your copilots provide relevant information and insights for your end users. In addition, knowledge can be incorporated with [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-boost-conversations) in copilots. Published copilots that contain knowledge use the configured knowledge sources to ground the published copilot.
+Knowledge in Microsoft Copilot Studio allows you to add enterprise data from Power Platform and external systems, to enable your agents in providing relevant information and insights to your end users. In addition, knowledge can be incorporated with [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio#add-and-manage-knowledge-for-generative-answers) in agents. Published agents that contain knowledge use the configured knowledge sources to ground the published agent.
 
-Next, you'll learn how to add an internal data source, SharePoint, for generative answers in your copilot.
+Next, you'll learn how to add an internal data source, SharePoint, for generative answers.
 
-1. In the Overview tab, select **+Add Knowledge**.
+1. In the **Overview** tab of your agent, scroll down to the **Knowledge** section and select **+Add Knowledge**.
 
     ![Add knowledge](assets/2.3_01_AddKnowledge.jpg)
 
-1. A list of knowledge sources will appear. Select SharePoint and OneDrive.
+1. A list of knowledge sources will appear. Select SharePoint.
 
-    ![Add SharePoint internal source](assets/2.3_02_AddDataSource.jpg)
+    ![Add SharePoint internal source](assets/2.3_02_AddSharePointDataSource.jpg)
 
 1.  Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select Add.
 
-    ![SharePoint URL](assets/2.3_03_DataSourceURL.jpg)
+    ![SharePoint URL](assets/2.3_03_SharePointSiteURL.jpg)
 
 > [!TIP]  
 > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
