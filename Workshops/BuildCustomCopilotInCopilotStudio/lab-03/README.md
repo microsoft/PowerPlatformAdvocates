@@ -8,7 +8,7 @@ Actions can be used to extend the capabilities of agents. You can add multiple t
 - **•	Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
 
 In this lab, you will learn how to do the following:
-* [3.1 Add a prompt to a topic node](#31-create-a-prompt-plugin-for-generative-actions)
+* [3.1 Add a prompt to a topic node](#31-add-a-prompt-action-to-a-topic-node)
 
 ## 3.1 Add a prompt action to a topic node
 
