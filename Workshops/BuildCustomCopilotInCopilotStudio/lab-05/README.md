@@ -160,37 +160,57 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
 
     ![Test Topic](assets/4.1_25_TestTopic.jpg)
 
-1.  Copilot will return a response and you’ll now see a message with a question including two options for you to select. Select **Yes**
+1.  The agent will return a response with the 5 questions it generated for the quiz, and you’ll also see the Question node with the two options of the multi choice question. Select **Yes**
 
-    ![Question](assets/5.1_24_Question.jpg)
+    ![Question](assets/4.1_26_MultiChoiceQuestion.jpg)
 
-1.	A message will appear as additional permissions need to be granted to run the Teams connector from the copilot. Select Connect 
+1.	A connection message will appear as additional permissions need to be granted to run the Teams connector from the agent using the authentication of the user. Select **Connect**
 
-    ![Connect](assets/5.1_25_Connect.jpg)
+    ![Connect](assets/4.1_27_Connect.jpg)
 
-1. Select the **cog wheel** icon.
+1. The Connections page in Copilot Studio will load. This will list connections for all actions that I need to configure for my agent. When I select the hyperlink in the **Used by** column, it tells me more information about the connectors used for the Power Automate cloud flow action.
 
-    ![Connection settings](assets/5.1_26_Settings.jpg)
+    ![Review Action](assets/4.1_28_ReviewConnectorAction.jpg)
 
-1.  Next select **Submit** to enable a connection to Microsoft Teams connector.
+1. We can see the **Microsoft Teams** connector has a status of not connected as we have not authenticated the connection. Select **Close**.
 
-    ![Microsoft Teams connection](assets/5.1_27_Connection.jpg)
+    ![Review connector for action](assets/4.1_29_ReviewConnector.jpg)
+
+1. Next select **Connect**. 
+
+    ![Select Connect](assets/4.1_30_SelectConnect.jpg)
+
+1. Select **Submit** to enable a connection to the Microsoft Teams connector.
+
+    ![Select Submit](assets/4.1_31_Submit.jpg)
 
 1.  The action will now have a status of **Connected**.
 
-    ![Connection settings](assets/5.1_28_Connected.jpg)
+    ![Connected](assets/4.1_32_Connected.jpg)
 
-1.  Navigate back to the browser tab with Microsoft Copilot Studio and select Retry.
+1.  Navigate back to the browser tab with Microsoft Copilot Studio and select **Retry**.
 
-    ![Retry](assets/5.1_29_Retry.jpg)
+    ![Retry](assets/4.1_33_RetryAction.jpg)
 
-1.  Copilot will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the **General** channel in Microsoft Teams where the content includes the prompt response. Copilot will then send a message back to the user which contains a link to view the message posted in the Teams channel.
+1.  The agent will execute the Power Automate cloud flow node which results in the cloud flow being triggered and performing the action of posting a message to the **General** channel in Microsoft Teams where the content includes the prompt response. The message displayed to the user also includes a link which was sent back from the cloud flow to the action. Select the hyperlink to load the message posted to the Teams channel.
 
-    ![Flow executed](assets/5.1_30_FlowExecuted.jpg)
+    ![Select hyperlink](assets/4.1_34_SelectHyperlink.jpg)
 
-1.  Click on the link and open Microsoft Teams in the web app. The posted Teams message created from the cloud flow will appear.
+1.  Select **Use the web app instead** to launch the Microsoft Teams web app in a new browser tab. 
 
-    ![Teams message](assets/5.1_31_TeamsMessage.jpg)
+    ![Launch Teams web app](assets/4.1_35_LaunchTeamsWebApp.jpg)
+
+1. The posted message to the Teams channel will appear which includes the prompt response.
+
+    ![Teams message](assets/4.1_36_MessagePostedToTeams.jpg)
+
+1. Navigate back to the browser tab with Copilot Studio open and select **Yes**.
+
+    ![Redirect node](assets/4.1_37_RedirectNode.jpg)
+
+1. The agent has been redirected to the system End of Conversation topic.
+
+    ![End of Conversation node](assets/4.1_38_EndOfConversationNode.jpg)
 
 ## End of lab and workshop
 

@@ -132,6 +132,14 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Prompt action variable output](assets/3.1_21_VariableOutput.jpg)
 
+1. Below the Prompt action, select the **+** icon to add a new node and select **Send a message**. Select the **{x}** variable icon.
+
+    ![Send a message node](assets/3.1_22_SendMessage.jpg)
+
+1. Select the variable **VarQuizQuestionsResponse.text**. This will add the text property of the prompt action response to the send a message node.
+
+    ![Select variable output](assets/3.1_23_VarQuizQuestionsResponse.text.jpg)
+
 1. Select **Save** to save your topic.
 
 1. The Topic details needs to be updated next which will be used by your agent to associate the topic with the user's intent when [Generative mode](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) is enabled. Select **Details** and for the **Display name** enter the following
@@ -146,17 +154,17 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     This topic creates questions for a quiz based on the number of questions, the topic and format provided by the user
     ```
 
-    ![Update Topic details](assets/3.1_22_UpdateTopicDetails.jpg)
+    ![Update Topic details](assets/3.1_24_UpdateTopicDetails.jpg)
 
 1. Select **Save** to save your topic.
 
 1. Lastly, the [Generative mode](https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-generative-actions#how-does-generative-mode-work) setting needs to be enabled for the agent to call the topic with the prompt action. Select **Settings** for your agent.
 
-    ![Agent settings](assets/3.1_23_Settings.jpg)
+    ![Agent settings](assets/3.1_25_Settings.jpg)
 
 1. Select the **Generative AI** setting and select **Generate (preview)** followed by selecting **Save**.
 
-    ![Enable Generative mode](assets/3.1_24_EnableGenerativeMode.jpg)
+    ![Enable Generative mode](assets/3.1_26_EnableGenerativeMode.jpg)
 
 1. Great, we're now ready to test the agent. In the test pane, select the **refresh** icon. Then enter the following question,
 
@@ -164,11 +172,11 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     Create 5 questions for a quiz based on geography and format the quiz as multi choice
     ```
 
-    ![Test prompt action](assets/3.1_25_TestPromptAction.jpg)
+    ![Test prompt action](assets/3.1_27_TestPromptAction.jpg)
 
 1. A response is returned where 5 questions have been provided with the answers on the topic of geography and is formatted as multi choice questions.
 
-    ![Test prompt action response](assets/3.1_26_TestPromptActionResponse.jpg)
+    ![Test prompt action response](assets/3.1_28_TestPromptActionResponse.jpg)
 
 ## Next lab
 
