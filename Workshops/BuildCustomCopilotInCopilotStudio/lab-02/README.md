@@ -297,4 +297,4 @@ Congratulations! 👏🏻  You've configured your agent with external and intern
 
 This is the end of Lab 02 - Build an agent with Microsoft Copilot Studio, select the link below to move to the next lab.
 
-[⏭️ Move to Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses](../lab-03/README.md)
+[⏭️ Move to Lab 03 - Create a Prompt action for a Topic for generative answers](../lab-03/README.md)

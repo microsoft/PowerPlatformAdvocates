@@ -17,14 +17,14 @@ These connectors are categorized as:
 
 Microsoft Power Automate connectors help extend the functionality of Microsoft Copilot Studio, enabling them to perform a wide range of tasks by connecting with various external services and applications. This integration empowers agent makers to create more dynamic, responsive, and useful agents, tailored to specific business needs and processes.
 
-You can use connectors that already exist in your Power Apps environment or create a flow from the Microsoft Copilot Studio authoring canvas through the Call an action node.
+You can use connectors that already exist in your Power Apps environment or create a Power Automate cloud flow from the Microsoft Copilot Studio authoring canvas through the **Call an action** node.
 
 In this lab, you will learn how to do the following:
 * [4.1 Create a Power Automate cloud flow for your agent](#41-create-a-power-automate-cloud-flow-for-your-agent)
 
 ## 4.1 Create a Power Automate cloud flow for your agent
 
-In this part of the lab you’ll learn how to add some additional logic and automation. 
+In this part of the lab you’ll learn how to add additional logic and automation. 
 
 A question will be added to the authoring canvas to ask the user if they want to send the questions generated for a quiz to a channel in Microsoft Teams for members of the channel to review.
 
@@ -32,7 +32,7 @@ A question will be added to the authoring canvas to ask the user if they want to
 
 - Should the user select No, a new node will be added to redirect to the *End of Conversation* node.
 
-Let's begin with creating a Power Automate cloud flow to the existing topic created in [Lab 03 - Create a Prompt action using a Power Platform connector for generative responses](../lab-03/README.md)
+Let's begin with creating a Power Automate cloud flow to the existing topic created in [Lab 03 - Create a Prompt action for a Topic for generative answers](../lab-03/README.md)
 
 1.	Click on the **X** icon to close the testing pane to increase the width of the authoring canvas.
 

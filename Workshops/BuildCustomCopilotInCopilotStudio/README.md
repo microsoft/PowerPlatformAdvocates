@@ -14,11 +14,11 @@ In this lab, you will create an agent using a template and with natural language
 
 [Lab 02 - Build an agent with Microsoft Copilot Studio and Generative Answers](./lab-02/README.md)
 
-## Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses
+## Lab 03 - Create a Prompt action for a Topic for generative answers
 
 In this lab, you will learn how to create a Prompt action for a Topic for generative responses. You will also learn how to test your Topic with the Prompt action.
 
-[Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses](./lab-03/README.md)
+[Lab 03 - Create a Prompt action for a Topic for generative answers](./lab-03/README.md)
 
 ## Lab 04 - Automation for your agent with Power Automate cloud flows
 

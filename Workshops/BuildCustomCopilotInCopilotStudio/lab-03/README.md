@@ -1,28 +1,28 @@
-# Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses
+# Lab 03 - Create a Prompt action for a Topic for generative answers
 
 Actions can be used to extend the capabilities of agents. You can add multiple types of actions to your agents in Microsoft Copilot Studio:
 - **Prebuilt connector action**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
 - **Custom connector action**, where a connector can be built to access data from public or private APIs.
-- **Power Automate cloud flow**, which use Power Automate flows to perform actions, and retrieve and work with data.
+- **Power Automate cloud flow**, which use Power Automate cloud flows to perform actions, retrieve and work with data.
 - **AI Builder prompts**, which use AI Builder and natural language understanding to target the specific scenarios and workflows within your business.
-- **•	Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
+- **Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
 
 In this lab, you will learn how to do the following:
-* [3.1 Add a prompt to a topic node](#31-add-a-prompt-action-to-a-topic-node)
+* [3.1 Add a prompt to action to a topic node](#31-add-a-prompt-action-to-a-topic-node)
 
 ## 3.1 Add a prompt action to a topic node
 
 In this part of the lab we’ll be creating a **prompt action** in a topic., which is the **Generate content or extract insights** action from the AI Builder connector.
 
-Prompt actions in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scnarios for your agents.
+Prompt actions in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
 
 For this lab, we'll add a Topic that calls a prompt action to generate questions for a quiz.
 
-1.	In your agent select the **Topics** tab, select **+ Add a topic** and select From blank.
+1.	In your agent select the **Topics** tab, select **+ Add a topic** and select **From blank**.
 
     ![Add topic from blank](assets/3.1_01_AddTopicFromBlank.jpg)
 
-1. Enter a **name** for the Topic such as `Generate questions for a quiz` and select the **Edit** hyperlink under Phrases in the trigger. A minimum of 5 trigger phrases needs to be entered and you can enter them in bulk by pasting in line-separated items and then select the **+** icon to add the phrases.
+1. Enter a **name** for the Topic such as `Generate questions for a quiz` and select the **Edit** hyperlink under _Phrases_ in the trigger. A minimum of 5 trigger phrases needs to be entered and you can enter them in bulk by pasting line-separated items and then select the **+** icon to add the phrases.
 
     The following is an example that can be copied and pasted.
 
@@ -40,7 +40,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Save topic](assets/3.1_03_SaveTopic.jpg)
 
-1. Under the trigger node, select the **+** icon and select the Call an action node, followed by selecting Create a prompt.
+1. Under the trigger node, select the **+** icon and select the **Call an action** node, followed by selecting **Create a prompt**.
 
     ![Call an action node](assets/3.1_04_CallAnActionNode.jpg)
 
@@ -60,7 +60,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Prompt dialog](assets/3.1_06_PromptDialog.jpg)
 
-1.	Enter a name for the prompt such as `Quiz Generator` 
+1.	We'll create prompt that will generate questions for a quiz. Enter a name for the prompt such as `Quiz Generator` 
 
     ![Prompt name](assets/3.1_07_PromptName.jpg)
 
@@ -73,11 +73,11 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
     - topic which is the topic of the quiz
     - format which is the output format of the questions
 
-    Copy the prompt.
+    **Copy** the Quiz Generator prompt.
 
     ![Quiz Generator prompt](assets/3.1_09_QuizGeneratorPrompt.jpg)
 
-1.	Go back to the action in Copilot Studio. Paste the copied prompt value in the Prompt box on the top left hand side.
+1.	Go back to the action in Copilot Studio. **Paste** the copied prompt value in the Prompt box on the top left hand side.
 
     ![Paste Prompt](assets/3.1_10_PastePrompt.jpg)
 
@@ -93,7 +93,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Input parameters](assets/3.1_13_InputParameters.jpg)
 
-1.	Next, the inputs needs to be inserted into the prompt. In the Prompt, highlight **[number]** and select **+ Insert** and select **number**. The input of number has now been added to the prompt as an input. Repeat the same steps for the remaining inputs.
+1.	Next, the inputs needs to be inserted into the prompt. In the Prompt, highlight **[number]** and select **+ Insert** and select **number**. The input of _number_ has now been added to the prompt as an input. Repeat the same steps for the remaining inputs.
 
     ![Insert inputs](assets/3.1_14_PromptInputParameters.jpg)
 
@@ -110,7 +110,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 1. The prompt action node will now appear in the authoring canvas of the Topic. Next, the values of the input parameter need to be defined in order for the agent to populate them. This value can be 
     - a literal value
     - an existing variable (custom, system or environment) 
-    - a Power Fx formula that could also reference existing variables.
+    - a Power Fx formula that could also reference existing variables
 
     Select the **>** icon
 
@@ -128,7 +128,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
     ![Create new output variable](assets/3.1_20_CreateActionOutputVariable.jpg)
 
-1. A new variable named `Var1` appears as the vairable output. Select the variable and the variable properties pane will appear. Enter a variable name such as `VarQuizQuestionsResponse`
+1. A new variable named `Var1` appears as the variable output. Select the variable and the variable properties pane will appear. Enter a variable name such as `VarQuizQuestionsResponse`
 
     ![Prompt action variable output](assets/3.1_21_VariableOutput.jpg)
 
@@ -182,7 +182,7 @@ For this lab, we'll add a Topic that calls a prompt action to generate questions
 
 Congratulations! 🙌🏻 You’ve now learnt how to create a prompt action for a topic by creating a custom prompt with one of the Power Platform Prompt samples.
 
-This is the end of Lab 03 - Create a Prompt action using a Power Platform connector for generative responses, select the link below to move to the next lab.
+This is the end of Lab 03 - Create a Prompt action for a Topic for generative answers, select the link below to move to the next lab.
 
 [⏭️ Move to Lab 04 - Create a custom topic with a prompt action for generative responses](../lab-04/README.md)
 
