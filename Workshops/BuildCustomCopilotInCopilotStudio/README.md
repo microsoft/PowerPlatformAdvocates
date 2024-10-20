@@ -10,13 +10,13 @@ In this lab, you will login to the account you are going to use during the works
 
 ## Lab 02 - Build an agent with Microsoft Copilot Studio
 
-In this lab, you will create an agent using a template and with natural language. You'll also learn how to add an an internal knowledge source, and how to test your agent as you build it.
+In this lab, you will create an agent using a template and with natural language. You'll also learn how to add an internal knowledge source, and how to test your agent as you build it.
 
 [Lab 02 - Build an agent with Microsoft Copilot Studio and Generative Answers](./lab-02/README.md)
 
 ## Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses
 
-In this lab, you will learn how to create a Prompt action for a Topic to your agent for generative responses. You will also learn how to test your Topic with the Prompt action.
+In this lab, you will learn how to create a Prompt action for a Topic for generative responses. You will also learn how to test your Topic with the Prompt action.
 
 [Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses](./lab-03/README.md)
 
