@@ -28,9 +28,9 @@ In this part of the lab you’ll learn how to add additional logic and automatio
 
 A question will be added to the authoring canvas to ask the user if they want to send the questions generated for a quiz to a channel in Microsoft Teams for members of the channel to review.
 
-- Should the user select Yes, a Power Automate cloud flow will be executed to send a Microsoft Teams message to your manager where the message content includes the prompt response from the plugin action.
+- Should the user select _Yes_, a Power Automate cloud flow will be executed to send a Microsoft Teams message to your manager where the message content includes the prompt response from the plugin action.
 
-- Should the user select No, a new node will be added to redirect to the *End of Conversation* node.
+- Should the user select _No_, a new node will be added to redirect to the *End of Conversation* node.
 
 Let's begin with creating a Power Automate cloud flow to the existing topic created in [Lab 03 - Create a Prompt action for a Topic for generative answers](../lab-03/README.md)
 
@@ -38,7 +38,7 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
 
     ![Close Test copilot](assets/4.1_01_CloseTestPane.jpg)
 
-1.	Scroll down to the bottom of the prompt action and select the **+** icon in the authoring canvas to add a new node. Select **Ask a question**.
+1.	Scroll down to the bottom of the prompt action and select the **+** icon in the authoring canvas to add a new node. Select **Ask a question**
 
     ![Ask a question](assets/4.1_02_AskAQuestionNode.jpg)
 
@@ -48,17 +48,17 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
     Do you want me to post a message to the General channel in the Contoso Microsoft Teams Group to ask the channel members to review the questions for the quiz?
     ```
     
-    ![Enter a question](assets/4.1_03_EnterQuestion.jpg)
+    ![Enter a question](assets/4.1_03_EnterAQuestion.jpg)
 
-1. Select **+ New option** to add the options of **Yes**, **No**. Next select **Var**1** in the **Save user response as** field
+1. Select **+ New option** to add the options of **Yes**, **No**. Next select **Var1** in the **Save user response as** field
 
     ![Question options](assets/4.1_04_QuestionOptions.jpg)
 
-1.	Update the name to **VarSendMessage** and select the **X** icon to close the variables pane.
+1.	Update the name to **VarSendMessage** and select the **X** icon to close the variable properties pane.
 
     ![Variable Name](assets/4.1_05_VariableName.jpg)
 
-1.	Scroll down in the authoring canvas and under the **Condition** where the **VarSendMessage is equal to Yes**, select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select **Create a cloud flow**
+1.	Scroll down in the authoring canvas and under the **Condition** where the **VarSendMessage is equal to Yes**, select the **+** icon in the authoring canvas to add a new node. This time select **Call an action** and select **Create a flow**
 
     ![Create cloud flow](assets/4.1_06_CreateACloudFlow.jpg)
 
@@ -88,23 +88,23 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
     | Post In | Channel | |
     | Team | Contoso | You may not see this Team, select any suitable team |
     | Channel | General | You may not see this channel, select any suitable channel for the Team previously selected |
-    | Message | [Content of your choice] | Enter a description message for the users in the Teams channel and select the **thunder** icon to insert the text generated output from the trigger of the cloud flow into the message content.|
+    | Message | [Content of your choice] | Enter a description message for the users in the Teams channel, `The user, {name of user}, asked an agent to generate a list of questions for a quiz. The following below are the questions it came up with, please review.` Select the **thunder** icon to insert the text generated output from the trigger of the cloud flow into the message content.|
 
     ![Configure action](assets/4.1_11_ConfigureAction.jpg)
 
-1.	To complete the end user experience, the cloud flow can send a link to the posted Teams message to the user in copilot as a response. Select the last action in the cloud flows, **Return value(s) to Power Virtual Agents** and select **+ Add an output**. 
+1.	To complete the end user experience, the cloud flow can send the _message link_ property of the _Post message in a chat or channel_ action back to the agent to display to the user. Select the last action in the cloud flow, **Respond to Copilot** and select **+ Add an output**. 
 
     ![Add an output](assets/4.1_12_AddAnOutput.jpg)
 
-1.	Select **text** as type of output, enter message link as the name of the output. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
+1.	Select **Text** as output of type, enter `message_link` as the name of the output. In the value field, select the **thunder** icon and select the **Message Link** output from the **Post message in a chat or channel action**.
 
     ![Message Link dynamic content](assets/4.1_13_AddAnOutput.jpg)
 
-1.	The output value is now updated with the **Message Link** output from the **Post message in a chat or channel action**. Select **Save draft** on the top right hand side of the cloud flow designer.
+1.	The output value is now updated with the **Message Link** output from the **Post message in a chat or channel** action. Select **Save draft** on the top right hand side of the cloud flow designer.
 
     ![Save draft](assets/4.1_14_SaveDraft.jpg)
 
-1.	Wait until you receive the confirmation message that the cloud flow has been saved. Next select Publish.
+1.	Wait until you receive the confirmation message that the cloud flow has been saved. Next select **Publish**.
 
     ![Publish](assets/4.1_15_Publish.jpg)
 
@@ -164,19 +164,19 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
 
     ![Question](assets/4.1_26_MultiChoiceQuestion.jpg)
 
-1.	A connection message will appear as additional permissions need to be granted to run the Teams connector from the agent using the authentication of the user. Select **Connect**
+1.	A connection message will appear as additional permissions need to be granted to run the Microsoft Teams connector from the agent using the authentication of the user. Select **Connect**
 
     ![Connect](assets/4.1_27_Connect.jpg)
 
-1. The Connections page in Copilot Studio will load. This will list connections for all actions that I need to configure for my agent. When I select the hyperlink in the **Used by** column, it tells me more information about the connectors used for the Power Automate cloud flow action.
+1. The _Connections_ page in Copilot Studio will load. This will list connections for all actions that I need to configure for my agent. When I select the hyperlink in the **Used by** column, it tells me more information about the connectors used for the Power Automate cloud flow action.
 
     ![Review Action](assets/4.1_28_ReviewConnectorAction.jpg)
 
-1. We can see the **Microsoft Teams** connector has a status of not connected as we have not authenticated the connection. Select **Close**.
+1. We can see the **Microsoft Teams** connector has a status of _Not Connected_ as we have not authenticated the connection. Select **Close**.
 
     ![Review connector for action](assets/4.1_29_ReviewConnector.jpg)
 
-1. Next select **Connect**. 
+1. Next select the **Connect** hyperlink. 
 
     ![Select Connect](assets/4.1_30_SelectConnect.jpg)
 
@@ -208,12 +208,12 @@ Let's begin with creating a Power Automate cloud flow to the existing topic crea
 
     ![Redirect node](assets/4.1_37_RedirectNode.jpg)
 
-1. The agent has been redirected to the system End of Conversation topic.
+1. The agent has been redirected to the system topic, _End of Conversation_.
 
     ![End of Conversation node](assets/4.1_38_EndOfConversationNode.jpg)
 
 ## End of lab and workshop
 
-Congratulations! 🎇 You’ve now learnt how to create a Power Automate cloud flow to perform automation where the prompt actiin response is included in a message posted to a Microsoft Teams channel.
+Congratulations! 🎇 You’ve now learnt how to create a Power Automate cloud flow to perform automation where the prompt action response is included in a message posted to a Microsoft Teams channel.
 
 You’ve now reached the end of this lab and workshop 🎉
