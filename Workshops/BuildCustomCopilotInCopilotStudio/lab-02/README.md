@@ -15,8 +15,8 @@ In this lab, you will learn how to do the following:
 
 ## 2.1 Available templates to create an agent
 
-In this part of the lab, you will learn of the several templates available to quickly get started in creating your own agent.
-In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
+In this part of the lab, you will learn about how templates can help you quickly get started in creating your own agent.
+In the **Home** landing page of Microsoft Copilot Studio, you’ll see three areas
 * **Describe your copilot to create it** – use natural language to build your agent
 * **Templates** – these are a preview feature and helps you get started in creating your agent
 * **Learning resources** – multiple resources for further learning
@@ -42,7 +42,7 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
     
     ![Weather agent template](assets/2.1_04_WeatherTemplate.jpg)
 
-1.	Scroll down to **Connect your data**, select the ellipsis (. . .) and select **Edit**.
+1.	Scroll down to **Connect your data**, select the ellipsis (**. . .**) and select **Edit**.
 
     ![Connect data source](assets/2.1_05_ConnectDataSource.jpg)
 
@@ -60,7 +60,7 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
 1.	This is where you can define the following settings,
 
-    - **Solution** – select the solution to create your agent in. This allows you to deploy the agent to a target environment by exporting the solution. By default Common Data Services Default Solution will be selected.
+    - **Solution** – select the solution to create your agent in. This allows you to deploy the agent to a target environment by exporting the solution. By default the _Common Data Services Default Solution_ will be selected.
     - **Schema Name** – by default this will be the name of your agent. This is the unique name which can be used to embed or connect your agent to other applications or services.
     - **Classic copilot** – there’s also an option to create a classic agent which is not covered in this lab.
     
@@ -80,7 +80,7 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
     ![Agent Topics and Actions](assets/2.1_12_TopicsActions.jpg)
 
-1.  You can now test the Weather agent using the right hand side pane. Select the **What can I ask?** question to see a list of suggested questions to ask the Weather agent.
+1.  You can now test the Weather agent using the right hand side pane. Select **What can I ask?** to see a list of suggested questions to ask the Weather agent.
 
     ![Suggested questions](assets/2.1_13_TestAgent.jpg)
     
@@ -157,7 +157,7 @@ You can use a conversation first approach to create an agent where natural langu
 
     ![Further guidance](assets/2.2_06_TipsForWebsites.jpg)
 
-1. Next, yu'll be asked whether you'd like to add more websites. Enter the following,
+1. Next, you'll be asked whether you'd like to add more websites. Enter the following,
 
     ```
     No
@@ -209,7 +209,7 @@ You can use a conversation first approach to create an agent where natural langu
     ```
     ![Ask a question](assets/2.2_14_TestAgent_Q1.jpg)
 
-1. The agent uses the external link previously provided, _www.microsoft.com_, to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs down or thumbs up icons.
+1. The agent uses the external link previously provided, _www.microsoft.com_, to return an answer in plain natural language. Notice that there are references with a hyperlink to where the information is sourced from so that you can validate it. You can also provide feedback by selecting the thumbs up or thumbs down icons.
 
     Try asking another question,
     
@@ -219,7 +219,7 @@ You can use a conversation first approach to create an agent where natural langu
 
     ![Ask another question](assets/2.2_15_TestAgent_Q2.jpg)
 
-    The agent will respond again using information from the external link, _www.microsoft.com_. 
+    The agent will respond again using information from the external link, _www.microsoft.com_
     
     ![Response to question](assets/2.2_16_TestAgent_Q2Response.jpg)
 
@@ -260,7 +260,7 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Refresh agent](assets/2.3_06_RefreshAgent.jpg)
 
-1. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the _Conversation Start Topic_ is dipslayed as it was triggered.
+1. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the _Conversation Start_ system topic is dipslayed as it was triggered.
 
     ![Track between topics](assets/2.3_07_TrackBetweenTopics.jpg)
 
