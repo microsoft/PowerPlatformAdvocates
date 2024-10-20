@@ -1,4 +1,4 @@
-# Lab 03 - Create a Prompt action using a Power Platform connector for generative responses
+# Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses
 
 Actions can be used to extend the capabilities of agents. You can add multiple types of actions to your agents in Microsoft Copilot Studio:
 - **Prebuilt connector action**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.

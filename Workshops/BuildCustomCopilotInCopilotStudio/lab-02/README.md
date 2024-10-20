@@ -9,17 +9,17 @@ There are several ways to create an agent
 Each method allows you to connect your data and knowledge sources to enable your agent to access information and complete tasks.
 
 In this lab, you will learn how to do the following:
-* [2.1 Available templates to create an agent copilot](#21-available-templates-to-create-an-agent)
+* [2.1 Available templates to create an agent](#21-available-templates-to-create-an-agent)
 * [2.2 Use natural language to create an agent](#22-use-natural-language-to-create-an-agent)
-* [2.3 Adding an internal knowledge source using a SharePoint site](#223-adding-an-internal-source-using-a-sharepoint-site)
+* [2.3 Adding an internal knowledge source using a SharePoint site](#23-adding-an-internal-source-using-a-sharepoint-site)
 
 ## 2.1 Available templates to create an agent
 
 In this part of the lab, you will learn of the several templates available to quickly get started in creating your own agent.
 In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
-* Describe your copilot to create it – use natural language to build your agent
-* Templates – these are a preview feature and helps you get started in creating your agent
-* Learning resources – multiple resources for further learning
+* **Describe your copilot to create it** – use natural language to build your agent
+* **Templates** – these are a preview feature and helps you get started in creating your agent
+* **Learning resources** – multiple resources for further learning
 
     ![Copilot Studio Home](assets/2.1_01_CopilotStudioHome.jpg)
 
@@ -104,9 +104,11 @@ In the Home landing page of Microsoft Copilot Studio, you’ll see three areas
 
 ## 2.2 Use natural language to create an agent
 
-You can now use a conversation first approach to create an agent where natural language is used to describe the agent that you’d like to create.
+You can use a conversation first approach to create an agent where natural language is used to describe the agent that you’d like to create.
 
-1.  Select Home on the left hand side menu and in the Describe your copilot to create it field, describe in natural language what your agent should do. For example,
+1.  Select **Home** on the left hand side menu and in the **Describe your copilot to create it** field, describe in natural language what your agent should do.
+
+    For example,
 
     ```
     I want you to be a question and answering assistant that can answer common questions from users using the content of a website and a SharePoint site
@@ -118,7 +120,10 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![City](assets/2.2_02_DescribeTypeOfAssistance.jpg)
 
-    You can either select _What should I say?_ which will provide guidance, or you can enter and describe what you’d like your agent to do. The following is an example,
+    You can either,
+    
+    - Option 1: select _What should I say?_ which will provide guidance, 
+    - Option 2: or you can enter and describe what you’d like your agent to do. The following is an example,
 
     ```
     help answer common product and support questions using the content of a website, and help answer HR questions from a SharePoint site
@@ -128,7 +133,9 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![Further guidance](assets/2.2_03_Further%20guidance.jpg)
 
-1.  A list of suggestions will appear for guidance. Enter a tone, for example,
+1.  A list of suggestions will appear for guidance. Enter a tone.
+
+    For example,
 
     ```
     Maintain a polite and professional tone while assisting with questions
@@ -136,11 +143,13 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![Tone](assets/2.2_04_Tone.jpg)
 
-1.  Next question will be based on what external knowledge source the Copilot can refer to answer questions asked by users. A guide can be provided by selecting _Any tips?_
+1.  Next question will be based on what external knowledge source your agent can refer to, to answer questions asked by users. A guide can be provided by selecting _Any tips?_
 
     ![Further guidance](assets/2.2_05_PubliclyAccessibleWebsitesTips.jpg)
 
-1.  Guidance will appear on adding websites for your agent. Next enter a public facing website URL address. For example, enter the following,
+1.  A list of tips will appear on adding websites for your agent. Next enter a public facing website URL address. 
+
+    For example, enter the following,
 
     ```
     www.microsoft.com
@@ -148,14 +157,14 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![Further guidance](assets/2.2_06_TipsForWebsites.jpg)
 
-1. You'll be asked whether you'd like to add more websites. Enter the following,
+1. Next, yu'll be asked whether you'd like to add more websites. Enter the following,
 
     ```
     No
     ```
     ![Add no further websites](assets/2.2_07_AddNoFurtherWebsites.jpg)
 
-1.  The final question will be based on what topics or tasks the Copilot should not help with. For example, enter the following,
+1.  The final question will be based on what topics or tasks your agent should not help with. For example, enter the following,
 
     ```
     If asked religion or politics, politely decline to discuss and offer assistance with other inquiries.
@@ -171,13 +180,13 @@ You can now use a conversation first approach to create an agent where natural l
 
     ![Done building agent](assets/2.2_09_DoneWithInstructions.jpg)
 
-1.  Before creating you Copilot, there’s also the options of
+1.  Before creating your agent, there’s also the options of
 
-    - **Skip to configure** – where you exit from this conversation first approach and create a custom copilot by not answering questions
+    - **Skip to configure** – where you exit from this conversation first approach and create an agent by not answering questions
     - Select the ellipsis for additional options  (**. . .**) 
-        - **Restart copilot creation** – clears all answers in response to the question asked and starts at the beginning
-        - **Edit advanced settings** – update the solution and schema name as previously covered in 2.1 Available templates to create a custom Copilot
-        - **Cancel copilot creation** – cancels creating the copilot
+        - **Restart copilot creation** – clears all answers in response to the question asked and starts at the beginning.
+        - **Edit advanced settings** – update the solution and schema name as previously covered in [2.1 Available templates to create an agent](#21-available-templates-to-create-an-agent).
+        - **Cancel copilot creation** – cancels creating the agent.
 
     ![Additional settings](assets/2.2_10_AdditionalSettings.jpg)
 
@@ -228,18 +237,18 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Add knowledge](assets/2.3_01_AddKnowledge.jpg)
 
-1. A list of knowledge sources will appear. Select SharePoint.
+1. A list of knowledge sources will appear. Select **SharePoint**.
 
     ![Add SharePoint internal source](assets/2.3_02_AddSharePointDataSource.jpg)
 
-1.  Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select Add.
+1.  Paste the SharePoint site URL from the SharePoint site you created earlier in the sources field and select **Add**.
 
     ![SharePoint URL](assets/2.3_03_SharePointSiteURL.jpg)
 
 > [!TIP]  
 > To recopy the SharePoint site URL, head to the [⏪ previous lab](../lab-01/README.md/#relaunch-sharepoint-site) to copy the SharePoint site URL and return to this lab to proceed.
 
-4.  The SharePoint site is added as a Knowledge Source. Please note that the SharePoint Site will only be available to authenticated end-users, [learn more](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive). Select Add.
+4.  The SharePoint site is added as a Knowledge Source. Please note that the SharePoint Site will only be available to authenticated end-users, [learn more](https://learn.microsoft.com/en-us/microsoft-copilot-studio/nlu-generative-answers-sharepoint-onedrive). Select **Add**.
 
     ![Add SharePoint site as a data source](assets/2.3_04_AddSharePointSite.jpg)
 
@@ -251,11 +260,11 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Refresh agent](assets/2.3_06_RefreshAgent.jpg)
 
-1. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the Conversation Start Topic is dipslayed as it was triggered.
+1. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the _Conversation Start Topic_ is dipslayed as it was triggered.
 
     ![Track between topics](assets/2.3_07_TrackBetweenTopics.jpg)
 
-1. Next, and enter the following question to test the agent.
+1. Next, enter the following question to test the agent.
 
     ```
     What happens if I'm sick and cannot work?
@@ -263,7 +272,10 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
     
     ![Test agent with Question 1](assets/2.3_08_TestAgent_Q1.jpg)
 
-1.  A response is returned in natural language using the information retrieved from the uploaded document in the SharePoint site. References are provided once again with a hyperlink to where the information is sourced from so that you can validate it. You can also see that the Conversational boosting Topic was called and the generative answers node succeeded in using the provided knowledge sources to answer the question.
+1.  A response is returned in natural language using the information retrieved from the uploaded document in the SharePoint site. 
+
+    - References are provided again with a hyperlink to where the information is sourced from so that you can validate it. 
+    - You can also see that the _Conversational boosting Topic_ was called and the generative answers node succeeded in using the provided knowledge sources to answer the question.
 
     ![Response to Question 1](assets/2.3_09_TestAgent_Q1Response.jpg)
 
@@ -275,7 +287,7 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
     ![Test agent with Question 2](assets/2.3_11_TestAgent_Q2.jpg)
 
-1.  You’ll see another response from Copilot that uses the SharePoint data source to answer the question entered in plain natural language.
+1.  You’ll see another response from your agent that uses the SharePoint data source to answer the question entered in plain natural language.
 
     ![Response to Question 2](assets/2.3_11_TestAgent_Q2.jpg)
 
@@ -285,4 +297,4 @@ Congratulations! 👏🏻  You've configured your agent with external and intern
 
 This is the end of Lab 02 - Build an agent with Microsoft Copilot Studio, select the link below to move to the next lab.
 
-[⏭️ Move to Lab 03 - Create an AI Plugin using a Power Platform component for Generative Actions](../lab-03/README.md)
+[⏭️ Move to Lab 03 - Create a Prompt action for a Topic using a Power Platform connector for generative responses](../lab-03/README.md)
