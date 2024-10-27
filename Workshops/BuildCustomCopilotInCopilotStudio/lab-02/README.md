@@ -289,7 +289,7 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 
 1.  You’ll see another response from your agent that uses the SharePoint data source to answer the question entered in plain natural language.
 
-    ![Response to Question 2](assets/2.3_11_TestAgent_Q2.jpg)
+    ![Response to Question 2](assets/2.3_12_TestAgent_Q2Response.jpg)
 
 ## Next lab
 
