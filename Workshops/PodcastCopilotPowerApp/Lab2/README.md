@@ -170,7 +170,7 @@ For this lab, make sure you have the following ready:
                 new UserChatMessage(transcription)
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
@@ -212,7 +212,7 @@ For this lab, make sure you have the following ready:
                 $"Here is the bio of the guest: {bio}")
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
@@ -231,7 +231,7 @@ For this lab, make sure you have the following ready:
 
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
