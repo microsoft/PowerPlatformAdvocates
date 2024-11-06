@@ -11,7 +11,8 @@ Each method allows you to connect your data and knowledge sources to enable your
 In this lab, you will learn how to do the following:
 * [2.1 Available templates to create an agent](#21-available-templates-to-create-an-agent)
 * [2.2 Use natural language to create an agent](#22-use-natural-language-to-create-an-agent)
-* [2.3 Adding an internal knowledge source using a SharePoint site](#23-adding-an-internal-source-using-a-sharepoint-site)
+* [2.3 Adding an internal knowledge source using a SharePoint site - for Microsoft 365 licensed users with SharePoint](#23-adding-an-internal-source-using-a-sharepoint-site)
+* [2.4 Adding an internal source by uploading a file - for non-Microsoft 365 licensed users](#24-adding-an-internal-source-by-uploading-a-file)
 
 ## 2.1 Available templates to create an agent
 
@@ -229,6 +230,8 @@ You can use a conversation first approach to create an agent where natural langu
 
 ## 2.3 Adding an internal source using a SharePoint site
 
+**CONTINUE WITH THIS IF YOU HAVE A MICROSOFT 365 USER LICENSE FOR SHAREPOINT, OTHERWISE CONTINUE WITH [2.4 Adding an internal source by uploading a file - for non-Microsoft 365 licensed users](#24-adding-an-internal-source-by-uploading-a-file)**
+
 Knowledge in Microsoft Copilot Studio allows you to add enterprise data from Power Platform and external systems, to enable your agents in providing relevant information and insights to your end users. In addition, knowledge can be incorporated with [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio#add-and-manage-knowledge-for-generative-answers) in agents. Published agents that contain knowledge use the configured knowledge sources to ground the published agent.
 
 Next, you'll learn how to add an internal data source, SharePoint, for generative answers.
@@ -290,6 +293,48 @@ Next, you'll learn how to add an internal data source, SharePoint, for generativ
 1.  You’ll see another response from your agent that uses the SharePoint data source to answer the question entered in plain natural language.
 
     ![Response to Question 2](assets/2.3_12_TestAgent_Q2Response.jpg)
+
+## 2.4 Adding an internal source by uploading a file
+
+**Continue with this lab if you DO NOT have a Microsoft 365 license for SharePoint**
+
+1. Select **Add Knowledge**
+
+    ![Select Add Knowledge](assets/2.4_01_AddKnowledge.jpg)
+
+1. Drag and drop the .PDF file downloaded from Lab-01 or select **click to browse** to select the .PDF file.
+
+    ![ClickToBrowse](assets/2.4_02_ClickToBrowse.jpg)
+
+1. Once the file has been selected, select **Add**.
+
+    ![Add file](assets/2.4_03_PDFSelected.jpg)
+
+1. The file will be in progress of being uploaded to your agent.
+
+    ![Uploading file](assets/2.4_04_Uploading.jpg)
+
+1. We can now test the agent to confirm SharePoint is now a data source for generative answers. Select the **Refresh** icon in the **Test your agent** pane. Next, select the **ellipsis** icon (**. . .**) and select the **Track between topics** to follow the agent conversation step by step. Notice how the _Conversation Start_ system topic is dipslayed as it was triggered. Next, enter the following question to test the agent.
+
+    ```
+    What happens if I'm sick and cannot work?
+    ```
+    
+    ![Test agent with Question 1](assets/2.4_05_Question1Response.jpg)
+
+    A response is returned in natural language using the information retrieved from the uploaded document. 
+
+    - References are provided again with a hyperlink to where the information is sourced from so that you can validate it. 
+
+ 1. Try entering another question, 
+
+    ```
+    What holidays do Contoso employees have off?
+    ```
+
+    ![Test agent with Question 2](assets/2.4_06_Question2Response.jpg)
+
+    You’ll see another response from your agent that uses the uploaded document to answer the question entered in plain natural language.
 
 ## Next lab
 
