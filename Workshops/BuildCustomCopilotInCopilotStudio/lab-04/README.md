@@ -1,5 +1,7 @@
 # Lab 04 - Automation for your agent with Power Automate cloud flows
 
+**CONTINUE WITH THIS LAB ONLY IF YOU HAVE A MICROSOFT 365 USER LICENSE WITH MICROSOFT TEAMS**
+
 ## What are connectors?
 
 Connectors from Microsoft Power Automate are a proxy or "wrapper" around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. Connectors let you connect your accounts and use a set of prebuilt actions and triggers to build your apps and workflows.
