@@ -230,7 +230,8 @@ You can use a conversation first approach to create an agent where natural langu
 
 ## 2.3 Adding an internal source using a SharePoint site
 
-**CONTINUE WITH THIS IF YOU HAVE A MICROSOFT 365 USER LICENSE FOR SHAREPOINT, OTHERWISE CONTINUE WITH [2.4 Adding an internal source by uploading a file - for non-Microsoft 365 licensed users](#24-adding-an-internal-source-by-uploading-a-file)**
+> [!NOTE]
+> **CONTINUE WITH THIS IF YOU HAVE A MICROSOFT 365 USER LICENSE FOR SHAREPOINT, otherwise continue with** [2.4 Adding an internal source by uploading a file - for non-Microsoft 365 licensed users](#24-adding-an-internal-source-by-uploading-a-file). If you are completing 2.3, you do not need to complete 2.4
 
 Knowledge in Microsoft Copilot Studio allows you to add enterprise data from Power Platform and external systems, to enable your agents in providing relevant information and insights to your end users. In addition, knowledge can be incorporated with [generative answers](https://learn.microsoft.com/en-us/microsoft-copilot-studio/knowledge-copilot-studio#add-and-manage-knowledge-for-generative-answers) in agents. Published agents that contain knowledge use the configured knowledge sources to ground the published agent.
 
