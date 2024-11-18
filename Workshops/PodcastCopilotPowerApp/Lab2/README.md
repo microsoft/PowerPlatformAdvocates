@@ -95,7 +95,7 @@ For this lab, make sure you have the following ready:
 1. In the terminal window, run the following command to install the prerelease version of the Azure OpenAI SDK:
 
     ```bash
-    dotnet add package Azure.AI.OpenAI --version 2.0.0-beta.5
+    dotnet add package Azure.AI.OpenAI --version 2.0.0
     ```
 
 1. Then run the following command to install the Newtonsoft.Json package:
@@ -135,7 +135,7 @@ For this lab, make sure you have the following ready:
     //Instantiate OpenAI Client
     static AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
         new Uri(endpointSC),
-        new AzureKeyCredential(keySC));
+        new ApiKeyCredential(keySC));
     ```
 
 1. Then below the above code, add the following code to perform **Audio Transcription**:
@@ -144,7 +144,7 @@ For this lab, make sure you have the following ready:
     //Get Audio Transcription
     public static async Task<string> GetTranscription(string podcastUrl)
     {
-        var decodededUrl = HttpUtility.UrlDecode(podcastUrl);
+        var decodedUrl = HttpUtility.UrlDecode(podcastUrl);
 
         HttpClient httpClient = new HttpClient();
         Stream audioStreamFromBlob = await httpClient.GetStreamAsync(decodededUrl);
@@ -170,7 +170,7 @@ For this lab, make sure you have the following ready:
                 new UserChatMessage(transcription)
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
@@ -212,7 +212,7 @@ For this lab, make sure you have the following ready:
                 $"Here is the bio of the guest: {bio}")
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
@@ -231,7 +231,7 @@ For this lab, make sure you have the following ready:
 
         ]);
 
-        return chatCompletion.ToString();
+        return chatCompletion.Content.First().Text;
     }
     ```
 
