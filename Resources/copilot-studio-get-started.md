@@ -33,9 +33,12 @@ Welcome! This resource guide is designed to help you dive into Microsoft Copilot
 
 ## 🌐 Community and Support
 
-- **[Join the Community](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553)**  
-  Connect with other users and experts.
+- **[Join the Agent Creators Community](https://aka.ms/AgentCreatorsCommunity)**  
+  Join Agent Creators around the world to enhance your Copilot Studio skills, explore real world use cases and learn from product experts.
 
+- **[Copilot Studio Forums](https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553)**  
+  Connect with other users and experts in the Copilot Studio forums.
+  
 - **[Engage in Community Calls]( https://pnp.github.io/#events)**  
   Engage in monthly and bi-weekly community calls to connect and learn from others.
  
