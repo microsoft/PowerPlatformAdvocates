@@ -32,4 +32,5 @@ Thanks for attending my session! Whether you're looking to build faster, create 
 - ✨ [Learn Copilot in Power Apps](https://learn.microsoft.com/power-apps/maker/canvas-apps/ai-conversations-create-app)
 - 🛠️ [Copilot Studio Documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
 - 📦 [AI Builder Docs](https://learn.microsoft.com/ai-builder/overview)
+- ✨ [Try the Early Access Preview for New Power Apps Features](https://aka.ms/PowerAppsEAP)
 
