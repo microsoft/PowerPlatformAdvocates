@@ -1,4 +1,4 @@
-# Supercharge Your Power Platform Integrations with Model Context Protocol (MCP) 
+# Supercharge Your Power Platform Integrations with Model Context Protocol (MCP)
 
 Resources for the demo I did at Microsoft 365 & Power Platform weekly call (3rd of June 2025).
 
