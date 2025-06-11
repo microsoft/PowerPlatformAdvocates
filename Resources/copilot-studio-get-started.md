@@ -49,6 +49,9 @@ Welcome! This resource guide is designed to help you dive into Microsoft Copilot
 - **[Implementation Guide](https://adoption.microsoft.com/en-us/microsoft-ai-tour-resources/copilot-studio/)**  
   Step-by-step instructions to implement Copilot Studio in your organization.
 
+  - **[Licensing Guide](https://aka.ms/mcs-licensing)**  
+  PDF covering licensing ins and outs for Copilot Studio.
+
 - **[Copilot Success Kit](https://adoption.microsoft.com/en-us/copilot/success-kit/)**  
   Accelerate your AI journey with structured resources.
 
