@@ -29,6 +29,9 @@ Welcome! This resource guide is designed to help you dive into Microsoft Copilot
 )**  
   In-depth video series that will take you zero to hero through building agents in Copilot Studio.
 
+- **[Microsoft Applied Skills: Create agents in Microsoft Copilot Studio](https://learn.microsoft.com/en-us/credentials/applied-skills/create-agents-in-microsoft-copilot-studio/#applied-skill-take-the-assessment)**  
+  Validate your technical skills and open doors to new possibilities of advancement with the Microsoft Applied Skills assesment for building agents with Copilot Studio.
+
 ---
 
 ## 🌐 Community and Support
@@ -49,7 +52,7 @@ Welcome! This resource guide is designed to help you dive into Microsoft Copilot
 - **[Implementation Guide](https://adoption.microsoft.com/en-us/microsoft-ai-tour-resources/copilot-studio/)**  
   Step-by-step instructions to implement Copilot Studio in your organization.
 
-  - **[Licensing Guide](https://aka.ms/mcs-licensing)**  
+- **[Licensing Guide](https://aka.ms/mcs-licensing)**  
   PDF covering licensing ins and outs for Copilot Studio.
 
 - **[Copilot Success Kit](https://adoption.microsoft.com/en-us/copilot/success-kit/)**  
