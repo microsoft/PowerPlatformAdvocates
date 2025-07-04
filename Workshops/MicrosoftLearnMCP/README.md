@@ -1,4 +1,4 @@
-# 📖 Use the Microsoft Learn MCP Server in Microsoft Copilot Studio
+# 📖 Lab: Use the Microsoft Learn MCP Server in Microsoft Copilot Studio
 
 The Microsoft Learn team announced the [Microsoft Learn MCP Server](https://github.com/microsoftdocs/mcp). Since this MCP Server is not yet available out of the box, lets explore how you can add this to Microsoft Copilot Studio!
 

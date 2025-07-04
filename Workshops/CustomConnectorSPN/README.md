@@ -1,4 +1,4 @@
-# Lab: Use service principal auth for custom connectors
+# 📖 Lab: Use service principal auth for custom connectors
 
 > [!IMPORTANT]
 > For this lab, you have to be able to create an app registration. In most organizations, this is not possible for end users. Make sure to have a dev environment and your own Microsoft 365 Developer Tenant, because it's highly likely you will not be able to finish this lab otherwise. If you don't know how to do this, watch [this video](https://www.youtube.com/watch?v=KYym2M9YocQ) by April Dunnam
