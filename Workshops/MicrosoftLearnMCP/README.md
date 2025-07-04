@@ -24,15 +24,21 @@ The Microsoft Learn team announced the [Microsoft Learn MCP Server](https://gith
 
 1. Enter the **name** for the agent
 
-    ```Learn Agent```
+    ```
+    Learn Agent
+    ```
 
 1. Enter the **description** for the agent
 
-    ```This agent will help users to answer their questions about Microsoft topics and discover random Microsoft Learn topics.```
+    ```
+    This agent will help users to answer their questions about Microsoft topics and discover random Microsoft Learn topics.
+    ```
 
 1. Enter **instructions** for the agent
 
-    ```You are an agent that will support users in their learning journey. Users will ask you questions about topics, make sure to answer those questions in a concise manner.```
+    ```
+    You are an agent that will support users in their learning journey. Users will ask you questions about topics, make sure to answer those questions in a concise manner.
+    ```
 
     ![](./assets/configure-agent.png)
 
@@ -81,15 +87,21 @@ Now the agent is created! In the following section we'll add a tool to the agent
 1. Change the connector name to **Microsoft Learn MCP** (1)
 1. Change the **description** to the following text (2)
 
-    ```The Microsoft Docs MCP Server is a cloud-hosted service that enables MCP hosts to search and retrieve accurate information directly from Microsoft's official documentation.```
+    ```
+    The Microsoft Docs MCP Server is a cloud-hosted service that enables MCP hosts to search and retrieve accurate information directly from Microsoft's official documentation.
+    ```
 
 1. Change the **Host** to the following URL (3)
 
-    ```learn.microsoft.com```
+    ```
+    learn.microsoft.com
+    ```
 
 1. Change the **Base URL** to the following URL (4)
 
-    ```/api/mcp```
+    ```
+    /api/mcp
+    ```
 
 1. Select **Create connector** (5)
 
@@ -143,7 +155,9 @@ Now you are ready to test the Microsoft Learn MCP server! 🚀
 
 1. Lets ask about Data Loss Prevention in Power Platform by entering the following prompt:
 
-    ```Can you tell me what Data Loss Prevention is in the Power Platform?```
+    ```
+    Can you tell me what Data Loss Prevention is in the Power Platform?
+    ```
 
 1. In the following screenshot you can see **(1)** the activity map button which you need to click to enable the activity map, **(2)** this is how your MCP server will show in the activity map, you can see which tool got triggered, what it sent to the server (inputs) and **(3)** what it got back from the server. **(4)** shows how the output is formatted in the test agent experience.
 
@@ -151,7 +165,9 @@ Now you are ready to test the Microsoft Learn MCP server! 🚀
 
 1. Lets try out another prompt and ask for this:
 
-    ```Can you tell me more about MCP in Copilot Studio?```
+    ```
+    Can you tell me more about MCP in Copilot Studio?
+    ```
 
 ## 📖 More learning
 
