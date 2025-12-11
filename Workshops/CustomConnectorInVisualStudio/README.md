@@ -4,7 +4,7 @@ In this lab, you will learn how to:
 
 1. Create a **.NET minimal Web API** using Visual Studio with an in-memory repository of Orders for testing purposes.
 1. Add **Entra ID authentication and authorization** to your Web API so that operations can be protected using **API App Roles**.
-1. **Register a Entra ID application** that can access the Web API and store the generated secret in **Azure Key Vault**.
+1. **Register an Entra ID application** that can access the Web API and store the generated secret in **Azure Key Vault**.
 1. Create Power Platform **Environment Variables** connected to Azure Key Vault to access the secret.
 1. Test the API using **Postman** after generating an OAuth bearer token.
 1. **Deploy** the Web API to Power Platform as a **custom connector**.
