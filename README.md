@@ -17,12 +17,6 @@ Welcome to Power Platform Advocates GitHub repository. You'll find advocacy crea
 - [Podcast Copilot with Azure OpenAI Service, .NET, and Power Platform](./Workshops/PodcastCopilotPowerApp/README.md)
 - [Power Platform & Mixed Reality](./Workshops/MR/README.md)
 
-## Labs
-
-- [📖 Lab: Use service principal auth for custom connectors](./Workshops/CustomConnectorSPN/README.md)
-- [Power Platform custom connector using Visual Studio Web API with Entra ID auth and solution deployment](./Workshops/CustomConnectorInVisualStudio/README.md)
-- [📖 Lab: Use the Microsoft Learn MCP Server in Microsoft Copilot Studio](./Workshops/MicrosoftLearnMCP/README.md)
-
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
